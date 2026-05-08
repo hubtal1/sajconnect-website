@@ -8,15 +8,18 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "npm run build && wrangler dev",
     "astro": "astro",
     "check": "astro check",
     "cms": "decap-server",
     "dev:cms": "concurrently -n astro,cms -c cyan,magenta \"npm run dev\" \"npm run cms\"",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "12",
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/react": "^4.0.0",
     "@astrojs/sitemap": "^3.2.1",
@@ -40,6 +43,7 @@
     "decap-server": "^3.1.0",
     "prettier": "^3.4.0",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "wrangler": "^4.90.0"
   }
 }

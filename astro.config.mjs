@@ -4,14 +4,18 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
+import cloudflare from "@astrojs/cloudflare";
+
 const SITE = "https://www.sajconnect.com";
 
 export default defineConfig({
   site: SITE,
   trailingSlash: "ignore",
+
   build: {
     format: "directory",
   },
+
   integrations: [
     react(),
     mdx(),
@@ -26,7 +30,10 @@ export default defineConfig({
       },
     }),
   ],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare()
 });
