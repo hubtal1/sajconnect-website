@@ -1,0 +1,53 @@
+---
+import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+---
+
+<section class="surface-carbon mesh-dual noise relative overflow-hidden">
+  <div class="container-prose section">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12 md:col-span-3">
+        <p class="chapter-mark">{tt("nav.contact")}</p>
+        <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">
+          {tt("contact.title")}
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-9">
+        <h2 class="display-lg text-[var(--color-bone)]">
+          {tt("home.cta.headline")}
+        </h2>
+        <p class="lede mt-8 max-w-[58ch]">
+          {tt("home.cta.sub")}
+        </p>
+        <div class="mt-12 flex flex-col gap-3 sm:flex-row">
+          <a href={localizedPath(locale, "/contact")} class="btn btn-primary">
+            {tt("home.cta.button")} →
+          </a>
+        </div>
+
+        <div class="mt-16 grid grid-cols-2 gap-6 border-t border-[var(--color-hairline-dark)] pt-8 md:grid-cols-3">
+          <div>
+            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("contact.office")}</p>
+            <p class="mt-2 mono-spec text-[var(--color-text-on-carbon-muted)]">
+              Egensbach 310<br />91238 Offenhausen
+            </p>
+          </div>
+          <div>
+            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("contact.phone")}</p>
+            <p class="mt-2 mono-spec text-[var(--color-text-on-carbon-muted)]">
+              +49 160 97533957
+            </p>
+          </div>
+          <div>
+            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("ui.registered")}</p>
+            <p class="mt-2 mono-spec text-[var(--color-text-on-carbon-muted)]">
+              HRB 45795<br />AG Nürnberg
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

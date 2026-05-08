@@ -1,0 +1,115 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import ObfuscatedEmail from "../../../components/ObfuscatedEmail.astro";
+import { LOCALES, t, localizedPath, type Locale } from "../../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+
+const allJobs = await getCollection("jobs", ({ data }) => !data.draft && data.locale === lang);
+allJobs.sort((a, b) => +b.data.publishedAt - +a.data.publishedAt);
+---
+
+<Layout title={tt("careers.title")} description={tt("careers.lead")}>
+  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
+    <div class="container-prose pt-10 md:pt-12">
+      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+        <span class="flex items-center gap-2">
+          <span class="glow-dot"></span>
+          <span class="text-[var(--color-saj-green-bright)]">{tt("nav.careers")}</span>
+        </span>
+        <span class="hidden md:block">{allJobs.length} open positions</span>
+        <span class="text-[var(--color-cobalt-light)]">SAJ Connect GmbH</span>
+      </div>
+    </div>
+
+    <div class="container-prose pt-24 pb-20 md:pt-32 md:pb-28">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("nav.careers")}</p>
+          <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">Open positions</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{tt("careers.title")}</h1>
+          <p class="lede mt-10 max-w-[58ch]">
+            {tt("careers.lead")}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose pb-24 md:pb-32">
+      <div class="border-t border-[var(--color-hairline-dark)] pt-10">
+        <div class="flex items-baseline justify-between pb-6">
+          <h2 class="display-md text-[var(--color-bone)]">{tt("careers.openPositions")}</h2>
+          <span class="mono-label text-[var(--color-text-on-carbon-faint)]">
+            {String(allJobs.length).padStart(2, "0")} positions
+          </span>
+        </div>
+
+        {allJobs.length === 0 && (
+          <p class="border-t border-[var(--color-hairline-dark)] py-10 text-[var(--color-text-on-carbon-muted)]">
+            {tt("careers.noPositions")}
+          </p>
+        )}
+
+        <ul>
+          {allJobs.map((job, idx) => {
+            const isCobalt = idx % 2 === 0;
+            const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
+            return (
+              <li class="border-t border-[var(--color-hairline-dark)]">
+                <a
+                  href={localizedPath(lang, `/careers/${job.slug.replace(/\.(de|en|pt-br)$/, "")}`)}
+                  class="group relative grid grid-cols-12 items-baseline gap-6 py-10 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:py-12"
+                >
+                  <span
+                    class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
+                    style={`background-color: var(${accentVar}); box-shadow: 0 0 12px var(${isCobalt ? "--color-cobalt-glow" : "--color-saj-green-glow"});`}
+                  ></span>
+
+                  <div class="col-span-12 md:col-span-1">
+                    <p class="mono-label-sm" style={`color: var(${accentVar});`}>
+                      {String(idx + 1).padStart(2, "0")}
+                    </p>
+                  </div>
+                  <div class="col-span-12 md:col-span-7">
+                    <h3 class="display-md text-[var(--color-bone)]">{job.data.title}</h3>
+                    <p class="mt-3 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+                      {job.data.summary}
+                    </p>
+                  </div>
+                  <div class="col-span-12 md:col-span-3 mono-spec text-[var(--color-text-on-carbon-muted)]">
+                    {job.data.location} · {job.data.employmentType}
+                    {job.data.department && ` · ${job.data.department}`}
+                  </div>
+                  <div class="col-span-12 mono-label text-[var(--color-cobalt-light)] transition-transform group-hover:translate-x-1 md:col-span-1 md:text-right">
+                    →
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div class="mt-16 border border-[var(--color-hairline-dark)] bg-[var(--color-carbon-soft)] p-10 md:p-14">
+        <p class="mono-label text-[var(--color-saj-green-bright)]">Initiative</p>
+        <h3 class="mt-4 display-md text-[var(--color-bone)]">{tt("careers.initiative")}</h3>
+        <ObfuscatedEmail
+          user="karriere"
+          domain="sajconnect.com"
+          label={tt("careers.applyNow") + " →"}
+          class="btn btn-primary mt-7 inline-flex"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

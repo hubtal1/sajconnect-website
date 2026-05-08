@@ -1,0 +1,73 @@
+---
+import { getLocaleFromUrl, t, getDict, localizedPath, type Locale } from "../i18n/utils";
+
+interface Domain {
+  title: string;
+  tag: string;
+  description: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
+---
+
+<section class="surface-carbon mesh-green relative overflow-hidden">
+  <div class="container-prose section">
+    <div class="grid grid-cols-12 gap-6">
+      <div class="col-span-12 md:col-span-3">
+        <p class="chapter-mark">{tt("ui.chapter")} 03</p>
+        <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">{tt("ui.capabilities")}</p>
+      </div>
+      <div class="col-span-12 md:col-span-9">
+        <h2 class="display-lg text-[var(--color-bone)]">
+          8 domains. One stack.
+        </h2>
+        <p class="lede mt-8 max-w-[58ch]">
+          {tt("services.lead")}
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2 lg:grid-cols-4">
+      {domains.map((d, idx) => (
+        <article class="group relative bg-[var(--color-carbon)] p-7 transition-all duration-500 hover:bg-[var(--color-carbon-soft)] md:p-8">
+          <!-- top edge accent on hover, alternating cobalt/green -->
+          <span class:list={["absolute left-0 top-0 h-px w-0 transition-all duration-500 group-hover:w-full", idx % 2 === 0 ? "bg-[var(--color-cobalt-light)]" : "bg-[var(--color-saj-green-bright)]"]}
+            style={idx % 2 === 0 ? "box-shadow: 0 0 8px var(--color-cobalt-glow);" : "box-shadow: 0 0 8px var(--color-saj-green-glow);"}></span>
+
+          <div class="flex items-baseline justify-between">
+            <span class:list={["mono-label-sm", idx % 2 === 0 ? "text-[var(--color-cobalt-light)]" : "text-[var(--color-saj-green-bright)]"]}>{d.tag}</span>
+            <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+              {String(idx + 1).padStart(2, "0")}
+            </span>
+          </div>
+          <h3 class="heading-card mt-10">
+            {d.title}
+          </h3>
+          <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+            {d.description}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-20 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-12">
+      <div class="col-span-12 md:col-span-3">
+        <p class="chapter-mark text-[var(--color-amber)]" style="--tw-content: ''">
+          <span class="block h-px w-6 bg-[var(--color-amber)]"></span>
+          {tt("ui.outlook")}
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-9">
+        <h3 class="display-md text-[var(--color-bone)]">{tt("services.outroHeadline")}</h3>
+        <p class="mt-6 max-w-[58ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+          {tt("services.outroSub")}
+        </p>
+        <a href={localizedPath(locale, "/services")} class="arrow-link mt-8">
+          {tt("nav.services")} →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

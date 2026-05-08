@@ -1,0 +1,221 @@
+{
+  "site": {
+    "name": "SAJ Connect",
+    "tagline": "Connecting the Future of Mobility",
+    "description": "SAJ Connect — specialist consultancy at the intersection of wireless communication and automotive innovation. From concept to live operations."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "consultancy": "Private 5G",
+    "testing": "Testing",
+    "vehicle": "Connected Car",
+    "careers": "Careers",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Wireless meets Automotive",
+      "headline": "Connecting the Future of Mobility",
+      "sub": "We combine deep technical expertise across Telco and Automotive — delivering end-to-end engineering, testing and operations for Private 5G, eSIM, IoT and Connected Car.",
+      "ctaPrimary": "Get in touch",
+      "ctaSecondary": "Explore our services"
+    },
+    "pillars": [
+      { "label": "5G+", "text": "Private and public 5G expertise — from architecture to live operations." },
+      { "label": "E2E", "text": "End-to-end delivery across the full development and deployment lifecycle." },
+      { "label": "6G", "text": "Forward-looking research and advisory for next-generation networks." },
+      { "label": "360°", "text": "Complete coverage of wireless, IoT and automotive connectivity." }
+    ],
+    "intersection": {
+      "headline": "Where wireless meets automotive",
+      "sub": "Two of the most demanding domains in modern technology, brought together by a team that has shipped both."
+    },
+    "differentiators": {
+      "headline": "What sets us apart",
+      "items": [
+        { "title": "End-to-End Delivery", "text": "From architecture and design through implementation, integration and live operations — one team, one accountable partner." },
+        { "title": "Vendor Agnostic", "text": "We choose the right technology for your problem — never tied to a single vendor or platform." },
+        { "title": "Global Ecosystem", "text": "A proven, scalable network of specialist partners — ready to deploy at the scale your project demands." },
+        { "title": "Mission Critical", "text": "We work on systems where reliability and safety matter most — and we treat your project the same way." }
+      ]
+    },
+    "cta": {
+      "headline": "Let's build something exceptional",
+      "sub": "Get in touch to discuss how SAJ Connect can support your next project — from initial scoping to full-scale deployment and beyond.",
+      "button": "Schedule a call"
+    }
+  },
+  "services": {
+    "title": "Our Core Technology Domains",
+    "lead": "Eight focused domains where we deliver expertise at depth — combine them into the solution your project needs.",
+    "domains": [
+      { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Network engineering, design, deployment and operations for enterprise and industrial Private 5G." },
+      { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "End-to-end eSIM and iSIM ecosystem — RSP, profile management, lifecycle and certification." },
+      { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Connectivity strategies for massive IoT — cellular, LPWA, satellite, and hybrid architectures." },
+      { "title": "NTN — Non-Terrestrial Networks", "tag": "SATELLITE 5G", "description": "Satellite-5G integration, NTN architecture and feasibility for global, resilient connectivity." },
+      { "title": "6G — Next Generation", "tag": "TOMORROW'S NETWORKS", "description": "6G readiness, advisory and research — preparation today for the networks of tomorrow." },
+      { "title": "Connectivity Platform", "tag": "PLATFORM ENGINEERING", "description": "Platforms that abstract complexity — from connectivity management to telemetry and analytics." },
+      { "title": "V2X & Vehicle Connectivity", "tag": "AUTOMOTIVE", "description": "Vehicle connectivity architectures — cellular, V2X, Wi-Fi, Bluetooth — secure and seamless." },
+      { "title": "360° Connectivity Expertise", "tag": "FULL STACK", "description": "End-to-end coverage from device to cloud — integrated, validated, and operational." }
+    ],
+    "outroHeadline": "Tomorrow's networks. Today's preparation.",
+    "outroSub": "We don't just operate today's networks — we help our clients shape the next generation."
+  },
+  "consultancy": {
+    "title": "Private 5G Consultancy",
+    "lead": "Concept to live operations — full-stack consultancy for enterprise and industrial Private 5G deployments.",
+    "items": [
+      { "title": "Network Engineering & Design", "text": "Architecture, RF planning, slicing strategy and integration design — built for your specific industrial environment." },
+      { "title": "Project Management & Operations", "text": "End-to-end programme management — milestones, vendor coordination, risk and quality from kick-off to handover." },
+      { "title": "Network Management & Operations", "text": "Day-2 operations, monitoring, optimisation and continuous improvement — keeping mission-critical networks healthy." },
+      { "title": "Software & Hardware Development", "text": "Custom software and hardware components where the off-the-shelf stack falls short — fully integrated and certified." },
+      { "title": "Network Testing & Validation", "text": "Comprehensive testing — functional, performance, interoperability, compliance — before and after go-live." }
+    ]
+  },
+  "testing": {
+    "title": "We test until it's perfect",
+    "lead": "Rigorous, structured validation across the full connectivity stack — for products that have to work in the real world.",
+    "groups": [
+      {
+        "headline": "Test disciplines",
+        "items": [
+          { "title": "Functional Testing", "text": "End-to-end functional validation across all system components and interfaces — verifying every feature performs precisely as specified." },
+          { "title": "Performance & Load Testing", "text": "KPI benchmarking, throughput testing, latency measurement, and stress testing under real-world and worst-case conditions." },
+          { "title": "Interoperability Testing", "text": "Multi-vendor integration validation ensuring seamless operation across different vendors, platforms, and protocol stacks." },
+          { "title": "Compliance & Homologation", "text": "Regulatory compliance testing and homologation support — ensuring your product meets all required certifications before market entry." }
+        ]
+      },
+      {
+        "headline": "Specialised testing",
+        "items": [
+          { "title": "5G Network Testing", "text": "RAN, core and slice-level test campaigns — including KPI validation, drive testing and benchmarking." },
+          { "title": "eSIM & SIM Testing", "text": "Profile, RSP and lifecycle testing — fully aligned with GSMA specifications." },
+          { "title": "OTA Update Testing", "text": "End-to-end validation of OTA campaigns — robustness, rollback, security, and field-relevant scenarios." },
+          { "title": "HIL & SIL Testing", "text": "Hardware- and software-in-the-loop test environments for connected and automotive systems." },
+          { "title": "IoT Device Validation", "text": "Device-level certification, conformance and ecosystem-readiness testing for massive IoT deployments." },
+          { "title": "PoC & Acceptance", "text": "Structured proof-of-concept and acceptance frameworks — measurable, repeatable, decision-ready." }
+        ]
+      }
+    ]
+  },
+  "vehicle": {
+    "title": "The modern vehicle platform",
+    "lead": "The modern vehicle is a complex, connected platform — and the demands on its software and communication architecture have never been greater. We deliver expert engineering across the full Connected Car and IVI stack.",
+    "items": [
+      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Deep expertise in Android Automotive OS and Android Auto integration — enabling rich, responsive in-vehicle user experiences compliant with OEM and Google ecosystem standards." },
+      { "title": "Connectivity Architecture", "tag": "4G · 5G · V2X", "text": "End-to-end design of vehicle connectivity frameworks — cellular, Wi-Fi, Bluetooth, and V2X protocols for seamless, secure data exchange between vehicle, cloud, and external devices." },
+      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Robust service lifecycle management and security frameworks — IAM, certificate handling, and authorisation flows aligned with automotive cybersecurity standards." },
+      { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Architecture and implementation for flexible, subscription-based feature activation — enabling OEMs to unlock capabilities remotely and create new post-sale revenue streams." },
+      { "title": "OTA Update Management", "tag": "OTA · ECU · IVI", "text": "Comprehensive OTA strategy, integration, and validation — ensuring secure, reliable, and compliant software updates across ECUs, IVI systems, and vehicle subsystems." },
+      { "title": "ECU Testing & Validation", "tag": "HIL · SIL · HOMOLOGATION", "text": "Rigorous testing for ECUs and connected vehicle systems — from early-stage verification through system-level integration testing and homologation support." }
+    ]
+  },
+  "about": {
+    "title": "About SAJ Connect",
+    "lead": "SAJ Connect GmbH is a specialist technology consultancy at the intersection of wireless communication, automotive innovation and IoT. Founded in December 2025, we combine deep technical knowledge across Telco, Automotive and IoT with a practical, partnership-first approach.",
+    "leadSecond": "Our global team of engineers and consultants collaborates directly with customers — translating complex connectivity challenges into clear, executable strategies and measurable outcomes.",
+    "mission": {
+      "title": "Our mission",
+      "text": "To foster sustainable 5G innovation and connected-technology adoption through trusted partnerships, end-to-end expertise, and a commitment to excellence — from concept to live operations."
+    },
+    "differentiators": {
+      "title": "Why partner with us",
+      "items": [
+        { "n": "01", "text": "Decades of combined expertise in mobile communications, 5G and automotive systems." },
+        { "n": "02", "text": "Direct customer collaboration — from strategy through to live operations." },
+        { "n": "03", "text": "Proven, scalable partner ecosystem with global reach." },
+        { "n": "04", "text": "Comprehensive coverage across Private 5G, eSIM, IoT and Connected Car domains." },
+        { "n": "05", "text": "Agile, multidisciplinary teams — adaptable to your project scale and complexity." }
+      ]
+    }
+  },
+  "careers": {
+    "title": "Careers at SAJ Connect",
+    "lead": "We are looking for engineers and consultants who want to shape the future of wireless and automotive connectivity — from day one.",
+    "openPositions": "Open positions",
+    "noPositions": "No open positions right now — we still welcome unsolicited applications.",
+    "applyNow": "Apply now",
+    "initiative": "Send unsolicited application"
+  },
+  "blog": {
+    "title": "Blog & Insights",
+    "lead": "Notes from the field — what we learn building 5G, eSIM, IoT and Connected Car systems.",
+    "readingTime": "min read",
+    "by": "by",
+    "back": "Back to overview",
+    "noPosts": "First articles coming soon."
+  },
+  "contact": {
+    "title": "Let's connect",
+    "lead": "Get in touch to discuss how SAJ Connect can support your next project — from initial scoping to full-scale deployment and beyond.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "consent": "I have read the privacy policy and consent to the processing of my data.",
+      "submit": "Send message",
+      "submitting": "Sending ...",
+      "success": "Thank you — we'll be in touch shortly.",
+      "error": "Something went wrong. Please try again."
+    },
+    "office": "Office",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "imprint": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "tagline": "Connecting the Future of Mobility."
+  },
+  "cookie": {
+    "headline": "We respect your privacy",
+    "text": "We only use technically necessary cookies. Optionally you can enable cookieless statistics to help us improve the site.",
+    "accept": "Allow statistics",
+    "decline": "Necessary only",
+    "settings": "Settings"
+  },
+  "language": {
+    "label": "Language",
+    "de": "Deutsch",
+    "en": "English",
+    "pt-br": "Português (BR)"
+  },
+  "ui": {
+    "chapter": "Chapter",
+    "capabilities": "Capabilities",
+    "deepDives": "Deep Dives",
+    "deepDivesHeadline": "Three core practices.",
+    "outlook": "Outlook",
+    "mission": "Mission",
+    "differentiators": "What sets us apart",
+    "form": "Form",
+    "direct": "Direct",
+    "responseTime": "Response time",
+    "registered": "Registered",
+    "company": "Company",
+    "legal": "Legal",
+    "readMore": "Read more",
+    "readArticle": "Read article",
+    "back": "Back",
+    "live": "Live",
+    "operational": "Operational",
+    "founded": "Founded",
+    "focus": "Focus",
+    "headquarter": "HQ",
+    "lead": "Lead",
+    "insights": "Insights",
+    "article": "Article",
+    "position": "Position",
+    "openPositions": "Open positions",
+    "send": "Send",
+    "sendMessage": "Send us a message.",
+    "responseLine": "We respond within one business day.",
+    "deepDive": "Deep Dive"
+  }
+}

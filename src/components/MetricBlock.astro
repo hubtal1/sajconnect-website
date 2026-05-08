@@ -1,0 +1,26 @@
+---
+const metrics = [
+  { value: "8", label: "Core Technology Domains", suffix: "" },
+  { value: "10", label: "Testing Disciplines", suffix: "+" },
+  { value: "6", label: "Connected-Car Capabilities", suffix: "" },
+  { value: "Global", label: "Partner Ecosystem", suffix: "" },
+];
+---
+
+<section class="surface-carbon">
+  <div class="container-prose section-tight">
+    <div class="grid grid-cols-2 gap-px bg-[var(--color-hairline-dark)] md:grid-cols-4">
+      {metrics.map((m, idx) => (
+        <div class="group bg-[var(--color-carbon)] p-8 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-10">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+            {String(idx + 1).padStart(2, "0")} / {String(metrics.length).padStart(2, "0")}
+          </p>
+          <p class:list={["mt-6 font-display text-4xl font-medium leading-none tracking-tight text-[var(--color-bone)] transition-colors duration-500 md:text-5xl", idx % 2 === 0 ? "group-hover:text-[var(--color-cobalt-light)]" : "group-hover:text-[var(--color-saj-green-bright)]"]}>
+            {m.value}<span class={idx % 2 === 0 ? "text-[var(--color-cobalt-light)]" : "text-[var(--color-saj-green-bright)]"}>{m.suffix || "·"}</span>
+          </p>
+          <p class="mt-5 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{m.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

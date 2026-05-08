@@ -1,0 +1,43 @@
+---
+const items = [
+  "Private 5G",
+  "eSIM / iSIM",
+  "GSMA SGP.22",
+  "V2X",
+  "C-V2X",
+  "Android Automotive",
+  "OTA Update Management",
+  "ECU Validation",
+  "Network Slicing",
+  "ORAN",
+  "NTN · Satellite 5G",
+  "6G Research",
+  "ISO/SAE 21434",
+  "HIL · SIL",
+  "RF Engineering",
+  "IoT Connectivity",
+  "RSP / SM-DP+",
+  "Drive Testing",
+];
+---
+
+<section class="surface-carbon border-y border-[var(--color-hairline-dark)] py-6">
+  <div class="marquee">
+    <div class="marquee-track">
+      {items.map((item, idx) => (
+        <span class="flex items-center gap-3 mono-label text-[var(--color-text-on-carbon-muted)]">
+          <span class={idx % 2 === 0 ? "text-[var(--color-cobalt-light)]" : "text-[var(--color-saj-green-bright)]"}>▸</span>
+          {item}
+        </span>
+      ))}
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      {items.map((item, idx) => (
+        <span class="flex items-center gap-3 mono-label text-[var(--color-text-on-carbon-muted)]">
+          <span class={idx % 2 === 0 ? "text-[var(--color-cobalt-light)]" : "text-[var(--color-saj-green-bright)]"}>▸</span>
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

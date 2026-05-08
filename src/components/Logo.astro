@@ -1,0 +1,52 @@
+---
+interface Props {
+  /** Total width in CSS pixels */
+  width?: number;
+  /** Show the "Connectivity is our passion" tagline (full logo)
+   *  When false, the bottom portion is cropped via object-fit. */
+  withTagline?: boolean;
+  /** Optional inline class */
+  class?: string;
+}
+
+const { width = 200, withTagline = true, class: className } = Astro.props;
+
+// Source PNG: 1128 × 406 (full logo with tagline)
+const fullRatio = 406 / 1128;        // 0.36 — full logo
+const wordRatio = (406 * 0.66) / 1128; // 0.24 — crops bottom ~34% (full tagline gone)
+const ratio = withTagline ? fullRatio : wordRatio;
+const height = Math.round(width * ratio);
+---
+
+<img
+  src="/logo.png"
+  alt="SAJ Connect"
+  width={width}
+  height={height}
+  class:list={["saj-logo", !withTagline && "saj-logo--cropped", className]}
+  style={`width:${width}px;height:${height}px;`}
+  loading="eager"
+  decoding="async"
+/>
+
+<style is:global>
+  .saj-logo {
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  /* Default theme = dark
+     brightness(2.5) multiplies each channel by 2.5 → dark cobalt becomes
+     bright cobalt, dark green becomes vivid green. Hues are preserved.
+     saturate(1.2) gives the colors extra punch on the carbon background. */
+  :root .saj-logo,
+  [data-theme="dark"] .saj-logo {
+    filter: brightness(2.5) saturate(1.2) contrast(1.05);
+  }
+
+  /* Light theme: original brand colors as designed */
+  [data-theme="light"] .saj-logo {
+    filter: none;
+  }
+</style>

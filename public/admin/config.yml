@@ -1,0 +1,247 @@
+# SAJ Connect — Decap CMS configuration
+# Docs: https://decapcms.org/docs/
+
+# === BACKEND ===
+# Production: Git-based via GitHub. Edits commit directly to the repo,
+# Cloudflare Pages rebuilds automatically.
+backend:
+  name: github
+  repo: hubtal1/sajconnect-website # ← anpassen sobald GitHub-Repo angelegt
+  branch: main
+  base_url: https://decap-proxy.sajconnect.workers.dev # ← OAuth-Worker (siehe README)
+  open_authoring: false
+  commit_messages:
+    create: 'content({{collection}}): create "{{slug}}"'
+    update: 'content({{collection}}): update "{{slug}}"'
+    delete: 'content({{collection}}): delete "{{slug}}"'
+    uploadMedia: 'content(media): upload "{{path}}"'
+    deleteMedia: 'content(media): delete "{{path}}"'
+
+# Local development:
+# 1. Install once: npm i -D decap-server
+# 2. Terminal A: npm run dev          (Astro)
+# 3. Terminal B: npx decap-server     (proxy at :8081)
+# 4. Open http://localhost:4321/admin/ — authentication is bypassed.
+local_backend: true
+
+# === MEDIA ===
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# === SITE SETTINGS ===
+site_url: https://www.sajconnect.com
+display_url: https://www.sajconnect.com
+logo_url: https://www.sajconnect.com/favicon.svg
+
+# === COLLECTIONS ===
+collections:
+  # ──────────────────────────────────────────────────────────────────
+  # JOBS
+  # ──────────────────────────────────────────────────────────────────
+  - name: "jobs"
+    label: "Stellenanzeigen"
+    label_singular: "Stelle"
+    description: "Offene Positionen auf der Karriere-Seite. Pro Sprache eine Datei (Slug + .de.md / .en.md / .pt-br.md)."
+    folder: "src/content/jobs"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}.{{locale}}"
+    summary: "{{title}} — {{locale | upper}} ({{location}})"
+    sortable_fields: ["publishedAt", "title", "locale"]
+    view_filters:
+      - label: "Nur Deutsch"
+        field: locale
+        pattern: "de"
+      - label: "Nur Englisch"
+        field: locale
+        pattern: "en"
+      - label: "Nur Portugiesisch"
+        field: locale
+        pattern: "pt-br"
+      - label: "Nur veröffentlicht"
+        field: draft
+        pattern: false
+    fields:
+      - { name: "title", label: "Titel der Stelle", widget: "string" }
+      - name: "locale"
+        label: "Sprache"
+        widget: "select"
+        options:
+          - { label: "Deutsch", value: "de" }
+          - { label: "English", value: "en" }
+          - { label: "Português (BR)", value: "pt-br" }
+      - { name: "location", label: "Standort", widget: "string", default: "Remote / Hybrid", hint: "z. B. 'Remote / Hybrid' oder 'Offenhausen, DE'" }
+      - name: "employmentType"
+        label: "Anstellungsart"
+        widget: "select"
+        options:
+          - { label: "Vollzeit", value: "full-time" }
+          - { label: "Teilzeit", value: "part-time" }
+          - { label: "Werkvertrag", value: "contract" }
+          - { label: "Praktikum", value: "internship" }
+        default: "full-time"
+      - { name: "department", label: "Abteilung", widget: "string", required: false, hint: "z. B. Engineering, Consulting, Operations" }
+      - { name: "summary", label: "Kurzbeschreibung", widget: "text", hint: "1–2 Sätze, erscheint in der Jobliste und als Lead-Text" }
+      - { name: "publishedAt", label: "Veröffentlicht am", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+      - { name: "closesAt", label: "Bewerbungsfrist", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false, picker_utc: false }
+      - { name: "draft", label: "Entwurf (nicht veröffentlicht)", widget: "boolean", default: false }
+      - { name: "body", label: "Stellenbeschreibung", widget: "markdown", hint: "Volltext der Stelle. Überschriften (##), Listen, Fett-Text werden unterstützt." }
+
+  # ──────────────────────────────────────────────────────────────────
+  # BLOG
+  # ──────────────────────────────────────────────────────────────────
+  - name: "blog"
+    label: "Blog & Insights"
+    label_singular: "Artikel"
+    description: "Blog-Artikel. Pro Sprache eine Datei (Slug + .de.md / .en.md / .pt-br.md)."
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}.{{locale}}"
+    summary: "{{title}} — {{locale | upper}}"
+    sortable_fields: ["publishedAt", "title"]
+    view_filters:
+      - label: "Nur Deutsch"
+        field: locale
+        pattern: "de"
+      - label: "Nur Englisch"
+        field: locale
+        pattern: "en"
+      - label: "Nur Portugiesisch"
+        field: locale
+        pattern: "pt-br"
+      - label: "Nur veröffentlicht"
+        field: draft
+        pattern: false
+    fields:
+      - { name: "title", label: "Titel", widget: "string" }
+      - name: "locale"
+        label: "Sprache"
+        widget: "select"
+        options:
+          - { label: "Deutsch", value: "de" }
+          - { label: "English", value: "en" }
+          - { label: "Português (BR)", value: "pt-br" }
+      - { name: "description", label: "Kurzbeschreibung / Lead", widget: "text", hint: "1–2 Sätze für die Listenansicht und SEO." }
+      - { name: "author", label: "Autor:in", widget: "string", default: "SAJ Connect Team" }
+      - { name: "publishedAt", label: "Veröffentlicht am", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        required: false
+        default: []
+        hint: "Stichworte wie 'engineering', 'news', '5g' — kleinbuchstabig, ohne Leerzeichen"
+      - { name: "cover", label: "Titelbild (optional)", widget: "image", required: false, allow_multiple: false }
+      - { name: "draft", label: "Entwurf (nicht veröffentlicht)", widget: "boolean", default: false }
+      - { name: "body", label: "Inhalt", widget: "markdown" }
+
+  # ──────────────────────────────────────────────────────────────────
+  # SEITEN-TEXTE (i18n)
+  # ──────────────────────────────────────────────────────────────────
+  - name: "i18n"
+    label: "Seiten-Texte"
+    label_singular: "Sprache"
+    description: "Alle übersetzten Texte der Webseite (Hero, Sektions-Headlines, Buttons, Fußzeile). Bitte nur Werte ändern, keine Schlüssel!"
+    files:
+      - name: "de"
+        label: "Deutsch"
+        file: "src/i18n/de.json"
+        format: "json"
+        fields:
+          - name: "site"
+            label: "Site"
+            widget: "object"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "tagline", label: "Tagline", widget: "string" }
+              - { name: "description", label: "Meta-Beschreibung", widget: "text" }
+          - name: "home"
+            label: "Startseite"
+            widget: "object"
+            fields:
+              - name: "hero"
+                label: "Hero"
+                widget: "object"
+                fields:
+                  - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-Headline", widget: "text" }
+                  - { name: "ctaPrimary", label: "Primary-CTA", widget: "string" }
+                  - { name: "ctaSecondary", label: "Secondary-CTA", widget: "string" }
+              - name: "cta"
+                label: "Call to Action"
+                widget: "object"
+                fields:
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-Text", widget: "text" }
+                  - { name: "button", label: "Button-Text", widget: "string" }
+
+      - name: "en"
+        label: "English"
+        file: "src/i18n/en.json"
+        format: "json"
+        fields:
+          - name: "site"
+            label: "Site"
+            widget: "object"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "tagline", label: "Tagline", widget: "string" }
+              - { name: "description", label: "Meta description", widget: "text" }
+          - name: "home"
+            label: "Home"
+            widget: "object"
+            fields:
+              - name: "hero"
+                label: "Hero"
+                widget: "object"
+                fields:
+                  - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-headline", widget: "text" }
+                  - { name: "ctaPrimary", label: "Primary CTA", widget: "string" }
+                  - { name: "ctaSecondary", label: "Secondary CTA", widget: "string" }
+              - name: "cta"
+                label: "Call to Action"
+                widget: "object"
+                fields:
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-text", widget: "text" }
+                  - { name: "button", label: "Button label", widget: "string" }
+
+      - name: "pt-br"
+        label: "Português (BR)"
+        file: "src/i18n/pt-br.json"
+        format: "json"
+        fields:
+          - name: "site"
+            label: "Site"
+            widget: "object"
+            fields:
+              - { name: "name", label: "Nome", widget: "string" }
+              - { name: "tagline", label: "Tagline", widget: "string" }
+              - { name: "description", label: "Meta-descrição", widget: "text" }
+          - name: "home"
+            label: "Início"
+            widget: "object"
+            fields:
+              - name: "hero"
+                label: "Hero"
+                widget: "object"
+                fields:
+                  - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-headline", widget: "text" }
+                  - { name: "ctaPrimary", label: "CTA principal", widget: "string" }
+                  - { name: "ctaSecondary", label: "CTA secundário", widget: "string" }
+              - name: "cta"
+                label: "Call to Action"
+                widget: "object"
+                fields:
+                  - { name: "headline", label: "Headline", widget: "string" }
+                  - { name: "sub", label: "Sub-texto", widget: "text" }
+                  - { name: "button", label: "Texto do botão", widget: "string" }

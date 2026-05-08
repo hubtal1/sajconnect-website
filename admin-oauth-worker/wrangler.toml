@@ -1,0 +1,10 @@
+name = "decap-proxy"
+main = "worker.js"
+compatibility_date = "2026-04-01"
+
+# Add custom domain or worker.dev subdomain after deploy.
+# Then update public/admin/config.yml `backend.base_url` to match.
+
+# Set secrets via:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET

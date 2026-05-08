@@ -1,0 +1,45 @@
+{
+  "name": "sajconnect-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SAJ Connect public marketing website (www.sajconnect.com)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "cms": "decap-server",
+    "dev:cms": "concurrently -n astro,cms -c cyan,magenta \"npm run dev\" \"npm run cms\"",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/react": "^4.0.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/geist": "^5.1.0",
+    "@fontsource-variable/geist-mono": "^5.1.0",
+    "@fontsource-variable/inter": "^5.1.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "astro": "^5.1.0",
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^9.1.0",
+    "decap-server": "^3.1.0",
+    "prettier": "^3.4.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.9"
+  }
+}

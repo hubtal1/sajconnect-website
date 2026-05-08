@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ObfuscatedEmail from "../../components/ObfuscatedEmail.astro";
+import { LOCALES, t, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+---
+
+<Layout title={tt("footer.imprint")} description={tt("footer.imprint")}>
+  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
+    <div class="container-prose pt-10 md:pt-12">
+      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+        <span class="flex items-center gap-2">
+          <span class="glow-dot"></span>
+          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.legal")}</span>
+        </span>
+        <span class="hidden md:block">§ 5 TMG</span>
+        <span class="text-[var(--color-cobalt-light)]">SAJ Connect GmbH</span>
+      </div>
+    </div>
+
+    <div class="container-prose pt-20 pb-12 md:pt-24 md:pb-16">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("ui.legal")}</p>
+          <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">Imprint</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{tt("footer.imprint")}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose pb-24 md:pb-32">
+      <article class="editorial-prose pt-8">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          <strong>SAJ Connect GmbH</strong><br />
+          Egensbach 310<br />
+          91238 Offenhausen<br />
+          Deutschland
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: +49 (0) 160 97533957<br />
+          E-Mail: <ObfuscatedEmail user="info" domain="sajconnect.com" /><br />
+          Web: <a href="https://www.sajconnect.com">www.sajconnect.com</a>
+        </p>
+
+        <h2>Handelsregister</h2>
+        <p>
+          Registergericht: Amtsgericht Nürnberg<br />
+          Registernummer: HRB 45795<br />
+          Gegründet: Dezember 2025
+        </p>
+
+        <h2>Umsatzsteuer-ID</h2>
+        <p>
+          Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+          DE460439086
+        </p>
+
+        <h2>Vertretungsberechtigt</h2>
+        <p>Geschäftsführer: Julian von Wild</p>
+
+        <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <p>Julian von Wild<br />Anschrift wie oben.</p>
+
+        <h2>EU-Streitschlichtung</h2>
+        <p>
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+          <a href="https://ec.europa.eu/consumers/odr/" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>
+          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+          nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+          Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+          Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+          Tätigkeit hinweisen.
+        </p>
+
+        <h2>Haftung für Links</h2>
+        <p>
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
+          Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+          Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
+          der Seiten verantwortlich.
+        </p>
+
+        <h2>Urheberrecht</h2>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+          dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+          der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
+          Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </article>
+    </div>
+  </section>
+</Layout>

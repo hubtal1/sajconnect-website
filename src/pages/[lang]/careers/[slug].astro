@@ -1,0 +1,113 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import ObfuscatedEmail from "../../../components/ObfuscatedEmail.astro";
+import { LOCALES, t, localizedPath, type Locale } from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+  const all = await getCollection("jobs", ({ data }) => !data.draft);
+  return all.map((entry) => {
+    const lang = entry.data.locale as Locale;
+    const slug = entry.slug.replace(/\.(de|en|pt-br)$/, "");
+    return { params: { lang, slug }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+const { Content } = await entry.render();
+
+const applySubject = `Bewerbung: ${entry.data.title}`;
+---
+
+<Layout title={`${entry.data.title} — ${tt("careers.title")}`} description={entry.data.summary}>
+  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
+    <div class="container-prose pt-10 md:pt-12">
+      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+        <span class="flex items-center gap-2">
+          <span class="glow-dot"></span>
+          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.position")}</span>
+        </span>
+        <span class="hidden md:block">{entry.data.department}</span>
+        <span class="text-[var(--color-cobalt-light)]">SAJ Connect</span>
+      </div>
+    </div>
+
+    <div class="container-prose pt-16 pb-16 md:pt-20 md:pb-20">
+      <a
+        href={localizedPath(lang, "/careers")}
+        class="mono-label text-[var(--color-text-on-carbon-muted)] transition-colors hover:text-[var(--color-cobalt-light)]"
+      >
+        ← {tt("careers.openPositions")}
+      </a>
+
+      <div class="mt-10 grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("ui.position")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{entry.data.title}</h1>
+          {entry.data.summary && (
+            <p class="lede mt-8 max-w-[58ch]">{entry.data.summary}</p>
+          )}
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
+        <div class="col-span-6 md:col-span-3">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Location</p>
+          <p class="mt-2">{entry.data.location}</p>
+        </div>
+        <div class="col-span-6 md:col-span-3">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Type</p>
+          <p class="mt-2">{entry.data.employmentType}</p>
+        </div>
+        {entry.data.department && (
+          <div class="col-span-6 md:col-span-3">
+            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Department</p>
+            <p class="mt-2">{entry.data.department}</p>
+          </div>
+        )}
+        <div class="col-span-6 md:col-span-3">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Posted</p>
+          <p class="mt-2">
+            {new Date(entry.data.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose pb-24 md:pb-32">
+      <div class="grid grid-cols-12 gap-10 pt-12">
+        <article class="col-span-12 md:col-span-8 editorial-prose">
+          <Content />
+        </article>
+        <aside class="col-span-12 md:col-span-4">
+          <div class="md:sticky md:top-24 border border-[var(--color-hairline-dark)] bg-[var(--color-carbon-soft)] p-8">
+            <p class="mono-label text-[var(--color-saj-green-bright)]">Apply</p>
+            <h3 class="mt-4 font-display text-xl font-medium text-[var(--color-bone)]">
+              {tt("careers.applyNow")}
+            </h3>
+            <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+              {entry.data.summary}
+            </p>
+            <ObfuscatedEmail
+              user="karriere"
+              domain="sajconnect.com"
+              subject={applySubject}
+              label={tt("careers.applyNow") + " →"}
+              class="btn btn-primary mt-6 w-full"
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>

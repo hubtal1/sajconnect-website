@@ -1,0 +1,30 @@
+---
+interface Props {
+  /** Mailbox part, e.g. "info" */
+  user: string;
+  /** Domain part, e.g. "sajconnect.com" */
+  domain: string;
+  /** Optional subject for mailto */
+  subject?: string;
+  /** Optional inline class */
+  class?: string;
+  /** Override visible label (otherwise the address is shown when JS runs) */
+  label?: string;
+}
+
+const { user, domain, subject, label, class: className } = Astro.props;
+
+// Base64-encode parts so the raw email never appears in the served HTML.
+const u64 = Buffer.from(user).toString("base64");
+const d64 = Buffer.from(domain).toString("base64");
+const s64 = subject ? Buffer.from(subject).toString("base64") : "";
+---
+
+<span
+  class:list={["oe", className]}
+  data-u={u64}
+  data-d={d64}
+  data-s={s64}
+  data-label={label ?? ""}>
+  {user}<span> [at] </span>{domain.replace(/\./g, " [dot] ")}
+</span>

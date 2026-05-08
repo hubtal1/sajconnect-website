@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { LOCALES, t, getDict, localizedPath, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+interface Domain {
+  title: string;
+  tag: string;
+  description: string;
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+const domains = getDict<Domain[]>(lang, "services.domains") ?? [];
+
+const subAreas = [
+  { title: tt("consultancy.title"), lead: tt("consultancy.lead"), href: localizedPath(lang, "/consultancy"), tag: "01 — Private 5G" },
+  { title: tt("testing.title"), lead: tt("testing.lead"), href: localizedPath(lang, "/testing"), tag: "02 — Testing" },
+  { title: tt("vehicle.title"), lead: tt("vehicle.lead"), href: localizedPath(lang, "/connected-car"), tag: "03 — Connected Car" },
+];
+---
+
+<Layout title={tt("services.title")} description={tt("services.lead")}>
+  <section class="surface-carbon mesh-cobalt noise relative overflow-hidden">
+    <div class="container-prose pt-10 md:pt-12">
+      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+        <span class="flex items-center gap-2">
+          <span class="glow-dot"></span>
+          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.capabilities")}</span>
+        </span>
+        <span class="hidden md:block">8 Core Technology Domains</span>
+        <span class="text-[var(--color-cobalt-light)]">03 / 04</span>
+      </div>
+    </div>
+
+    <div class="container-prose pt-24 pb-16 md:pt-32 md:pb-20">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("ui.chapter")} 03</p>
+          <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">{tt("ui.capabilities")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{tt("services.title")}</h1>
+          <p class="lede mt-10 max-w-[58ch]">
+            {tt("services.lead")}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-prose pb-24 reveal">
+      <div class="grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2">
+        {domains.map((d, idx) => (
+          <article class="group relative bg-[var(--color-carbon)] p-8 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-12">
+            <span class="absolute left-0 top-0 h-px w-0 bg-[var(--color-cobalt-light)] transition-all duration-700 group-hover:w-full"
+              style="box-shadow: 0 0 12px var(--color-cobalt-glow);"></span>
+
+            <div class="flex items-baseline justify-between">
+              <span class="mono-label-sm text-[var(--color-cobalt-light)]">{d.tag}</span>
+              <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+                {String(idx + 1).padStart(2, "0")} / {String(domains.length).padStart(2, "0")}
+              </span>
+            </div>
+            <h2 class="display-md mt-12 text-[var(--color-bone)]">
+              {d.title}
+            </h2>
+            <p class="mt-5 max-w-[55ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+              {d.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon" style="background-color: var(--color-carbon-soft);">
+    <div class="container-prose section">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">{tt("ui.deepDives")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <h2 class="display-lg text-[var(--color-bone)]">
+            {tt("ui.deepDivesHeadline")}
+          </h2>
+        </div>
+      </div>
+
+      <div class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-3 reveal">
+        {subAreas.map((area, idx) => {
+          const isCobalt = idx % 2 === 0;
+          const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
+          return (
+            <a
+              href={area.href}
+              class="group flex h-full flex-col p-8 transition-all duration-500 hover:bg-[var(--color-carbon-elev)] md:p-10"
+              style="background-color: var(--color-carbon-soft);"
+            >
+              <p class="mono-label" style={`color: var(${accentVar});`}>{area.tag}</p>
+              <h3 class="heading-card mt-12 text-[var(--color-bone)]">
+                {area.title}
+              </h3>
+              <p class="mt-5 flex-1 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+                {area.lead}
+              </p>
+              <span class="arrow-link mt-10" style={`color: var(${accentVar});`}>
+                {tt("ui.readMore")} →
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</Layout>

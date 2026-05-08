@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import { LOCALES, t, localizedPath, type Locale } from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+  const all = await getCollection("blog", ({ data }) => !data.draft);
+  return all.map((entry) => {
+    const lang = entry.data.locale as Locale;
+    const slug = entry.slug.replace(/\.(de|en|pt-br)$/, "");
+    return { params: { lang, slug }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+const { Content } = await entry.render();
+
+const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US";
+const publishedFormatted = new Date(entry.data.publishedAt).toLocaleDateString(dateLocale, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<Layout title={`${entry.data.title} — ${tt("blog.title")}`} description={entry.data.description}>
+  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
+    <div class="container-prose pt-10 md:pt-12">
+      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+        <span class="flex items-center gap-2">
+          <span class="glow-dot"></span>
+          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.article")}</span>
+        </span>
+        <span class="hidden md:block">{publishedFormatted}</span>
+        <span class="text-[var(--color-cobalt-light)]">{tt("blog.title")}</span>
+      </div>
+    </div>
+
+    <div class="container-prose pt-16 pb-16 md:pt-20 md:pb-20">
+      <a
+        href={localizedPath(lang, "/blog")}
+        class="mono-label text-[var(--color-text-on-carbon-muted)] transition-colors hover:text-[var(--color-cobalt-light)]"
+      >
+        ← {tt("blog.back")}
+      </a>
+
+      <div class="mt-10 grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("ui.article")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{entry.data.title}</h1>
+          {entry.data.description && (
+            <p class="lede mt-8 max-w-[58ch]">{entry.data.description}</p>
+          )}
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
+        <div class="col-span-6 md:col-span-3">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Published</p>
+          <p class="mt-2">{publishedFormatted}</p>
+        </div>
+        <div class="col-span-6 md:col-span-3">
+          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("blog.by")}</p>
+          <p class="mt-2">{entry.data.author}</p>
+        </div>
+        {entry.data.tags.length > 0 && (
+          <div class="col-span-12 md:col-span-6">
+            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">Tags</p>
+            <div class="mt-2 flex flex-wrap gap-3">
+              {entry.data.tags.map((tag) => (
+                <span class="mono-spec text-[var(--color-text-on-carbon-muted)]"># {tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <article class="container-prose pb-24 pt-12 editorial-prose">
+      <Content />
+    </article>
+  </section>
+</Layout>

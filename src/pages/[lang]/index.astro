@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import TechMarquee from "../../components/TechMarquee.astro";
+import Intersection from "../../components/Intersection.astro";
+import MetricBlock from "../../components/MetricBlock.astro";
+import ServiceGrid from "../../components/ServiceGrid.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { LOCALES, t, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+---
+
+<Layout title={`${tt("site.name")} — ${tt("site.tagline")}`} description={tt("site.description")}>
+  <Hero />
+  <TechMarquee />
+  <Intersection />
+  <MetricBlock />
+  <ServiceGrid />
+  <CtaBanner />
+</Layout>

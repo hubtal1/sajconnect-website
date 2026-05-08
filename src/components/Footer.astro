@@ -1,0 +1,62 @@
+---
+import Logo from "./Logo.astro";
+import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="surface-carbon border-t border-[var(--color-hairline-dark)]">
+  <div class="container-prose pt-20 pb-10">
+    <div class="grid grid-cols-12 gap-8">
+      <div class="col-span-12 md:col-span-5">
+        <Logo width={240} withTagline={true} />
+        <p class="mt-6 max-w-md text-base text-[var(--color-text-on-carbon-muted)]">
+          {tt("footer.tagline")}
+        </p>
+        <div class="mt-8 mono-spec text-[var(--color-text-on-carbon-faint)]">
+          <p>Egensbach 310 · 91238 Offenhausen · DE</p>
+          <p class="mt-1">+49 160 97533957</p>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-2">
+        <p class="mono-label text-[var(--color-saj-green-bright)]">{tt("ui.capabilities")}</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href={localizedPath(locale, "/services")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.services")}</a></li>
+          <li><a href={localizedPath(locale, "/consultancy")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.consultancy")}</a></li>
+          <li><a href={localizedPath(locale, "/testing")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.testing")}</a></li>
+          <li><a href={localizedPath(locale, "/connected-car")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.vehicle")}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-6 md:col-span-2">
+        <p class="mono-label text-[var(--color-cobalt-light)]">{tt("ui.company")}</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href={localizedPath(locale, "/about")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.about")}</a></li>
+          <li><a href={localizedPath(locale, "/careers")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.careers")}</a></li>
+          <li><a href={localizedPath(locale, "/blog")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.blog")}</a></li>
+          <li><a href={localizedPath(locale, "/contact")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.contact")}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-12 md:col-span-3">
+        <p class="mono-label text-[var(--color-amber)]">{tt("ui.legal")}</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href={localizedPath(locale, "/imprint")} class="hover:text-[var(--color-cobalt-light)]">{tt("footer.imprint")}</a></li>
+          <li><a href={localizedPath(locale, "/privacy")} class="hover:text-[var(--color-cobalt-light)]">{tt("footer.privacy")}</a></li>
+        </ul>
+        <p class="mt-6 mono-spec text-[var(--color-text-on-carbon-faint)]">
+          HRB 45795 · AG Nürnberg<br />
+          USt-IdNr. DE460439086
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 hairline-dark pt-6 flex flex-col-reverse items-start justify-between gap-4 mono-spec text-[var(--color-text-on-carbon-faint)] md:flex-row md:items-center">
+      <span>&copy; {year} SAJ Connect GmbH. {tt("footer.rights")}</span>
+      <span>www.sajconnect.com</span>
+    </div>
+  </div>
+</footer>

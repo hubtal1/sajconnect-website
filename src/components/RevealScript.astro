@@ -1,0 +1,85 @@
+---
+// Inline scroll-reveal observer — sets `.visible` on `.reveal` elements when they enter viewport.
+---
+
+<script is:inline>
+  function hydrateEmails() {
+    document.querySelectorAll(".oe").forEach((el) => {
+      if (el.dataset.hydrated) return;
+      try {
+        const u = atob(el.dataset.u || "");
+        const d = atob(el.dataset.d || "");
+        const s = el.dataset.s ? atob(el.dataset.s) : "";
+        if (!u || !d) return;
+        const email = u + "@" + d;
+        const a = document.createElement("a");
+        a.href = "mailto:" + email + (s ? "?subject=" + encodeURIComponent(s) : "");
+        a.textContent = el.dataset.label || email;
+        a.className = el.className.replace(/\boe\b/, "").trim();
+        a.setAttribute("rel", "nofollow");
+        el.replaceWith(a);
+      } catch (e) {
+        /* leave fallback in place */
+      }
+    });
+  }
+
+  function setupReveals() {
+    if (!("IntersectionObserver" in window)) {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+      return;
+    }
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    );
+    document.querySelectorAll(".reveal:not(.visible)").forEach((el) => io.observe(el));
+  }
+
+  function setupCardGlow() {
+    document.querySelectorAll(".kard").forEach((card) => {
+      if (card.dataset.glow) return;
+      card.dataset.glow = "1";
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
+  function init() {
+    hydrateEmails();
+    setupReveals();
+    setupCardGlow();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+  // Also run after Astro view-transitions
+  document.addEventListener("astro:page-load", init);
+</script>
+
+<style>
+  .oe .oe-fallback {
+    /* Visible until JS replaces the element. Hidden from screen readers via
+       parent <noscript> + this fallback being aria-hidden in the markup. */
+    user-select: none;
+  }
+</style>

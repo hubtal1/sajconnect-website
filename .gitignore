@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.local
+.env.production
+.DS_Store
+.vscode/
+*.log
+.cache/
+
+# Cloudflare Worker
+admin-oauth-worker/.wrangler/
+admin-oauth-worker/node_modules/
+
+# CMS uploads — these belong in repo, but ignore git noise
+.netlify/

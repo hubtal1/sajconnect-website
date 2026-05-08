@@ -1,0 +1,57 @@
+---
+// Decap CMS entry — served at /admin/.
+// We render a minimal HTML page (no Layout) because Decap mounts its own UI.
+export const prerender = true;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAJ Connect · Content Editor</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: "Geist Variable", "Inter", system-ui, sans-serif;
+        background: #07080b;
+        color: #f2efe9;
+      }
+      body::before {
+        content: "SAJ Connect · Content Editor";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 24px;
+        background: #07080b;
+        color: #f2efe9;
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 500;
+        z-index: 10000;
+        border-bottom: 1px solid #1f242c;
+        font-family: "Geist Mono Variable", ui-monospace, monospace;
+        pointer-events: none;
+      }
+      .nc-rootApp-Main,
+      [class*="AppMainContainer"] {
+        margin-top: 36px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Decap CMS — Git-based content editor.
+         For local development run `npx decap-server` (proxy on :8081),
+         then visit http://localhost:4321/admin/ — auth is bypassed. -->
+    <script src="https://unpkg.com/decap-cms@^3.6.4/dist/decap-cms.js" is:inline></script>
+  </body>
+</html>
