@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sajconnect-website",
+  "compatibility_date": "2026-05-08",
+  // Statische Site: reine Asset-Auslieferung, kein Worker-Skript nötig.
+  // 404-Handling über das von Astro gebaute dist/404.html.
+  "assets": {
+    "directory": "dist",
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
