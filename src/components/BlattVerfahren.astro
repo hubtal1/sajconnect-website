@@ -25,15 +25,10 @@ const steps = getDict<Step[]>(locale, "home.approach.steps") ?? [];
         return (
           <div class="relative">
             <span
-              class:list={[
-                "relative z-[1] block h-3.5 w-3.5 rounded-full border-2",
-                isTerminal
-                  ? "border-[var(--color-saj-green-bright)] bg-[var(--color-saj-green-bright)]"
-                  : "border-[var(--color-cobalt-light)] bg-[var(--color-carbon)]",
-              ]}
+              class="relative z-[1] block h-3.5 w-3.5 rounded-full border-2 border-[var(--color-saj-green-bright)] bg-[var(--color-saj-green-bright)]"
               aria-hidden="true"
             ></span>
-            <p class:list={["mt-4 text-[0.8125rem] font-bold", isTerminal ? "text-[var(--color-saj-green-bright)]" : "text-[var(--color-cobalt-light)]"]}>
+            <p class="mt-4 text-[0.8125rem] font-bold text-[var(--color-saj-green-bright)]">
               {tt("dossier.sections.phase")} {String(idx + 1).padStart(2, "0")}
             </p>
             <h3 class="heading-card mt-1.5 text-[var(--color-text-on-carbon)]">{step.title}</h3>

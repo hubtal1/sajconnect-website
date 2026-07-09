@@ -66,22 +66,25 @@ const siteLd = websiteJsonLd(locale);
     <meta name="theme-color" content="#ffffff" />
 
     <script is:inline>
-      // Apply theme before paint to avoid flash. Default = light (corporate).
-      // Re-applied after every ClientRouter navigation — the view-transition
-      // swap replaces <html> and would otherwise drop the data-theme attribute.
+      // Apply theme before paint to avoid flash. Ohne gespeicherte Wahl folgt
+      // die Seite der Systemeinstellung (prefers-color-scheme) — auch live,
+      // wenn das Betriebssystem umschaltet. Re-applied after every
+      // ClientRouter navigation (view-transition swap replaces <html>).
       (() => {
+        const media = window.matchMedia("(prefers-color-scheme: dark)");
         const applyTheme = () => {
-          let theme = "light";
+          let theme = null;
           try {
             const stored = localStorage.getItem("saj_theme");
             if (stored === "light" || stored === "dark") theme = stored;
           } catch (e) {
-            /* storage unavailable — keep default */
+            /* storage unavailable */
           }
-          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("data-theme", theme || (media.matches ? "dark" : "light"));
         };
         applyTheme();
         document.addEventListener("astro:after-swap", applyTheme);
+        media.addEventListener("change", applyTheme);
       })();
     </script>
 

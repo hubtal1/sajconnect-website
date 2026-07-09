@@ -7,7 +7,7 @@
   "nav": {
     "home": "Start",
     "about": "Über uns",
-    "services": "Leistungen",
+    "services": "Portfolio",
     "consultancy": "Private 5G",
     "testing": "Testing",
     "vehicle": "Connected Car",
@@ -82,15 +82,14 @@
       "masskette": "3 Phasen — vom Zielbild bis in den Betrieb",
       "sub": "SAJ Connect ist die Ingenieurberatung an der Schnittstelle von Wireless und Mobilität — Private 5G, eSIM und Connected Car vom Zielbild bis in den Betrieb. Jede Phase liefert ein definiertes, messbares Ergebnis.",
       "ctaPrimary": "Erstgespräch anfragen",
-      "ctaSecondary": "Anhang A — Leistungsverzeichnis, Blatt 02",
+      "ctaSecondary": "Anhang A — Portfolio, Blatt 02",
       "spec": {
         "parameter": "Parameter",
         "wert": "Wert",
         "remarks": "Bemerkungen: —",
         "rows": [
-          { "k": "Gegründet", "v": "Dezember 2025" },
           { "k": "Standort", "v": "Nürnberg, Deutschland" },
-          { "k": "Leistungsfelder", "v": "8" },
+          { "k": "Portfolio", "v": "8 Bereiche" },
           { "k": "Sprachen", "v": "DE · EN · PT" },
           { "k": "Arbeitsgrundlage", "v": "3GPP · GSMA" }
         ]
@@ -98,7 +97,7 @@
     },
     "sections": {
       "geltungsbereich": "Geltungsbereich",
-      "leistungsverzeichnis": "Leistungsverzeichnis",
+      "leistungsverzeichnis": "Portfolio",
       "pruefverfahren": "Prüfverfahren",
       "normative": "Normative Verweise",
       "vertragsmodelle": "Vertragsmodelle",
@@ -195,7 +194,7 @@
   },
   "about": {
     "title": "Über SAJ Connect",
-    "lead": "SAJ Connect GmbH ist eine spezialisierte Technologieberatung an der Schnittstelle von Wireless, Mobilität und IoT. Gegründet im Dezember 2025, vereinen wir tiefes technisches Wissen aus Telco, Automotive und IoT mit einem praktischen, partnerschaftlichen Ansatz.",
+    "lead": "SAJ Connect GmbH ist eine spezialisierte Technologieberatung an der Schnittstelle von Wireless, Mobilität und IoT. Wir vereinen tiefes technisches Wissen aus Telco, Automotive und IoT mit einem praktischen, partnerschaftlichen Ansatz.",
     "leadSecond": "Unser globales Team aus Ingenieurinnen, Ingenieuren und Beraterinnen arbeitet direkt mit Kundinnen und Kunden zusammen — und übersetzt komplexe Connectivity-Aufgaben in klare, umsetzbare Strategien und messbare Ergebnisse.",
     "mission": {
       "title": "Unsere Mission",
@@ -234,7 +233,7 @@
     "noPostsLabel": "Noch keine Artikel"
   },
   "contact": {
-    "title": "Lassen Sie uns sprechen",
+    "title": "Kontakt",
     "lead": "Sprechen Sie mit uns, wie SAJ Connect Ihr nächstes Projekt unterstützen kann — vom ersten Scoping bis zum vollständigen Rollout und darüber hinaus.",
     "form": {
       "name": "Name",
@@ -274,7 +273,7 @@
   },
   "ui": {
     "chapter": "Kapitel",
-    "capabilities": "Leistungen",
+    "capabilities": "Portfolio",
     "deepDives": "Schwerpunkte",
     "deepDivesHeadline": "Drei Kernpraktiken.",
     "outlook": "Ausblick",
