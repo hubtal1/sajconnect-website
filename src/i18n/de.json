@@ -273,7 +273,7 @@
   },
   "ui": {
     "chapter": "Kapitel",
-    "capabilities": "Portfolio",
+    "capabilities": "Leistungen",
     "deepDives": "Schwerpunkte",
     "deepDivesHeadline": "Drei Kernpraktiken.",
     "outlook": "Ausblick",
@@ -286,7 +286,6 @@
     "company": "Unternehmen",
     "legal": "Rechtliches",
     "readMore": "Mehr erfahren",
-    "overview": "Übersicht",
     "readArticle": "Artikel lesen",
     "back": "Zurück",
     "live": "Live",

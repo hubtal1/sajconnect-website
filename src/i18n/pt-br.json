@@ -273,7 +273,7 @@
   },
   "ui": {
     "chapter": "Capítulo",
-    "capabilities": "Portfólio",
+    "capabilities": "Capacidades",
     "deepDives": "Áreas de foco",
     "deepDivesHeadline": "Três práticas centrais.",
     "outlook": "Perspectivas",
@@ -286,7 +286,6 @@
     "company": "Empresa",
     "legal": "Jurídico",
     "readMore": "Saiba mais",
-    "overview": "Visão geral",
     "readArticle": "Ler artigo",
     "back": "Voltar",
     "live": "Live",

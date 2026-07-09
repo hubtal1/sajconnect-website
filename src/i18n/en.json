@@ -273,7 +273,7 @@
   },
   "ui": {
     "chapter": "Chapter",
-    "capabilities": "Portfolio",
+    "capabilities": "Capabilities",
     "deepDives": "Deep Dives",
     "deepDivesHeadline": "Three core practices.",
     "outlook": "Outlook",
@@ -286,7 +286,6 @@
     "company": "Company",
     "legal": "Legal",
     "readMore": "Read more",
-    "overview": "Overview",
     "readArticle": "Read article",
     "back": "Back",
     "live": "Live",
