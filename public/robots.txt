@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /verwaltung/
 Disallow: /uploads/
 
 Sitemap: https://www.sajconnect.com/sitemap-index.xml

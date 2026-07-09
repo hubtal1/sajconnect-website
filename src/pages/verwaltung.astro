@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import AdminApp from "../components/admin/AdminApp.tsx";
+---
+
+<!doctype html>
+<html lang="de" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Verwaltung — SAJ Connect</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen bg-[var(--color-carbon)] text-[var(--color-text-on-carbon)]">
+    <AdminApp client:only="react" />
+    <noscript>
+      <p style="padding: 2rem; font-family: sans-serif;">Die Verwaltung benötigt JavaScript.</p>
+    </noscript>
+  </body>
+</html>
