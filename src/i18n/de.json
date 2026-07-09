@@ -62,7 +62,7 @@
       "label": "Standards",
       "headline": "Wir arbeiten entlang etablierter Standards.",
       "note": "Normen und Frameworks, an denen wir Architektur, Sicherheit und Prozesse ausrichten.",
-      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "ISO/SAE 21434", "Automotive SPICE", "ISO 27001", "DSGVO"]
+      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "DSGVO"]
     }
   },
   "dossier": {
@@ -76,9 +76,9 @@
       "gueltigAb": "Gültig ab"
     },
     "hero": {
-      "headline": "Konnektivität: spezifiziert, gebaut, nachgemessen.",
+      "headline": "Konnektivität: spezifiziert, gebaut, getestet.",
       "kicker": "Konnektivität —",
-      "verbs": ["spezifiziert,", "gebaut,", "nachgemessen."],
+      "verbs": ["spezifiziert,", "gebaut,", "getestet."],
       "masskette": "3 Phasen — vom Zielbild bis in den Betrieb",
       "sub": "SAJ Connect ist die Ingenieurberatung an der Schnittstelle von Wireless und Mobilität — Private 5G, eSIM und Connected Car vom Zielbild bis in den Betrieb. Jede Phase liefert ein definiertes, messbares Ergebnis.",
       "ctaPrimary": "Erstgespräch anfragen",
@@ -88,11 +88,11 @@
         "wert": "Wert",
         "remarks": "Bemerkungen: —",
         "rows": [
-          { "k": "Frequenzen", "v": "n77/n78 (3,3–3,8 GHz)" },
-          { "k": "Standards", "v": "3GPP Rel-17+, GSMA SGP.22" },
-          { "k": "Domänen", "v": "08" },
-          { "k": "Methodik", "v": "3 Phasen" },
-          { "k": "Standort", "v": "49°27′ N · 11°05′ O" }
+          { "k": "Gegründet", "v": "Dezember 2025" },
+          { "k": "Standort", "v": "Nürnberg, Deutschland" },
+          { "k": "Leistungsfelder", "v": "8" },
+          { "k": "Sprachen", "v": "DE · EN · PT" },
+          { "k": "Arbeitsgrundlage", "v": "3GPP · GSMA" }
         ]
       }
     },

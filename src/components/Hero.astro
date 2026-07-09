@@ -19,13 +19,8 @@ const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
         <span class="mb-5 block font-sans text-[0.34em] font-normal italic leading-none tracking-normal text-[var(--color-text-on-carbon-muted)]">
           {tt("dossier.hero.kicker")}
         </span>
-        {verbs.map((verb, idx) => (
-          <span class="block">
-            <sup class:list={[
-              "mr-3 align-top font-mono text-[0.26em] font-medium",
-              idx === 2 ? "text-[var(--color-saj-green-bright)]" : "text-[var(--color-cobalt-light)]",
-            ]}>{String(idx + 1).padStart(2, "0")}</sup>{verb}
-          </span>
+        {verbs.map((verb) => (
+          <span class="block">{verb}</span>
         ))}
       </h1>
 

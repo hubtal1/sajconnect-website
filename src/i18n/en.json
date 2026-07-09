@@ -62,7 +62,7 @@
       "label": "Standards",
       "headline": "We work to established industry standards.",
       "note": "The norms and frameworks that guide our architecture, security and processes.",
-      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "ISO/SAE 21434", "Automotive SPICE", "ISO 27001", "GDPR"]
+      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "GDPR"]
     }
   },
   "dossier": {
@@ -76,9 +76,9 @@
       "gueltigAb": "Valid from"
     },
     "hero": {
-      "headline": "Connectivity: specified, built, measured.",
+      "headline": "Connectivity: specified, built, tested.",
       "kicker": "Connectivity —",
-      "verbs": ["specified,", "built,", "measured."],
+      "verbs": ["specified,", "built,", "tested."],
       "masskette": "3 phases — from target picture to live operations",
       "sub": "SAJ Connect is the engineering consultancy at the intersection of wireless and mobility — Private 5G, eSIM and Connected Car from target picture to live operations. Every phase delivers a defined, measurable result.",
       "ctaPrimary": "Request an intro call",
@@ -88,11 +88,11 @@
         "wert": "Value",
         "remarks": "Remarks: —",
         "rows": [
-          { "k": "Frequencies", "v": "n77/n78 (3.3–3.8 GHz)" },
-          { "k": "Standards", "v": "3GPP Rel-17+, GSMA SGP.22" },
-          { "k": "Domains", "v": "08" },
-          { "k": "Method", "v": "3 phases" },
-          { "k": "Location", "v": "49°27′ N · 11°05′ E" }
+          { "k": "Founded", "v": "December 2025" },
+          { "k": "Location", "v": "Nuremberg, Germany" },
+          { "k": "Service areas", "v": "8" },
+          { "k": "Languages", "v": "DE · EN · PT" },
+          { "k": "Working basis", "v": "3GPP · GSMA" }
         ]
       }
     },
