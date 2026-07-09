@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404 — SAJ Connect" description="Page not found" hideHeader={true}>
+  <section class="surface-carbon mesh-dual noise relative flex min-h-[80vh] items-center overflow-hidden">
+    <div class="container-prose py-24">
+      <p class="chapter-mark">Error · 404</p>
+      <h1 class="display-xl mt-8 text-[var(--color-bone)]">Page not found.</h1>
+      <p class="lede mt-8 max-w-[58ch]">
+        Diese Seite existiert nicht (mehr). / This page does not exist. /
+        Esta página não existe.
+      </p>
+      <div class="mt-12 flex flex-wrap gap-4">
+        <a href="/de/" class="btn btn-primary">Zur Startseite</a>
+        <a href="/en/" class="btn btn-ghost">Home (English)</a>
+        <a href="/pt-br/" class="btn btn-ghost">Início (Português)</a>
+      </div>
+    </div>
+  </section>
+</Layout>
