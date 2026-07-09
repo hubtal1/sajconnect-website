@@ -2,7 +2,7 @@
   "site": {
     "name": "SAJ Connect",
     "tagline": "Connecting the Future of Mobility",
-    "description": "SAJ Connect — specialist consultancy at the intersection of wireless communication and automotive innovation. From concept to live operations."
+    "description": "SAJ Connect — specialist consultancy at the intersection of wireless communication and mobility. From concept to live operations."
   },
   "nav": {
     "home": "Home",
@@ -17,7 +17,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Wireless meets Automotive",
+      "eyebrow": "Wireless meets Mobility",
       "headline": "Connecting the Future of Mobility",
       "sub": "We combine deep technical expertise across Telco and Automotive — delivering end-to-end engineering, testing and operations for Private 5G, eSIM, IoT and Connected Car.",
       "ctaPrimary": "Get in touch",
@@ -30,7 +30,7 @@
       { "label": "360°", "text": "Complete coverage of wireless, IoT and automotive connectivity." }
     ],
     "intersection": {
-      "headline": "Where wireless meets automotive",
+      "headline": "Where wireless meets mobility",
       "sub": "Two of the most demanding domains in modern technology, brought together by a team that has shipped both."
     },
     "differentiators": {
@@ -80,7 +80,7 @@
       "kicker": "Connectivity —",
       "verbs": ["specified,", "built,", "measured."],
       "masskette": "3 phases — from target picture to live operations",
-      "sub": "SAJ Connect is the engineering consultancy at the intersection of wireless and automotive — Private 5G, eSIM and Connected Car from target picture to live operations. Every phase delivers a defined, measurable result.",
+      "sub": "SAJ Connect is the engineering consultancy at the intersection of wireless and mobility — Private 5G, eSIM and Connected Car from target picture to live operations. Every phase delivers a defined, measurable result.",
       "ctaPrimary": "Request an intro call",
       "ctaSecondary": "Appendix A — Scope of services, sheet 02",
       "spec": {
@@ -195,7 +195,7 @@
   },
   "about": {
     "title": "About SAJ Connect",
-    "lead": "SAJ Connect GmbH is a specialist technology consultancy at the intersection of wireless communication, automotive innovation and IoT. Founded in December 2025, we combine deep technical knowledge across Telco, Automotive and IoT with a practical, partnership-first approach.",
+    "lead": "SAJ Connect GmbH is a specialist technology consultancy at the intersection of wireless communication, mobility and IoT. Founded in December 2025, we combine deep technical knowledge across Telco, Automotive and IoT with a practical, partnership-first approach.",
     "leadSecond": "Our global team of engineers and consultants collaborates directly with customers — translating complex connectivity challenges into clear, executable strategies and measurable outcomes.",
     "mission": {
       "title": "Our mission",
@@ -214,7 +214,7 @@
   },
   "careers": {
     "title": "Careers at SAJ Connect",
-    "lead": "We are looking for engineers and consultants who want to shape the future of wireless and automotive connectivity — from day one.",
+    "lead": "We are looking for engineers and consultants who want to shape the future of wireless and connected mobility — from day one.",
     "openPositions": "Open positions",
     "noPositions": "No open positions right now — we still welcome unsolicited applications.",
     "applyNow": "Apply now",
