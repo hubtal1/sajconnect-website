@@ -39,18 +39,12 @@ const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
       {tt("dossier.hero.sub")}
     </p>
 
-    <div class="mt-10 flex flex-wrap items-center gap-6">
+    <div class="mt-10">
       <a
         href={localizedPath(locale, "/contact")}
         class="inline-flex items-center justify-center bg-[var(--color-cobalt)] px-7 py-3.5 font-sans text-[0.9375rem] font-bold tracking-[0.01em] text-white transition-colors duration-150 hover:bg-[var(--color-cobalt-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-cobalt)]"
       >
         {tt("dossier.hero.ctaPrimary")}
-      </a>
-      <a
-        href={localizedPath(locale, "/services")}
-        class="mono-label-sm text-[var(--color-text-on-carbon-muted)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 transition-colors duration-150 hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]"
-      >
-        {tt("dossier.hero.ctaSecondary")}
       </a>
     </div>
 
