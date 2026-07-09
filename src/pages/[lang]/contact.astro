@@ -14,7 +14,6 @@ const responseLine = tt("ui.responseLine");
 const formHeadline = tt("ui.sendMessage");
 const directLabel = tt("ui.direct");
 const responseLabel = tt("ui.responseTime");
-const registeredLabel = tt("ui.registered");
 ---
 
 <Layout title={tt("contact.title")} description={tt("contact.lead")}>
@@ -75,20 +74,6 @@ const registeredLabel = tt("ui.registered");
 
             <div>
               <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-                {tt("contact.phone")}
-              </p>
-              <p class="mt-3 text-base">
-                <a
-                  href="tel:+4916097533957"
-                  class="font-display text-xl font-medium tracking-tight text-[var(--color-bone)] transition-colors hover:text-[var(--color-cobalt-light)]"
-                >
-                  +49 160 97533957
-                </a>
-              </p>
-            </div>
-
-            <div>
-              <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
                 {responseLabel}
               </p>
               <p class="mt-3 flex items-center gap-2 text-base text-[var(--color-bone)]">
@@ -97,15 +82,6 @@ const registeredLabel = tt("ui.registered");
               </p>
             </div>
 
-            <div class="border-t border-[var(--color-hairline-dark)] pt-6">
-              <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-                {registeredLabel}
-              </p>
-              <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">
-                HRB 45795 · AG Nürnberg<br />
-                USt-IdNr. DE460439086
-              </p>
-            </div>
           </div>
         </aside>
       </div>

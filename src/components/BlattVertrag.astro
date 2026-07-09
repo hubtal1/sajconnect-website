@@ -10,7 +10,6 @@ interface Model {
 const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 const models = getDict<Model[]>(locale, "services.engagement.models") ?? [];
-const lineTypes = getDict<string[]>(locale, "dossier.sections.linientypen") ?? [];
 const lineStyles = [
   "border-top: 3px solid var(--color-text-on-carbon);",
   "border-top: 3px dashed var(--color-text-on-carbon);",
@@ -24,9 +23,6 @@ const lineStyles = [
   <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
     {models.map((model, idx) => (
       <div style={lineStyles[idx]} class="pt-4">
-        <p class="text-[0.75rem] font-bold text-[var(--color-text-on-carbon-faint)]">
-          {tt("dossier.sections.linienart")}: {lineTypes[idx]}
-        </p>
         <h3 class="heading-card mt-2.5 text-[var(--color-text-on-carbon)]">{model.title}</h3>
         <p class="mt-3 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{model.text}</p>
       </div>
