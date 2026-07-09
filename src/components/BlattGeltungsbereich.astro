@@ -1,0 +1,44 @@
+---
+import DossierBlatt from "./DossierBlatt.astro";
+import { getLocaleFromUrl, t, getDict, type Locale } from "../i18n/utils";
+
+interface Item {
+  title: string;
+  text: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const items = getDict<Item[]>(locale, "home.differentiators.items") ?? [];
+---
+
+<DossierBlatt nr="1.0" title={tt("dossier.sections.geltungsbereich")} blatt="02/06" id="geltungsbereich">
+  <div class="grid grid-cols-12 items-center gap-x-12 gap-y-10 pt-10 md:pt-14">
+    <div class="col-span-12 md:col-span-7">
+      <h3 class="display-md text-[var(--color-text-on-carbon)]">{tt("home.intersection.headline")}</h3>
+      <p class="lede mt-5 max-w-[52ch]">{tt("home.intersection.sub")}</p>
+    </div>
+    <!-- Zulauf-Plan: Telco- und Automotive-Linie münden in einen Knoten -->
+    <div class="col-span-12 md:col-span-5">
+      <svg class="h-auto w-full max-w-[380px]" viewBox="0 0 300 132" fill="none" aria-hidden="true">
+        <text x="0" y="24" font-size="9" letter-spacing="0.5" font-weight="700" fill="var(--color-text-on-carbon-faint)">TELCO</text>
+        <text x="0" y="122" font-size="9" letter-spacing="0.5" font-weight="700" fill="var(--color-text-on-carbon-faint)">AUTOMOTIVE</text>
+        <path d="M0 32 H78 L128 66" stroke="var(--color-cobalt-light)" stroke-width="1.5" />
+        <path d="M0 108 H78 L128 74" stroke="var(--color-cobalt-light)" stroke-width="1.5" />
+        <path d="M134 70 H300" stroke="var(--color-cobalt-light)" stroke-width="2" />
+        <circle cx="131" cy="70" r="5.5" fill="var(--color-carbon)" stroke="var(--color-cobalt-light)" stroke-width="2" />
+        <text x="150" y="60" font-size="9" letter-spacing="0.5" font-weight="700" fill="var(--color-text-on-carbon-muted)">SAJ CONNECT</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-2">
+    {items.map((item, idx) => (
+      <div>
+        <p class="mono-spec text-[0.8125rem] text-[var(--color-cobalt-light)]">1.{idx + 1}</p>
+        <h4 class="heading-card mt-2 text-[var(--color-text-on-carbon)]">{item.title}</h4>
+        <p class="mt-2.5 max-w-[52ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{item.text}</p>
+      </div>
+    ))}
+  </div>
+</DossierBlatt>

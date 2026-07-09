@@ -18,19 +18,8 @@ const items = getDict<Item[]>(lang, "consultancy.items") ?? [];
 ---
 
 <Layout title={tt("consultancy.title")} description={tt("consultancy.lead")}>
-  <section class="surface-carbon mesh-cobalt noise relative overflow-hidden">
-    <div class="container-prose pt-10 md:pt-12">
-      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-        <span class="flex items-center gap-2">
-          <span class="glow-dot"></span>
-          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.deepDive")} · 01</span>
-        </span>
-        <span class="hidden md:block">Concept to live operations</span>
-        <span class="text-[var(--color-cobalt-light)]">Private 5G</span>
-      </div>
-    </div>
-
-    <div class="container-prose pt-24 pb-20 md:pt-32 md:pb-28">
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
       <div class="grid grid-cols-12 gap-6 reveal">
         <div class="col-span-12 md:col-span-2">
           <p class="chapter-mark">01 / 03</p>

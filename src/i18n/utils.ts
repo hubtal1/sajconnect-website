@@ -51,6 +51,11 @@ export function getDict<T = unknown>(locale: Locale, key: string): T {
   return cur as T;
 }
 
+/** Derive a clean URL slug from a content entry id like "willkommen.de.md" → "willkommen". */
+export function contentSlug(entryId: string): string {
+  return entryId.replace(/\.(de|en|pt-br)\.(md|mdx)$/i, "");
+}
+
 export function localizedPath(locale: Locale, path: string): string {
   const clean = path.startsWith("/") ? path : `/${path}`;
   return `/${locale}${clean === "/" ? "" : clean}`;

@@ -76,7 +76,7 @@ export default function ContactForm({ locale, endpoint }: Props) {
           aria-hidden="true"
         ></span>
         <p className="mt-5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-saj-green-bright)]">
-          Acknowledged
+          {t.acknowledged}
         </p>
         <p className="mt-3 font-display text-xl font-medium tracking-tight text-[var(--color-bone)]">
           {t.success}

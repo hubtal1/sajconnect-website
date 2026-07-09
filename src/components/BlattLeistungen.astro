@@ -1,0 +1,56 @@
+---
+import DossierBlatt from "./DossierBlatt.astro";
+import { getLocaleFromUrl, t, getDict, localizedPath, type Locale } from "../i18n/utils";
+
+interface Domain {
+  title: string;
+  tag: string;
+  description: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
+
+// Sprachneutrale Fachsubstanz je Domäne — Bänder, Normen, Schnittstellen.
+const BANDS = [
+  "n77/n78 · 3,5 GHz",
+  "GSMA SGP.21/22",
+  "NB-IoT · LTE-M",
+  "NTN · Ka-Band",
+  "3GPP Rel-20+",
+  "API · MQTT",
+  "5,9 GHz ITS",
+  "Device-to-Cloud",
+];
+---
+
+<DossierBlatt nr="2.0" title={tt("dossier.sections.leistungsverzeichnis")} blatt="03/06" id="leistungsverzeichnis">
+  <p class="lede mt-10 max-w-[58ch]">{tt("services.lead")}</p>
+
+  <ol class="mt-10">
+    {domains.map((d, idx) => (
+      <li
+        class:list={[
+          "grid grid-cols-[2.75rem_1fr] gap-x-4 py-5 md:grid-cols-[3.5rem_1.1fr_11.5rem_1.6fr] md:gap-x-8",
+          idx > 0 && "border-t border-[var(--color-hairline-dark)]",
+        ]}
+      >
+        <span class="mono-spec text-[var(--color-cobalt-light)]">{String(idx + 1).padStart(2, "0")}</span>
+        <span class="font-bold leading-snug text-[var(--color-text-on-carbon)]">{d.title}</span>
+        <span class="mono-spec col-start-2 mt-1 text-[0.8125rem] text-[var(--color-text-on-carbon-muted)] md:col-start-auto md:mt-0.5">{BANDS[idx]}</span>
+        <span class="col-span-2 mt-2 max-w-[60ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:col-span-1 md:mt-0.5">{d.description}</span>
+      </li>
+    ))}
+  </ol>
+
+  <div class="mt-8 flex flex-wrap items-baseline justify-between gap-3">
+    <a
+      href={localizedPath(locale, "/services")}
+      class="mono-label-sm text-[var(--color-text-on-carbon-muted)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 transition-colors duration-150 hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]"
+    >
+      {tt("services.exploreAll")}
+    </a>
+    <span class="mono-spec text-[0.8125rem] text-[var(--color-text-on-carbon-faint)]">08 {tt("dossier.sections.positionen")}</span>
+  </div>
+</DossierBlatt>

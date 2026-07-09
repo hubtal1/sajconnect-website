@@ -1,0 +1,26 @@
+---
+import DossierBlatt from "./DossierBlatt.astro";
+import { getLocaleFromUrl, t, getDict, type Locale } from "../i18n/utils";
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const items = getDict<string[]>(locale, "home.standards.items") ?? [];
+---
+
+<DossierBlatt nr="4.0" title={tt("dossier.sections.normative")} blatt="05/06" id="normen">
+  <div class="grid grid-cols-12 gap-x-12 gap-y-8 pt-10">
+    <div class="col-span-12 md:col-span-4">
+      <p class="max-w-[36ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{tt("home.standards.note")}</p>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <ol class="grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-cols-3">
+        {items.map((item, idx) => (
+          <li>
+            <span class="mono-spec block text-[0.8125rem] text-[var(--color-text-on-carbon-faint)]">[{String(idx + 1).padStart(2, "0")}]</span>
+            <span class="mono-spec mt-0.5 block text-[var(--color-text-on-carbon)]">{item}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</DossierBlatt>

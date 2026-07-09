@@ -17,6 +17,12 @@ const { lang } = Astro.params as { lang: Locale };
 const tt = t(lang);
 const domains = getDict<Domain[]>(lang, "services.domains") ?? [];
 
+interface EngagementModel {
+  title: string;
+  text: string;
+}
+const engagementModels = getDict<EngagementModel[]>(lang, "services.engagement.models") ?? [];
+
 const subAreas = [
   { title: tt("consultancy.title"), lead: tt("consultancy.lead"), href: localizedPath(lang, "/consultancy"), tag: "01 — Private 5G" },
   { title: tt("testing.title"), lead: tt("testing.lead"), href: localizedPath(lang, "/testing"), tag: "02 — Testing" },
@@ -25,19 +31,8 @@ const subAreas = [
 ---
 
 <Layout title={tt("services.title")} description={tt("services.lead")}>
-  <section class="surface-carbon mesh-cobalt noise relative overflow-hidden">
-    <div class="container-prose pt-10 md:pt-12">
-      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-        <span class="flex items-center gap-2">
-          <span class="glow-dot"></span>
-          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.capabilities")}</span>
-        </span>
-        <span class="hidden md:block">8 Core Technology Domains</span>
-        <span class="text-[var(--color-cobalt-light)]">03 / 04</span>
-      </div>
-    </div>
-
-    <div class="container-prose pt-24 pb-16 md:pt-32 md:pb-20">
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-16 md:pt-24 md:pb-20">
       <div class="grid grid-cols-12 gap-6 reveal">
         <div class="col-span-12 md:col-span-2">
           <p class="chapter-mark">{tt("ui.chapter")} 03</p>
@@ -111,6 +106,40 @@ const subAreas = [
                 {tt("ui.readMore")} →
               </span>
             </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose section">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-3">
+          <p class="chapter-mark">{tt("services.engagement.label")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <h2 class="display-lg text-[var(--color-bone)]">{tt("services.engagement.headline")}</h2>
+          <p class="lede mt-8 max-w-[58ch]">{tt("services.engagement.sub")}</p>
+        </div>
+      </div>
+
+      <div class="mt-16 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-3 reveal">
+        {engagementModels.map((model, idx) => {
+          const isCobalt = idx % 2 === 0;
+          const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
+          return (
+            <div class="group relative bg-[var(--color-carbon)] p-8 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-10">
+              <span
+                class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
+                style={`background-color: var(${accentVar});`}
+              ></span>
+              <p class="mono-label-sm" style={`color: var(${accentVar});`}>
+                {String(idx + 1).padStart(2, "0")} / {String(engagementModels.length).padStart(2, "0")}
+              </p>
+              <h3 class="heading-card mt-6 text-[var(--color-bone)]">{model.title}</h3>
+              <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{model.text}</p>
+            </div>
           );
         })}
       </div>

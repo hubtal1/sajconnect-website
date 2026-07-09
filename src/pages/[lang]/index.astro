@@ -1,11 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
-import TechMarquee from "../../components/TechMarquee.astro";
-import Intersection from "../../components/Intersection.astro";
-import MetricBlock from "../../components/MetricBlock.astro";
-import ServiceGrid from "../../components/ServiceGrid.astro";
-import CtaBanner from "../../components/CtaBanner.astro";
+import BlattGeltungsbereich from "../../components/BlattGeltungsbereich.astro";
+import BlattLeistungen from "../../components/BlattLeistungen.astro";
+import BlattVerfahren from "../../components/BlattVerfahren.astro";
+import BlattNormen from "../../components/BlattNormen.astro";
+import BlattVertrag from "../../components/BlattVertrag.astro";
 import { LOCALES, t, type Locale } from "../../i18n/utils";
 
 export function getStaticPaths() {
@@ -18,9 +18,9 @@ const tt = t(lang);
 
 <Layout title={`${tt("site.name")} — ${tt("site.tagline")}`} description={tt("site.description")}>
   <Hero />
-  <TechMarquee />
-  <Intersection />
-  <MetricBlock />
-  <ServiceGrid />
-  <CtaBanner />
+  <BlattGeltungsbereich />
+  <BlattLeistungen />
+  <BlattVerfahren />
+  <BlattNormen />
+  <BlattVertrag />
 </Layout>

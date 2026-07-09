@@ -95,6 +95,11 @@ export default function SignalCanvas() {
     function step(t: number) {
       ctx!.clearRect(0, 0, width, height);
 
+      // Theme-aware ink: bone dots on carbon, carbon dots on paper.
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      const lineInk = isLight ? "42, 47, 56" : "212, 207, 196";
+      const nodeInk = isLight ? "7, 8, 11" : "242, 239, 233";
+
       for (const n of nodes) {
         n.x += n.vx;
         n.y += n.vy;
@@ -124,7 +129,7 @@ export default function SignalCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < CONNECTION_DISTANCE) {
             const alpha = (1 - dist / CONNECTION_DISTANCE) * 0.18;
-            ctx!.strokeStyle = `rgba(212, 207, 196, ${alpha})`;
+            ctx!.strokeStyle = `rgba(${lineInk}, ${alpha})`;
             ctx!.lineWidth = 1;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -172,7 +177,7 @@ export default function SignalCanvas() {
       for (const n of nodes) {
         n.pulsePhase += 0.02;
         const pulse = (Math.sin(n.pulsePhase) + 1) / 2;
-        ctx!.fillStyle = `rgba(242, 239, 233, ${0.55 + pulse * 0.35})`;
+        ctx!.fillStyle = `rgba(${nodeInk}, ${0.55 + pulse * 0.35})`;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
         ctx!.fill();

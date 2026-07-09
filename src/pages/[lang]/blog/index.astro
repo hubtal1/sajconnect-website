@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
-import { LOCALES, t, localizedPath, type Locale } from "../../../i18n/utils";
+import { LOCALES, t, localizedPath, contentSlug, type Locale } from "../../../i18n/utils";
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -17,19 +17,8 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
 ---
 
 <Layout title={tt("blog.title")} description={tt("blog.lead")}>
-  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
-    <div class="container-prose pt-10 md:pt-12">
-      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-        <span class="flex items-center gap-2">
-          <span class="glow-dot"></span>
-          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.insights")}</span>
-        </span>
-        <span class="hidden md:block">Notes from the field</span>
-        <span class="text-[var(--color-cobalt-light)]">{String(posts.length).padStart(2, "0")} articles</span>
-      </div>
-    </div>
-
-    <div class="container-prose pt-24 pb-20 md:pt-32 md:pb-28">
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
       <div class="grid grid-cols-12 gap-6 reveal">
         <div class="col-span-12 md:col-span-2">
           <p class="chapter-mark">Blog</p>
@@ -49,7 +38,7 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
     <div class="container-prose pb-24 md:pb-32">
       {posts.length === 0 && (
         <div class="border-t border-[var(--color-hairline-dark)] py-16 text-center">
-          <p class="mono-label text-[var(--color-text-on-carbon-faint)]">No articles yet</p>
+          <p class="mono-label text-[var(--color-text-on-carbon-faint)]">{tt("blog.noPostsLabel")}</p>
           <p class="mt-4 lede max-w-[40ch] mx-auto">
             {tt("blog.noPosts")}
           </p>
@@ -63,7 +52,7 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
           return (
             <li class="border-b border-[var(--color-hairline-dark)]">
               <a
-                href={localizedPath(lang, `/blog/${post.slug.replace(/\.(de|en|pt-br)$/, "")}`)}
+                href={localizedPath(lang, `/blog/${contentSlug(post.id)}`)}
                 class="group relative grid grid-cols-12 gap-6 py-10 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:py-14"
               >
                 <span
@@ -108,7 +97,7 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
                   </p>
                   <p class="mt-3 text-sm text-[var(--color-text-on-carbon-muted)]">{post.data.author}</p>
                   <span class="arrow-link mt-6 inline-flex transition-all duration-300 group-hover:gap-3">
-                    Read →
+                    {tt("ui.readArticle")} →
                   </span>
                 </div>
               </a>

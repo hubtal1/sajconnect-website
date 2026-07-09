@@ -5,7 +5,7 @@ const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 ---
 
-<section class="surface-carbon mesh-dual noise relative overflow-hidden">
+<section class="surface-carbon relative overflow-hidden">
   <div class="container-prose section">
     <div class="grid grid-cols-12 gap-6">
       <div class="col-span-12 md:col-span-3">
@@ -22,7 +22,10 @@ const tt = t(locale);
           {tt("home.cta.sub")}
         </p>
         <div class="mt-12 flex flex-col gap-3 sm:flex-row">
-          <a href={localizedPath(locale, "/contact")} class="btn btn-primary">
+          <a
+            href={localizedPath(locale, "/contact")}
+            class="inline-flex items-center justify-center bg-[var(--color-cobalt)] px-7 py-3.5 font-sans text-[0.9375rem] font-bold tracking-[0.01em] text-white transition-colors duration-150 hover:bg-[var(--color-cobalt-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-cobalt)]"
+          >
             {tt("home.cta.button")} →
           </a>
         </div>

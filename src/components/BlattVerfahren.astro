@@ -1,0 +1,50 @@
+---
+import DossierBlatt from "./DossierBlatt.astro";
+import { getLocaleFromUrl, t, getDict, type Locale } from "../i18n/utils";
+
+interface Step {
+  title: string;
+  text: string;
+  outcome: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const steps = getDict<Step[]>(locale, "home.approach.steps") ?? [];
+---
+
+<DossierBlatt nr="3.0" title={tt("dossier.sections.pruefverfahren")} blatt="04/06" id="pruefverfahren">
+  <p class="lede mt-10 max-w-[58ch]">{tt("home.approach.sub")}</p>
+
+  <!-- Drei Stationen auf gerader Strecke, Terminal "Betrieb" ist der einzige grüne Knoten -->
+  <div class="relative mt-12">
+    <div class="absolute left-0 right-0 top-[0.4rem] hidden h-px bg-[var(--color-hairline-dark)] md:block" aria-hidden="true"></div>
+    <div class="grid gap-10 md:grid-cols-3 md:gap-12">
+      {steps.map((step, idx) => {
+        const isTerminal = idx === steps.length - 1;
+        return (
+          <div class="relative">
+            <span
+              class:list={[
+                "relative z-[1] block h-3.5 w-3.5 rounded-full border-2",
+                isTerminal
+                  ? "border-[var(--color-saj-green-bright)] bg-[var(--color-saj-green-bright)]"
+                  : "border-[var(--color-cobalt-light)] bg-[var(--color-carbon)]",
+              ]}
+              aria-hidden="true"
+            ></span>
+            <p class:list={["mt-4 text-[0.8125rem] font-bold", isTerminal ? "text-[var(--color-saj-green-bright)]" : "text-[var(--color-cobalt-light)]"]}>
+              {tt("dossier.sections.phase")} {String(idx + 1).padStart(2, "0")}
+            </p>
+            <h3 class="heading-card mt-1.5 text-[var(--color-text-on-carbon)]">{step.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{step.text}</p>
+            <p class="mt-4 text-[0.8125rem] font-bold text-[var(--color-text-on-carbon-faint)]">{tt("home.approach.outcomeLabel")}</p>
+            <p class="mt-1 text-sm font-medium leading-relaxed text-[var(--color-text-on-carbon)]">
+              {isTerminal && <span class="text-[var(--color-saj-green-bright)]">✓ </span>}{step.outcome}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</DossierBlatt>

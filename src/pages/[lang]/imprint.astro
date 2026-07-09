@@ -12,23 +12,12 @@ const tt = t(lang);
 ---
 
 <Layout title={tt("footer.imprint")} description={tt("footer.imprint")}>
-  <section class="surface-carbon mesh-dual noise relative overflow-hidden">
-    <div class="container-prose pt-10 md:pt-12">
-      <div class="flex items-center justify-between border-b border-[var(--color-hairline-dark)] pb-4 mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-        <span class="flex items-center gap-2">
-          <span class="glow-dot"></span>
-          <span class="text-[var(--color-saj-green-bright)]">{tt("ui.legal")}</span>
-        </span>
-        <span class="hidden md:block">§ 5 TMG</span>
-        <span class="text-[var(--color-cobalt-light)]">SAJ Connect GmbH</span>
-      </div>
-    </div>
-
-    <div class="container-prose pt-20 pb-12 md:pt-24 md:pb-16">
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-12 md:pt-24 md:pb-16">
       <div class="grid grid-cols-12 gap-6 reveal">
         <div class="col-span-12 md:col-span-2">
           <p class="chapter-mark">{tt("ui.legal")}</p>
-          <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">Imprint</p>
+          <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">{tt("ui.imprintLabel")}</p>
         </div>
         <div class="col-span-12 md:col-span-10">
           <h1 class="display-xl text-[var(--color-bone)]">{tt("footer.imprint")}</h1>

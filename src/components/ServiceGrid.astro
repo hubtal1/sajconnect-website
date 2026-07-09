@@ -10,6 +10,8 @@ interface Domain {
 const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
+
+const exploreCta = tt("services.exploreAll");
 ---
 
 <section class="surface-carbon mesh-green relative overflow-hidden">
@@ -21,7 +23,7 @@ const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
       </div>
       <div class="col-span-12 md:col-span-9">
         <h2 class="display-lg text-[var(--color-bone)]">
-          8 domains. One stack.
+          {tt("services.gridTagline")}
         </h2>
         <p class="lede mt-8 max-w-[58ch]">
           {tt("services.lead")}
@@ -29,45 +31,48 @@ const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
       </div>
     </div>
 
-    <div class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2 lg:grid-cols-4">
-      {domains.map((d, idx) => (
-        <article class="group relative bg-[var(--color-carbon)] p-7 transition-all duration-500 hover:bg-[var(--color-carbon-soft)] md:p-8">
-          <!-- top edge accent on hover, alternating cobalt/green -->
-          <span class:list={["absolute left-0 top-0 h-px w-0 transition-all duration-500 group-hover:w-full", idx % 2 === 0 ? "bg-[var(--color-cobalt-light)]" : "bg-[var(--color-saj-green-bright)]"]}
-            style={idx % 2 === 0 ? "box-shadow: 0 0 8px var(--color-cobalt-glow);" : "box-shadow: 0 0 8px var(--color-saj-green-glow);"}></span>
+    <!-- Compact teaser grid: just titles + tags, no descriptions
+         (the full description grid lives on /services) -->
+    <ul class="mt-16 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2 lg:grid-cols-4">
+      {domains.map((d, idx) => {
+        const isCobalt = idx % 2 === 0;
+        const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
+        const glowVar = isCobalt ? "--color-cobalt-glow" : "--color-saj-green-glow";
+        return (
+          <li class="group relative bg-[var(--color-carbon)] p-6 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-7">
+            <span
+              class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
+              style={`background-color: var(${accentVar}); box-shadow: 0 0 8px var(${glowVar});`}
+            ></span>
+            <div class="flex items-baseline justify-between">
+              <span class="mono-label-sm" style={`color: var(${accentVar});`}>{d.tag}</span>
+              <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
+                {String(idx + 1).padStart(2, "0")}
+              </span>
+            </div>
+            <h3 class="mt-6 text-lg font-medium leading-snug tracking-tight text-[var(--color-bone)]">
+              {d.title}
+            </h3>
+          </li>
+        );
+      })}
+    </ul>
 
-          <div class="flex items-baseline justify-between">
-            <span class:list={["mono-label-sm", idx % 2 === 0 ? "text-[var(--color-cobalt-light)]" : "text-[var(--color-saj-green-bright)]"]}>{d.tag}</span>
-            <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-              {String(idx + 1).padStart(2, "0")}
-            </span>
-          </div>
-          <h3 class="heading-card mt-10">
-            {d.title}
-          </h3>
-          <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-            {d.description}
-          </p>
-        </article>
-      ))}
-    </div>
-
-    <div class="mt-20 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-12">
-      <div class="col-span-12 md:col-span-3">
-        <p class="chapter-mark text-[var(--color-amber)]" style="--tw-content: ''">
-          <span class="block h-px w-6 bg-[var(--color-amber)]"></span>
+    <div class="mt-12 flex flex-col items-start gap-6 border-t border-[var(--color-hairline-dark)] pt-10 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-[60ch]">
+        <p class="chapter-mark text-[var(--color-amber)]">
           {tt("ui.outlook")}
         </p>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <h3 class="display-md text-[var(--color-bone)]">{tt("services.outroHeadline")}</h3>
-        <p class="mt-6 max-w-[58ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+        <h3 class="mt-4 display-md text-[var(--color-bone)]">
+          {tt("services.outroHeadline")}
+        </h3>
+        <p class="mt-4 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
           {tt("services.outroSub")}
         </p>
-        <a href={localizedPath(locale, "/services")} class="arrow-link mt-8">
-          {tt("nav.services")} →
-        </a>
       </div>
+      <a href={localizedPath(locale, "/services")} class="btn btn-primary shrink-0">
+        {exploreCta} →
+      </a>
     </div>
   </div>
 </section>

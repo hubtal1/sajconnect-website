@@ -1,0 +1,69 @@
+---
+import { getLocaleFromUrl, t, type Locale } from "../i18n/utils";
+import { DOSSIER, formatDossierDate } from "../lib/site";
+
+interface Props {
+  /** Document number, e.g. "SAJC-HP-2026-A" */
+  dok: string;
+  /** Sheet counter, e.g. "01/06" */
+  blatt: string;
+  /** Optional section number + title for section-level headers (compact variant) */
+  sectionNr?: string;
+  sectionTitle?: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const { dok, blatt, sectionNr, sectionTitle } = Astro.props;
+
+const validFrom = formatDossierDate(DOSSIER.validFrom, locale);
+const compact = !!sectionNr;
+---
+
+{
+  compact ? (
+    <div class="grid grid-cols-2 gap-px border-b border-[var(--color-hairline-dark)] bg-[var(--color-hairline-dark)] md:grid-cols-[auto_1fr_auto_auto]">
+      <div class="bg-[var(--color-carbon)] px-4 py-2.5">
+        <span class="mono-label-sm text-[var(--color-cobalt-light)]">{sectionNr}</span>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 py-2.5">
+        <span class="mono-label-sm text-[var(--color-text-on-carbon)]">{sectionTitle}</span>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 py-2.5">
+        <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{`${tt("dossier.kopf.blatt")} ${blatt}`}</span>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 py-2.5">
+        <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.rev")}</span>
+      </div>
+    </div>
+  ) : (
+    <div class="grid grid-cols-2 gap-px border-b border-[var(--color-hairline-dark)] bg-[var(--color-hairline-dark)] md:grid-cols-[1.7fr_1.3fr_1.7fr_0.5fr_0.8fr_1.1fr]">
+      {/* Dok-Nr.: das Ankerfeld — größter Wert im Kopf */}
+      <div class="bg-[var(--color-carbon)] px-4 pb-3 pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.dok")}</p>
+        <p class="mt-1.5 font-mono text-[1.0625rem] font-medium leading-none tracking-tight text-[var(--color-text-on-carbon)]">{dok}</p>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 pb-3 pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.firmaLabel")}</p>
+        <p class="mono-spec mt-1.5 leading-tight text-[var(--color-text-on-carbon)]">SAJ Connect GmbH</p>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 pb-3 pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.registerLabel")}</p>
+        <p class="mono-spec mt-1.5 leading-tight text-[var(--color-text-on-carbon)]">HRB 45795<span class="text-[var(--color-text-on-carbon-faint)]"> · AG Nürnberg</span></p>
+      </div>
+      {/* Rev + Blatt: schmale Zählfelder */}
+      <div class="flex items-baseline gap-2 bg-[var(--color-carbon)] px-4 py-2.5 md:block md:pb-3 md:pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.revLabel")}</p>
+        <p class="mono-spec text-[var(--color-text-on-carbon)] md:mt-1.5 md:leading-tight">{DOSSIER.rev}</p>
+      </div>
+      <div class="flex items-baseline gap-2 bg-[var(--color-carbon)] px-4 py-2.5 md:block md:pb-3 md:pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.blatt")}</p>
+        <p class="mono-spec text-[var(--color-text-on-carbon)] md:mt-1.5 md:leading-tight">{blatt}</p>
+      </div>
+      <div class="bg-[var(--color-carbon)] px-4 pb-3 pt-2.5">
+        <p class="font-sans text-[0.6875rem] font-bold tracking-[0.02em] text-[var(--color-text-on-carbon-faint)]">{tt("dossier.kopf.gueltigAb")}</p>
+        <p class="mono-spec mt-1.5 leading-tight text-[var(--color-text-on-carbon)]">{validFrom}</p>
+      </div>
+    </div>
+  )
+}

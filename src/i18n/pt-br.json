@@ -43,14 +43,80 @@
       ]
     },
     "cta": {
-      "headline": "Vamos construir algo excepcional",
-      "sub": "Fale com a gente sobre como a SAJ Connect pode apoiar seu próximo projeto — do scoping inicial à implantação completa e além.",
+      "headline": "Vamos falar sobre o seu projeto",
+      "sub": "Uma primeira conversa esclarece viabilidade, esforço e próximos passos — sem compromisso e com os engenheiros que de fato vão entregar.",
       "button": "Agendar conversa"
+    },
+    "approach": {
+      "label": "Abordagem",
+      "headline": "Um método que revela riscos cedo.",
+      "sub": "Todo engajamento segue o mesmo princípio: primeiro entender, depois construir, depois assumir o resultado — com entregáveis claros em cada fase.",
+      "outcomeLabel": "Resultado",
+      "steps": [
+        { "title": "Análise & Scoping", "text": "Requisitos, levantamento do estado atual, viabilidade e business case — antes da primeira decisão de arquitetura.", "outcome": "Visão-alvo sólida com avaliação de esforço e risco" },
+        { "title": "Design & Construção", "text": "Arquitetura, implementação e integração em incrementos curtos e verificáveis — com testes e validação desde o primeiro incremento.", "outcome": "Solução aceita e documentada rodando no ambiente-alvo" },
+        { "title": "Operação & Melhoria", "text": "Transição para operação, monitoramento, otimização e transferência de conhecimento — até seu time assumir o sistema com confiança.", "outcome": "Operação estável com KPIs mensuráveis e responsabilidade clara" }
+      ]
+    },
+    "standards": {
+      "label": "Padrões",
+      "headline": "Trabalhamos conforme padrões estabelecidos do setor.",
+      "note": "As normas e frameworks que orientam nossa arquitetura, segurança e processos.",
+      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "ISO/SAE 21434", "Automotive SPICE", "ISO 27001", "LGPD / GDPR"]
+    }
+  },
+  "dossier": {
+    "kopf": {
+      "dok": "Nº doc.",
+      "firmaLabel": "Empresa",
+      "registerLabel": "Registro",
+      "revLabel": "Rev",
+      "rev": "Rev A",
+      "blatt": "Folha",
+      "gueltigAb": "Válido desde"
+    },
+    "hero": {
+      "headline": "Conectividade: especificada, construída, medida.",
+      "kicker": "Conectividade —",
+      "verbs": ["especificada,", "construída,", "medida."],
+      "masskette": "3 fases — da visão-alvo à operação",
+      "sub": "A SAJ Connect é a consultoria de engenharia na interseção entre wireless e automotive — Private 5G, eSIM e Connected Car, da visão-alvo à operação. Cada fase entrega um resultado definido e mensurável.",
+      "ctaPrimary": "Solicitar conversa inicial",
+      "ctaSecondary": "Anexo A — Escopo de serviços, folha 02",
+      "spec": {
+        "parameter": "Parâmetro",
+        "wert": "Valor",
+        "remarks": "Observações: —",
+        "rows": [
+          { "k": "Frequências", "v": "n77/n78 (3,3–3,8 GHz)" },
+          { "k": "Padrões", "v": "3GPP Rel-17+, GSMA SGP.22" },
+          { "k": "Domínios", "v": "08" },
+          { "k": "Metodologia", "v": "3 fases" },
+          { "k": "Localização", "v": "49°27′ N · 11°05′ E" }
+        ]
+      }
+    },
+    "sections": {
+      "geltungsbereich": "Escopo",
+      "leistungsverzeichnis": "Escopo de serviços",
+      "pruefverfahren": "Procedimento de verificação",
+      "normative": "Referências normativas",
+      "vertragsmodelle": "Modelos de contratação",
+      "pos": "Pos.",
+      "bezeichnung": "Designação",
+      "bereich": "Área",
+      "beschreibung": "Descrição",
+      "phase": "Fase",
+      "linienart": "Tipo de linha",
+      "linientypen": ["contínua", "tracejada", "dupla"],
+      "tabelleEnde": "Fim da tabela",
+      "positionen": "posições"
     }
   },
   "services": {
     "title": "Nossos Domínios Tecnológicos Centrais",
     "lead": "Oito domínios focados onde entregamos expertise em profundidade — combine-os na solução que seu projeto precisa.",
+    "exploreAll": "Explorar todas as 8 áreas",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engenharia, design, deployment e operação de Private 5G corporativo e industrial." },
       { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, gestão de perfis, ciclo de vida e certificação." },
@@ -62,7 +128,19 @@
       { "title": "Expertise 360° em Conectividade", "tag": "FULL STACK", "description": "Cobertura end-to-end do dispositivo à nuvem — integrada, validada e em operação." }
     ],
     "outroHeadline": "As redes de amanhã. A preparação de hoje.",
-    "outroSub": "Não operamos apenas as redes de hoje — ajudamos nossos clientes a moldar a próxima geração."
+    "outroSub": "Não operamos apenas as redes de hoje — ajudamos nossos clientes a moldar a próxima geração.",
+    "gridTagline": "8 domínios. Uma stack.",
+    "domainsLabel": "8 domínios tecnológicos centrais",
+    "engagement": {
+      "label": "Modelos",
+      "headline": "Três formas de trabalhar conosco.",
+      "sub": "De um projeto claramente delimitado à responsabilidade operacional de longo prazo — você escolhe a profundidade do engajamento.",
+      "models": [
+        { "title": "Entrega de Projeto", "text": "Escopo definido, resultado definido: assumimos concepção, implementação e aceite de uma iniciativa delimitada — em preço fixo ou por esforço." },
+        { "title": "Expert Augmentation", "text": "Nossos especialistas reforçam seu time — reviews de arquitetura, planejamento de RF, campanhas de teste ou suporte à certificação, exatamente onde falta expertise." },
+        { "title": "Managed Services", "text": "Assumimos de forma duradoura a operação e a evolução da sua solução de conectividade — com SLAs, monitoramento e relatórios regulares." }
+      ]
+    }
   },
   "consultancy": {
     "title": "Consultoria Private 5G",
@@ -73,7 +151,8 @@
       { "title": "Gestão & Operação de Rede", "text": "Day-2 operations, monitoramento, otimização e melhoria contínua — mantendo redes mission-critical saudáveis." },
       { "title": "Desenvolvimento de Software & Hardware", "text": "Componentes customizados de software e hardware onde o stack padrão não atende — totalmente integrados e certificados." },
       { "title": "Testes & Validação de Rede", "text": "Testes abrangentes — funcional, performance, interoperabilidade, compliance — antes e depois do go-live." }
-    ]
+    ],
+    "taglineShort": "Do conceito à operação"
   },
   "testing": {
     "title": "Testamos até estar perfeito",
@@ -99,7 +178,8 @@
           { "title": "PoC & Aceitação", "text": "Frameworks estruturados de prova-de-conceito e aceitação — mensuráveis, repetíveis, prontos para decisão." }
         ]
       }
-    ]
+    ],
+    "chapterLabel": "Testing & Validation"
   },
   "vehicle": {
     "title": "A plataforma do veículo moderno",
@@ -146,7 +226,12 @@
     "readingTime": "min de leitura",
     "by": "por",
     "back": "Voltar para a visão geral",
-    "noPosts": "Em breve os primeiros artigos."
+    "noPosts": "Em breve os primeiros artigos.",
+    "tagline": "Notas do campo",
+    "articles": "artigos",
+    "published": "Publicado",
+    "tags": "Tags",
+    "noPostsLabel": "Ainda sem artigos"
   },
   "contact": {
     "title": "Vamos conversar",
@@ -160,7 +245,8 @@
       "submit": "Enviar mensagem",
       "submitting": "Enviando ...",
       "success": "Obrigado — entraremos em contato em breve.",
-      "error": "Algo deu errado. Por favor, tente novamente."
+      "error": "Algo deu errado. Por favor, tente novamente.",
+      "acknowledged": "Confirmado"
     },
     "office": "Escritório",
     "phone": "Telefone",
@@ -216,6 +302,30 @@
     "send": "Enviar",
     "sendMessage": "Escreva para nós.",
     "responseLine": "Respondemos em até um dia útil.",
-    "deepDive": "Aprofundamento"
+    "deepDive": "Aprofundamento",
+    "foundedDate": "Dezembro de 2025",
+    "reach": "Alcance",
+    "globalEcosystem": "Ecossistema global",
+    "positions": "vagas",
+    "initiativeLabel": "Iniciativa",
+    "location": "Localização",
+    "employmentType": "Tipo",
+    "department": "Departamento",
+    "posted": "Publicado",
+    "apply": "Candidatar-se",
+    "menu": "Menu",
+    "imprintLabel": "Imprint",
+    "privacyLabel": "Privacidade"
+  },
+  "connectedCar": {
+    "platformLabel": "Plataforma veicular",
+    "chapterLabel": "Connected Car & IVI"
+  },
+  "metrics": {
+    "domains": "Domínios tecnológicos centrais",
+    "testing": "Disciplinas de teste",
+    "connectedCar": "Competências Connected Car",
+    "partners": "Ecossistema de parceiros",
+    "global": "Global"
   }
 }

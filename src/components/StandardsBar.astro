@@ -1,0 +1,30 @@
+---
+import { getLocaleFromUrl, t, getDict, type Locale } from "../i18n/utils";
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const items = getDict<string[]>(locale, "home.standards.items") ?? [];
+---
+
+<section class="surface-carbon">
+  <div class="container-prose section-tight">
+    <div class="border-y border-[var(--color-hairline-dark)] py-12">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-3">
+          <p class="mono-label text-[var(--color-text-on-carbon-faint)]">{tt("home.standards.label")}</p>
+          <h2 class="heading-card mt-4 text-[var(--color-bone)]">{tt("home.standards.headline")}</h2>
+          <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{tt("home.standards.note")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <ul class="grid grid-cols-2 gap-px bg-[var(--color-hairline-dark)] sm:grid-cols-3">
+            {items.map((item, idx) => (
+              <li class="flex min-h-[92px] items-center justify-center bg-[var(--color-carbon)] px-4 py-6 text-center transition-colors duration-300 hover:bg-[var(--color-carbon-soft)]">
+                <span class="mono-spec text-[var(--color-text-on-carbon)]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

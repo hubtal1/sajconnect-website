@@ -63,21 +63,25 @@ const siteLd = websiteJsonLd(locale);
     <link rel="alternate" hreflang="x-default" href={`https://www.sajconnect.com/de${pagePath.replace(/^\/(de|en|pt-br)/, "") || ""}`} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#07080b" />
+    <meta name="theme-color" content="#ffffff" />
 
     <script is:inline>
-      // Apply theme before paint to avoid flash. Default = dark.
+      // Apply theme before paint to avoid flash. Default = light (corporate).
+      // Re-applied after every ClientRouter navigation — the view-transition
+      // swap replaces <html> and would otherwise drop the data-theme attribute.
       (() => {
-        try {
-          const stored = localStorage.getItem("saj_theme");
-          if (stored === "light" || stored === "dark") {
-            document.documentElement.setAttribute("data-theme", stored);
-          } else {
-            document.documentElement.setAttribute("data-theme", "dark");
+        const applyTheme = () => {
+          let theme = "light";
+          try {
+            const stored = localStorage.getItem("saj_theme");
+            if (stored === "light" || stored === "dark") theme = stored;
+          } catch (e) {
+            /* storage unavailable — keep default */
           }
-        } catch (e) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        }
+          document.documentElement.setAttribute("data-theme", theme);
+        };
+        applyTheme();
+        document.addEventListener("astro:after-swap", applyTheme);
       })();
     </script>
 

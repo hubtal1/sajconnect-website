@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-@import "@fontsource-variable/geist/index.css";
+@import "@fontsource/cantarell/400.css";
+@import "@fontsource/cantarell/400-italic.css";
+@import "@fontsource/cantarell/700.css";
 @import "@fontsource-variable/geist-mono/index.css";
-@import "@fontsource-variable/inter/index.css";
 
 @theme {
   /* Carbon & Cobalt — kinetic. Token values are overridden for light theme below. */
@@ -10,21 +11,21 @@
   --color-bone-dark: #e8e4da;
   --color-bone-soft: #ebe7dd;
 
-  --color-carbon: #07080b;
-  --color-carbon-soft: #0e1218;
-  --color-carbon-elev: #161b22;
+  --color-carbon: #0e1015;
+  --color-carbon-soft: #14181f;
+  --color-carbon-elev: #1a1f27;
   --color-graphite: #2a2f38;
 
   --color-cobalt: #001ec9;
-  --color-cobalt-light: #2440f0;
+  --color-cobalt-light: #4d63ff;
   --color-cobalt-glow: rgba(36, 64, 240, 0.45);
   --color-cobalt-tint: rgba(0, 30, 201, 0.08);
 
   /* SAJ Green — heritage brand accent, used for live/signal/operational */
   --color-saj-green: #117400;
-  --color-saj-green-light: #1a9b00;
-  --color-saj-green-bright: #2bbe0d;
-  --color-saj-green-glow: rgba(43, 190, 13, 0.45);
+  --color-saj-green-light: #2e9e1e;
+  --color-saj-green-bright: #2e9e1e;
+  --color-saj-green-glow: rgba(46, 158, 30, 0.35);
   --color-saj-green-tint: rgba(17, 116, 0, 0.10);
 
   --color-amber: #e8a33d;
@@ -32,7 +33,7 @@
 
   --color-hairline: #d4cfc4;
   --color-hairline-soft: #e0dccf;
-  --color-hairline-dark: #1f242c;
+  --color-hairline-dark: #262a33;
   --color-hairline-cobalt: rgba(36, 64, 240, 0.35);
   --color-hairline-green: rgba(43, 190, 13, 0.35);
 
@@ -40,12 +41,12 @@
   --color-text-on-bone-muted: #4a4944;
   --color-text-on-bone-faint: #82807a;
 
-  --color-text-on-carbon: #f2efe9;
-  --color-text-on-carbon-muted: #c8c5be;
-  --color-text-on-carbon-faint: #7a7d85;
+  --color-text-on-carbon: #e8eaf0;
+  --color-text-on-carbon-muted: #a9afbc;
+  --color-text-on-carbon-faint: #6e7480;
 
-  --font-display: "Geist Variable", "Inter Variable", system-ui, sans-serif;
-  --font-sans: "Inter Variable", "Geist Variable", system-ui, sans-serif;
+  --font-display: "Cantarell", system-ui, sans-serif;
+  --font-sans: "Cantarell", system-ui, sans-serif;
   --font-mono: "Geist Mono Variable", "JetBrains Mono", ui-monospace, monospace;
 
   --radius-sm: 2px;
@@ -60,30 +61,89 @@
    Swaps the physical role of carbon/bone tokens. Every .surface-carbon
    section renders light, .surface-bone renders dark, text colors invert. */
 [data-theme="light"] {
-  --color-carbon: #f2efe9;
-  --color-carbon-soft: #ebe7dd;
-  --color-carbon-elev: #e0dccf;
-  --color-graphite: #b8b3a6;
+  --color-carbon: #ffffff;
+  --color-carbon-soft: #f4f5f7;
+  --color-carbon-elev: #eceef2;
+  --color-graphite: #b6bac4;
+  --color-cobalt-light: #001ec9;
+  --color-saj-green-bright: #117400;
+  --color-saj-green-light: #117400;
 
-  --color-bone: #07080b;
-  --color-bone-dark: #0e1218;
-  --color-bone-soft: #161b22;
+  --color-bone: #10131a;
+  --color-bone-dark: #171b24;
+  --color-bone-soft: #1e232d;
 
-  --color-text-on-carbon: #07080b;
-  --color-text-on-carbon-muted: #4a4944;
-  --color-text-on-carbon-faint: #82807a;
+  --color-text-on-carbon: #10131a;
+  --color-text-on-carbon-muted: #5a6070;
+  --color-text-on-carbon-faint: #8a90a0;
 
-  --color-text-on-bone: #f2efe9;
-  --color-text-on-bone-muted: #c8c5be;
+  --color-text-on-bone: #ffffff;
+  --color-text-on-bone-muted: #c8cbd4;
   --color-text-on-bone-faint: #7a7d85;
 
   --color-hairline: #2a2d33;
   --color-hairline-soft: #1f242c;
-  --color-hairline-dark: #d4cfc4;
+  --color-hairline-dark: #d9dce3;
 
   /* Mesh / glow accents stay as-is — cobalt + saj-green read on both surfaces */
   --color-cobalt-tint: rgba(0, 30, 201, 0.06);
   --color-saj-green-tint: rgba(17, 116, 0, 0.08);
+}
+
+/* Light theme: meshes and noise must stay whisper-quiet on paper backgrounds —
+   heavy radial glows read as "gamer", not consultancy. */
+[data-theme="light"] .mesh-cobalt {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(0, 30, 201, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 85% 100%, rgba(17, 116, 0, 0.04) 0%, transparent 50%),
+    var(--color-carbon);
+}
+[data-theme="light"] .mesh-green {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(17, 116, 0, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 80% 100%, rgba(0, 30, 201, 0.05) 0%, transparent 50%),
+    var(--color-carbon);
+}
+[data-theme="light"] .mesh-amber {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(232, 163, 61, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(17, 116, 0, 0.04) 0%, transparent 40%),
+    var(--color-carbon);
+}
+[data-theme="light"] .mesh-dual {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(0, 30, 201, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 75% 80%, rgba(17, 116, 0, 0.05) 0%, transparent 40%),
+    var(--color-carbon);
+}
+[data-theme="light"] .noise::after {
+  opacity: 0.025;
+}
+[data-theme="light"] .glow-dot {
+  box-shadow: 0 0 6px var(--color-saj-green-glow);
+}
+[data-theme="light"] .glow-dot-cobalt {
+  box-shadow: 0 0 6px var(--color-cobalt-glow);
+}
+[data-theme="light"] .text-saj-green {
+  color: var(--color-saj-green);
+}
+/* Hero scrim: fades the animated canvas behind the headline. Theme-aware —
+   dark ink on dark theme, paper wash on light theme. */
+.hero-scrim {
+  background: linear-gradient(180deg, rgba(7, 8, 11, 0.65) 0%, rgba(7, 8, 11, 0.45) 50%, rgba(7, 8, 11, 0.85) 100%);
+}
+[data-theme="light"] .hero-scrim {
+  background: linear-gradient(180deg, rgba(247, 245, 240, 0.75) 0%, rgba(247, 245, 240, 0.55) 50%, rgba(247, 245, 240, 0.9) 100%);
+}
+
+[data-theme="light"] .btn-ghost {
+  color: var(--color-text-on-carbon);
+  border-color: rgba(7, 8, 11, 0.25);
+}
+[data-theme="light"] .btn-ghost:hover {
+  background-color: rgba(7, 8, 11, 0.05);
+  border-color: var(--color-text-on-carbon);
 }
 
 @layer base {
@@ -110,8 +170,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.022em;
+    font-weight: 700;
+    letter-spacing: -0.012em;
     line-height: 1.08;
     text-wrap: balance;
   }
@@ -143,20 +203,19 @@
 
 @layer components {
   /* === MONO LABELS === */
+  /* Beschriftungen: Cantarell fett, normale Schreibweise — Formular, nicht Terminal. */
   .mono-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.8125rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-weight: 700;
     line-height: 1.4;
   }
   .mono-label-sm {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-weight: 700;
     line-height: 1.4;
   }
   .mono-spec {
@@ -164,6 +223,7 @@
     font-size: 0.9375rem;
     letter-spacing: 0.01em;
     line-height: 1.55;
+    font-variant-numeric: tabular-nums;
   }
 
   /* === BUTTONS === */
@@ -184,8 +244,44 @@
   .btn-primary:hover {
     background-color: var(--color-cobalt-light);
     border-color: var(--color-cobalt-light);
-    box-shadow: 0 0 24px -4px var(--color-cobalt-glow);
-    transform: translateY(-1px);
+  }
+
+  /* Dossier-CTA: gestempelter Rahmen. Hover = Tinten-Invertierung, kein Glow, kein Lift. */
+  .btn-dossier {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.875rem 1.75rem;
+    border: 1.5px solid var(--color-cobalt);
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-cobalt-light);
+    transition: background-color 120ms linear, color 120ms linear;
+  }
+  .btn-dossier:hover,
+  .btn-dossier:focus-visible {
+    background-color: var(--color-cobalt);
+    color: #ffffff;
+  }
+  [data-theme="light"] .btn-dossier {
+    color: var(--color-cobalt);
+  }
+  [data-theme="light"] .btn-dossier:hover,
+  [data-theme="light"] .btn-dossier:focus-visible {
+    color: #ffffff;
+  }
+
+  /* Zeichnungskonvention "entfällt": 45°-Schraffur für ungenutzte Formularflächen */
+  .schraffur {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0 7px,
+      var(--color-hairline-dark) 7px 8px
+    );
   }
   .btn-ghost {
     background-color: transparent;
@@ -209,7 +305,8 @@
 
   /* === CONTAINER & SECTIONS === */
   .container-prose {
-    @apply mx-auto w-full max-w-[1280px] px-6 lg:px-12;
+    /* Ein Blatt hat ein Format — auf Ultrawide bleibt es ein Dokument, keine Tapete. */
+    @apply mx-auto w-full max-w-[1320px] px-6 lg:px-12;
   }
   .section {
     @apply py-20 md:py-28;
@@ -259,21 +356,21 @@
   /* === DISPLAY TYPOGRAPHY — refined editorial scale === */
   .display-xl {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(2.5rem, 6vw, 5rem);
     line-height: 1;
-    letter-spacing: -0.032em;
+    letter-spacing: -0.012em;
   }
   .display-lg {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(1.875rem, 4vw, 3.25rem);
     line-height: 1.04;
-    letter-spacing: -0.026em;
+    letter-spacing: -0.012em;
   }
   .display-md {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(1.5rem, 2.4vw, 2.125rem);
     line-height: 1.12;
     letter-spacing: -0.02em;
@@ -282,7 +379,7 @@
   /* Card / sub-section heading */
   .heading-card {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 700;
     font-size: clamp(1.25rem, 1.6vw, 1.5rem);
     line-height: 1.2;
     letter-spacing: -0.014em;
@@ -372,11 +469,10 @@
     display: inline-flex;
     align-items: center;
     gap: 0.625rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.8125rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-weight: 700;
     color: var(--color-cobalt-light);
   }
   .chapter-mark::before {
@@ -425,6 +521,36 @@
     opacity: 0.06;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* === MASSKETTE (dimension line, DIN drawing style) === */
+  .masskette-line {
+    stroke: var(--color-text-on-carbon);
+    stroke-width: 1;
+    fill: none;
+  }
+  .masskette-draw {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: masskette-draw 0.7s var(--ease-out-expo) 0.15s forwards;
+  }
+  .masskette-label {
+    font-family: var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    fill: var(--color-text-on-carbon-muted);
+    opacity: 0;
+    animation: masskette-fade 0.4s ease-out 0.7s forwards;
+  }
+  @keyframes masskette-draw {
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes masskette-fade {
+    to { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .masskette-draw { animation: none; stroke-dashoffset: 0; }
+    .masskette-label { animation: none; opacity: 1; }
   }
 
   /* === SCROLL REVEAL === */
@@ -531,7 +657,7 @@
   .editorial-prose h3,
   .editorial-prose h4 {
     color: var(--color-bone);
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: -0.022em;
   }
   .editorial-prose h1 { font-size: 2.5rem; line-height: 1.05; margin-top: 0; margin-bottom: 1rem; }
@@ -622,7 +748,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--color-cobalt-light);
     transition: gap 0.3s var(--ease-out-expo);
   }
