@@ -14,10 +14,9 @@ const items = getDict<string[]>(locale, "home.standards.items") ?? [];
     </div>
     <div class="md:col-span-8">
       <ol class="grid grid-cols-2 gap-x-10 gap-y-6 sm:grid-cols-3">
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li>
-            <span class="mono-spec block text-[0.8125rem] text-[var(--color-text-on-carbon-faint)]">[{String(idx + 1).padStart(2, "0")}]</span>
-            <span class="mono-spec mt-0.5 block text-[var(--color-text-on-carbon)]">{item}</span>
+            <span class="mono-spec block text-[var(--color-text-on-carbon)]">{item}</span>
           </li>
         ))}
       </ol>

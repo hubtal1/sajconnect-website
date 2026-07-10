@@ -54,12 +54,7 @@ const subAreas = [
             <span class="absolute left-0 top-0 h-px w-0 bg-[var(--color-cobalt-light)] transition-all duration-700 group-hover:w-full"
               style="box-shadow: 0 0 12px var(--color-cobalt-glow);"></span>
 
-            <div class="flex items-baseline justify-between">
-              <span class="mono-label-sm text-[var(--color-cobalt-light)]">{d.tag}</span>
-              <span class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">
-                {String(idx + 1).padStart(2, "0")} / {String(domains.length).padStart(2, "0")}
-              </span>
-            </div>
+            <span class="mono-label-sm text-[var(--color-cobalt-light)]">{d.tag}</span>
             <h2 class="display-md mt-12 text-[var(--color-bone)]">
               {d.title}
             </h2>
@@ -134,10 +129,7 @@ const subAreas = [
                 class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
                 style={`background-color: var(${accentVar});`}
               ></span>
-              <p class="mono-label-sm" style={`color: var(${accentVar});`}>
-                {String(idx + 1).padStart(2, "0")} / {String(engagementModels.length).padStart(2, "0")}
-              </p>
-              <h3 class="heading-card mt-6 text-[var(--color-bone)]">{model.title}</h3>
+              <h3 class="heading-card text-[var(--color-bone)]">{model.title}</h3>
               <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{model.text}</p>
             </div>
           );
