@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- SAJ Connect — Orbit invers: weißer Kern + Orbit auf SAJ-Blau, grüner Satellit -->
-  <rect width="32" height="32" rx="7" fill="#001EC9"/>
-  <circle cx="16" cy="16" r="5.6" fill="#ffffff"/>
+  <!-- SAJ Connect — Orbit-Mark: blauer Kern, grüner Orbit, transparenter Grund -->
+  <circle cx="16" cy="16" r="7.5" fill="#001EC9"/>
   <g transform="rotate(-24 16 16)">
-    <ellipse cx="16" cy="16" rx="12.5" ry="5.8" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.92"/>
+    <ellipse cx="16" cy="16" rx="14" ry="6.6" fill="none" stroke="#15A00A" stroke-width="2.4"/>
   </g>
-  <circle cx="26.8" cy="11.2" r="2.4" fill="#2BBE0D"/>
+  <circle cx="28.2" cy="10.6" r="2.6" fill="#15A00A"/>
 </svg>
