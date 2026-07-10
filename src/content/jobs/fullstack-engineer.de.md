@@ -6,7 +6,7 @@ employmentType: "full-time"
 department: "Engineering"
 summary: "Du baust mit uns moderne, vernetzte Web- und Mobile-Lösungen — von der API bis ins UI."
 publishedAt: 2026-04-01
-draft: false
+draft: true
 ---
 
 ## Was dich erwartet
