@@ -14,6 +14,8 @@ const Schema = z.object({
   company: z.string().optional(),
   message: z.string().min(10),
   consent: z.literal(true),
+  // Honeypot — bleibt bei Menschen leer, Bots füllen es aus.
+  website: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof Schema>;
@@ -113,6 +115,12 @@ export default function ContactForm({ locale, endpoint }: Props) {
           className="form-input"
         />
       </Field>
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", height: 0, overflow: "hidden" }}>
+        <label>
+          Website
+          <input {...register("website")} type="text" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <Field label={t.message} error={errors.message?.message}>
         <textarea
           {...register("message", { required: true, minLength: 10 })}
