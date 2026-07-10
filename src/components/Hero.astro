@@ -14,6 +14,8 @@ const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
 
 <section class="text-[var(--color-text-on-carbon)]">
   <div class="container-prose pb-14 pt-16 md:pb-20 md:pt-24">
+    <div class="lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-16">
+      <div>
     <div class="w-fit max-w-full">
       <h1 class="font-display font-bold leading-[1.02] tracking-[-0.012em]" style="font-size: clamp(2.25rem, 6vw, 5.25rem);">
         <span class="mb-3 block font-sans text-[0.5em] font-bold leading-none tracking-[-0.01em] text-[var(--color-text-on-carbon)]">
@@ -46,6 +48,22 @@ const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
       >
         {tt("dossier.hero.ctaPrimary")}
       </a>
+    </div>
+      </div>
+
+      <!-- Orbit-Motiv aus dem Markenzeichen: ruhige Liniengrafik statt Stock-Bild -->
+      <div class="hidden lg:block" aria-hidden="true">
+        <svg class="mx-auto h-auto w-full max-w-[460px]" viewBox="0 0 440 440" fill="none">
+          <g transform="rotate(-24 220 220)">
+            <ellipse cx="220" cy="220" rx="198" ry="92" stroke="var(--color-hairline-dark)" stroke-width="1.5" />
+            <ellipse cx="220" cy="220" rx="150" ry="68" stroke="var(--color-cobalt-light)" stroke-width="1.5" opacity="0.55" />
+          </g>
+          <circle cx="220" cy="220" r="64" fill="var(--color-cobalt)" />
+          <circle cx="220" cy="220" r="88" stroke="var(--color-hairline-dark)" stroke-width="1" />
+          <circle cx="398" cy="141" r="9" fill="var(--color-saj-green-bright)" />
+          <circle cx="66" cy="310" r="5" fill="none" stroke="var(--color-cobalt-light)" stroke-width="1.5" />
+        </svg>
+      </div>
     </div>
 
     <!-- Faktenzeile: offene Schlüssel/Wert-Paare, keine Box -->
