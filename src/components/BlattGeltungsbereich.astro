@@ -33,10 +33,9 @@ const items = getDict<Item[]>(locale, "home.differentiators.items") ?? [];
   </div>
 
   <div class="mt-14 grid gap-y-10 md:grid-cols-2 md:gap-x-12">
-    {items.map((item, idx) => (
+    {items.map((item) => (
       <div>
-        <p class="mono-spec text-[0.8125rem] text-[var(--color-cobalt-light)]">1.{idx + 1}</p>
-        <h4 class="heading-card mt-2 text-[var(--color-text-on-carbon)]">{item.title}</h4>
+        <h4 class="heading-card text-[var(--color-text-on-carbon)]">{item.title}</h4>
         <p class="mt-2.5 max-w-[52ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{item.text}</p>
       </div>
     ))}

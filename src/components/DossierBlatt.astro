@@ -13,10 +13,8 @@ const { nr, title, blatt, id } = Astro.props;
 
 <section class="py-14 text-[var(--color-text-on-carbon)] md:py-20" id={id}>
   <div class="container-prose">
-    <div class="flex items-baseline gap-4 border-b border-[var(--color-hairline-dark)] pb-4">
-      <span class="mono-spec text-[var(--color-cobalt-light)]">{nr}</span>
+    <div class="border-b border-[var(--color-hairline-dark)] pb-4">
       <h2 class="text-xl font-bold md:text-2xl">{title}</h2>
-      <span class="mono-spec ml-auto hidden text-[0.8125rem] text-[var(--color-text-on-carbon-faint)] md:block">{blatt}</span>
     </div>
     <slot />
   </div>
