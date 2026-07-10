@@ -89,13 +89,7 @@ const diffs = getDict<Diff[]>(lang, "about.differentiators.items") ?? [];
                 class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
                 style={`background-color: var(${accentVar}); box-shadow: 0 0 12px var(${glowVar});`}
               ></span>
-              <p
-                class="font-display text-4xl font-medium leading-none tracking-tight transition-transform duration-500 group-hover:scale-105 md:text-5xl"
-                style={`color: var(${accentVar});`}
-              >
-                {d.n}
-              </p>
-              <p class="mt-8 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:text-base">{d.text}</p>
+              <p class="text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:text-base">{d.text}</p>
             </li>
           );
         })}
