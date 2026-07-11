@@ -1,7 +1,7 @@
 ---
 title: "Private 5G oder Wi-Fi 6E in der Fabrik? Ein ehrlicher Entscheidungsleitfaden"
 locale: "de"
-description: "Wann sich ein Campusnetz lohnt, wann Wi-Fi die bessere Wahl ist — und warum die Antwort oft „beides" lautet. Mit Prüffragen für Ihre Entscheidung."
+description: "Wann sich ein Campusnetz lohnt, wann Wi-Fi die bessere Wahl ist — und warum die Antwort oft ‚beides' lautet. Mit Prüffragen für Ihre Entscheidung."
 author: "SAJ Connect Team"
 publishedAt: 2026-07-10
 tags: ["private-5g", "wifi", "industrie"]
