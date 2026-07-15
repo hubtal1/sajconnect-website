@@ -128,6 +128,17 @@ export default {
       if (request.method !== "POST") return json({ error: "method_not_allowed" }, 405);
       return handleContact(request, env);
     }
+    if (url.pathname === "/api/geo") {
+      // Besucherland für die Geo-Consent-Logik (EU Opt-in / US Opt-out).
+      // CF-IPCountry ist nur server-seitig lesbar — hier reichen wir es durch.
+      const country = request.cf?.country || request.headers.get("CF-IPCountry") || "XX";
+      return new Response(JSON.stringify({ country }), {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Cache-Control": "no-store",
+        },
+      });
+    }
     // Alles andere: statische Website.
     return env.ASSETS.fetch(request);
   },

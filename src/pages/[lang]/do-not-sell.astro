@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import OptOutToggle from "../../components/OptOutToggle.tsx";
+import { LOCALES, t, localizedPath, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+---
+
+<Layout title="Do Not Sell or Share My Personal Information" description={tt("usPrivacy.lead")}>
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-12 md:pt-24 md:pb-16">
+      <div class="grid grid-cols-12 gap-6 reveal">
+        <div class="col-span-12 md:col-span-2">
+          <p class="chapter-mark">{tt("ui.legal")}</p>
+        </div>
+        <div class="col-span-12 md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">Do Not Sell or Share My Personal Information</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose pb-24 md:pb-32">
+      <article class="editorial-prose pt-8">
+        <p>{tt("usPrivacy.lead")}</p>
+        <p>{tt("usPrivacy.note")}</p>
+        <p>
+          {tt("usPrivacy.moreInfo")}
+          <a href={localizedPath(lang, "/privacy")}>{tt("footer.privacy")}</a>.
+        </p>
+      </article>
+      <OptOutToggle client:load locale={lang} />
+    </div>
+  </section>
+</Layout>

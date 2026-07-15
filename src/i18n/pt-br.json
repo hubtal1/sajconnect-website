@@ -265,6 +265,17 @@
     "decline": "Apenas necessários",
     "settings": "Configurações"
   },
+  "usPrivacy": {
+    "lead": "Pela legislação da Califórnia (CCPA/CPRA), visitantes dos Estados Unidos têm o direito de se opor à venda e ao compartilhamento de seus dados pessoais. Nesta página você pode exercer esse direito.",
+    "note": "Até hoje, a SAJ Connect não vende dados pessoais e não utiliza cookies de marketing ou análise de terceiros. Sua escolha fica armazenada no seu navegador e será aplicada automaticamente caso tais serviços venham a ser utilizados no futuro. Se o seu navegador envia o sinal Global Privacy Control (GPC), nós o respeitamos sem nenhuma ação adicional.",
+    "moreInfo": "Para mais informações sobre o tratamento de dados, consulte nossa ",
+    "currentState": "Status atual",
+    "statusOptedOut": "Opt-out ativo — cookies de marketing e análise permanecem desativados.",
+    "statusNotOptedOut": "Sem opt-out — comportamento padrão ativo.",
+    "statusGpc": "Seu navegador envia o sinal Global Privacy Control. Tratamos isso automaticamente como uma objeção — nenhuma ação adicional é necessária.",
+    "optOutBtn": "Opt out — não vender nem compartilhar meus dados",
+    "optInBtn": "Retirar opt-out"
+  },
   "language": {
     "label": "Idioma",
     "de": "Deutsch",

@@ -3,8 +3,14 @@ import deRaw from "../i18n/de.json";
 import enRaw from "../i18n/en.json";
 import ptRaw from "../i18n/pt-br.json";
 import type { Locale } from "../i18n/utils";
-
-const STORAGE_KEY = "saj_cookie_consent_v1";
+import {
+  EU_CONSENT_KEY,
+  euConsentAccepted,
+  getCountry,
+  isUS,
+  loadMarketingScripts,
+  marketingAllowed,
+} from "../lib/consent";
 
 const dicts = { de: deRaw, en: enRaw, "pt-br": ptRaw } as const;
 
@@ -12,23 +18,45 @@ export default function CookieBanner({ locale }: { locale: Locale }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (!stored) setVisible(true);
-    } catch {
-      setVisible(true);
-    }
+    let cancelled = false;
+    (async () => {
+      const country = await getCountry();
+      if (cancelled) return;
+
+      if (isUS(country)) {
+        // USA: Opt-out-Prinzip (CPRA) — kein EU-Banner. Marketing lädt sofort,
+        // außer der Nutzer hat widersprochen oder sein Browser sendet GPC.
+        if (marketingAllowed(country)) loadMarketingScripts();
+        return;
+      }
+
+      // EU + Rest: Opt-in-Prinzip — ohne gespeicherte Entscheidung blockieren.
+      if (euConsentAccepted()) {
+        loadMarketingScripts();
+        return;
+      }
+      try {
+        const stored = localStorage.getItem(EU_CONSENT_KEY);
+        if (!stored) setVisible(true);
+      } catch {
+        setVisible(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   function decide(consent: "accept" | "decline") {
     try {
       localStorage.setItem(
-        STORAGE_KEY,
+        EU_CONSENT_KEY,
         JSON.stringify({ consent, at: new Date().toISOString() }),
       );
     } catch {
       // ignore
     }
+    if (consent === "accept") loadMarketingScripts();
     setVisible(false);
   }
 

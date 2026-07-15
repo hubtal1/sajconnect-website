@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro";
+import UsPrivacyLink from "./UsPrivacyLink.tsx";
 import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
 
 const locale: Locale = getLocaleFromUrl(Astro.url);
@@ -43,6 +44,7 @@ const year = new Date().getFullYear();
           <li><a href={localizedPath(locale, "/imprint")} class="hover:text-[var(--color-cobalt-light)]">{tt("footer.imprint")}</a></li>
           <li><a href={localizedPath(locale, "/privacy")} class="hover:text-[var(--color-cobalt-light)]">{tt("footer.privacy")}</a></li>
         </ul>
+        <UsPrivacyLink client:idle locale={locale} />
       </div>
     </div>
 
