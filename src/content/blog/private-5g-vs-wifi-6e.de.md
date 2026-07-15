@@ -5,7 +5,7 @@ description: "Wann sich ein Campusnetz lohnt, wann Wi-Fi die bessere Wahl ist �
 author: "SAJ Connect Team"
 publishedAt: 2026-07-10
 tags: ["private-5g", "wifi", "industrie"]
-draft: true
+draft: false
 ---
 
 Die Frage kommt in fast jedem Erstgespräch zur Fabrikvernetzung: „Brauchen wir wirklich Private 5G — oder reicht modernes WLAN?" Die ehrliche Antwort: Es kommt auf Ihre Prozesse an, nicht auf die Technologie. Beide Welten haben sich weiterentwickelt, und wer heute pauschal zu einer Seite rät, hat entweder etwas zu verkaufen oder nicht genau hingeschaut.
