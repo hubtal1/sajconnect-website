@@ -40,10 +40,7 @@ export function organizationJsonLd() {
     name: "SAJ Connect",
     url: SITE,
     logo: `${SITE}/logo.svg`,
-    foundingDate: "2025-12",
     telephone: "+49-160-97533957",
-    vatID: "DE460439086",
-    taxID: "HRB 45795",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Egensbach 310",
