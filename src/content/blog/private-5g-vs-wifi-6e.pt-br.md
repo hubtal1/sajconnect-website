@@ -5,7 +5,7 @@ description: "Quando uma rede celular privada compensa, quando o Wi-Fi é a melh
 author: "SAJ Connect Team"
 publishedAt: 2026-07-10
 tags: ["private-5g", "wifi", "industria"]
-draft: true
+draft: false
 ---
 
 A pergunta aparece em quase toda primeira conversa sobre conectividade fabril: "Precisamos mesmo de 5G privado — ou um Wi-Fi moderno basta?" A resposta honesta: depende dos seus processos, não da tecnologia. Os dois mundos evoluíram, e quem hoje recomenda um lado de forma genérica ou tem algo a vender, ou não olhou com atenção.
