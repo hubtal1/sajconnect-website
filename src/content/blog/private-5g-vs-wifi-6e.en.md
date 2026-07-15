@@ -5,7 +5,7 @@ description: "When a private cellular network pays off, when Wi-Fi is the better
 author: "SAJ Connect Team"
 publishedAt: 2026-07-10
 tags: ["private-5g", "wifi", "industry"]
-draft: true
+draft: false
 ---
 
 The question comes up in almost every first conversation about factory connectivity: "Do we really need private 5G — or is modern Wi-Fi enough?" The honest answer: it depends on your processes, not on the technology. Both worlds have moved on, and anyone giving you a blanket recommendation today either has something to sell or hasn't looked closely.
