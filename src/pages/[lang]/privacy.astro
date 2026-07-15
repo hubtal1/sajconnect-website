@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ObfuscatedEmail from "../../components/ObfuscatedEmail.astro";
-import { LOCALES, t, type Locale } from "../../i18n/utils";
+import { LOCALES, t, localizedPath, type Locale } from "../../i18n/utils";
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -29,65 +29,223 @@ const tt = t(lang);
   <section class="surface-carbon">
     <div class="container-prose pb-24 md:pb-32">
       <article class="editorial-prose pt-8">
-        <h2>1. Verantwortlicher</h2>
-        <p>
-          SAJ Connect GmbH<br />
-          vertreten durch den Geschäftsführer Julian von Wild<br />
-          Egensbach 310<br />
-          91238 Offenhausen<br />
-          Deutschland<br />
-          E-Mail: <ObfuscatedEmail user="datenschutz" domain="sajconnect.com" />
-        </p>
+        {lang === "de" && (
+          <>
+            <h2>1. Verantwortlicher</h2>
+            <p>
+              SAJ Connect GmbH<br />
+              vertreten durch den Geschäftsführer Julian von Wild<br />
+              Egensbach 310<br />
+              91238 Offenhausen<br />
+              Deutschland<br />
+              E-Mail: <ObfuscatedEmail user="datenschutz" domain="sajconnect.com" />
+            </p>
 
-        <h2>2. Hosting</h2>
-        <p>
-          Die Website wird über das Netzwerk von Cloudflare, Inc., 101 Townsend St.,
-          San Francisco, CA 94107, USA, ausgeliefert. Cloudflare verarbeitet dabei
-          personenbezogene Daten, insbesondere IP-Adressen, zur Bereitstellung,
-          Absicherung und Optimierung des Websitebetriebs. Die Verarbeitung erfolgt
-          auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Soweit eine Übermittlung in
-          Drittländer stattfindet, erfolgt diese auf Grundlage der von Cloudflare
-          verwendeten Standardvertragsklauseln und weiterer geeigneter Garantien.
-        </p>
+            <h2>2. Hosting</h2>
+            <p>
+              Die Website wird über das Netzwerk von Cloudflare, Inc., 101 Townsend St.,
+              San Francisco, CA 94107, USA, ausgeliefert. Cloudflare verarbeitet dabei
+              personenbezogene Daten, insbesondere IP-Adressen, zur Bereitstellung,
+              Absicherung und Optimierung des Websitebetriebs. Die Verarbeitung erfolgt
+              auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Soweit eine Übermittlung in
+              Drittländer stattfindet, erfolgt diese auf Grundlage der von Cloudflare
+              verwendeten Standardvertragsklauseln und weiterer geeigneter Garantien.
+            </p>
 
-        <h2>3. Cookies & lokaler Speicher</h2>
-        <p>
-          Wir verwenden ausschließlich technisch notwendige Cookies und einen Eintrag im
-          lokalen Speicher des Browsers, um Ihre Cookie-Auswahl zu merken. Ohne Ihre Zustimmung findet
-          keine Reichweitenmessung statt. Sofern Sie einwilligen, kann eine cookielose
-          Reichweitenmessung über <strong>Cloudflare Web Analytics</strong> erfolgen —
-          dabei werden keine Cookies gesetzt und keine personenbezogenen Daten wie
-          IP-Adressen gespeichert.
-        </p>
+            <h2>3. Cookies & lokaler Speicher</h2>
+            <p>
+              Wir verwenden ausschließlich technisch notwendige Cookies und einen Eintrag im
+              lokalen Speicher des Browsers, um Ihre Cookie-Auswahl zu merken. Ohne Ihre Zustimmung findet
+              keine Reichweitenmessung statt. Sofern Sie einwilligen, kann eine cookielose
+              Reichweitenmessung über <strong>Cloudflare Web Analytics</strong> erfolgen —
+              dabei werden keine Cookies gesetzt und keine personenbezogenen Daten wie
+              IP-Adressen gespeichert.
+            </p>
 
-        <h2>4. Schriftarten</h2>
-        <p>
-          Die verwendeten Schriftarten werden lokal von unserem Server bereitgestellt.
-          Eine Verbindung zu externen Schriftanbieterdiensten, insbesondere Google
-          Fonts, findet nicht statt.
-        </p>
+            <h2>4. Schriftarten</h2>
+            <p>
+              Die verwendeten Schriftarten werden lokal von unserem Server bereitgestellt.
+              Eine Verbindung zu externen Schriftanbieterdiensten, insbesondere Google
+              Fonts, findet nicht statt.
+            </p>
 
-        <h2>5. Kontaktformular</h2>
-        <p>
-          Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren,
-          verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer
-          Anfrage und für mögliche Anschlussfragen. Die Verarbeitung erfolgt je nach
-          Inhalt der Anfrage auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO oder
-          Art. 6 Abs. 1 lit. f DSGVO. Eine Weitergabe an Dritte erfolgt nicht ohne
-          Ihre Einwilligung. Die Daten löschen wir, sobald sie für den Zweck ihrer
-          Erhebung nicht mehr erforderlich sind und keine gesetzlichen
-          Aufbewahrungspflichten entgegenstehen.
-        </p>
+            <h2>5. Kontaktformular</h2>
+            <p>
+              Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren,
+              verarbeiten wir die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer
+              Anfrage und für mögliche Anschlussfragen. Die Verarbeitung erfolgt je nach
+              Inhalt der Anfrage auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO oder
+              Art. 6 Abs. 1 lit. f DSGVO. Eine Weitergabe an Dritte erfolgt nicht ohne
+              Ihre Einwilligung. Die Daten löschen wir, sobald sie für den Zweck ihrer
+              Erhebung nicht mehr erforderlich sind und keine gesetzlichen
+              Aufbewahrungspflichten entgegenstehen.
+            </p>
 
-        <h2>6. Ihre Rechte</h2>
-        <p>
-          Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung,
-          Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das
-          Recht, sich bei einer Aufsichtsbehörde zu beschweren — für Bayern: Bayerisches
-          Landesamt für Datenschutzaufsicht (BayLDA), Ansbach.
-        </p>
+            <h2>6. Ihre Rechte</h2>
+            <p>
+              Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung,
+              Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das
+              Recht, sich bei einer Aufsichtsbehörde zu beschweren — für Bayern: Bayerisches
+              Landesamt für Datenschutzaufsicht (BayLDA), Ansbach.
+            </p>
+            <p>
+              Besucherinnen und Besucher aus den USA (Kalifornien) finden Hinweise zu ihren
+              Rechten nach CCPA/CPRA auf unserer Seite{" "}
+              <a href={localizedPath(lang, "/do-not-sell")}>Do Not Sell or Share My Personal Information</a>.
+            </p>
 
-        <p><em>Stand: Juli 2026</em></p>
+            <p><em>Stand: Juli 2026</em></p>
+          </>
+        )}
+
+        {lang === "en" && (
+          <>
+            <p>
+              <em>
+                This English version is provided for convenience. Only the{" "}
+                <a href="/de/privacy">German version</a> is legally binding.
+              </em>
+            </p>
+
+            <h2>1. Controller</h2>
+            <p>
+              SAJ Connect GmbH<br />
+              represented by its Managing Director Julian von Wild<br />
+              Egensbach 310<br />
+              91238 Offenhausen<br />
+              Germany<br />
+              E-mail: <ObfuscatedEmail user="datenschutz" domain="sajconnect.com" />
+            </p>
+
+            <h2>2. Hosting</h2>
+            <p>
+              This website is delivered via the network of Cloudflare, Inc., 101 Townsend St.,
+              San Francisco, CA 94107, USA. In doing so, Cloudflare processes personal data,
+              in particular IP addresses, to provide, secure and optimise the operation of the
+              website. Processing is based on Art. 6(1)(f) GDPR. Where data is transferred to
+              third countries, this takes place on the basis of the standard contractual
+              clauses used by Cloudflare and further appropriate safeguards.
+            </p>
+
+            <h2>3. Cookies & local storage</h2>
+            <p>
+              We only use technically necessary cookies and a single entry in your browser's
+              local storage to remember your cookie choice. No audience measurement takes
+              place without your consent. If you consent, cookieless audience measurement may
+              be carried out via <strong>Cloudflare Web Analytics</strong> — no cookies are
+              set and no personal data such as IP addresses are stored.
+            </p>
+
+            <h2>4. Fonts</h2>
+            <p>
+              The fonts used on this website are served locally from our own server. No
+              connection to external font services, in particular Google Fonts, is
+              established.
+            </p>
+
+            <h2>5. Contact form</h2>
+            <p>
+              If you contact us via the contact form or by e-mail, we process the information
+              you provide in order to handle your enquiry and for possible follow-up
+              questions. Depending on the content of the enquiry, processing is based on
+              Art. 6(1)(b) GDPR or Art. 6(1)(f) GDPR. Your data will not be passed on to
+              third parties without your consent. We delete the data as soon as it is no
+              longer required for the purpose for which it was collected and no statutory
+              retention obligations apply.
+            </p>
+
+            <h2>6. Your rights</h2>
+            <p>
+              You have the right at any time to access, rectification, erasure, restriction
+              of processing, data portability and objection, as well as the right to lodge a
+              complaint with a supervisory authority — for Bavaria: the Bavarian State Office
+              for Data Protection Supervision (Bayerisches Landesamt für Datenschutzaufsicht,
+              BayLDA), Ansbach, Germany.
+            </p>
+            <p>
+              Visitors from the United States (California) can find information about their
+              rights under the CCPA/CPRA on our page{" "}
+              <a href={localizedPath(lang, "/do-not-sell")}>Do Not Sell or Share My Personal Information</a>.
+            </p>
+
+            <p><em>Last updated: July 2026</em></p>
+          </>
+        )}
+
+        {lang === "pt-br" && (
+          <>
+            <p>
+              <em>
+                Esta versão em português é uma tradução de cortesia. Apenas a{" "}
+                <a href="/de/privacy">versão alemã</a> é juridicamente vinculativa.
+              </em>
+            </p>
+
+            <h2>1. Responsável pelo tratamento</h2>
+            <p>
+              SAJ Connect GmbH<br />
+              representada pelo diretor-geral Julian von Wild<br />
+              Egensbach 310<br />
+              91238 Offenhausen<br />
+              Alemanha<br />
+              E-mail: <ObfuscatedEmail user="datenschutz" domain="sajconnect.com" />
+            </p>
+
+            <h2>2. Hospedagem</h2>
+            <p>
+              Este site é entregue pela rede da Cloudflare, Inc., 101 Townsend St.,
+              San Francisco, CA 94107, EUA. Nesse processo, a Cloudflare trata dados
+              pessoais, em particular endereços IP, para fornecer, proteger e otimizar a
+              operação do site. O tratamento tem como base legal o art. 6(1)(f) do RGPD
+              (GDPR). Quando há transferência para países terceiros, ela ocorre com base nas
+              cláusulas contratuais-padrão utilizadas pela Cloudflare e em outras garantias
+              adequadas.
+            </p>
+
+            <h2>3. Cookies e armazenamento local</h2>
+            <p>
+              Usamos apenas cookies tecnicamente necessários e um único registro no
+              armazenamento local do seu navegador para lembrar a sua escolha de cookies.
+              Nenhuma medição de audiência ocorre sem o seu consentimento. Se você
+              consentir, uma medição de audiência sem cookies pode ser realizada via{" "}
+              <strong>Cloudflare Web Analytics</strong> — sem uso de cookies e sem
+              armazenamento de dados pessoais como endereços IP.
+            </p>
+
+            <h2>4. Fontes tipográficas</h2>
+            <p>
+              As fontes utilizadas neste site são fornecidas localmente pelo nosso próprio
+              servidor. Não é estabelecida nenhuma conexão com serviços externos de fontes,
+              em particular o Google Fonts.
+            </p>
+
+            <h2>5. Formulário de contato</h2>
+            <p>
+              Se você entrar em contato conosco pelo formulário de contato ou por e-mail,
+              trataremos as informações fornecidas para processar a sua solicitação e para
+              eventuais perguntas de acompanhamento. Dependendo do conteúdo da solicitação, o
+              tratamento tem como base legal o art. 6(1)(b) ou o art. 6(1)(f) do RGPD (GDPR).
+              Seus dados não serão repassados a terceiros sem o seu consentimento. Excluímos
+              os dados assim que deixarem de ser necessários para a finalidade da coleta e
+              não houver obrigações legais de retenção.
+            </p>
+
+            <h2>6. Seus direitos</h2>
+            <p>
+              Você tem, a qualquer momento, o direito de acesso, retificação, exclusão,
+              limitação do tratamento, portabilidade dos dados e oposição, bem como o direito
+              de apresentar reclamação a uma autoridade de controle — para a Baviera:
+              Bayerisches Landesamt für Datenschutzaufsicht (BayLDA), Ansbach, Alemanha.
+            </p>
+            <p>
+              Visitantes dos Estados Unidos (Califórnia) encontram informações sobre seus
+              direitos sob a CCPA/CPRA em nossa página{" "}
+              <a href={localizedPath(lang, "/do-not-sell")}>Do Not Sell or Share My Personal Information</a>.
+            </p>
+
+            <p><em>Última atualização: julho de 2026</em></p>
+          </>
+        )}
       </article>
     </div>
   </section>
