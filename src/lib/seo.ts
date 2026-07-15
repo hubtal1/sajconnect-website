@@ -40,7 +40,6 @@ export function organizationJsonLd() {
     name: "SAJ Connect",
     url: SITE,
     logo: `${SITE}/logo.svg`,
-    telephone: "+49-160-97533957",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Egensbach 310",
@@ -50,7 +49,6 @@ export function organizationJsonLd() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+49-160-97533957",
       url: `${SITE}/de/contact`,
       contactType: "customer support",
       availableLanguage: ["de", "en", "pt-BR"],
