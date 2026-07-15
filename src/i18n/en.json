@@ -87,7 +87,7 @@
         "wert": "Value",
         "remarks": "Remarks: —",
         "rows": [
-          { "k": "Location", "v": "Nuremberg, Germany" },
+          { "k": "Locations", "v": "Nuremberg, DE · Spokane, USA" },
           { "k": "Portfolio", "v": "8 areas" },
           { "k": "Languages", "v": "DE · EN · PT" },
           { "k": "Working basis", "v": "3GPP · GSMA" }
@@ -246,7 +246,8 @@
       "error": "Something went wrong. Please try again.",
       "acknowledged": "Acknowledged"
     },
-    "office": "Office",
+    "officeGermany": "Germany",
+    "officeUsa": "USA",
     "phone": "Phone",
     "email": "Email"
   },

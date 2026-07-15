@@ -87,7 +87,7 @@
         "wert": "Wert",
         "remarks": "Bemerkungen: —",
         "rows": [
-          { "k": "Standort", "v": "Nürnberg, Deutschland" },
+          { "k": "Standorte", "v": "Nürnberg, DE · Spokane, USA" },
           { "k": "Portfolio", "v": "8 Bereiche" },
           { "k": "Sprachen", "v": "DE · EN · PT" },
           { "k": "Arbeitsgrundlage", "v": "3GPP · GSMA" }
@@ -246,7 +246,8 @@
       "error": "Da ist etwas schiefgelaufen. Bitte versuchen Sie es noch einmal.",
       "acknowledged": "Bestätigt"
     },
-    "office": "Büro",
+    "officeGermany": "Deutschland",
+    "officeUsa": "USA",
     "phone": "Telefon",
     "email": "E-Mail"
   },
