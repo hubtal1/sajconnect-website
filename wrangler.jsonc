@@ -5,6 +5,15 @@
   // Statische Site + kleiner Worker für die Kontaktformular-API (/api/*).
   // 404-Handling über das von Astro gebaute dist/404.html.
   "main": "worker/index.js",
+  // Dashboard-Variablen bei Deploys NICHT löschen (Wrangler-Default wäre löschen!).
+  // Die drei AZURE_*-Werte liegen als Secrets im Dashboard — Secrets überleben
+  // Deploys immer; keep_vars schützt zusätzlich alle Klartext-Variablen.
+  "keep_vars": true,
+  // Unkritische Mail-Adressen direkt hier — stehen ohnehin öffentlich auf der Website.
+  "vars": {
+    "MAIL_SENDER": "noreply@sajconnect.com",
+    "MAIL_TO": "info@sajconnect.com"
+  },
   "assets": {
     "directory": "dist",
     "binding": "ASSETS",
