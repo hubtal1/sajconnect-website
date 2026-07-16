@@ -195,6 +195,12 @@
     "title": "Sobre a SAJ Connect",
     "lead": "A SAJ Connect GmbH é uma consultoria de tecnologia especializada na interseção entre comunicação wireless, mobilidade e IoT. Combinamos profundo conhecimento técnico em Telco, Automotive e IoT com uma abordagem prática e parceira.",
     "leadSecond": "Nossa equipe global de engenheiros e consultores colabora diretamente com clientes — traduzindo desafios complexos de conectividade em estratégias claras, executáveis e com resultados mensuráveis.",
+    "name": {
+      "label": "O nome",
+      "title": "SAJ — Smart Access Journey.",
+      "text": "Nosso nome é a nossa promessa: acompanhamos empresas em sua jornada rumo à conectividade inteligente — independentes de fabricante, da estratégia à operação. Sejam veículos conectados, redes 5G privadas em portos e áreas industriais, transmissão ao vivo no autódromo ou máquinas conectadas em campo: criamos o acesso que conecta seus ativos, processos e pessoas.",
+      "closing": "SAJ Connect — seu parceiro na Smart Access Journey."
+    },
     "mission": {
       "title": "Nossa missão",
       "text": "Fomentar inovação sustentável em 5G e a adoção de tecnologias conectadas — através de parcerias confiáveis, expertise end-to-end e compromisso com a excelência, do conceito à operação."
