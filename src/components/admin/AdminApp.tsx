@@ -465,7 +465,7 @@ export default function AdminApp() {
     }
     const existing = entries[f.kind].find((e) => e.slug === slug);
     if (f.isNew && existing) {
-      setError(`Es existiert bereits ein Eintrag mit dem Namen „${slug}" — bitte den bestehenden Eintrag bearbeiten oder einen anderen Slug wählen.`);
+      setError(`Es existiert bereits ein Eintrag mit dem Namen „${slug}“ — bitte den bestehenden Eintrag bearbeiten oder einen anderen Slug wählen.`);
       return;
     }
     // Abgewählte, existierende Sprachfassungen: vorher bestätigen lassen.
@@ -549,7 +549,7 @@ export default function AdminApp() {
         </div>
         {!token && (
           <p className="mt-3 max-w-[70ch] text-xs leading-relaxed text-[var(--color-text-on-carbon-faint)]">
-            Schlüssel erstellen: GitHub → Settings → Developer settings → Fine-grained personal access tokens → „Generate new token".
+            Schlüssel erstellen: GitHub → Settings → Developer settings → Fine-grained personal access tokens → „Generate new token“.
             Repository access: nur <span className="font-mono">sajconnect-website</span> · Permissions: Contents → Read and write.
           </p>
         )}
@@ -636,7 +636,7 @@ export default function AdminApp() {
             </ul>
           )}
           <p className="mt-8 text-xs text-[var(--color-text-on-carbon-faint)]">
-            Hinweis: „Offline nehmen" setzt den Eintrag auf Entwurf (bleibt erhalten und kann wieder online gestellt werden). „Löschen" entfernt ihn endgültig — in allen Sprachen.
+            Hinweis: „Offline nehmen“ setzt den Eintrag auf Entwurf (bleibt erhalten und kann wieder online gestellt werden). „Löschen“ entfernt ihn endgültig — in allen Sprachen.
           </p>
         </section>
       )}

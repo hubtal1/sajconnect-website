@@ -146,7 +146,7 @@
     "items": [
       { "title": "Network Engineering & Design", "text": "Architektur, RF-Planung, Slicing-Strategie und Integrationsdesign — passgenau für Ihre industrielle Umgebung." },
       { "title": "Project Management & Operations", "text": "End-to-End-Programm-Management — Meilensteine, Vendor-Koordination, Risiko und Qualität vom Kick-off bis zur Übergabe." },
-      { "title": "Network Management & Operations", "text": "Day-2-Operations, Monitoring, Optimierung und kontinuierliche Verbesserung — für gesunde, mission-kritische Netze." },
+      { "title": "Network Management & Operations", "text": "Day-2-Operations, Monitoring, Optimierung und kontinuierliche Verbesserung — für gesunde, missionskritische Netze." },
       { "title": "Software & Hardware Development", "text": "Maßgeschneiderte Software- und Hardware-Komponenten dort, wo der Standard-Stack an Grenzen kommt — vollständig integriert und zertifiziert." },
       { "title": "Network Testing & Validation", "text": "Umfassendes Testing — funktional, Performance, Interoperabilität, Compliance — vor und nach Go-live." }
     ],
@@ -185,7 +185,7 @@
     "items": [
       { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Tiefe Expertise in Android Automotive OS und Android-Auto-Integration — für reichhaltige, performante In-Vehicle-Erlebnisse, konform mit OEM- und Google-Ökosystem-Standards." },
       { "title": "Connectivity-Architektur", "tag": "4G · 5G · V2X", "text": "End-to-End-Design von Fahrzeug-Connectivity-Frameworks — Cellular, Wi-Fi, Bluetooth und V2X-Protokolle für nahtlosen, sicheren Datenaustausch zwischen Fahrzeug, Cloud und externen Geräten." },
-      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Robustes Service-Lifecycle-Management und Security-Frameworks — IAM, Zertifikatsverwaltung und Autorisierungsabläufe, ausgerichtet an automotive Cybersecurity-Standards." },
+      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Robustes Service-Lifecycle-Management und Security-Frameworks — IAM, Zertifikatsverwaltung und Autorisierungsabläufe, ausgerichtet an Automotive-Cybersecurity-Standards." },
       { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Architektur und Implementierung für flexible, abonnementbasierte Feature-Aktivierung — OEMs schalten Funktionen remote frei und erschließen neue After-Sales-Umsätze." },
       { "title": "OTA Update Management", "tag": "OTA · ECU · IVI", "text": "Umfassende OTA-Strategie, Integration und Validierung — sichere, zuverlässige und konforme Software-Updates über ECUs, IVI-Systeme und Fahrzeug-Subsysteme." },
       { "title": "ECU Testing & Validation", "tag": "HIL · SIL · HOMOLOGATION", "text": "Rigoroses Testing für ECUs und vernetzte Fahrzeugsysteme — von früher Verifikation bis zu System-Integration und Homologation." }
@@ -194,7 +194,7 @@
   "about": {
     "title": "Über SAJ Connect",
     "lead": "SAJ Connect GmbH ist eine spezialisierte Technologieberatung an der Schnittstelle von Wireless, Mobilität und IoT. Wir vereinen tiefes technisches Wissen aus Telco, Automotive und IoT mit einem praktischen, partnerschaftlichen Ansatz.",
-    "leadSecond": "Unser globales Team aus Ingenieurinnen, Ingenieuren und Beraterinnen arbeitet direkt mit Kundinnen und Kunden zusammen — und übersetzt komplexe Connectivity-Aufgaben in klare, umsetzbare Strategien und messbare Ergebnisse.",
+    "leadSecond": "Unser globales Team aus Ingenieurinnen, Ingenieuren, Beraterinnen und Beratern arbeitet direkt mit Kundinnen und Kunden zusammen — und übersetzt komplexe Connectivity-Aufgaben in klare, umsetzbare Strategien und messbare Ergebnisse.",
     "name": {
       "label": "Der Name",
       "title": "SAJ — Smart Access Journey.",
@@ -239,7 +239,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "lead": "Sprechen Sie mit uns, wie SAJ Connect Ihr nächstes Projekt unterstützen kann — vom ersten Scoping bis zum vollständigen Rollout und darüber hinaus.",
+    "lead": "Sprechen Sie mit uns darüber, wie SAJ Connect Ihr nächstes Projekt unterstützen kann — vom ersten Scoping bis zum vollständigen Rollout und darüber hinaus.",
     "form": {
       "name": "Name",
       "email": "E-Mail",
@@ -247,7 +247,7 @@
       "message": "Nachricht",
       "consent": "Ich habe die Datenschutzerklärung gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
       "submit": "Nachricht senden",
-      "submitting": "Wird gesendet ...",
+      "submitting": "Wird gesendet …",
       "success": "Vielen Dank — wir melden uns in Kürze.",
       "error": "Da ist etwas schiefgelaufen. Bitte versuchen Sie es noch einmal.",
       "acknowledged": "Bestätigt"
@@ -319,7 +319,6 @@
     "sendMessage": "Schreiben Sie uns.",
     "responseLine": "Wir melden uns innerhalb eines Werktags.",
     "deepDive": "Schwerpunkt",
-    "foundedDate": "Dezember 2025",
     "reach": "Reichweite",
     "globalEcosystem": "Globales Ökosystem",
     "positions": "Stellen",

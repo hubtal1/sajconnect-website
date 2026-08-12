@@ -247,7 +247,7 @@
       "message": "Message",
       "consent": "I have read the privacy policy and consent to the processing of my data.",
       "submit": "Send message",
-      "submitting": "Sending ...",
+      "submitting": "Sending…",
       "success": "Thank you — we'll be in touch shortly.",
       "error": "Something went wrong. Please try again.",
       "acknowledged": "Acknowledged"
@@ -266,7 +266,7 @@
   },
   "cookie": {
     "headline": "We respect your privacy",
-    "text": "We only use technically necessary cookies. Optionally you can enable cookieless statistics to help us improve the site.",
+    "text": "We only use technically necessary cookies. Optionally, you can enable cookieless statistics to help us improve the site.",
     "accept": "Allow statistics",
     "decline": "Necessary only",
     "settings": "Settings"
@@ -319,7 +319,6 @@
     "sendMessage": "Send us a message.",
     "responseLine": "We respond within one business day.",
     "deepDive": "Deep Dive",
-    "foundedDate": "December 2025",
     "reach": "Reach",
     "globalEcosystem": "Global ecosystem",
     "positions": "positions",

@@ -9,8 +9,8 @@ draft: false
 ---
 
 Willkommen auf unserem neuen Blog. Hier teilen wir Einblicke, technische Erfahrungen
-und Gedanken aus unserer täglichen Arbeit — sowohl für Kund:innen, Mitarbeiter:innen
-als auch alle, die sich für moderne, vernetzte Lösungen interessieren.
+und Gedanken aus unserer täglichen Arbeit — sowohl für Kund:innen und Mitarbeiter:innen
+als auch für alle, die sich für moderne, vernetzte Lösungen interessieren.
 
 ## Was hier erscheint
 

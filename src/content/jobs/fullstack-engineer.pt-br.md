@@ -9,7 +9,7 @@ publishedAt: 2026-04-01
 draft: true
 ---
 
-## O que te espera
+## O que espera por você
 
 - Desenvolvimento end-to-end em um time pequeno e focado
 - Stack moderna: TypeScript, React, Node, Python, PostgreSQL

@@ -18,4 +18,4 @@ por soluções modernas e conectadas.
 - **Customer Stories** — como resolvemos problemas junto com nossos clientes
 - **Time & Cultura** — quem somos e no que acreditamos
 
-Estamos ansiosos pela conversa. Se algum tema te interessar, escreva para nós.
+Estamos ansiosos pela conversa. Se algum tema lhe interessar, escreva para nós.

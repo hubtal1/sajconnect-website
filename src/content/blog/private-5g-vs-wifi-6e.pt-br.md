@@ -4,7 +4,7 @@ locale: "pt-br"
 description: "Quando uma rede celular privada compensa, quando o Wi-Fi é a melhor escolha — e por que a resposta muitas vezes é 'os dois'. Com checklist para a sua decisão."
 author: "SAJ Connect Team"
 publishedAt: 2026-07-10
-tags: ["private-5g", "wifi", "industria"]
+tags: ["private-5g", "wifi", "indústria"]
 draft: false
 ---
 
@@ -49,7 +49,7 @@ Dinheiro raramente é comparado de forma justa. Os itens que costumam faltar nas
 2. Você divide o ambiente de rádio com vizinhos, visitantes ou sistemas legados próprios?
 3. Áreas externas, pátios ou armazéns verticais precisam de cobertura?
 4. Existem aplicações que exigem latência garantida ou priorização?
-5. Seus dispositivos sequer existem com módulo 5G — ou tudo seria retrofit?
+5. Seus dispositivos ao menos existem com módulo 5G — ou tudo seria retrofit?
 6. Quem opera a rede daqui a três anos — seu time, um parceiro, o fornecedor?
 
 Três ou mais "sim" nas perguntas 1–4: faça as contas do 5G privado a sério. Maioria "não" e a pergunta 5 contra: um Wi-Fi 6E bem planejado vai deixar você mais feliz gastando menos.

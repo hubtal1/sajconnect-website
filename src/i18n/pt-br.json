@@ -113,13 +113,13 @@
   },
   "services": {
     "title": "Nossos Domínios Tecnológicos Centrais",
-    "lead": "Oito domínios focados onde entregamos expertise em profundidade — combine-os na solução que seu projeto precisa.",
+    "lead": "Oito domínios focados onde entregamos expertise em profundidade — combine-os na solução de que seu projeto precisa.",
     "exploreAll": "Explorar todas as 8 áreas",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engenharia, design, deployment e operação de Private 5G corporativo e industrial." },
       { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, gestão de perfis, ciclo de vida e certificação." },
       { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Estratégias de conectividade para Massive IoT — celular, LPWA, satélite e arquiteturas híbridas." },
-      { "title": "NTN — Redes Não-Terrestres", "tag": "SATELLITE 5G", "description": "Integração satélite-5G, arquitetura NTN e viabilidade para conectividade global e resiliente." },
+      { "title": "NTN — Redes Não Terrestres", "tag": "SATELLITE 5G", "description": "Integração satélite-5G, arquitetura NTN e viabilidade para conectividade global e resiliente." },
       { "title": "6G — Próxima Geração", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G — preparação hoje para as redes de amanhã." },
       { "title": "Plataforma de Conectividade", "tag": "PLATFORM ENGINEERING", "description": "Plataformas que abstraem complexidade — da gestão de conectividade à telemetria e analytics." },
       { "title": "V2X & Conectividade Veicular", "tag": "AUTOMOTIVE", "description": "Arquiteturas de conectividade veicular — celular, V2X, Wi-Fi, Bluetooth — seguras e fluidas." },
@@ -127,7 +127,7 @@
     ],
     "outroHeadline": "As redes de amanhã. A preparação de hoje.",
     "outroSub": "Não operamos apenas as redes de hoje — ajudamos nossos clientes a moldar a próxima geração.",
-    "gridTagline": "8 domínios. Uma stack.",
+    "gridTagline": "8 domínios. Um stack.",
     "domainsLabel": "8 domínios tecnológicos centrais",
     "engagement": {
       "label": "Modelos",
@@ -173,7 +173,7 @@
           { "title": "Testes de OTA Updates", "text": "Validação end-to-end de campanhas OTA — robustez, rollback, segurança e cenários de campo." },
           { "title": "HIL & SIL Testing", "text": "Ambientes hardware e software-in-the-loop para sistemas conectados e automotivos." },
           { "title": "Validação de Dispositivos IoT", "text": "Certificação de dispositivos, conformidade e prontidão de ecossistema para deployments IoT em massa." },
-          { "title": "PoC & Aceitação", "text": "Frameworks estruturados de prova-de-conceito e aceitação — mensuráveis, repetíveis, prontos para decisão." }
+          { "title": "PoC & Aceitação", "text": "Frameworks estruturados de prova de conceito e aceitação — mensuráveis, repetíveis, prontos para decisão." }
         ]
       }
     ],
@@ -247,7 +247,7 @@
       "message": "Mensagem",
       "consent": "Li a política de privacidade e concordo com o processamento dos meus dados.",
       "submit": "Enviar mensagem",
-      "submitting": "Enviando ...",
+      "submitting": "Enviando…",
       "success": "Obrigado — entraremos em contato em breve.",
       "error": "Algo deu errado. Por favor, tente novamente.",
       "acknowledged": "Confirmado"
@@ -319,7 +319,6 @@
     "sendMessage": "Escreva para nós.",
     "responseLine": "Respondemos em até um dia útil.",
     "deepDive": "Aprofundamento",
-    "foundedDate": "Dezembro de 2025",
     "reach": "Alcance",
     "globalEcosystem": "Ecossistema global",
     "positions": "vagas",

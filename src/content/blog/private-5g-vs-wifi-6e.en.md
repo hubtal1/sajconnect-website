@@ -27,11 +27,11 @@ In short: for the "office inside the plant" and stationary data connectivity, Wi
 
 ## Where private 5G wins
 
-A campus network plays its strengths where WLAN hits physical and conceptual limits:
+A campus network plays to its strengths where WLAN hits physical and conceptual limits:
 
 - **Mobility with hard requirements.** Automated guided vehicles (AGVs), forklift terminals, mobile robotics: a 5G connection survives cell changes without dropping. Wi-Fi roaming — even with 802.11r — is a common source of trouble in practice, precisely when the device is moving, i.e. at the most critical moment.
 - **Licensed spectrum.** In a dedicated band, you are the only one transmitting. No neighbour, no guest device, no microwave oven. For processes that must behave deterministically, interference sovereignty is the real reason to buy.
-- **Large and difficult areas.** Outdoor yards, high-bay warehouses, metal-heavy environments: 5G covers with far fewer radio cells than a Wi-Fi grid — and outdoor use of the 6 GHz band is regulatorily constrained anyway.
+- **Large and difficult areas.** Outdoor yards, high-bay warehouses, metal-heavy environments: 5G provides coverage with far fewer radio cells than a Wi-Fi grid — and outdoor use of the 6 GHz band is regulatorily constrained anyway.
 - **Prioritisation and quality of service.** If the emergency-stop command and a software update share the same network, you want to guarantee who gets priority. QoS is an architectural principle in 5G, not an accessory.
 - **SIM-based identity.** A device without your SIM does not get on the network — a different security model from any password- or certificate-based WLAN.
 
@@ -52,7 +52,7 @@ Money is rarely compared fairly. The items that tend to be missing from proposal
 5. Are your end devices even available with 5G modules — or would everything be a retrofit?
 6. Who operates the network in three years — your team, a partner, the vendor?
 
-Three or more "yes" answers on questions 1–4: run the numbers on private 5G seriously. Mostly "no" plus question 5 against you: a well-planned Wi-Fi 6E will make you happier at lower cost.
+Three or more "yes" answers to questions 1–4: run the numbers on private 5G seriously. Mostly "no" plus question 5 against you: a well-planned Wi-Fi 6E network will make you happier at lower cost.
 
 ## The realistic answer is often: both
 
