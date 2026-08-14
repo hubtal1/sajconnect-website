@@ -77,10 +77,10 @@ export default function ContactForm({ locale, endpoint }: Props) {
           style={{ boxShadow: "0 0 16px rgba(43,190,13,0.7)" }}
           aria-hidden="true"
         ></span>
-        <p className="mt-5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-saj-green-bright)]">
+        <p className="mono-label mt-5 text-[var(--color-saj-green-bright)]">
           {t.acknowledged}
         </p>
-        <p className="mt-3 font-display text-xl font-medium tracking-tight text-[var(--color-bone)]">
+        <p className="heading-card mt-3 text-[var(--color-bone)]">
           {t.success}
         </p>
       </div>
@@ -145,7 +145,7 @@ export default function ContactForm({ locale, endpoint }: Props) {
           {status === "submitting" ? t.submitting : t.submit} →
         </button>
         {status === "error" && (
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-red-400">
+          <p className="text-sm text-red-400">
             {t.error}
           </p>
         )}
@@ -190,12 +190,12 @@ function Field({
 }) {
   return (
     <div>
-      <label className="mb-2 block font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-on-carbon-faint)]">
+      <label className="mono-label mb-2 block text-[var(--color-text-on-carbon-faint)]">
         {label}
       </label>
       {children}
       {error && (
-        <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-red-400">
+        <p className="mt-1.5 text-sm text-red-400">
           {error}
         </p>
       )}

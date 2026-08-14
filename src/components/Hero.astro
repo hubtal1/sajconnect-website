@@ -61,7 +61,7 @@ const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
     <dl class="mt-16 flex flex-wrap gap-x-12 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-6 md:mt-20">
       {specRows.map((row) => (
         <div>
-          <dt class="text-[0.8125rem] font-bold text-[var(--color-text-on-carbon-faint)]">{row.k}</dt>
+          <dt class="mono-label text-[var(--color-text-on-carbon-faint)]">{row.k}</dt>
           <dd class="mono-spec mt-1 text-[var(--color-text-on-carbon)]">{row.v}</dd>
         </div>
       ))}

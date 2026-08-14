@@ -211,9 +211,10 @@
     font-weight: 700;
     line-height: 1.4;
   }
+  /* Bewusst identisch mit .mono-label — EINE Beschriftungsgröße im System. */
   .mono-label-sm {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     letter-spacing: 0.02em;
     font-weight: 700;
     line-height: 1.4;

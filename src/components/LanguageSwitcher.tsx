@@ -37,7 +37,7 @@ export default function LanguageSwitcher({ currentLocale, pathname }: Props) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1.5 border border-[var(--color-hairline-dark)] bg-transparent px-3 py-1.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-text-on-carbon-muted)] transition-colors hover:border-[var(--color-cobalt-light)] hover:text-[var(--color-cobalt-light)]"
+        className="mono-label flex items-center gap-1.5 border border-[var(--color-hairline-dark)] bg-transparent px-3 py-1.5 text-[var(--color-text-on-carbon-muted)] transition-colors hover:border-[var(--color-cobalt-light)] hover:text-[var(--color-cobalt-light)]"
         aria-haspopup="true"
         aria-expanded={open}
       >
@@ -57,7 +57,7 @@ export default function LanguageSwitcher({ currentLocale, pathname }: Props) {
                 }`}
               >
                 <span>{fullLabels[loc]}</span>
-                <span className="font-mono text-xs tracking-[0.14em] text-[var(--color-text-on-carbon-faint)]">
+                <span className="mono-label text-[var(--color-text-on-carbon-faint)]">
                   {labels[loc]}
                 </span>
               </a>

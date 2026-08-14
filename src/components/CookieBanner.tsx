@@ -77,11 +77,11 @@ export default function CookieBanner({ locale }: { locale: Locale }) {
             className="block h-1.5 w-1.5 rounded-full bg-[var(--color-cobalt-light)]"
             style={{ boxShadow: "0 0 12px rgba(36,64,240,0.6)" }}
           ></span>
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-cobalt-light)]">
+          <p className="mono-label text-[var(--color-cobalt-light)]">
             Privacy
           </p>
         </div>
-        <h3 className="mt-3 font-display text-lg font-semibold tracking-tight text-[var(--color-bone)]">
+        <h3 className="heading-card mt-3 text-[var(--color-bone)]">
           {t.headline}
         </h3>
         <p className="mt-3 text-sm text-[var(--color-text-on-carbon-muted)]">{t.text}</p>
