@@ -5,7 +5,7 @@ description: "No licence, no auction, no waiting: how enterprises get on air wit
 author: "SAJ Connect Team"
 publishedAt: 2026-08-14
 tags: ["private-5g", "cbrs", "campus-network"]
-draft: true
+draft: false
 ---
 
 In Germany, a company applies to the regulator and receives its own exclusive slice of spectrum. In the United States, the answer to the same question looks completely different: for most private networks there is no licence at all. The band is called CBRS, and understanding how it works is the first real planning decision of any US campus network.
