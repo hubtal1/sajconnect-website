@@ -5,7 +5,7 @@ description: "Antrag, Kosten, Fristen: Was Unternehmen für ein lizenziertes Cam
 author: "SAJ Connect Team"
 publishedAt: 2026-08-14
 tags: ["private-5g", "bnetza", "campusnetz"]
-draft: true
+draft: false
 ---
 
 Wer über Private 5G nachdenkt, denkt zuerst an Funkplanung, Antennen und Kernnetz. Die eigentliche Grundlage ist deutlich unspektakulärer: ein Verwaltungsakt. Deutschland hat das Band 3,7–3,8 GHz für lokale Netze reserviert, und die Zuteilung beantragt man direkt bei der Bundesnetzagentur. Die gute Nachricht vorweg: Das ist kein Vergabeverfahren mit Auktion, sondern ein Antrag. Wer die Unterlagen beisammen hat, bekommt seine Frequenz.
