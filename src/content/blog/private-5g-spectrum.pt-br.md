@@ -5,7 +5,7 @@ description: "SLP, faixa de 3,7 GHz, custos e prazos: como empresas conseguem es
 author: "SAJ Connect Team"
 publishedAt: 2026-08-14
 tags: ["private-5g", "anatel", "rede-privativa"]
-draft: true
+draft: false
 ---
 
 Quando o assunto é rede privativa 5G, muita gente assume que espectro no Brasil significa leilão. Não significa. A Anatel reservou faixas específicas para uso das empresas, fora do leilão de 2021 — e o caminho até elas é um processo administrativo, não uma disputa bilionária. O mercado respondeu: o Brasil já passa de 470 redes privativas em operação e é um dos mercados mais dinâmicos da América Latina.
