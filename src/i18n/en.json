@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "SAJ Connect",
-    "tagline": "Connecting the Future of Mobility",
+    "tagline": "Engineering consultancy for Private 5G, eSIM and Connected Car",
     "description": "SAJ Connect — engineering consultancy for wireless and mobility: Private 5G, eSIM and Connected Car."
   },
   "nav": {
@@ -120,9 +120,9 @@
       { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "End-to-end eSIM and iSIM ecosystem — RSP, profile management, lifecycle and certification." },
       { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Connectivity strategies for massive IoT — cellular, LPWA, satellite, and hybrid architectures." },
       { "title": "NTN — Non-Terrestrial Networks", "tag": "SATELLITE 5G", "description": "Satellite-5G integration, NTN architecture and feasibility for global, resilient connectivity." },
-      { "title": "6G — Next Generation", "tag": "TOMORROW'S NETWORKS", "description": "6G readiness, advisory and research — preparation today for the networks of tomorrow." },
+      { "title": "6G — Next Generation", "tag": "TOMORROW'S NETWORKS", "description": "6G readiness, advisory and research along the 3GPP roadmap (Rel-20+)." },
       { "title": "Connectivity Platform", "tag": "PLATFORM ENGINEERING", "description": "Platforms that abstract complexity — from connectivity management to telemetry and analytics." },
-      { "title": "V2X & Vehicle Connectivity", "tag": "AUTOMOTIVE", "description": "Vehicle connectivity architectures — cellular, V2X, Wi-Fi, Bluetooth — secure and seamless." },
+      { "title": "V2X & Vehicle Connectivity", "tag": "AUTOMOTIVE", "description": "Vehicle connectivity architectures — cellular, V2X, Wi-Fi, Bluetooth — with cleanly separated, secured data paths." },
       { "title": "360° Connectivity Expertise", "tag": "FULL STACK", "description": "End-to-end coverage from device to cloud — integrated, validated, and operational." }
     ],
     "outroHeadline": "Tomorrow's networks. Today's preparation.",
@@ -262,7 +262,7 @@
     "imprint": "Legal Notice",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
-    "tagline": "Connecting the Future of Mobility."
+    "tagline": "Engineering consultancy for Private 5G, eSIM and Connected Car — Nuremberg and Spokane."
   },
   "cookie": {
     "headline": "We respect your privacy",

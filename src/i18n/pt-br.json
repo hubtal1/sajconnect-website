@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "SAJ Connect",
-    "tagline": "Conectando o Futuro da Mobilidade",
+    "tagline": "Consultoria de engenharia para Private 5G, eSIM e Connected Car",
     "description": "SAJ Connect — consultoria de engenharia para wireless e mobilidade: Private 5G, eSIM e Connected Car."
   },
   "nav": {
@@ -120,9 +120,9 @@
       { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, gestão de perfis, ciclo de vida e certificação." },
       { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Estratégias de conectividade para Massive IoT — celular, LPWA, satélite e arquiteturas híbridas." },
       { "title": "NTN — Redes Não Terrestres", "tag": "SATELLITE 5G", "description": "Integração satélite-5G, arquitetura NTN e viabilidade para conectividade global e resiliente." },
-      { "title": "6G — Próxima Geração", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G — preparação hoje para as redes de amanhã." },
+      { "title": "6G — Próxima Geração", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G ao longo do roadmap 3GPP (Rel-20+)." },
       { "title": "Plataforma de Conectividade", "tag": "PLATFORM ENGINEERING", "description": "Plataformas que abstraem complexidade — da gestão de conectividade à telemetria e analytics." },
-      { "title": "V2X & Conectividade Veicular", "tag": "AUTOMOTIVE", "description": "Arquiteturas de conectividade veicular — celular, V2X, Wi-Fi, Bluetooth — seguras e fluidas." },
+      { "title": "V2X & Conectividade Veicular", "tag": "AUTOMOTIVE", "description": "Arquiteturas de conectividade veicular — celular, V2X, Wi-Fi, Bluetooth — com caminhos de dados separados e protegidos." },
       { "title": "Expertise 360° em Conectividade", "tag": "FULL STACK", "description": "Cobertura end-to-end do dispositivo à nuvem — integrada, validada e em operação." }
     ],
     "outroHeadline": "As redes de amanhã. A preparação de hoje.",
@@ -161,7 +161,7 @@
         "items": [
           { "title": "Testes Funcionais", "text": "Validação funcional end-to-end de todos os componentes e interfaces — verificando que cada feature funciona exatamente como especificado." },
           { "title": "Performance & Carga", "text": "Benchmarking de KPIs, testes de throughput, medição de latência e testes de stress em condições reais e de pior caso." },
-          { "title": "Interoperabilidade", "text": "Validação de integração multi-fornecedor garantindo operação fluida entre diferentes vendors, plataformas e protocolos." },
+          { "title": "Interoperabilidade", "text": "Comprovamos que setups multifornecedor realmente funcionam juntos — entre vendors, plataformas e protocolos." },
           { "title": "Compliance & Homologação", "text": "Testes de conformidade regulatória e suporte de homologação — garantindo que seu produto atenda às certificações antes do lançamento." }
         ]
       },
@@ -262,7 +262,7 @@
     "imprint": "Aviso Legal",
     "privacy": "Política de Privacidade",
     "terms": "Termos & Condições",
-    "tagline": "Conectando o futuro da mobilidade."
+    "tagline": "Consultoria de engenharia para Private 5G, eSIM e Connected Car — Nuremberg e Spokane."
   },
   "cookie": {
     "headline": "Respeitamos a sua privacidade",
