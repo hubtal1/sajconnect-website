@@ -29,8 +29,8 @@ Em resumo: para o "escritório dentro do galpão" e conectividade estacionária,
 
 Uma rede privada mostra sua força onde o WLAN encontra limites físicos e conceituais:
 
-- **Mobilidade com requisitos duros.** Veículos autoguiados (AGVs), terminais de empilhadeira, robótica móvel: a conexão 5G sobrevive à troca de célula sem cair. O roaming Wi-Fi — mesmo com 802.11r — é fonte frequente de problemas na prática, justamente quando o dispositivo está em movimento.
-- **Espectro licenciado.** Na banda dedicada, só você transmite. Sem vizinho, sem dispositivo de visitante, sem micro-ondas. Para processos que precisam ser determinísticos, a soberania sobre interferência é o verdadeiro motivo de compra.
+- **Mobilidade com requisitos duros.** Veículos autoguiados (AGVs), terminais de empilhadeira, robótica móvel: a conexão 5G atravessa a troca de célula praticamente sem interrupção — quem controla o handover é a rede, não o dispositivo. O roaming Wi-Fi — mesmo com 802.11r — é fonte frequente de problemas na prática, justamente quando o dispositivo está em movimento.
+- **Espectro licenciado.** Na banda dedicada, só você transmite na sua área. Sem dispositivo de visitante, sem micro-ondas — e redes vizinhas são coordenadas, não aleatórias. Para processos que precisam ser determinísticos, ter o espectro só para você é o que de fato justifica o investimento.
 - **Áreas grandes e difíceis.** Pátios externos, armazéns verticais, ambientes metálicos: o 5G cobre com muito menos células de rádio que uma malha Wi-Fi.
 - **Priorização e qualidade de serviço.** Se o comando de parada de emergência e uma atualização de software compartilham a mesma rede, você quer garantir quem tem prioridade. QoS no 5G é princípio de arquitetura, não acessório.
 - **Identidade baseada em SIM.** Um dispositivo sem o seu SIM não entra na rede — um modelo de segurança diferente de qualquer WLAN com senha ou certificado.
@@ -39,7 +39,7 @@ Uma rede privada mostra sua força onde o WLAN encontra limites físicos e conce
 
 Dinheiro raramente é comparado de forma justa. Os itens que costumam faltar nas propostas:
 
-**No 5G privado:** dispositivos e roteadores com módulo 5G custam visivelmente mais que os equivalentes Wi-Fi. Gestão de SIMs e perfis é um processo operacional novo. E uma rede privada precisa ser operada — "quem faz o day-2?" pertence a todo cálculo. A licença de espectro em si costuma ser o menor item.
+**No 5G privado:** dispositivos e roteadores com módulo 5G custam visivelmente mais que os equivalentes Wi-Fi. Gestão de SIMs e perfis é um processo operacional novo. E uma rede privada precisa ser operada — "quem cuida do day-2?" tem que entrar em qualquer conta. A licença de espectro em si costuma ser o menor item.
 
 **No Wi-Fi:** em galpões exigentes a malha de access points fica densa — cabeamento, switches e instalação se somam. E o custo de interferências recorrentes não aparece em proposta nenhuma; aparece na operação, como parada, diagnóstico e frustração.
 
@@ -52,7 +52,7 @@ Dinheiro raramente é comparado de forma justa. Os itens que costumam faltar nas
 5. Seus dispositivos ao menos existem com módulo 5G — ou tudo seria retrofit?
 6. Quem opera a rede daqui a três anos — seu time, um parceiro, o fornecedor?
 
-Três ou mais "sim" nas perguntas 1–4: faça as contas do 5G privado a sério. Maioria "não" e a pergunta 5 contra: um Wi-Fi 6E bem planejado vai deixar você mais feliz gastando menos.
+Três ou mais "sim" nas perguntas 1–4: leve o 5G privado a sério e faça as contas. Maioria "não", e a pergunta 5 pesando contra: um Wi-Fi 6E bem planejado vai deixar você mais feliz gastando menos.
 
 ## A resposta realista muitas vezes é: os dois
 

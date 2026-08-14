@@ -29,8 +29,8 @@ Kurz: Für das „Büro in der Halle“ und stationäre Datenanbindung ist Wi-Fi
 
 Ein Campusnetz spielt seine Stärken dort aus, wo WLAN physikalisch und konzeptionell an Grenzen stößt:
 
-- **Mobilität mit harten Anforderungen.** Fahrerlose Transportsysteme (FTS/AGV), Stapler-Terminals, mobile Robotik: Beim Zellwechsel reißt eine 5G-Verbindung nicht ab. WLAN-Roaming ist auch mit 802.11r in der Praxis eine häufige Störungsquelle — genau dann, wenn sich das Gerät bewegt, also im kritischsten Moment.
-- **Lizenziertes Spektrum.** Im 3,7–3,8-GHz-Band funken nur Sie. Kein Nachbar, kein Gastgerät, keine Mikrowelle. Für Prozesse, die deterministisch funktionieren müssen, ist Interferenzhoheit der eigentliche Kaufgrund.
+- **Mobilität mit harten Anforderungen.** Fahrerlose Transportsysteme (FTS/AGV), Stapler-Terminals, mobile Robotik: Beim Zellwechsel bleibt eine 5G-Verbindung praktisch unterbrechungsfrei — das Handover steuert das Netz, nicht das Endgerät. WLAN-Roaming ist auch mit 802.11r in der Praxis eine häufige Störungsquelle — genau dann, wenn sich das Gerät bewegt, also im kritischsten Moment.
+- **Lizenziertes Spektrum.** Im 3,7–3,8-GHz-Band funken in Ihrem Zuteilungsgebiet nur Sie. Kein Gastgerät, keine Mikrowelle — und Nachbarnetze sind koordiniert statt zufällig. Für Prozesse, die deterministisch funktionieren müssen, ist Interferenzhoheit der eigentliche Kaufgrund.
 - **Große und schwierige Flächen.** Außenbereiche, Hochregale, Metallumgebungen: 5G deckt sie mit deutlich weniger Funkzellen ab als ein WLAN-Raster — und Outdoor ist für Wi-Fi 6E regulatorisch ohnehin eng.
 - **Priorisierung und Dienstgüte.** Wenn der Not-Halt-Befehl und das Software-Update über dasselbe Netz laufen, wollen Sie festlegen können, wer Vorrang hat. Quality-of-Service ist in 5G Architekturprinzip, nicht Zubehör.
 - **SIM-basierte Identität.** Ein Gerät ohne Ihre SIM kommt nicht ins Netz — ein anderes Sicherheitsmodell als jedes Passwort- oder Zertifikats-WLAN.
@@ -39,7 +39,7 @@ Ein Campusnetz spielt seine Stärken dort aus, wo WLAN physikalisch und konzepti
 
 Beim Geld wird selten sauber verglichen. Die Punkte, die in Angeboten gern fehlen:
 
-**Bei Private 5G:** Endgeräte und Router mit 5G-Modul kosten spürbar mehr als Wi-Fi-Pendants. SIM-/Profilverwaltung ist ein neuer Betriebsprozess. Und ein Campusnetz will betrieben werden — die Frage „wer macht Day-2?“ gehört in jede Kalkulation. Die Frequenzzuteilung der Bundesnetzagentur ist dagegen der kleinste Posten: eine überschaubare, einmalige Verwaltungsgebühr, abhängig von Fläche und Bandbreite.
+**Bei Private 5G:** Endgeräte und Router mit 5G-Modul kosten spürbar mehr als Wi-Fi-Pendants. SIM-/Profilverwaltung ist ein neuer Betriebsprozess. Und ein Campusnetz will betrieben werden — die Frage „wer macht Day-2?“ gehört in jede Kalkulation. Die Frequenzzuteilung der Bundesnetzagentur ist dagegen der kleinste Posten: eine überschaubare Verwaltungsgebühr, abhängig von Fläche, Bandbreite und Laufzeit — typisch vier- bis niedrig fünfstellig für zehn Jahre, plus geringe jährliche Beiträge.
 
 **Bei Wi-Fi:** In anspruchsvollen Hallen wird das Access-Point-Raster dicht — Verkabelung, Switches und Montage summieren sich. Und die Kosten wiederkehrender Funkstörungen tauchen in keinem Angebot auf, sondern erst im Betrieb: als Stillstand, Fehlersuche und Frust.
 

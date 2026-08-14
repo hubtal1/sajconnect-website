@@ -18,4 +18,4 @@ in modern, connected solutions.
 - **Customer Stories** — how we solve problems with our customers
 - **Team & Culture** — who we are and what we believe in
 
-We look forward to the conversation. If a topic interests you, drop us a line.
+We'd love to hear from you. If a topic interests you, drop us a line.

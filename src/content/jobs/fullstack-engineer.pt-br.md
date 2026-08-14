@@ -19,11 +19,11 @@ draft: true
 
 - Pelo menos 3 anos de experiência construindo aplicações web em produção
 - Domínio de TypeScript e de um framework frontend moderno
-- Mentalidade de dono — você entrega as coisas até o fim
+- Mentalidade de dono — você leva a entrega até o fim
 
 ## O que oferecemos
 
 - Remuneração justa, estruturas transparentes
 - Trabalho flexível — remoto ou no escritório
-- Orçamento de aprendizado e tempo para desenvolvimento
+- Verba para cursos e desenvolvimento e tempo para desenvolvimento
 - Ferramentas da sua escolha

@@ -2,7 +2,7 @@
   "site": {
     "name": "SAJ Connect",
     "tagline": "Die Zukunft der Mobilität verbinden",
-    "description": "SAJ Connect — spezialisierte Beratung an der Schnittstelle von Wireless und Mobilität. Vom Konzept bis zum Live-Betrieb."
+    "description": "SAJ Connect — Ingenieurberatung für Wireless und Mobilität: Private 5G, eSIM und Connected Car."
   },
   "nav": {
     "home": "Start",
@@ -19,7 +19,7 @@
     "hero": {
       "eyebrow": "Wireless trifft Mobilität",
       "headline": "Die Zukunft der Mobilität verbinden",
-      "sub": "Wir vereinen tiefe technische Expertise aus Telco und Automotive — End-to-End-Engineering, Testing und Operations für Private 5G, eSIM, IoT und Connected Car.",
+      "sub": "Ingenieure aus Telco und Automotive. Wir planen, testen und betreiben Private 5G, eSIM, IoT und Connected Car.",
       "ctaPrimary": "Kontakt aufnehmen",
       "ctaSecondary": "Leistungen entdecken"
     },
@@ -31,14 +31,14 @@
     ],
     "intersection": {
       "headline": "Wo Wireless auf Mobilität trifft",
-      "sub": "Zwei der anspruchsvollsten Domänen moderner Technologie — vereint in einem Team, das beide produktiv geliefert hat."
+      "sub": "Telco und Automotive haben eigene Standards, eigene Zyklen, eigene Zulassungen. Unser Team hat in beiden Welten produktiv geliefert."
     },
     "differentiators": {
       "headline": "Was uns auszeichnet",
       "items": [
         { "title": "End-to-End-Lieferung", "text": "Von Architektur und Design über Implementierung und Integration bis in den Live-Betrieb — ein Team, ein verantwortlicher Partner." },
         { "title": "Vendor Agnostic", "text": "Wir wählen die richtige Technologie für Ihre Aufgabe — ohne Bindung an einen einzelnen Hersteller oder eine Plattform." },
-        { "title": "Globales Ökosystem", "text": "Ein bewährtes, skalierbares Netzwerk spezialisierter Partner — bereit für die Größenordnung, die Ihr Projekt verlangt." },
+        { "title": "Globales Ökosystem", "text": "Für Rollouts über mehrere Standorte oder Länder ziehen wir Partner hinzu, mit denen wir schon geliefert haben." },
         { "title": "Mission Critical", "text": "Wir arbeiten an Systemen, in denen Zuverlässigkeit und Sicherheit zählen — und behandeln Ihr Projekt mit derselben Sorgfalt." }
       ]
     },
@@ -62,7 +62,7 @@
       "label": "Standards",
       "headline": "Wir arbeiten entlang etablierter Standards.",
       "note": "Normen und Frameworks, an denen wir Architektur, Sicherheit und Prozesse ausrichten.",
-      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "DSGVO"]
+      "items": ["3GPP", "GSMA SGP.21/22 · SGP.31/32", "DSGVO"]
     }
   },
   "dossier": {
@@ -113,7 +113,7 @@
   },
   "services": {
     "title": "Unsere Kerntechnologie-Domänen",
-    "lead": "Acht fokussierte Domänen, in denen wir tiefe Expertise liefern — kombinierbar zu der Lösung, die Ihr Projekt braucht.",
+    "lead": "Acht Bereiche, ein Stack. Die meisten Projekte brauchen zwei oder drei davon.",
     "exploreAll": "Alle 8 Bereiche entdecken",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engineering, Design, Deployment und Betrieb für Enterprise- und Industrial-Private-5G." },
@@ -147,7 +147,7 @@
       { "title": "Network Engineering & Design", "text": "Architektur, RF-Planung, Slicing-Strategie und Integrationsdesign — passgenau für Ihre industrielle Umgebung." },
       { "title": "Project Management & Operations", "text": "End-to-End-Programm-Management — Meilensteine, Vendor-Koordination, Risiko und Qualität vom Kick-off bis zur Übergabe." },
       { "title": "Network Management & Operations", "text": "Day-2-Operations, Monitoring, Optimierung und kontinuierliche Verbesserung — für gesunde, missionskritische Netze." },
-      { "title": "Software & Hardware Development", "text": "Maßgeschneiderte Software- und Hardware-Komponenten dort, wo der Standard-Stack an Grenzen kommt — vollständig integriert und zertifiziert." },
+      { "title": "Software & Hardware Development", "text": "Eigene Software- und Hardware-Komponenten dort, wo der Standard-Stack an Grenzen kommt — integriert und zertifiziert." },
       { "title": "Network Testing & Validation", "text": "Umfassendes Testing — funktional, Performance, Interoperabilität, Compliance — vor und nach Go-live." }
     ],
     "taglineShort": "Vom Konzept bis zum Betrieb"
@@ -181,10 +181,10 @@
   },
   "vehicle": {
     "title": "Die moderne Fahrzeug-Plattform",
-    "lead": "Das moderne Fahrzeug ist eine komplexe, vernetzte Plattform — und die Anforderungen an Software und Kommunikationsarchitektur waren nie höher. Wir liefern Engineering-Expertise über den gesamten Connected-Car- und IVI-Stack.",
+    "lead": "Ein Fahrzeug heute: mehrere Funkstandards, Dutzende Steuergeräte, Software-Updates over the air. Wir liefern Engineering über den gesamten Connected-Car- und IVI-Stack.",
     "items": [
-      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Tiefe Expertise in Android Automotive OS und Android-Auto-Integration — für reichhaltige, performante In-Vehicle-Erlebnisse, konform mit OEM- und Google-Ökosystem-Standards." },
-      { "title": "Connectivity-Architektur", "tag": "4G · 5G · V2X", "text": "End-to-End-Design von Fahrzeug-Connectivity-Frameworks — Cellular, Wi-Fi, Bluetooth und V2X-Protokolle für nahtlosen, sicheren Datenaustausch zwischen Fahrzeug, Cloud und externen Geräten." },
+      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Tiefe Expertise in Android Automotive OS und Android-Auto-Integration — konform mit OEM-Vorgaben und den Anforderungen des Google-Ökosystems." },
+      { "title": "Connectivity-Architektur", "tag": "4G · 5G · V2X", "text": "Design der Fahrzeug-Connectivity: Cellular, Wi-Fi, Bluetooth und V2X — inklusive der Frage, welcher Datenpfad wohin gehört und wie er abgesichert wird." },
       { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Robustes Service-Lifecycle-Management und Security-Frameworks — IAM, Zertifikatsverwaltung und Autorisierungsabläufe, ausgerichtet an Automotive-Cybersecurity-Standards." },
       { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Architektur und Implementierung für flexible, abonnementbasierte Feature-Aktivierung — OEMs schalten Funktionen remote frei und erschließen neue After-Sales-Umsätze." },
       { "title": "OTA Update Management", "tag": "OTA · ECU · IVI", "text": "Umfassende OTA-Strategie, Integration und Validierung — sichere, zuverlässige und konforme Software-Updates über ECUs, IVI-Systeme und Fahrzeug-Subsysteme." },
@@ -194,7 +194,7 @@
   "about": {
     "title": "Über SAJ Connect",
     "lead": "SAJ Connect GmbH ist eine spezialisierte Technologieberatung an der Schnittstelle von Wireless, Mobilität und IoT. Wir vereinen tiefes technisches Wissen aus Telco, Automotive und IoT mit einem praktischen, partnerschaftlichen Ansatz.",
-    "leadSecond": "Unser globales Team aus Ingenieurinnen, Ingenieuren, Beraterinnen und Beratern arbeitet direkt mit Kundinnen und Kunden zusammen — und übersetzt komplexe Connectivity-Aufgaben in klare, umsetzbare Strategien und messbare Ergebnisse.",
+    "leadSecond": "Unser Team aus Ingenieurinnen, Ingenieuren und Beratern arbeitet direkt mit den Kunden — vom ersten Scoping bis zur Abnahme.",
     "name": {
       "label": "Der Name",
       "title": "SAJ — Smart Access Journey.",
@@ -203,7 +203,7 @@
     },
     "mission": {
       "title": "Unsere Mission",
-      "text": "Nachhaltige 5G-Innovation und die Adoption vernetzter Technologien fördern — durch verlässliche Partnerschaften, End-to-End-Expertise und ein Bekenntnis zur Exzellenz, vom Konzept bis zum Live-Betrieb."
+      "text": "Wir bringen 5G- und Connectivity-Projekte in den Betrieb — und bleiben verantwortlich, bis sie dort stabil laufen."
     },
     "differentiators": {
       "title": "Warum mit uns arbeiten",
@@ -212,7 +212,7 @@
         { "n": "02", "text": "Direkte Zusammenarbeit mit Kunden — von der Strategie bis zum Live-Betrieb." },
         { "n": "03", "text": "Bewährtes, skalierbares Partner-Ökosystem mit globaler Reichweite." },
         { "n": "04", "text": "Vollständige Abdeckung über Private 5G, eSIM, IoT und Connected Car." },
-        { "n": "05", "text": "Agile, multidisziplinäre Teams — anpassbar an Ihren Projektumfang und Ihre Komplexität." }
+        { "n": "05", "text": "Teamgröße nach Bedarf — vom einzelnen RF-Planer bis zum kompletten Projektteam." }
       ]
     }
   },
@@ -239,7 +239,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "lead": "Sprechen Sie mit uns darüber, wie SAJ Connect Ihr nächstes Projekt unterstützen kann — vom ersten Scoping bis zum vollständigen Rollout und darüber hinaus.",
+    "lead": "Erzählen Sie uns von Ihrem Projekt. Wir sagen Ihnen, ob und wie wir helfen können — meist schon im ersten Gespräch.",
     "form": {
       "name": "Name",
       "email": "E-Mail",

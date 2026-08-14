@@ -2,7 +2,7 @@
   "site": {
     "name": "SAJ Connect",
     "tagline": "Conectando o Futuro da Mobilidade",
-    "description": "SAJ Connect — consultoria especializada na interseção entre comunicação wireless e mobilidade. Do conceito à operação."
+    "description": "SAJ Connect — consultoria de engenharia para wireless e mobilidade: Private 5G, eSIM e Connected Car."
   },
   "nav": {
     "home": "Início",
@@ -17,9 +17,9 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Wireless encontra Mobilidade",
+      "eyebrow": "Wireless e mobilidade se encontram",
       "headline": "Conectando o Futuro da Mobilidade",
-      "sub": "Combinamos profunda expertise técnica em Telco e Automotive — entrega end-to-end de engenharia, testes e operação para Private 5G, eSIM, IoT e Connected Car.",
+      "sub": "Engenheiros de telecom e automotivo. Planejamos, testamos e operamos Private 5G, eSIM, IoT e Connected Car.",
       "ctaPrimary": "Entrar em contato",
       "ctaSecondary": "Conhecer os serviços"
     },
@@ -30,30 +30,30 @@
       { "label": "360°", "text": "Cobertura completa de wireless, IoT e conectividade automotiva." }
     ],
     "intersection": {
-      "headline": "Onde wireless encontra a mobilidade",
-      "sub": "Dois dos domínios mais exigentes da tecnologia moderna, unidos por um time que já entregou em ambos."
+      "headline": "Onde o wireless e a mobilidade se encontram",
+      "sub": "Telecom e automotivo têm padrões, ciclos e homologações próprios. Nosso time já entregou em produção nos dois mundos."
     },
     "differentiators": {
       "headline": "O que nos diferencia",
       "items": [
         { "title": "Entrega End-to-End", "text": "Da arquitetura e design à implementação, integração e operação — um time, um parceiro responsável." },
         { "title": "Vendor Agnostic", "text": "Escolhemos a tecnologia certa para o seu problema — sem amarras a um único fornecedor ou plataforma." },
-        { "title": "Ecossistema Global", "text": "Uma rede comprovada e escalável de parceiros especialistas — pronta para atuar na escala que seu projeto exige." },
+        { "title": "Ecossistema Global", "text": "Para rollouts em vários sites ou países, trazemos parceiros com quem já entregamos antes." },
         { "title": "Mission Critical", "text": "Trabalhamos em sistemas onde confiabilidade e segurança são essenciais — e tratamos seu projeto da mesma forma." }
       ]
     },
     "cta": {
       "headline": "Vamos falar sobre o seu projeto",
-      "sub": "Uma primeira conversa esclarece viabilidade, esforço e próximos passos — sem compromisso e com os engenheiros que de fato vão entregar.",
+      "sub": "Uma primeira conversa esclarece viabilidade, custo e próximos passos — sem compromisso e com os engenheiros que de fato vão entregar.",
       "button": "Agendar conversa"
     },
     "approach": {
       "label": "Abordagem",
       "headline": "Um método que revela riscos cedo.",
-      "sub": "Todo engajamento segue o mesmo princípio: primeiro entender, depois construir, depois assumir o resultado — com entregáveis claros em cada fase.",
+      "sub": "Todo projeto segue o mesmo princípio: primeiro entender, depois construir, depois assumir o resultado — com entregáveis claros em cada fase.",
       "outcomeLabel": "Resultado",
       "steps": [
-        { "title": "Análise & Scoping", "text": "Requisitos, levantamento do estado atual, viabilidade e business case — antes da primeira decisão de arquitetura.", "outcome": "Visão-alvo sólida com avaliação de esforço e risco" },
+        { "title": "Análise & Scoping", "text": "Requisitos, levantamento do estado atual, viabilidade e business case — antes da primeira decisão de arquitetura.", "outcome": "Arquitetura-alvo sólida, com estimativa de esforço e risco" },
         { "title": "Design & Construção", "text": "Arquitetura, implementação e integração em incrementos curtos e verificáveis — com testes e validação desde o primeiro incremento.", "outcome": "Solução aceita e documentada rodando no ambiente-alvo" },
         { "title": "Operação & Melhoria", "text": "Transição para operação, monitoramento, otimização e transferência de conhecimento — até seu time assumir o sistema com confiança.", "outcome": "Operação estável com KPIs mensuráveis e responsabilidade clara" }
       ]
@@ -62,7 +62,7 @@
       "label": "Padrões",
       "headline": "Trabalhamos conforme padrões estabelecidos do setor.",
       "note": "As normas e frameworks que orientam nossa arquitetura, segurança e processos.",
-      "items": ["3GPP", "GSMA SGP.21 / SGP.22", "LGPD / GDPR"]
+      "items": ["3GPP", "GSMA SGP.21/22 · SGP.31/32", "LGPD / GDPR"]
     }
   },
   "dossier": {
@@ -79,8 +79,8 @@
       "headline": "Conectividade: especificada, construída, testada.",
       "kicker": "Conectividade —",
       "verbs": ["especificada,", "construída,", "testada."],
-      "masskette": "3 fases — da visão-alvo à operação",
-      "sub": "A SAJ Connect é a consultoria de engenharia na interseção entre wireless e mobilidade — Private 5G, eSIM e Connected Car, da visão-alvo à operação. Cada fase entrega um resultado definido e mensurável.",
+      "masskette": "3 fases — da arquitetura-alvo à operação",
+      "sub": "A SAJ Connect é a consultoria de engenharia na interseção entre wireless e mobilidade — Private 5G, eSIM e Connected Car, da arquitetura-alvo à operação. Cada fase entrega um resultado definido e mensurável.",
       "ctaPrimary": "Solicitar conversa inicial",
       "spec": {
         "parameter": "Parâmetro",
@@ -113,7 +113,7 @@
   },
   "services": {
     "title": "Nossos Domínios Tecnológicos Centrais",
-    "lead": "Oito domínios focados onde entregamos expertise em profundidade — combine-os na solução de que seu projeto precisa.",
+    "lead": "Oito áreas, um stack. A maioria dos projetos precisa de duas ou três.",
     "exploreAll": "Explorar todas as 8 áreas",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engenharia, design, deployment e operação de Private 5G corporativo e industrial." },
@@ -132,7 +132,7 @@
     "engagement": {
       "label": "Modelos",
       "headline": "Três formas de trabalhar conosco.",
-      "sub": "De um projeto claramente delimitado à responsabilidade operacional de longo prazo — você escolhe a profundidade do engajamento.",
+      "sub": "De um projeto claramente delimitado à responsabilidade operacional de longo prazo — você escolhe a profundidade da parceria.",
       "models": [
         { "title": "Entrega de Projeto", "text": "Escopo definido, resultado definido: assumimos concepção, implementação e aceite de uma iniciativa delimitada — em preço fixo ou por esforço." },
         { "title": "Expert Augmentation", "text": "Nossos especialistas reforçam seu time — reviews de arquitetura, planejamento de RF, campanhas de teste ou suporte à certificação, exatamente onde falta expertise." },
@@ -153,7 +153,7 @@
     "taglineShort": "Do conceito à operação"
   },
   "testing": {
-    "title": "Testamos até estar perfeito",
+    "title": "Testamos até ficar perfeito",
     "lead": "Validação rigorosa e estruturada por todo o stack de conectividade — para produtos que precisam funcionar no mundo real.",
     "groups": [
       {
@@ -181,11 +181,11 @@
   },
   "vehicle": {
     "title": "A plataforma do veículo moderno",
-    "lead": "O veículo moderno é uma plataforma complexa e conectada — e as exigências sobre seu software e arquitetura de comunicação nunca foram tão grandes. Entregamos engenharia especialista em todo o stack de Connected Car e IVI.",
+    "lead": "Um carro hoje: vários padrões de rádio, dezenas de ECUs, atualizações de software over the air. Entregamos engenharia em todo o stack de Connected Car e IVI.",
     "items": [
-      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Expertise profunda em Android Automotive OS e integração Android Auto — experiências in-vehicle ricas e responsivas, em conformidade com OEM e o ecossistema Google." },
-      { "title": "Arquitetura de Conectividade", "tag": "4G · 5G · V2X", "text": "Design end-to-end de frameworks de conectividade veicular — celular, Wi-Fi, Bluetooth e V2X para troca de dados segura e fluida entre veículo, nuvem e dispositivos externos." },
-      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Gestão robusta do ciclo de vida de serviços e frameworks de segurança — IAM, manuseio de certificados e fluxos de autorização alinhados aos padrões de cibersegurança automotiva." },
+      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Expertise profunda em Android Automotive OS e integração Android Auto — em conformidade com os requisitos do OEM e o ecossistema Google." },
+      { "title": "Arquitetura de Conectividade", "tag": "4G · 5G · V2X", "text": "Design da conectividade veicular: celular, Wi-Fi, Bluetooth e V2X — incluindo qual caminho de dados vai para onde e como é protegido." },
+      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Gestão robusta do ciclo de vida de serviços e frameworks de segurança — IAM, gestão de certificados e fluxos de autorização alinhados aos padrões de cibersegurança automotiva." },
       { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Arquitetura e implementação para ativação flexível de features por assinatura — OEMs liberam capacidades remotamente e criam novas receitas pós-venda." },
       { "title": "Gestão de OTA Updates", "tag": "OTA · ECU · IVI", "text": "Estratégia, integração e validação completas de OTA — atualizações de software seguras, confiáveis e em conformidade em ECUs, IVI e subsistemas." },
       { "title": "Testes & Validação de ECU", "tag": "HIL · SIL · HOMOLOGATION", "text": "Testes rigorosos para ECUs e sistemas veiculares conectados — da verificação inicial à integração de sistema e homologação." }
@@ -194,7 +194,7 @@
   "about": {
     "title": "Sobre a SAJ Connect",
     "lead": "A SAJ Connect GmbH é uma consultoria de tecnologia especializada na interseção entre comunicação wireless, mobilidade e IoT. Combinamos profundo conhecimento técnico em Telco, Automotive e IoT com uma abordagem prática e parceira.",
-    "leadSecond": "Nossa equipe global de engenheiros e consultores colabora diretamente com clientes — traduzindo desafios complexos de conectividade em estratégias claras, executáveis e com resultados mensuráveis.",
+    "leadSecond": "Nossos engenheiros e consultores trabalham diretamente com os clientes — do primeiro scoping à aceitação.",
     "name": {
       "label": "O nome",
       "title": "SAJ — Smart Access Journey.",
@@ -203,16 +203,16 @@
     },
     "mission": {
       "title": "Nossa missão",
-      "text": "Fomentar inovação sustentável em 5G e a adoção de tecnologias conectadas — através de parcerias confiáveis, expertise end-to-end e compromisso com a excelência, do conceito à operação."
+      "text": "Levamos projetos de 5G e conectividade à operação — e seguimos responsáveis até rodarem de forma estável."
     },
     "differentiators": {
-      "title": "Por que ser parceiro",
+      "title": "Por que trabalhar conosco",
       "items": [
         { "n": "01", "text": "Décadas de expertise combinada em comunicações móveis, 5G e sistemas automotivos." },
         { "n": "02", "text": "Colaboração direta com clientes — da estratégia à operação." },
         { "n": "03", "text": "Ecossistema de parceiros comprovado, escalável e com alcance global." },
         { "n": "04", "text": "Cobertura abrangente em Private 5G, eSIM, IoT e Connected Car." },
-        { "n": "05", "text": "Times ágeis e multidisciplinares — adaptáveis ao escopo e à complexidade do seu projeto." }
+        { "n": "05", "text": "Tamanho de time conforme a necessidade — de um único planejador de RF a um time de projeto completo." }
       ]
     }
   },
@@ -239,7 +239,7 @@
   },
   "contact": {
     "title": "Contato",
-    "lead": "Fale com a gente sobre como a SAJ Connect pode apoiar seu próximo projeto — do scoping inicial à implantação completa e além.",
+    "lead": "Conte para a gente sobre o seu projeto. Dizemos se e como podemos ajudar — geralmente já na primeira conversa.",
     "form": {
       "name": "Nome",
       "email": "E-mail",
