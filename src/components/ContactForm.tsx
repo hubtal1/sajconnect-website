@@ -134,7 +134,17 @@ export default function ContactForm({ locale, endpoint }: Props) {
           {...register("consent", { required: true })}
           className="mt-1 h-4 w-4 rounded-none border-[var(--color-hairline-dark)] bg-[var(--color-carbon-soft)] accent-[var(--color-cobalt-light)]"
         />
-        <span>{t.consent}</span>
+        <span>
+          {t.consent}{" "}
+          <a
+            href={`/${locale}/privacy`}
+            target="_blank"
+            rel="noopener"
+            className="underline decoration-1 underline-offset-2 hover:text-[var(--color-cobalt-light)]"
+          >
+            ({dicts[locale].footer.privacy})
+          </a>
+        </span>
       </label>
       <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
         <button
