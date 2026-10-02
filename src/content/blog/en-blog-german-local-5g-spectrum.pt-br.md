@@ -1,5 +1,5 @@
 ---
-title: "/pt/blog/german-local-5g-spectrum/"
+title: "Seu próprio espectro 5G na Alemanha: o que o pedido envolve"
 locale: "pt-br"
 description: "Autorizações locais de 5G na faixa de 3,7 a 3,8 GHz são concedidas mediante pedido, sem leilão. O que se pode solicitar, como a taxa é calculada e o que a autorização não resolve."
 author: "SAJ Connect Team"
