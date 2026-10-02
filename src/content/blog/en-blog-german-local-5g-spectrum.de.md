@@ -1,5 +1,5 @@
 ---
-title: "/de/blog/german-local-5g-spectrum/"
+title: "Die eigene 5G-Frequenz in Deutschland: Was der Antrag wirklich umfasst"
 locale: "de"
 description: "Lokale 5G-Frequenzen im Band 3,7 bis 3,8 GHz werden auf Antrag zugeteilt, ohne Auktion. Was Sie beantragen können, wie sich die Gebühr berechnet und was die Zuteilung nicht löst."
 author: "SAJ Connect Team"
