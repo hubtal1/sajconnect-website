@@ -5,7 +5,7 @@ description: "Local 5G licences in the 3.7–3.8 GHz band are assigned on applic
 author: "SAJ Connect Team"
 publishedAt: 2026-11-05
 tags: ["private-5g", "spectrum", "campus-network", "germany"]
-draft: true
+draft: false
 ---
 
 Germany assigns part of the 3.7 GHz band to companies on application. There is no auction, and a company with a site of its own can hold a licence for a network on that site. Our article on CBRS in the US describes a model where you can get on air without applying for anything. This article covers the German one.
