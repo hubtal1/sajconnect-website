@@ -50,7 +50,7 @@ What the licence does not solve
 
 The licence gives you spectrum. It does not give you a working network.
 
-Coverage has to be designed for the site as it is, with its steel racking and moving machinery, and a simulation of the empty building will not match it. A coverage plan drawn for an empty yard looked nothing like the same yard at shift change, when trucks and containers filled every gap.
+Coverage has to be designed for the site as it is, with its racking, its machinery and its walls. The building documents are not always right, and a simulation built on them inherits the mistake. In one project a wall was listed as drywall and turned out to be a fire wall, which the plan had not allowed for. A walk through the site finds that kind of thing before the radio planning does.
 
 The core decides how the network connects to your IT, who can reach it, and how it can be segmented. That is expensive to change once the network runs.
 
