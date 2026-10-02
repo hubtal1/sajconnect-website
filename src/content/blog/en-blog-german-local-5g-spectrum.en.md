@@ -3,7 +3,7 @@ title: "Your Own 5G Spectrum in Germany: What the Application Involves"
 locale: "en"
 description: "Local 5G licences in the 3.7–3.8 GHz band are assigned on application, with no auction. What you can apply for, how the fee is calculated, and what the licence does not solve."
 author: "SAJ Connect Team"
-publishedAt: 2026-11-05
+publishedAt: 2026-10-02
 tags: ["private-5g", "spectrum", "campus-network", "germany"]
 draft: false
 ---
