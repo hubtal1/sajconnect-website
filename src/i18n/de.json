@@ -271,6 +271,59 @@
     "decline": "Nur notwendige",
     "settings": "Einstellungen"
   },
+  "critical": {
+    "title": "Bahnfunk und kritische Infrastruktur",
+    "lede": "Zwei Felder, in denen Funktechnik und Regulierung gerade gleichzeitig umgebaut werden. Die Bahn wechselt von GSM-R auf 5G, Betreiber kritischer Anlagen haben mit NIS2 und dem KRITIS-Dachgesetz neue Pflichten. Beides läuft auf derselben Technik, mit der wir jeden Tag arbeiten.",
+    "frmcs": {
+      "label": "Bahnfunk",
+      "title": "FRMCS: der Nachfolger von GSM-R",
+      "text": "FRMCS ist ein 5G-Standalone-Netz mit den Mission-Critical-Diensten von 3GPP, also genau die Technik aus unseren Private-5G-Projekten. Die ausschreibungsreife erste Fassung kommt erst mit der nächsten Revision der CCS TSI. Bis dahin entscheidet die Vorbereitung, wie glatt die Migration läuft.",
+      "facts": [
+        {
+          "k": "Bänder",
+          "v": "n100 (900 MHz) · n101 (1900 MHz)"
+        },
+        {
+          "k": "Basis",
+          "v": "5G SA · 3GPP MCX"
+        },
+        {
+          "k": "Regelwerk",
+          "v": "CCS TSI 2023 · Rev. 2027/28"
+        },
+        {
+          "k": "Parallelbetrieb",
+          "v": "GSM-R bis ca. 2035"
+        }
+      ],
+      "work": "Was wir beitragen: Funkplanung in n100 und n101 entlang der Strecke, Koexistenz mit GSM-R und benachbarten Mobilfunknetzen, Integration der Bordtechnik (TOBA) und Testkonzepte, die mit der Spezifikation mitwachsen."
+    },
+    "kritis": {
+      "label": "KRITIS & NIS2",
+      "title": "Neue Pflichten für Betreiber kritischer Anlagen",
+      "text": "Seit Dezember 2025 gilt das NIS2-Umsetzungsgesetz, seit März 2026 das KRITIS-Dachgesetz. Nach Schätzung des BSI fallen rund 29.500 Unternehmen und Einrichtungen unter NIS2, darunter Schienenverkehr, Energie und Telekommunikation. Funk- und Campusnetze gehören zu der IT, die jetzt Risikomanagement, Lieferkettenprüfung und Meldewege braucht.",
+      "facts": [
+        {
+          "k": "NIS2UmsuCG",
+          "v": "in Kraft seit 12/2025"
+        },
+        {
+          "k": "KRITIS-Dachgesetz",
+          "v": "in Kraft seit 03/2026"
+        },
+        {
+          "k": "Meldefristen",
+          "v": "24 h · 72 h · 30 Tage"
+        },
+        {
+          "k": "Behörden",
+          "v": "BSI · BBK"
+        }
+      ],
+      "work": "Was wir beitragen: Wir übersetzen die Anforderungen in Netzarchitektur, Redundanz, Segmentierung und Lieferantenbewertung für Ihre Funk- und Campusnetze. Rechtsberatung und Prüfungen ersetzen wir nicht. Wir liefern die technische Grundlage dafür und arbeiten mit Ihren Juristen und Auditoren zusammen."
+    },
+    "cta": "Über FRMCS oder KRITIS sprechen"
+  },
   "usPrivacy": {
     "lead": "Nach kalifornischem Recht (CCPA/CPRA) haben Besucherinnen und Besucher aus den USA das Recht, dem Verkauf und der Weitergabe ihrer personenbezogenen Daten zu widersprechen. Auf dieser Seite können Sie dieses Recht ausüben.",
     "note": "Stand heute verkauft SAJ Connect keine personenbezogenen Daten und setzt keine Marketing- oder Analyse-Cookies von Drittanbietern ein. Ihre Einstellung wird in Ihrem Browser gespeichert und greift automatisch, falls solche Dienste künftig eingesetzt werden. Sendet Ihr Browser das Global-Privacy-Control-Signal (GPC), respektieren wir es ohne weiteres Zutun.",

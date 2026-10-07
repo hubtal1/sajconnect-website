@@ -271,6 +271,59 @@
     "decline": "Apenas necessários",
     "settings": "Configurações"
   },
+  "critical": {
+    "title": "Rádio ferroviário e infraestrutura crítica",
+    "lede": "Dois campos em que a tecnologia de rádio e a regulação estão sendo refeitas ao mesmo tempo. As ferrovias europeias migram do GSM-R para o 5G, e operadores de infraestrutura crítica na Alemanha têm novas obrigações com a NIS2. Nos dois casos, a base é a mesma tecnologia com que trabalhamos todos os dias.",
+    "frmcs": {
+      "label": "Rádio ferroviário",
+      "title": "FRMCS: o sucessor do GSM-R",
+      "text": "O FRMCS é uma rede 5G standalone com os serviços de missão crítica do 3GPP, a mesma tecnologia dos nossos projetos de Private 5G. A primeira edição pronta para licitação só chega com a próxima revisão da CCS TSI. Até lá, é a preparação que define se a migração vai ser tranquila.",
+      "facts": [
+        {
+          "k": "Faixas",
+          "v": "n100 (900 MHz) · n101 (1900 MHz)"
+        },
+        {
+          "k": "Base",
+          "v": "5G SA · 3GPP MCX"
+        },
+        {
+          "k": "Regulação",
+          "v": "CCS TSI 2023 · rev. 2027/28"
+        },
+        {
+          "k": "Convivência",
+          "v": "GSM-R até cerca de 2035"
+        }
+      ],
+      "work": "O que entregamos: planejamento de rádio em n100 e n101 ao longo da via, convivência com o GSM-R e com redes públicas vizinhas, integração embarcada (TOBA) e conceitos de teste que acompanham a evolução da especificação."
+    },
+    "kritis": {
+      "label": "KRITIS & NIS2",
+      "title": "Novas obrigações para infraestrutura crítica na Alemanha",
+      "text": "A lei alemã de implementação da NIS2 vale desde dezembro de 2025, e a lei-quadro KRITIS desde março de 2026. Segundo o BSI, cerca de 29.500 empresas e órgãos públicos estão sujeitos à NIS2, entre eles ferrovias, energia e telecomunicações. Redes de rádio e de campus fazem parte da TI que agora precisa de gestão de riscos, avaliação da cadeia de fornecimento e notificação de incidentes.",
+      "facts": [
+        {
+          "k": "NIS2UmsuCG",
+          "v": "em vigor desde 12/2025"
+        },
+        {
+          "k": "Lei KRITIS",
+          "v": "em vigor desde 03/2026"
+        },
+        {
+          "k": "Notificação",
+          "v": "24 h · 72 h · 30 dias"
+        },
+        {
+          "k": "Autoridades",
+          "v": "BSI · BBK"
+        }
+      ],
+      "work": "O que entregamos: traduzimos os requisitos em arquitetura de rede, redundância, segmentação e avaliação de fornecedores para suas redes de rádio e de campus. Não substituímos assessoria jurídica nem auditorias. Entregamos a base técnica e trabalhamos junto com seus advogados e auditores."
+    },
+    "cta": "Fale conosco sobre FRMCS ou KRITIS"
+  },
   "usPrivacy": {
     "lead": "Pela legislação da Califórnia (CCPA/CPRA), visitantes dos Estados Unidos têm o direito de se opor à venda e ao compartilhamento de seus dados pessoais. Nesta página você pode exercer esse direito.",
     "note": "Até hoje, a SAJ Connect não vende dados pessoais e não utiliza cookies de marketing ou análise de terceiros. Sua escolha fica armazenada no seu navegador e será aplicada automaticamente caso tais serviços venham a ser utilizados no futuro. Se o seu navegador envia o sinal Global Privacy Control (GPC), nós o respeitamos sem nenhuma ação adicional.",

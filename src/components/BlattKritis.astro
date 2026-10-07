@@ -1,0 +1,60 @@
+---
+import DossierBlatt from "./DossierBlatt.astro";
+import { getLocaleFromUrl, t, getDict, localizedPath, type Locale } from "../i18n/utils";
+
+interface Fact {
+  k: string;
+  v: string;
+}
+
+interface Topic {
+  label: string;
+  title: string;
+  text: string;
+  facts: Fact[];
+  work: string;
+}
+
+const locale: Locale = getLocaleFromUrl(Astro.url);
+const tt = t(locale);
+const topics = [
+  getDict<Topic>(locale, "critical.frmcs"),
+  getDict<Topic>(locale, "critical.kritis"),
+].filter((topic): topic is Topic => !!topic);
+// Bahnfunk in Cobalt, KRITIS in Grün — wie die Kapitelmarken der übrigen Seite.
+const accents = ["var(--color-cobalt-light)", "var(--color-saj-green-bright)"];
+---
+
+<DossierBlatt nr="2.5" title={tt("critical.title")} blatt="03b/06" id="kritis">
+  <p class="lede mt-10 max-w-[58ch]">{tt("critical.lede")}</p>
+
+  <div class="mt-12 grid grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-16">
+    {topics.map((topic, idx) => (
+      <div class:list={["md:pl-0", idx > 0 && "md:border-l md:border-[var(--color-hairline-dark)] md:pl-16"]}>
+        <p class="mono-label" style={`color: ${accents[idx]};`}>{topic.label}</p>
+        <h3 class="heading-card mt-2 text-[var(--color-text-on-carbon)]">{topic.title}</h3>
+        <p class="mt-4 max-w-[52ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">{topic.text}</p>
+
+        <dl class="mt-8">
+          {topic.facts.map((fact, i) => (
+            <div class:list={["grid grid-cols-[9rem_1fr] gap-x-6 py-3", i > 0 && "border-t border-[var(--color-hairline-dark)]"]}>
+              <dt class="mono-label text-[var(--color-text-on-carbon-faint)]">{fact.k}</dt>
+              <dd class="mono-spec text-[var(--color-text-on-carbon)]">{fact.v}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <p class="mt-8 max-w-[52ch] text-sm leading-relaxed text-[var(--color-text-on-carbon)]">{topic.work}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-12">
+    <a
+      href={localizedPath(locale, "/contact")}
+      class="mono-label-sm text-[var(--color-text-on-carbon-muted)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 transition-colors duration-150 hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]"
+    >
+      {tt("critical.cta")}
+    </a>
+  </div>
+</DossierBlatt>
