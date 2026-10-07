@@ -1,0 +1,146 @@
+---
+/**
+ * Fachseite mit Eckdaten, Abschnitten, Beitrag und Quellen (FRMCS, KRITIS).
+ * Offen gesetzt wie die Startseite: Haarlinien statt Kacheln, keine Zähler.
+ */
+import Layout from "../layouts/Layout.astro";
+import CtaBanner from "./CtaBanner.astro";
+import { getDict, type Locale } from "../i18n/utils";
+
+interface Fact {
+  k: string;
+  v: string;
+}
+interface Section {
+  title: string;
+  paras: string[];
+  bullets: string[];
+  after: string[];
+}
+interface Source {
+  label: string;
+  url: string;
+}
+interface DeepDive {
+  chapter: string;
+  title: string;
+  lede: string;
+  factsTitle: string;
+  facts: Fact[];
+  sections: Section[];
+  contributionTitle: string;
+  contribution: string[];
+  limitsTitle?: string;
+  limits?: string;
+  asOf: string;
+  sourcesTitle: string;
+  sources: Source[];
+}
+
+interface Props {
+  lang: Locale;
+  ns: "frmcs" | "kritis";
+}
+
+const { lang, ns } = Astro.props;
+const page = getDict<DeepDive>(lang, ns);
+if (!page) throw new Error(`Fachseite ${ns} fehlt in ${lang}`);
+
+const bullet =
+  "relative pl-6 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-3 before:bg-[var(--color-cobalt-light)]";
+---
+
+<Layout title={page.title} description={page.lede}>
+  <section class="surface-carbon relative overflow-hidden">
+    <div class="container-prose pt-16 pb-16 md:pt-24 md:pb-20">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-12 reveal">
+        <div class="md:col-span-2">
+          <p class="chapter-mark">{page.chapter}</p>
+        </div>
+        <div class="md:col-span-10">
+          <h1 class="display-xl text-[var(--color-bone)]">{page.title}</h1>
+          <p class="lede mt-10 max-w-[62ch]">{page.lede}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose pb-20 md:pb-28">
+      <!-- Eckdaten -->
+      <div class="grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
+        <h2 class="heading-card text-[var(--color-text-on-carbon)] md:col-span-4">{page.factsTitle}</h2>
+        <dl class="md:col-span-8">
+          {page.facts.map((fact, i) => (
+            <div class:list={["grid grid-cols-1 gap-y-1 py-3 sm:grid-cols-[11rem_1fr] sm:gap-x-6", i > 0 && "border-t border-[var(--color-hairline-dark)]"]}>
+              <dt class="mono-label text-[var(--color-text-on-carbon-faint)]">{fact.k}</dt>
+              <dd class="mono-spec text-[var(--color-text-on-carbon)]">{fact.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <!-- Fachabschnitte -->
+      {page.sections.map((section) => (
+        <div class="mt-16 grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
+          <h2 class="heading-card text-[var(--color-text-on-carbon)] md:col-span-4">{section.title}</h2>
+          <div class="space-y-5 md:col-span-8">
+            {section.paras.map((p) => (
+              <p class="max-w-[68ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">{p}</p>
+            ))}
+            {section.bullets.length > 0 && (
+              <ul class="max-w-[68ch] space-y-3 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+                {section.bullets.map((b) => <li class={bullet}>{b}</li>)}
+              </ul>
+            )}
+            {section.after.map((p) => (
+              <p class="max-w-[68ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">{p}</p>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- Beitrag -->
+      <div class="mt-16 grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
+        <div class="md:col-span-4">
+          <h2 class="heading-card text-[var(--color-saj-green-bright)]">{page.contributionTitle}</h2>
+        </div>
+        <div class="md:col-span-8">
+          <ul class="max-w-[68ch] space-y-3 text-base leading-relaxed text-[var(--color-text-on-carbon)]">
+            {page.contribution.map((c) => <li class={bullet}>{c}</li>)}
+          </ul>
+          {page.limits && (
+            <div class="mt-10">
+              <p class="mono-label text-[var(--color-text-on-carbon-faint)]">{page.limitsTitle}</p>
+              <p class="mt-3 max-w-[68ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{page.limits}</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <!-- Quellen -->
+      <div class="mt-16 grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
+        <h2 class="mono-label text-[var(--color-text-on-carbon-faint)] md:col-span-4">{page.sourcesTitle}</h2>
+        <div class="md:col-span-8">
+          <ul class="space-y-2 text-sm">
+            {page.sources.map((s) => (
+              <li>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[var(--color-text-on-carbon-muted)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 transition-colors hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-6 text-sm text-[var(--color-text-on-carbon-faint)]">{page.asOf}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</Layout>

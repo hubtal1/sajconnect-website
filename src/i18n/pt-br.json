@@ -11,6 +11,8 @@
     "consultancy": "Private 5G",
     "testing": "Testes",
     "vehicle": "Connected Car",
+    "frmcs": "FRMCS",
+    "kritis": "KRITIS & NIS2",
     "careers": "Carreiras",
     "blog": "Blog",
     "contact": "Contato"
@@ -88,7 +90,7 @@
         "remarks": "Observações: —",
         "rows": [
           { "k": "Localizações", "v": "Nuremberg, DE · Spokane, EUA" },
-          { "k": "Portfólio", "v": "8 áreas" },
+          { "k": "Portfólio", "v": "10 áreas" },
           { "k": "Idiomas", "v": "DE · EN · PT" },
           { "k": "Base de trabalho", "v": "3GPP · GSMA" }
         ]
@@ -113,8 +115,8 @@
   },
   "services": {
     "title": "Nossos Domínios Tecnológicos Centrais",
-    "lead": "Oito áreas, um stack. A maioria dos projetos precisa de duas ou três.",
-    "exploreAll": "Explorar todas as 8 áreas",
+    "lead": "Dez áreas, um stack. A maioria dos projetos precisa de duas ou três.",
+    "exploreAll": "Explorar todas as 10 áreas",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engenharia, design, deployment e operação de Private 5G corporativo e industrial." },
       { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, gestão de perfis, ciclo de vida e certificação." },
@@ -123,12 +125,14 @@
       { "title": "6G — Próxima Geração", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G ao longo do roadmap 3GPP (Rel-20+)." },
       { "title": "Plataforma de Conectividade", "tag": "PLATFORM ENGINEERING", "description": "Plataformas que abstraem complexidade — da gestão de conectividade à telemetria e analytics." },
       { "title": "V2X & Conectividade Veicular", "tag": "AUTOMOTIVE", "description": "Arquiteturas de conectividade veicular — celular, V2X, Wi-Fi, Bluetooth — com caminhos de dados separados e protegidos." },
+      { "title": "FRMCS — Rádio Ferroviário", "tag": "RAIL RADIO", "description": "Migração do GSM-R para o FRMCS: planejamento de rádio em n100 e n101, convivência, integração embarcada e conceitos de teste." },
+      { "title": "KRITIS & NIS2", "tag": "CRITICAL INFRASTRUCTURE", "description": "Implementação técnica das obrigações da NIS2 e da KRITIS para redes de rádio, móveis e de campus." },
       { "title": "Expertise 360° em Conectividade", "tag": "FULL STACK", "description": "Cobertura end-to-end do dispositivo à nuvem — integrada, validada e em operação." }
     ],
     "outroHeadline": "As redes de amanhã. A preparação de hoje.",
     "outroSub": "Não operamos apenas as redes de hoje — ajudamos nossos clientes a moldar a próxima geração.",
-    "gridTagline": "8 domínios. Um stack.",
-    "domainsLabel": "8 domínios tecnológicos centrais",
+    "gridTagline": "10 domínios. Um stack.",
+    "domainsLabel": "10 domínios tecnológicos centrais",
     "engagement": {
       "label": "Modelos",
       "headline": "Três formas de trabalhar conosco.",
@@ -296,7 +300,8 @@
           "v": "GSM-R até cerca de 2035"
         }
       ],
-      "work": "O que entregamos: planejamento de rádio em n100 e n101 ao longo da via, convivência com o GSM-R e com redes públicas vizinhas, integração embarcada (TOBA) e conceitos de teste que acompanham a evolução da especificação."
+      "work": "O que entregamos: planejamento de rádio em n100 e n101 ao longo da via, convivência com o GSM-R e com redes públicas vizinhas, integração embarcada (TOBA) e conceitos de teste que acompanham a evolução da especificação.",
+      "more": "Mais sobre FRMCS"
     },
     "kritis": {
       "label": "KRITIS & NIS2",
@@ -320,9 +325,270 @@
           "v": "BSI · BBK"
         }
       ],
-      "work": "O que entregamos: traduzimos os requisitos em arquitetura de rede, redundância, segmentação e avaliação de fornecedores para suas redes de rádio e de campus. Não substituímos assessoria jurídica nem auditorias. Entregamos a base técnica e trabalhamos junto com seus advogados e auditores."
+      "work": "O que entregamos: traduzimos os requisitos em arquitetura de rede, redundância, segmentação e avaliação de fornecedores para suas redes de rádio e de campus. Não substituímos assessoria jurídica nem auditorias. Entregamos a base técnica e trabalhamos junto com seus advogados e auditores.",
+      "more": "Mais sobre KRITIS & NIS2"
     },
     "cta": "Fale conosco sobre FRMCS ou KRITIS"
+  },
+  "frmcs": {
+    "chapter": "FRMCS",
+    "title": "FRMCS: o novo rádio ferroviário em 5G",
+    "lede": "O GSM-R é o rádio digital dos trens na Europa desde os anos 2000 e é baseado em 2G. Seu sucessor, o FRMCS (Future Railway Mobile Communication System), leva o 5G para a ferrovia. Apoiamos gestores de infraestrutura, fabricantes de material rodante e fornecedores na preparação técnica da migração.",
+    "teaser": "Migração do GSM-R para o FRMCS: planejamento de rádio em n100 e n101, convivência, integração embarcada e conceitos de teste.",
+    "factsTitle": "Dados-chave",
+    "facts": [
+      {
+        "k": "Substitui",
+        "v": "GSM-R (2G)"
+      },
+      {
+        "k": "Frequências",
+        "v": "874,4–880 / 919,4–925 MHz · 1900–1910 MHz"
+      },
+      {
+        "k": "Bandas 3GPP",
+        "v": "n100 (FDD) · n101 (TDD)"
+      },
+      {
+        "k": "Tecnologia",
+        "v": "5G Standalone · MCPTT · MCData"
+      },
+      {
+        "k": "Regulação",
+        "v": "CCS TSI 2023 · (UE) 2023/1695"
+      },
+      {
+        "k": "Versão completa",
+        "v": "prevista para 2027/28"
+      },
+      {
+        "k": "Convivência",
+        "v": "GSM-R até cerca de 2035"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Por que o GSM-R está sendo substituído",
+        "paras": [
+          "O GSM-R opera em cerca de 130.000 km de linhas na Europa. A tecnologia vem da era 2G, fabricantes e peças de reposição estão ficando escassos, e a largura de banda é pequena demais para novas aplicações de dados, como a operação automática de trens (ATO), vídeo ou diagnóstico dos veículos.",
+          "A Agência Ferroviária da União Europeia (ERA) espera que o GSM-R se torne tecnicamente insustentável entre 2035 e 2040. Até lá, linhas e veículos precisam ser migrados com os trens em operação."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "O que o FRMCS é tecnicamente",
+        "paras": [
+          "O FRMCS é uma rede 5G standalone. Sobre ela rodam os serviços de missão crítica do 3GPP: MCPTT para chamadas de voz em grupo e de emergência, MCData para aplicações de dados. Os requisitos das ferrovias vêm da União Internacional de Ferrovias (UIC); as especificações técnicas são elaboradas pelo comitê TC RT do ETSI e pelo 3GPP.",
+          "No trem, a arquitetura embarcada TOBA (Telecom On-Board Architecture) fornece o acesso de rádio para todas as aplicações a bordo. ETCS e ATO se conectam por uma interface padronizada (OBapp). Assim, fabricantes de sinalização e de rádio já podem desenvolver seus equipamentos contra uma interface comum."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "O espectro",
+        "paras": [
+          "Com a Decisão de Execução (UE) 2021/1730, a UE harmonizou duas faixas para o rádio ferroviário: a faixa pareada de 900 MHz (874,4–880 MHz e 919,4–925 MHz, banda 3GPP n100) e a faixa não pareada de 1900 MHz (1900–1910 MHz, banda n101).",
+          "As duas faixas são estreitas. A de 900 MHz oferece apenas 5,6 MHz por sentido, e o GSM-R a compartilha durante a transição. A de 1900 MHz traz mais capacidade, mas, por ter maior perda de propagação, exige uma rede mais densa. Os equipamentos embarcados precisam alternar entre as duas faixas com o trem em movimento."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "O cronograma",
+        "paras": [
+          "O Regulamento (UE) 2023/1695 (CCS TSI 2023) incluiu o FRMCS pela primeira vez no marco regulatório europeu, mas apenas em parte: o que está definido é sobretudo a interface entre ETCS/ATO e a unidade embarcada FRMCS. Segundo a ERA, isso ainda não basta para licitar equipamentos embarcados.",
+          "A primeira versão completa e pronta para licitação (FRMCS 1st Edition, V3) deve vir com a próxima revisão da TSI, hoje prevista para 2027 ou 2028. No projeto europeu MORANE-2, os testes de laboratório estão em andamento desde 2026. Testes de campo com várias ferrovias, entre elas a DB InfraGO na Alemanha, vêm a partir de 2027.",
+          "A Deutsche Bahn espera que o GSM-R siga em uso por pelo menos mais dez anos. Na reforma geral da linha Hamburgo–Berlim, a via já foi preparada com fibra óptica e torres para uma primeira operação de teste do FRMCS."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "As questões de engenharia da migração",
+        "paras": [
+          "Entre hoje e a operação regular há questões que as especificações sozinhas não resolvem:"
+        ],
+        "bullets": [
+          "Convivência e interoperação com o GSM-R por muitos anos, nas mesmas linhas e em parte nas mesmas frequências",
+          "Robustez contra redes móveis públicas que transmitem logo acima de 925 MHz, um problema que o GSM-R já conhece",
+          "Planejamento de rádio ao longo da via para 900 e 1900 MHz, incluindo quais sites existentes podem ser reaproveitados",
+          "Integração embarcada: antenas, espaço no teto, convivência com outros sistemas de rádio no veículo",
+          "Conceitos de teste que acompanham as versões V1, V2 e V3 da especificação, em vez de recomeçar a cada revisão"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "O que entregamos",
+    "contribution": [
+      "Avaliação técnica e conceitos de migração: o que o FRMCS significa para suas linhas, veículos ou produtos, e em que ordem?",
+      "Planejamento de rádio e análises de convivência para n100 e n101, incluindo cenários de interferência com redes públicas",
+      "Arquitetura e integração do core 5G standalone e dos serviços de missão crítica, que conhecemos de projetos de Private 5G",
+      "Gestão de requisitos, conceitos de teste e campanhas de teste acompanhando as versões da especificação"
+    ],
+    "asOf": "Atualizado em outubro de 2026. A especificação do FRMCS continua evoluindo, e atualizamos esta página quando houver novas versões.",
+    "sourcesTitle": "Fontes",
+    "sources": [
+      {
+        "label": "Decisão de Execução (UE) 2021/1730 (espectro)",
+        "url": "https://eur-lex.europa.eu/eli/dec_impl/2021/1730/oj"
+      },
+      {
+        "label": "ERA: parecer sobre as especificações FRMCS (2024, em inglês)",
+        "url": "https://www.era.europa.eu/sites/default/files/2024-12/opi-2024-10-version2-frmcs-specifications.pdf"
+      },
+      {
+        "label": "EU-Rail System Pillar: Report on FRMCS V2 and V3 (2025, em inglês)",
+        "url": "https://rail-research.europa.eu/wp-content/uploads/2026/01/20250304-FRMCS-Report.pdf"
+      },
+      {
+        "label": "Railway Gazette: MORANE-2 chega aos testes de laboratório (julho de 2026, em inglês)",
+        "url": "https://www.railwaygazette.com/frmcs/2026/07/02/european-frmcs-programme-reaches-laboratory-testing-phase/"
+      },
+      {
+        "label": "Deutsche Bahn, blog de notícias sobre GSM-R e FRMCS (junho de 2026, em alemão)",
+        "url": "https://www.deutschebahn.com/de/presse/Newsblog-12829716"
+      }
+    ]
+  },
+  "kritis": {
+    "chapter": "KRITIS & NIS2",
+    "title": "KRITIS e NIS2: o que as novas obrigações na Alemanha significam para suas redes",
+    "lede": "A lei alemã de implementação da NIS2 vale desde dezembro de 2025, e a lei-quadro KRITIS desde março de 2026. As duas exigem que muito mais empresas do que antes protejam sua TI e suas instalações contra falhas e ataques, e redes de rádio, móveis e de campus fazem parte disso. Esta página trata do marco alemão e europeu; no Brasil e nos EUA valem outras regras, que avaliamos projeto a projeto.",
+    "teaser": "Implementação técnica das obrigações da NIS2 e da KRITIS para redes de rádio, móveis e de campus.",
+    "factsTitle": "Dados-chave",
+    "facts": [
+      {
+        "k": "NIS2UmsuCG",
+        "v": "em vigor desde 06/12/2025"
+      },
+      {
+        "k": "Lei KRITIS",
+        "v": "em vigor desde 17/03/2026"
+      },
+      {
+        "k": "Abrangidos",
+        "v": "cerca de 29.500 (estimativa do BSI)"
+      },
+      {
+        "k": "Registro",
+        "v": "em até 3 meses"
+      },
+      {
+        "k": "Notificação",
+        "v": "24 h · 72 h · 30 dias"
+      },
+      {
+        "k": "Multas NIS2",
+        "v": "até 10 mi € ou 2 % do faturamento"
+      },
+      {
+        "k": "Autoridades",
+        "v": "BSI · BBK · reguladores setoriais"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Duas leis, dois tipos de proteção",
+        "paras": [
+          "A lei de implementação da NIS2 (NIS2UmsuCG) transpõe a diretiva europeia NIS2 e reformulou a lei alemã do BSI. O tema é cibersegurança: gestão de riscos, notificação de incidentes e responsabilidade da diretoria. Ela vale desde 6 de dezembro de 2025, sem período de transição.",
+          "A lei-quadro KRITIS (KRITIS-Dachgesetz) transpõe a diretiva europeia CER e trata da resiliência física de instalações críticas, ou seja, da proteção contra eventos naturais, sabotagem ou falta de energia. Ela vale desde 17 de março de 2026. Quais instalações são consideradas críticas é definido em um regulamento próprio, e os prazos dos operadores só começam a contar a partir dessa classificação."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Quem é afetado",
+        "paras": [
+          "A NIS2 distingue dois grupos. Entidades essenciais são operadores de instalações críticas, independentemente do porte, e grandes empresas de setores de alta criticidade (a partir de 250 empregados, ou mais de 50 milhões de euros de faturamento e mais de 43 milhões de euros de balanço). Entidades importantes são, em geral, médias empresas a partir de 50 empregados ou com mais de 10 milhões de euros de faturamento e balanço.",
+          "Operadores de redes públicas de telecomunicações e prestadores de serviços públicos de telecomunicações já contam como essenciais a partir do porte médio. No setor ferroviário, estão abrangidos os gestores de infraestrutura e as empresas de transporte ferroviário. O BSI estima cerca de 29.500 empresas e instituições no total. Até o fim de junho de 2026, cerca de 17.700 haviam se registrado."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Obrigações pela NIS2",
+        "paras": [],
+        "bullets": [
+          "Registro no BSI em até três meses após a empresa passar a ser abrangida pela lei",
+          "Notificação de incidentes significativos: alerta inicial em 24 horas, notificação em 72 horas, relatório final após 30 dias",
+          "Gestão de riscos em pelo menos dez áreas, entre elas análise de riscos, tratamento de incidentes, continuidade de negócios, segurança da cadeia de fornecimento, criptografia e autenticação multifator",
+          "A diretoria precisa implementar e supervisionar as medidas, participar de treinamentos regulares e responde por violações culposas",
+          "Multas de até 10 milhões de euros ou 2 % do faturamento mundial (entidades essenciais) ou até 7 milhões de euros ou 1,4 % (entidades importantes)"
+        ],
+        "after": []
+      },
+      {
+        "title": "Obrigações pela lei-quadro KRITIS",
+        "paras": [
+          "Operadores de instalações críticas também têm obrigações de resiliência física. Os prazos contam a partir da classificação da instalação como crítica:"
+        ],
+        "bullets": [
+          "Registro na plataforma conjunta do BBK e do BSI em até três meses",
+          "Avaliação de riscos em até nove meses",
+          "Medidas de resiliência e plano de resiliência em até dez meses",
+          "Notificação de incidentes em até 24 horas"
+        ],
+        "after": [
+          "O limite padrão é o abastecimento de 500.000 habitantes. No setor ferroviário, a autoridade competente é a Agência Ferroviária Federal (Eisenbahn-Bundesamt)."
+        ]
+      },
+      {
+        "title": "O que isso significa para redes de rádio e de campus",
+        "paras": [
+          "Uma rede de campus puramente interna em geral não é uma rede pública de telecomunicações. Por isso, os deveres específicos de segurança da lei alemã de telecomunicações (§ 165 e seguintes do TKG) normalmente não se aplicam diretamente. Se a empresa estiver sujeita à NIS2 ou operar uma instalação crítica, porém, a rede faz parte dos sistemas de TI que a gestão de riscos do § 30 BSIG precisa cobrir. Se isso se aplica a cada caso deve ser verificado juridicamente.",
+          "A escolha de fornecedores também ganha peso. Pelo § 41 BSIG, o Ministério Federal do Interior pode proibir operadores de instalações críticas de usar componentes críticos de um fabricante. As grandes operadoras móveis alemãs se comprometeram por contrato com o governo federal a retirar componentes críticos da Huawei e da ZTE de seus núcleos 5G até o fim de 2026."
+        ],
+        "bullets": [],
+        "after": []
+      }
+    ],
+    "contributionTitle": "O que entregamos",
+    "contribution": [
+      "Levantamento das suas redes de rádio, móveis e de campus: quais sistemas são críticos para a operação e onde há pontos únicos de falha?",
+      "Arquitetura de rede com redundância, segmentação e transições protegidas para o restante da TI",
+      "Avaliação de fornecedores e componentes como contribuição para a segurança da cadeia de fornecimento",
+      "Conceitos técnicos de monitoramento, detecção e fluxos de notificação de incidentes",
+      "Contribuição técnica para sua análise de riscos e seu plano de resiliência"
+    ],
+    "limitsTitle": "O que não fazemos",
+    "limits": "Somos uma consultoria de engenharia, não um escritório de advocacia nem um organismo de auditoria. Se e como sua empresa é afetada, seus advogados esclarecem, e auditorias e comprovações ficam a cargo de organismos credenciados. Entregamos a base técnica e trabalhamos com ambos.",
+    "asOf": "Atualizado em outubro de 2026. Esta página é uma visão técnica, não uma assessoria jurídica.",
+    "sourcesTitle": "Fontes",
+    "sources": [
+      {
+        "label": "Lei do BSI 2025, § 28 (tipos de entidade, em alemão)",
+        "url": "https://www.gesetze-im-internet.de/bsig_2025/__28.html"
+      },
+      {
+        "label": "Lei do BSI 2025, § 38 (deveres da diretoria, em alemão)",
+        "url": "https://www.gesetze-im-internet.de/bsig_2025/__38.html"
+      },
+      {
+        "label": "Lei do BSI 2025, § 41 (componentes críticos, em alemão)",
+        "url": "https://www.gesetze-im-internet.de/bsig_2025/__41.html"
+      },
+      {
+        "label": "BSI: visão geral das obrigações da NIS2 (em alemão)",
+        "url": "https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/NIS-2-Pflichten/nis-2-pflichten_node.html"
+      },
+      {
+        "label": "BSI: NIS2 em números (em alemão)",
+        "url": "https://www.bsi.bund.de/DE/Themen/Regulierte-Wirtschaft/NIS-2-regulierte-Unternehmen/NIS-2-in-Zahlen/nis-2-in-zahlen.html"
+      },
+      {
+        "label": "DIHK: Bundestag aprova a lei-quadro KRITIS (em alemão)",
+        "url": "https://www.dihk.de/de/newsroom/bundestag-verabschiedet-kritis-dachgesetz-170730"
+      },
+      {
+        "label": "Lei alemã de telecomunicações, § 165 (em alemão)",
+        "url": "https://www.gesetze-im-internet.de/tkg_2021/__165.html"
+      },
+      {
+        "label": "BMI: contratos sobre componentes Huawei e ZTE nas redes 5G (julho de 2024, em inglês)",
+        "url": "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2024/07/5g-en.html"
+      }
+    ]
   },
   "usPrivacy": {
     "lead": "Pela legislação da Califórnia (CCPA/CPRA), visitantes dos Estados Unidos têm o direito de se opor à venda e ao compartilhamento de seus dados pessoais. Nesta página você pode exercer esse direito.",

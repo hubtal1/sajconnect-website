@@ -13,6 +13,7 @@ interface Topic {
   text: string;
   facts: Fact[];
   work: string;
+  more: string;
 }
 
 const locale: Locale = getLocaleFromUrl(Astro.url);
@@ -23,6 +24,7 @@ const topics = [
 ].filter((topic): topic is Topic => !!topic);
 // Bahnfunk in Cobalt, KRITIS in Grün — wie die Kapitelmarken der übrigen Seite.
 const accents = ["var(--color-cobalt-light)", "var(--color-saj-green-bright)"];
+const pages = ["/frmcs", "/kritis"];
 ---
 
 <DossierBlatt nr="2.5" title={tt("critical.title")} blatt="03b/06" id="kritis">
@@ -45,6 +47,13 @@ const accents = ["var(--color-cobalt-light)", "var(--color-saj-green-bright)"];
         </dl>
 
         <p class="mt-8 max-w-[52ch] text-sm leading-relaxed text-[var(--color-text-on-carbon)]">{topic.work}</p>
+        <a
+          href={localizedPath(locale, pages[idx])}
+          class="mono-label mt-6 inline-block underline decoration-1 underline-offset-4 transition-opacity hover:opacity-80"
+          style={`color: ${accents[idx]};`}
+        >
+          {topic.more} →
+        </a>
       </div>
     ))}
   </div>

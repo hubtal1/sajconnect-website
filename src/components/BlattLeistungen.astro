@@ -21,8 +21,13 @@ const BANDS = [
   "3GPP Rel-20+",
   "API · MQTT",
   "5,9 GHz ITS",
+  "n100 · n101 · MCX",
+  "NIS2 · KRITIS-DachG",
   "Device-to-Cloud",
 ];
+
+// Bereiche mit eigener Fachseite (Index wie BANDS).
+const PAGES: (string | null)[] = ["/consultancy", null, null, null, null, null, "/connected-car", "/frmcs", "/kritis", null];
 ---
 
 <DossierBlatt nr="2.0" title={tt("dossier.sections.leistungsverzeichnis")} blatt="03/06" id="leistungsverzeichnis">
@@ -36,7 +41,11 @@ const BANDS = [
           idx > 0 && "border-t border-[var(--color-hairline-dark)]",
         ]}
       >
-        <span class="block font-bold leading-snug text-[var(--color-text-on-carbon)]">{d.title}</span>
+        {PAGES[idx] ? (
+          <a href={localizedPath(locale, PAGES[idx] as string)} class="block font-bold leading-snug text-[var(--color-text-on-carbon)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]">{d.title}</a>
+        ) : (
+          <span class="block font-bold leading-snug text-[var(--color-text-on-carbon)]">{d.title}</span>
+        )}
         <span class="mono-spec mt-1 block text-[var(--color-text-on-carbon-muted)] md:mt-0.5">{BANDS[idx]}</span>
         <span class="mt-2 block max-w-[60ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:mt-0.5">{d.description}</span>
       </li>

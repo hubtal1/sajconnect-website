@@ -24,9 +24,11 @@ interface EngagementModel {
 const engagementModels = getDict<EngagementModel[]>(lang, "services.engagement.models") ?? [];
 
 const subAreas = [
-  { title: tt("consultancy.title"), lead: tt("consultancy.lead"), href: localizedPath(lang, "/consultancy"), tag: "01 — Private 5G" },
-  { title: tt("testing.title"), lead: tt("testing.lead"), href: localizedPath(lang, "/testing"), tag: "02 — Testing" },
-  { title: tt("vehicle.title"), lead: tt("vehicle.lead"), href: localizedPath(lang, "/connected-car"), tag: "03 — Connected Car" },
+  { title: tt("consultancy.title"), lead: tt("consultancy.lead"), href: localizedPath(lang, "/consultancy"), tag: "Private 5G" },
+  { title: tt("testing.title"), lead: tt("testing.lead"), href: localizedPath(lang, "/testing"), tag: "Testing" },
+  { title: tt("vehicle.title"), lead: tt("vehicle.lead"), href: localizedPath(lang, "/connected-car"), tag: "Connected Car" },
+  { title: tt("frmcs.title"), lead: tt("frmcs.teaser"), href: localizedPath(lang, "/frmcs"), tag: tt("nav.frmcs") },
+  { title: tt("kritis.title"), lead: tt("kritis.teaser"), href: localizedPath(lang, "/kritis"), tag: tt("nav.kritis") },
 ];
 ---
 
@@ -79,30 +81,23 @@ const subAreas = [
         </div>
       </div>
 
-      <div class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-3 reveal">
-        {subAreas.map((area, idx) => {
-          const isCobalt = idx % 2 === 0;
-          const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
-          return (
+      <ul class="mt-16 reveal">
+        {subAreas.map((area, idx) => (
+          <li class:list={[idx > 0 && "border-t border-[var(--color-hairline-dark)]"]}>
             <a
               href={area.href}
-              class="group flex h-full flex-col p-8 transition-all duration-500 hover:bg-[var(--color-carbon-elev)] md:p-10"
-              style="background-color: var(--color-carbon-soft);"
+              class="group grid grid-cols-1 gap-y-2 py-7 md:grid-cols-[13rem_1fr_auto] md:items-baseline md:gap-x-10"
             >
-              <p class="mono-label" style={`color: var(${accentVar});`}>{area.tag}</p>
-              <h3 class="heading-card mt-12 text-[var(--color-bone)]">
-                {area.title}
-              </h3>
-              <p class="mt-5 flex-1 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-                {area.lead}
-              </p>
-              <span class="arrow-link mt-10" style={`color: var(${accentVar});`}>
-                {tt("ui.readMore")} →
+              <span class="mono-label" style={`color: var(${idx % 2 === 0 ? "--color-cobalt-light" : "--color-saj-green-bright"});`}>{area.tag}</span>
+              <span>
+                <span class="heading-card block text-[var(--color-bone)] transition-colors group-hover:text-[var(--color-cobalt-light)]">{area.title}</span>
+                <span class="mt-2 block max-w-[62ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{area.lead}</span>
               </span>
+              <span class="mono-label text-[var(--color-text-on-carbon-faint)] transition-colors group-hover:text-[var(--color-cobalt-light)]">{tt("ui.readMore")} →</span>
             </a>
-          );
-        })}
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
