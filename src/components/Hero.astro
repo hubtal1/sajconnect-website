@@ -5,12 +5,10 @@ const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 ---
 
-<!-- Kopf: schematische Funkplanung als Bildsprache. Bewusst dunkel in beiden Themes. -->
+<!-- Kopf: dunkle Fläche mit Aussage (Karte vorerst entfernt, User-Feedback 08.10.). -->
 <section class="coverage-hero relative overflow-hidden text-white" style="background-color: #060c28;">
-  <canvas class="coverage-map absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
-  <div class="coverage-scrim pointer-events-none absolute inset-0" aria-hidden="true"></div>
 
-  <div class="container-prose relative flex min-h-[560px] flex-col justify-end pb-14 pt-28 md:min-h-[680px] md:pb-20">
+  <div class="container-prose relative flex min-h-[460px] flex-col justify-end pb-14 pt-28 md:min-h-[560px] md:pb-20">
     <h1 class="max-w-[15ch] font-display font-bold leading-[1.04] tracking-[-0.01em]" style="font-size: clamp(2.4rem, 5.6vw, 4.4rem);">
       {tt("landing.headline")}
     </h1>
@@ -28,141 +26,7 @@ const tt = t(locale);
       <span class="text-sm" style="color: #aab4f0;">{tt("landing.locations")}</span>
     </div>
 
-    <div class="absolute bottom-20 right-12 hidden w-[300px] text-xs lg:block" style="color: #c9d1ff;">
-      <p>{tt("landing.legendTitle")}</p>
-      <div class="coverage-legend mt-2 h-2.5"></div>
-      <div class="mt-1.5 flex justify-between font-mono"><span>−120</span><span>−100</span><span>−80</span><span>−70</span></div>
-      <p class="mt-2.5 leading-snug" style="color: #aab4f0;">{tt("landing.legendCaption")}</p>
-    </div>
   </div>
 </section>
 
-<style>
-  .coverage-scrim {
-    /* Ruhige Zone hinter dem Text: links und unten dunkler. */
-    background:
-      linear-gradient(90deg, rgba(6, 12, 40, 0.78) 0%, rgba(6, 12, 40, 0.35) 45%, rgba(6, 12, 40, 0) 70%),
-      linear-gradient(0deg, rgba(6, 12, 40, 0.55) 0%, rgba(6, 12, 40, 0) 40%);
-  }
-  .coverage-legend {
-    background: linear-gradient(90deg, #060c28 0 14%, #0e1e6e 14% 28%, #001ec9 28% 43%, #285ad2 43% 57%, #117400 57% 71%, #4f9a3a 71% 86%, #78c85a 86%);
-  }
-</style>
 
-<script>
-  // Schematische Funkplanung: Log-Distanz-Pfadverlust je Zelle, Dämpfung an Hallenwänden,
-  // Darstellung in Pegelstufen mit Konturlinien (wie in Planungssoftware).
-  type Cell = [number, number];
-  type Wall = [number, number, number]; // x, y-Anfang, y-Ende (relativ)
-
-  const CELLS: Cell[] = [[0.58, 0.3], [0.8, 0.28], [0.66, 0.7], [0.88, 0.68]];
-  const WALLS: Wall[] = [[0.62, 0.1, 0.55], [0.74, 0.45, 0.9], [0.86, 0.1, 0.5]];
-  const STOPS: [number, number[]][] = [
-    [0, [6, 12, 40]], [0.25, [14, 30, 110]], [0.45, [0, 30, 201]], [0.62, [40, 90, 210]],
-    [0.78, [17, 116, 0]], [1, [120, 200, 90]],
-  ];
-  const LEVELS = 7;
-
-  function color(t: number): number[] {
-    for (let i = 1; i < STOPS.length; i++) {
-      if (t <= STOPS[i][0]) {
-        const [a, ca] = STOPS[i - 1];
-        const [b, cb] = STOPS[i];
-        const f = (t - a) / (b - a);
-        return ca.map((v, k) => v + (cb[k] - v) * f);
-      }
-    }
-    return STOPS[STOPS.length - 1][1];
-  }
-
-  function paint(canvas: HTMLCanvasElement) {
-    const rect = canvas.getBoundingClientRect();
-    if (!rect.width || !rect.height) return;
-    const quality = 0.75;
-    const W = (canvas.width = Math.round(rect.width * quality));
-    const H = (canvas.height = Math.round(rect.height * quality));
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    const img = ctx.createImageData(W, H);
-    const unit = 1440 / W; // Abstände unabhängig von der Fensterbreite
-    const bands = new Uint8Array(W * H);
-
-    for (let y = 0; y < H; y++) {
-      for (let x = 0; x < W; x++) {
-        let best = -200;
-        for (const [cx, cy] of CELLS) {
-          const px = cx * W;
-          const d = Math.max(2, Math.hypot(x - px, y - cy * H)) * unit * 0.47;
-          let pl = -35 - 30 * Math.log10(d);
-          for (const [wx, y0, y1] of WALLS) {
-            const wxp = wx * W;
-            if ((x - wxp) * (px - wxp) < 0 && y > y0 * H && y < y1 * H) pl -= 9;
-          }
-          if (pl > best) best = pl;
-        }
-        best += 0.35 * Math.sin(x * 0.07) * Math.cos(y * 0.09); // keine perfekten Kreise
-        const level = Math.max(0, Math.min(LEVELS, Math.floor(((best + 120) / 50) * LEVELS)));
-        bands[y * W + x] = level;
-        const [r, g, b] = color(level / LEVELS);
-        const i = (y * W + x) * 4;
-        img.data[i] = r;
-        img.data[i + 1] = g;
-        img.data[i + 2] = b;
-        img.data[i + 3] = 255;
-      }
-    }
-    // Konturlinien an Stufengrenzen leicht aufhellen
-    for (let y = 1; y < H; y++) {
-      for (let x = 1; x < W; x++) {
-        const k = y * W + x;
-        if (bands[k] !== bands[k - 1] || bands[k] !== bands[k - W]) {
-          const i = k * 4;
-          img.data[i] = Math.min(255, img.data[i] + 34);
-          img.data[i + 1] = Math.min(255, img.data[i + 1] + 34);
-          img.data[i + 2] = Math.min(255, img.data[i + 2] + 34);
-        }
-      }
-    }
-    ctx.putImageData(img, 0, 0);
-
-    // Grundriss und Zellenstandorte
-    ctx.strokeStyle = "rgba(255,255,255,0.32)";
-    ctx.lineWidth = 0.7;
-    ctx.strokeRect(W * 0.04, H * 0.08, W * 0.92, H * 0.84);
-    for (const [wx, y0, y1] of WALLS) {
-      ctx.beginPath();
-      ctx.moveTo(wx * W, y0 * H);
-      ctx.lineTo(wx * W, y1 * H);
-      ctx.stroke();
-    }
-    ctx.fillStyle = "#ffffff";
-    for (const [cx, cy] of CELLS) {
-      ctx.beginPath();
-      ctx.arc(cx * W, cy * H, 2.4, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  let listeners: AbortController | undefined;
-
-  function init() {
-    listeners?.abort();
-    const canvas = document.querySelector<HTMLCanvasElement>(".coverage-map");
-    if (!canvas) return;
-    listeners = new AbortController();
-    const run = () => paint(canvas);
-    if ("requestIdleCallback" in window) (window as Window).requestIdleCallback(run, { timeout: 400 });
-    else setTimeout(run, 0);
-    let timer: number | undefined;
-    let lastWidth = canvas.getBoundingClientRect().width;
-    window.addEventListener("resize", () => {
-      const w = canvas.getBoundingClientRect().width;
-      if (Math.abs(w - lastWidth) < 40) return; // mobile Adressleiste ignorieren
-      lastWidth = w;
-      window.clearTimeout(timer);
-      timer = window.setTimeout(run, 200);
-    }, { signal: listeners.signal });
-  }
-
-  document.addEventListener("astro:page-load", init);
-</script>
