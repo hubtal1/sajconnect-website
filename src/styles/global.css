@@ -57,10 +57,9 @@
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 
   /* Feldnotizen: Papier mit Messraster */
-  --color-paper: #1a1914;
-  --color-paper-grid: rgba(150, 165, 255, 0.07);
-  --color-paper-ink: #ece7da;
-  --color-paper-muted: #b9b29f;
+  --color-paper: var(--color-carbon-soft);
+  --color-paper-ink: var(--color-text-on-carbon);
+  --color-paper-muted: var(--color-text-on-carbon-muted);
 }
 
 /* === LIGHT THEME OVERRIDE ===
@@ -95,10 +94,9 @@
   --color-cobalt-tint: rgba(0, 30, 201, 0.06);
   --color-saj-green-tint: rgba(17, 116, 0, 0.08);
 
-  --color-paper: #f3efe6;
-  --color-paper-grid: rgba(0, 30, 201, 0.055);
-  --color-paper-ink: #1c1b18;
-  --color-paper-muted: #4a463d;
+  --color-paper: var(--color-carbon-soft);
+  --color-paper-ink: var(--color-text-on-carbon);
+  --color-paper-muted: var(--color-text-on-carbon-muted);
 }
 
 /* Light theme: meshes and noise must stay whisper-quiet on paper backgrounds —
@@ -769,13 +767,9 @@
   }
 }
 
-/* Feldnotizen-Sektion: warmes Papier mit 24-px-Messraster */
+/* Abgesetzte Sektion: dieselbe ruhige Zweitfläche wie im übrigen Layout, ohne Raster */
 .paper-sheet {
   background-color: var(--color-paper);
-  background-image:
-    linear-gradient(var(--color-paper-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-paper-grid) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 /* Lange deutsche Komposita (z. B. "Verbraucherstreitbeilegung") dürfen auf schmalen

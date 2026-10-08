@@ -280,61 +280,6 @@
     "decline": "Necessary only",
     "settings": "Settings"
   },
-  "critical": {
-    "title": "Rail radio and critical infrastructure",
-    "lede": "Two fields where radio technology and regulation are being rebuilt at the same time. Europe's railways are moving from GSM-R to 5G, and operators of critical facilities in Germany face new obligations under NIS2. Both run on the same technology we work with every day.",
-    "frmcs": {
-      "label": "Rail radio",
-      "title": "FRMCS: the successor to GSM-R",
-      "text": "FRMCS is a 5G standalone network built on 3GPP mission-critical services, the same technology we use in private 5G projects. The first tender-ready edition only arrives with the next revision of the CCS TSI. Until then, preparation decides how smoothly the migration goes.",
-      "facts": [
-        {
-          "k": "Bands",
-          "v": "n100 (900 MHz) · n101 (1900 MHz)"
-        },
-        {
-          "k": "Foundation",
-          "v": "5G SA · 3GPP MCX"
-        },
-        {
-          "k": "Framework",
-          "v": "CCS TSI 2023 · rev. 2027/28"
-        },
-        {
-          "k": "Coexistence",
-          "v": "GSM-R until approx. 2035"
-        }
-      ],
-      "work": "What we contribute: radio planning in n100 and n101 along the line, coexistence with GSM-R and neighbouring public networks, on-board integration (TOBA) and test concepts that grow with the specification.",
-      "more": "More on FRMCS"
-    },
-    "kritis": {
-      "label": "KRITIS & NIS2",
-      "title": "New obligations for critical infrastructure in Germany",
-      "text": "Germany's NIS2 Implementation Act has applied since December 2025, the KRITIS umbrella act since March 2026. The BSI estimates that around 29,500 companies and public bodies fall under NIS2, including rail, energy and telecommunications. Radio and campus networks are part of the IT that now needs risk management, supply-chain checks and incident reporting.",
-      "facts": [
-        {
-          "k": "NIS2UmsuCG",
-          "v": "in force since 12/2025"
-        },
-        {
-          "k": "KRITIS act",
-          "v": "in force since 03/2026"
-        },
-        {
-          "k": "Reporting",
-          "v": "24 h · 72 h · 30 days"
-        },
-        {
-          "k": "Authorities",
-          "v": "BSI · BBK"
-        }
-      ],
-      "work": "What we contribute: we translate the requirements into network architecture, redundancy, segmentation and supplier assessment for your radio and campus networks. We do not replace legal advice or audits. We provide the technical basis and work alongside your lawyers and auditors.",
-      "more": "More on KRITIS & NIS2"
-    },
-    "cta": "Talk to us about FRMCS or KRITIS"
-  },
   "frmcs": {
     "chapter": "FRMCS",
     "title": "FRMCS: the new 5G rail radio",

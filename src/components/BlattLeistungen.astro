@@ -12,21 +12,8 @@ const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 const domains = getDict<Domain[]>(locale, "services.domains") ?? [];
 
-// Sprachneutrale Fachsubstanz je Domäne — Bänder, Normen, Schnittstellen.
-const BANDS = [
-  "n77/n78 · 3,5 GHz · FR1/FR2",
-  "GSMA SGP.21/22 · 31/32",
-  "NB-IoT · LTE-M",
-  "NTN · L-/S-/Ka-Band",
-  "3GPP Rel-20+",
-  "API · MQTT",
-  "5,9 GHz ITS",
-  "n100 · n101 · MCX",
-  "NIS2 · KRITIS-DachG",
-  "Device-to-Cloud",
-];
 
-// Bereiche mit eigener Fachseite (Index wie BANDS).
+// Bereiche mit eigener Fachseite (Index wie services.domains).
 const PAGES: (string | null)[] = ["/consultancy", "/esim", "/iot", "/ntn", "/6g", "/connectivity-platform", "/connected-car", "/frmcs", "/kritis", null];
 ---
 
@@ -37,7 +24,7 @@ const PAGES: (string | null)[] = ["/consultancy", "/esim", "/iot", "/ntn", "/6g"
     {domains.map((d, idx) => (
       <li
         class:list={[
-          "py-5 md:grid md:grid-cols-[1.1fr_11.5rem_1.6fr] md:gap-x-8",
+          "py-5 md:grid md:grid-cols-[1fr_1.6fr] md:gap-x-10",
           idx > 0 && "border-t border-[var(--color-hairline-dark)]",
         ]}
       >
@@ -46,7 +33,6 @@ const PAGES: (string | null)[] = ["/consultancy", "/esim", "/iot", "/ntn", "/6g"
         ) : (
           <span class="block font-bold leading-snug text-[var(--color-text-on-carbon)]">{d.title}</span>
         )}
-        <span class="mono-spec mt-1 block text-[var(--color-text-on-carbon-muted)] md:mt-0.5">{BANDS[idx]}</span>
         <span class="mt-2 block max-w-[60ch] text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:mt-0.5">{d.description}</span>
       </li>
     ))}
