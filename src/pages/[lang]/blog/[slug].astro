@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import PageHero from "../../../components/PageHero.astro";
 import Layout from "../../../layouts/Layout.astro";
 import { LOCALES, t, localizedPath, contentSlug, type Locale } from "../../../i18n/utils";
 
@@ -26,28 +27,11 @@ const publishedFormatted = new Date(entry.data.publishedAt).toLocaleDateString(d
 ---
 
 <Layout title={`${entry.data.title} — ${tt("blog.title")}`} description={entry.data.description}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-16 md:pt-24 md:pb-20">
-      <a
-        href={localizedPath(lang, "/blog")}
-        class="mono-label text-[var(--color-text-on-carbon-muted)] transition-colors hover:text-[var(--color-cobalt-light)]"
-      >
-        ← {tt("blog.back")}
-      </a>
+  <PageHero back={{ href: localizedPath(lang, "/blog"), label: tt("blog.back") }} label={tt("ui.article")} title={entry.data.title} lede={entry.data.description} />
 
-      <div class="mt-10 grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("ui.article")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{entry.data.title}</h1>
-          {entry.data.description && (
-            <p class="lede mt-8 max-w-[58ch]">{entry.data.description}</p>
-          )}
-        </div>
-      </div>
-
-      <div class="mt-12 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
+  <section class="surface-carbon">
+    <div class="container-prose">
+      <div class="grid grid-cols-12 gap-6 border-b border-[var(--color-hairline-dark)] py-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
         <div class="col-span-6 md:col-span-3">
           <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("blog.published")}</p>
           <p class="mt-2">{publishedFormatted}</p>

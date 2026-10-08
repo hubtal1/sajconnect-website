@@ -777,3 +777,14 @@
     linear-gradient(90deg, var(--color-paper-grid) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* Lange deutsche Komposita (z. B. "Verbraucherstreitbeilegung") dürfen auf schmalen
+   Bildschirmen umbrechen, statt die Seite seitlich zu sprengen. */
+h1, h2, h3 {
+  overflow-wrap: break-word;
+}
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    hyphens: auto;
+  }
+}

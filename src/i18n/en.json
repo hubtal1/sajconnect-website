@@ -591,8 +591,8 @@
     ]
   },
   "landing": {
-    "headline": "Wireless networks that work on the factory floor.",
-    "lede": "We plan, test and operate private 5G, eSIM, rail radio and networks for critical infrastructure. We measure where the network will actually have to run.",
+    "headline": "Consulting for connectivity and private 5G.",
+    "lede": "We plan, test and operate private mobile networks, eSIM solutions and rail radio for factories, rail operators and critical infrastructure.",
     "locations": "Nuremberg · Spokane, USA",
     "legendTitle": "Received power RSRP (dBm)",
     "legendCaption": "Schematic radio plan: factory hall, 3.7 GHz, four cells.",

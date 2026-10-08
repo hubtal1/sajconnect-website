@@ -591,8 +591,8 @@
     ]
   },
   "landing": {
-    "headline": "Funknetze, die in der Halle funktionieren.",
-    "lede": "Wir planen, testen und betreiben Private 5G, eSIM, Bahnfunk und Netze für kritische Infrastruktur. Gemessen wird da, wo das Netz später laufen muss.",
+    "headline": "Beratung für Connectivity und Private 5G.",
+    "lede": "Wir planen, testen und betreiben private Mobilfunknetze, eSIM-Lösungen und Bahnfunk, für Fabriken, Bahnbetreiber und kritische Infrastruktur.",
     "locations": "Nürnberg · Spokane, USA",
     "legendTitle": "Empfangsleistung RSRP (dBm)",
     "legendCaption": "Schematische Darstellung einer Funkplanung: Werkhalle, 3,7 GHz, vier Zellen.",

@@ -3,18 +3,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="404 — SAJ Connect" description="Page not found" hideHeader={true}>
-  <section class="surface-carbon mesh-dual noise relative flex min-h-[80vh] items-center overflow-hidden">
+  <section class="relative flex min-h-[80vh] items-center text-white" style="background-color: #060c28;">
     <div class="container-prose py-24">
-      <p class="chapter-mark">Error · 404</p>
-      <h1 class="display-xl mt-8 text-[var(--color-bone)]">Page not found.</h1>
-      <p class="lede mt-8 max-w-[58ch]">
-        Diese Seite existiert nicht (mehr). / This page does not exist. /
-        Esta página não existe.
+      <p class="text-sm font-bold" style="color: #9fe58f;">404</p>
+      <h1 class="mt-3 font-display font-bold leading-[1.06]" style="font-size: clamp(2.1rem, 4.8vw, 3.9rem);">Seite nicht gefunden.</h1>
+      <p class="mt-6 max-w-[58ch] text-lg leading-relaxed" style="color: #d6dcff;">
+        Diese Seite existiert nicht (mehr). · This page does not exist. · Esta página não existe.
       </p>
-      <div class="mt-12 flex flex-wrap gap-4">
-        <a href="/de/" class="btn btn-primary">Zur Startseite</a>
-        <a href="/en/" class="btn btn-ghost">Home (English)</a>
-        <a href="/pt-br/" class="btn btn-ghost">Início (Português)</a>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/de/" class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold" style="color: #001ec9;">Zur Startseite</a>
+        <a href="/en/" class="inline-flex items-center border border-white/40 px-7 py-3.5 text-[0.9375rem] font-bold text-white hover:border-white">Home (English)</a>
+        <a href="/pt-br/" class="inline-flex items-center border border-white/40 px-7 py-3.5 text-[0.9375rem] font-bold text-white hover:border-white">Início (Português)</a>
       </div>
     </div>
   </section>

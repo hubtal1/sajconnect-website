@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import PageHero from "../../../components/PageHero.astro";
 import Layout from "../../../layouts/Layout.astro";
 import ObfuscatedEmail from "../../../components/ObfuscatedEmail.astro";
 import { LOCALES, t, localizedPath, contentSlug, type Locale } from "../../../i18n/utils";
@@ -23,28 +24,11 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
 ---
 
 <Layout title={`${entry.data.title} — ${tt("careers.title")}`} description={entry.data.summary}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-16 md:pt-24 md:pb-20">
-      <a
-        href={localizedPath(lang, "/careers")}
-        class="mono-label text-[var(--color-text-on-carbon-muted)] transition-colors hover:text-[var(--color-cobalt-light)]"
-      >
-        ← {tt("careers.openPositions")}
-      </a>
+  <PageHero back={{ href: localizedPath(lang, "/careers"), label: tt("careers.openPositions") }} label={tt("ui.position")} title={entry.data.title} lede={entry.data.summary} />
 
-      <div class="mt-10 grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("ui.position")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{entry.data.title}</h1>
-          {entry.data.summary && (
-            <p class="lede mt-8 max-w-[58ch]">{entry.data.summary}</p>
-          )}
-        </div>
-      </div>
-
-      <div class="mt-12 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
+  <section class="surface-carbon">
+    <div class="container-prose">
+      <div class="grid grid-cols-12 gap-6 border-b border-[var(--color-hairline-dark)] py-6 mono-spec text-[var(--color-text-on-carbon-muted)]">
         <div class="col-span-6 md:col-span-3">
           <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("ui.location")}</p>
           <p class="mt-2">{entry.data.location}</p>
@@ -80,12 +64,12 @@ const dateLocale = lang === "de" ? "de-DE" : lang === "pt-br" ? "pt-BR" : "en-US
           <Content />
         </article>
         <aside class="col-span-12 md:col-span-4">
-          <div class="md:sticky md:top-24 border border-[var(--color-hairline-dark)] bg-[var(--color-carbon-soft)] p-8">
+          <div class="paper-sheet md:sticky md:top-24 p-8">
             <p class="mono-label text-[var(--color-saj-green-bright)]">{tt("ui.apply")}</p>
-            <h3 class="mt-4 font-display text-xl font-medium text-[var(--color-bone)]">
+            <h3 class="heading-card mt-4" style="color: var(--color-paper-ink);">
               {tt("careers.applyNow")}
             </h3>
-            <p class="mt-4 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">
+            <p class="mt-4 text-sm leading-relaxed" style="color: var(--color-paper-muted);">
               {entry.data.summary}
             </p>
             <ObfuscatedEmail

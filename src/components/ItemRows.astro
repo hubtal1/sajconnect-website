@@ -1,0 +1,43 @@
+---
+/**
+ * Offene Zeilenliste statt Kachel-Raster: Titel links, Text rechts, Haarlinie dazwischen.
+ */
+interface Item {
+  title: string;
+  text: string;
+  tag?: string;
+  href?: string;
+}
+
+interface Props {
+  items: Item[];
+  /** Farbe der kleinen Bereichs-Etiketten */
+  accent?: "cobalt" | "green";
+}
+
+const { items, accent = "cobalt" } = Astro.props;
+const accentVar = accent === "green" ? "var(--color-saj-green-bright)" : "var(--color-cobalt-light)";
+---
+
+<ul class="mt-10">
+  {items.map((item, idx) => (
+    <li
+      class:list={[
+        "grid grid-cols-1 gap-y-2 py-7 md:grid-cols-12 md:gap-x-12 md:py-8",
+        idx > 0 && "border-t border-[var(--color-hairline-dark)]",
+      ]}
+    >
+      <div class="md:col-span-5">
+        {item.tag && <p class="mono-label" style={`color: ${accentVar};`}>{item.tag}</p>}
+        {item.href ? (
+          <a href={item.href} class="heading-card mt-1 block text-[var(--color-text-on-carbon)] underline decoration-[var(--color-hairline-dark)] decoration-1 underline-offset-4 hover:text-[var(--color-cobalt-light)] hover:decoration-[var(--color-cobalt-light)]">
+            {item.title}
+          </a>
+        ) : (
+          <h3 class="heading-card mt-1 text-[var(--color-text-on-carbon)]">{item.title}</h3>
+        )}
+      </div>
+      <p class="max-w-[62ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)] md:col-span-7 md:pt-1">{item.text}</p>
+    </li>
+  ))}
+</ul>

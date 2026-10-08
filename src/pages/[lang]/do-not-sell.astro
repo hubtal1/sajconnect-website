@@ -1,4 +1,5 @@
 ---
+import PageHero from "../../components/PageHero.astro";
 import Layout from "../../layouts/Layout.astro";
 import OptOutToggle from "../../components/OptOutToggle.tsx";
 import { LOCALES, t, localizedPath, type Locale } from "../../i18n/utils";
@@ -12,21 +13,10 @@ const tt = t(lang);
 ---
 
 <Layout title="Do Not Sell or Share My Personal Information" description={tt("usPrivacy.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-12 md:pt-24 md:pb-16">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("ui.legal")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">Do Not Sell or Share My Personal Information</h1>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero label={tt("ui.legal")} title="Do Not Sell or Share My Personal Information" />
 
   <section class="surface-carbon">
-    <div class="container-prose pb-24 md:pb-32">
+    <div class="container-prose pb-24 pt-14 md:pb-32 md:pt-20">
       <article class="editorial-prose pt-8">
         <p>{tt("usPrivacy.lead")}</p>
         <p>{tt("usPrivacy.note")}</p>

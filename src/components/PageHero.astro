@@ -1,0 +1,69 @@
+---
+/**
+ * Seitenkopf für alle Seiten: dunkle Fläche, optional mit echtem Foto.
+ * Bewusst in beiden Themes dunkel — der Kopf ist das Bild der Seite.
+ */
+interface Props {
+  label?: string;
+  title: string;
+  lede?: string;
+  /** Pfad unter /images, z. B. "/images/private5g-fabrik.webp" */
+  image?: string;
+  /** CSS object-position, z. B. "center 40%" */
+  imagePosition?: string;
+  back?: { href: string; label: string };
+}
+
+const { label, title, lede, image, imagePosition = "center", back } = Astro.props;
+---
+
+<section class="page-hero relative overflow-hidden text-white" style="background-color: #060c28;">
+  {image && (
+    <img
+      src={image}
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+      style={`object-position: ${imagePosition};`}
+      width="2000"
+      height="1333"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+  )}
+  {image && <div class="page-hero-scrim pointer-events-none absolute inset-0" aria-hidden="true"></div>}
+
+  <div
+    class:list={[
+      "container-prose relative",
+      image ? "flex min-h-[440px] flex-col justify-end pb-12 pt-24 md:min-h-[560px] md:pb-20" : "pb-14 pt-14 md:pb-20 md:pt-20",
+    ]}
+  >
+    {back && (
+      <a href={back.href} class="mb-8 inline-block text-sm font-bold transition-colors hover:text-white" style="color: #aab4f0;">
+        ← {back.label}
+      </a>
+    )}
+    {label && <p class="text-sm font-bold" style="color: #9fe58f;">{label}</p>}
+    <h1 class="mt-3 max-w-[24ch] font-display font-bold leading-[1.06] tracking-[-0.01em]" style="font-size: clamp(2.1rem, 4.8vw, 3.9rem);">
+      {title}
+    </h1>
+    {lede && (
+      <p class="mt-6 max-w-[58ch] text-lg leading-relaxed md:text-xl" style="color: #d6dcff;">{lede}</p>
+    )}
+    <slot />
+  </div>
+</section>
+
+<style>
+  .page-hero-scrim {
+    background:
+      linear-gradient(90deg, rgba(6, 12, 40, 0.9) 0%, rgba(6, 12, 40, 0.68) 42%, rgba(6, 12, 40, 0.18) 100%),
+      linear-gradient(0deg, rgba(6, 12, 40, 0.6) 0%, rgba(6, 12, 40, 0) 50%);
+  }
+  @media (max-width: 767px) {
+    .page-hero-scrim {
+      background: linear-gradient(0deg, rgba(6, 12, 40, 0.92) 0%, rgba(6, 12, 40, 0.7) 55%, rgba(6, 12, 40, 0.35) 100%);
+    }
+  }
+</style>

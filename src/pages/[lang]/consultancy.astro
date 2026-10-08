@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
+import ItemRows from "../../components/ItemRows.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
 import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
 
@@ -18,36 +20,11 @@ const items = getDict<Item[]>(lang, "consultancy.items") ?? [];
 ---
 
 <Layout title={tt("consultancy.title")} description={tt("consultancy.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">Private 5G</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{tt("consultancy.title")}</h1>
-          <p class="lede mt-10 max-w-[58ch]">
-            {tt("consultancy.lead")}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero label="Private 5G" title={tt("consultancy.title")} lede={tt("consultancy.lead")} image="/images/private5g-fabrik.webp" imagePosition="center 45%" />
 
   <section class="surface-carbon">
-    <div class="container-prose pb-24">
-      <div class="grid gap-px bg-[var(--color-hairline-dark)]">
-        {items.map((item, idx) => (
-          <article class="group grid grid-cols-12 gap-6 bg-[var(--color-carbon)] py-12 px-2 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:py-14 md:px-6">
-            <div class="col-span-12 md:col-span-10">
-              <h2 class="display-md text-[var(--color-bone)]">{item.title}</h2>
-              <p class="mt-5 max-w-[58ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-                {item.text}
-              </p>
-            </div>
-          </article>
-        ))}
-      </div>
+    <div class="container-prose py-16 md:py-24">
+      <ItemRows items={items} />
     </div>
   </section>
 

@@ -5,6 +5,7 @@
  */
 import Layout from "../layouts/Layout.astro";
 import CtaBanner from "./CtaBanner.astro";
+import PageHero from "./PageHero.astro";
 import { getDict, type Locale } from "../i18n/utils";
 
 interface Fact {
@@ -43,6 +44,11 @@ interface Props {
 }
 
 const { lang, ns } = Astro.props;
+// Kopf-Fotos (Unsplash, siehe BILDQUELLEN.md)
+const HERO: Record<Props["ns"], { image: string; position: string }> = {
+  frmcs: { image: "/images/frmcs-oberleitung.webp", position: "center 60%" },
+  kritis: { image: "/images/kritis-mast.webp", position: "center 35%" },
+};
 const page = getDict<DeepDive>(lang, ns);
 if (!page) throw new Error(`Fachseite ${ns} fehlt in ${lang}`);
 
@@ -51,24 +57,12 @@ const bullet =
 ---
 
 <Layout title={page.title} description={page.lede}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-16 md:pt-24 md:pb-20">
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-12 reveal">
-        <div class="md:col-span-2">
-          <p class="chapter-mark">{page.chapter}</p>
-        </div>
-        <div class="md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{page.title}</h1>
-          <p class="lede mt-10 max-w-[62ch]">{page.lede}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero label={page.chapter} title={page.title} lede={page.lede} image={HERO[ns].image} imagePosition={HERO[ns].position} />
 
   <section class="surface-carbon">
-    <div class="container-prose pb-20 md:pb-28">
+    <div class="container-prose pb-20 pt-6 md:pb-28">
       <!-- Eckdaten -->
-      <div class="grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
+      <div class="grid grid-cols-1 gap-y-6 pt-10 md:grid-cols-12 md:gap-x-12">
         <h2 class="heading-card text-[var(--color-text-on-carbon)] md:col-span-4">{page.factsTitle}</h2>
         <dl class="md:col-span-8">
           {page.facts.map((fact, i) => (

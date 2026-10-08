@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
+import ItemRows from "../../components/ItemRows.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
 import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
 
@@ -19,46 +21,11 @@ const items = getDict<Item[]>(lang, "vehicle.items") ?? [];
 ---
 
 <Layout title={tt("vehicle.title")} description={tt("vehicle.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("connectedCar.chapterLabel")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{tt("vehicle.title")}</h1>
-          <p class="lede mt-10 max-w-[58ch]">
-            {tt("vehicle.lead")}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero label={tt("connectedCar.chapterLabel")} title={tt("vehicle.title")} lede={tt("vehicle.lead")} image="/images/connected-car-fertigung.webp" imagePosition="center 55%" />
 
   <section class="surface-carbon">
-    <div class="container-prose section reveal">
-      <div class="grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2">
-        {items.map((item, idx) => {
-          const isCobalt = idx % 2 === 0;
-          const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
-          const glowVar = isCobalt ? "--color-cobalt-glow" : "--color-saj-green-glow";
-          return (
-            <article class="group relative bg-[var(--color-carbon)] p-8 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-12">
-              <span
-                class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
-                style={`background-color: var(${accentVar}); box-shadow: 0 0 12px var(${glowVar});`}
-              ></span>
-              <p class="mono-label-sm" style={`color: var(${accentVar});`}>{item.tag}</p>
-              <h2 class="display-md mt-10 text-[var(--color-bone)]">
-                {item.title}
-              </h2>
-              <p class="mt-5 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-                {item.text}
-              </p>
-            </article>
-          );
-        })}
-      </div>
+    <div class="container-prose py-16 md:py-24">
+      <ItemRows items={items} />
     </div>
   </section>
 

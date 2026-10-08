@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
 import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
 
@@ -15,102 +16,58 @@ interface Diff {
 const { lang } = Astro.params as { lang: Locale };
 const tt = t(lang);
 const diffs = getDict<Diff[]>(lang, "about.differentiators.items") ?? [];
+// "Standorte" / "Locations" / "Localizações" aus der Faktenzeile wiederverwenden
+const locationsLabel = getDict<{ k: string }[]>(lang, "dossier.hero.spec.rows")?.[0]?.k ?? tt("ui.headquarter");
 ---
 
 <Layout title={tt("about.title")} description={tt("about.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">SAJ Connect GmbH</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{tt("about.title")}</h1>
-        </div>
-      </div>
+  <PageHero label="SAJ Connect GmbH" title={tt("about.title")} lede={tt("about.lead")} />
 
-      <div class="mt-20 grid grid-cols-12 gap-6 border-t border-[var(--color-hairline-dark)] pt-10 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("ui.lead")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-7 space-y-6">
-          <p class="lede">{tt("about.lead")}</p>
-          <p class="text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">{tt("about.leadSecond")}</p>
-        </div>
-        <div class="hidden md:col-span-3 md:flex md:flex-col md:gap-6 md:border-l md:border-[var(--color-hairline-dark)] md:pl-6">
-          <div>
-            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("ui.focus")}</p>
-            <p class="mt-2 font-display text-base font-medium">Telco × Automotive × IoT</p>
-          </div>
-          <div>
-            <p class="mono-label-sm text-[var(--color-text-on-carbon-faint)]">{tt("ui.headquarter")}</p>
-            <p class="mt-2 font-display text-base font-medium">Offenhausen, DE</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Einstieg: Text links, Eckdaten rechts -->
   <section class="surface-carbon">
-    <div class="container-prose section border-t border-[var(--color-hairline-dark)]">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-3">
-          <p class="chapter-mark">{tt("about.name.label")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-7">
-          <h2 class="display-lg text-[var(--color-bone)]">{tt("about.name.title")}</h2>
-          <p class="mt-8 max-w-[62ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-            {tt("about.name.text")}
-          </p>
-          <p class="mt-6 font-display text-base font-medium text-[var(--color-cobalt-light)]">
-            {tt("about.name.closing")}
-          </p>
-        </div>
+    <div class="container-prose grid grid-cols-1 gap-y-10 py-16 md:grid-cols-12 md:gap-x-16 md:py-24">
+      <p class="text-lg leading-relaxed text-[var(--color-text-on-carbon)] md:col-span-7">{tt("about.leadSecond")}</p>
+      <dl class="md:col-span-5 md:border-l md:border-[var(--color-hairline-dark)] md:pl-10">
+        <dt class="mono-label text-[var(--color-text-on-carbon-faint)]">{tt("ui.focus")}</dt>
+        <dd class="mt-1.5 text-base font-bold text-[var(--color-text-on-carbon)]">Telco · Automotive · IoT</dd>
+        <dt class="mono-label mt-6 text-[var(--color-text-on-carbon-faint)]">{locationsLabel}</dt>
+        <dd class="mt-1.5 text-base font-bold text-[var(--color-text-on-carbon)]">{tt("landing.locations")}</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Der Name -->
+  <section class="paper-sheet">
+    <div class="container-prose grid grid-cols-1 gap-y-6 py-16 md:grid-cols-12 md:gap-x-16 md:py-24">
+      <div class="md:col-span-4">
+        <p class="mono-label" style="color: var(--color-cobalt-light);">{tt("about.name.label")}</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="display-md" style="color: var(--color-paper-ink);">{tt("about.name.title")}</h2>
+        <p class="mt-6 max-w-[62ch] text-base leading-relaxed" style="color: var(--color-paper-muted);">{tt("about.name.text")}</p>
+        <p class="mt-6 text-base font-bold" style="color: var(--color-cobalt-light);">{tt("about.name.closing")}</p>
       </div>
     </div>
   </section>
 
-  <section class="surface-carbon" style="background-color: var(--color-carbon-soft);">
-    <div class="container-prose section">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-3">
-          <p class="chapter-mark">{tt("ui.mission")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-9">
-          <h2 class="display-lg text-[var(--color-bone)]">
-            <span class="text-[var(--color-saj-green-bright)]">„</span>{tt("about.mission.text")}<span class="text-[var(--color-saj-green-bright)]">"</span>
-          </h2>
-        </div>
-      </div>
+  <!-- Mission als volle Farbfläche -->
+  <section class="text-white" style="background-color: #001ec9;">
+    <div class="container-prose py-16 md:py-24">
+      <p class="text-sm font-bold" style="color: #9fe58f;">{tt("ui.mission")}</p>
+      <p class="mt-5 max-w-[30ch] font-display font-bold leading-[1.15]" style="font-size: clamp(1.75rem, 3.4vw, 2.75rem);">
+        {tt("about.mission.text")}
+      </p>
     </div>
   </section>
 
+  <!-- Was uns auszeichnet: offene Liste -->
   <section class="surface-carbon">
-    <div class="container-prose section">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-3">
-          <p class="chapter-mark">{tt("ui.differentiators")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-9">
-          <h2 class="display-lg text-[var(--color-bone)]">{tt("about.differentiators.title")}</h2>
-        </div>
-      </div>
-
-      <ul class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2 lg:grid-cols-5">
-        {diffs.map((d, idx) => {
-          const isCobalt = idx % 2 === 0;
-          const accentVar = isCobalt ? "--color-cobalt-light" : "--color-saj-green-bright";
-          const glowVar = isCobalt ? "--color-cobalt-glow" : "--color-saj-green-glow";
-          return (
-            <li class="group relative flex h-full flex-col bg-[var(--color-carbon)] p-7 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-8">
-              <span
-                class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
-                style={`background-color: var(${accentVar}); box-shadow: 0 0 12px var(${glowVar});`}
-              ></span>
-              <p class="text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)] md:text-base">{d.text}</p>
-            </li>
-          );
-        })}
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("about.differentiators.title")}</h2>
+      <ul class="mt-10 grid grid-cols-1 gap-x-12 md:grid-cols-2">
+        {diffs.map((d) => (
+          <li class="border-t border-[var(--color-hairline-dark)] py-5 text-base leading-relaxed text-[var(--color-text-on-carbon)]">{d.text}</li>
+        ))}
       </ul>
     </div>
   </section>

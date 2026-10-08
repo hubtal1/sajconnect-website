@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
+import ItemRows from "../../components/ItemRows.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
 import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
 
@@ -23,59 +25,16 @@ const groups = getDict<Group[]>(lang, "testing.groups") ?? [];
 ---
 
 <Layout title={tt("testing.title")} description={tt("testing.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-20 md:pt-24 md:pb-28">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("testing.chapterLabel")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">
-            {tt("testing.title")}
-          </h1>
-          <p class="lede mt-10 max-w-[58ch]">
-            {tt("testing.lead")}
-          </p>
-        </div>
+  <PageHero label={tt("testing.chapterLabel")} title={tt("testing.title")} lede={tt("testing.lead")} image="/images/testing-panel.webp" imagePosition="center 40%" />
+
+  {groups.map((group, gIdx) => (
+    <section class:list={[gIdx % 2 === 1 ? "paper-sheet" : "surface-carbon"]}>
+      <div class="container-prose py-16 md:py-24">
+        <h2 class="display-md" style={gIdx % 2 === 1 ? "color: var(--color-paper-ink);" : ""}>{group.headline}</h2>
+        <ItemRows items={group.items} accent={gIdx % 2 === 1 ? "green" : "cobalt"} />
       </div>
-    </div>
-  </section>
-
-  {groups.map((group, gIdx) => {
-    const accent = gIdx === 0 ? "cobalt" : "green";
-    const accentText = accent === "cobalt" ? "var(--color-cobalt-light)" : "var(--color-saj-green-bright)";
-    const accentGlow = accent === "cobalt" ? "var(--color-cobalt-glow)" : "var(--color-saj-green-glow)";
-    return (
-      <section class="surface-carbon">
-        <div class="container-prose section">
-          <div class="grid grid-cols-12 gap-6 reveal">
-            <div class="col-span-12 md:col-span-9">
-              <h2 class="display-lg text-[var(--color-bone)]">
-                {group.headline}
-              </h2>
-            </div>
-          </div>
-
-          <div class="mt-20 grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-2">
-            {group.items.map((item, idx) => (
-              <article class="group relative bg-[var(--color-carbon)] p-8 transition-colors duration-500 hover:bg-[var(--color-carbon-soft)] md:p-10">
-                <span
-                  class="absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
-                  style={`background-color: ${accentText}; box-shadow: 0 0 12px ${accentGlow};`}
-                ></span>
-                <h3 class="heading-card text-[var(--color-bone)]">
-                  {item.title}
-                </h3>
-                <p class="mt-5 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
-                  {item.text}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  })}
+    </section>
+  ))}
 
   <CtaBanner />
 </Layout>

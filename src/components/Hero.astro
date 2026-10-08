@@ -1,32 +1,20 @@
 ---
+import PageHero from "./PageHero.astro";
 import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
 
 const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 ---
 
-<!-- Kopf: dunkle Fläche mit Aussage (Karte vorerst entfernt, User-Feedback 08.10.). -->
-<section class="coverage-hero relative overflow-hidden text-white" style="background-color: #060c28;">
-
-  <div class="container-prose relative flex min-h-[460px] flex-col justify-end pb-14 pt-28 md:min-h-[560px] md:pb-20">
-    <h1 class="max-w-[15ch] font-display font-bold leading-[1.04] tracking-[-0.01em]" style="font-size: clamp(2.4rem, 5.6vw, 4.4rem);">
-      {tt("landing.headline")}
-    </h1>
-    <p class="mt-7 max-w-[46ch] text-lg leading-relaxed md:text-xl" style="color: #d6dcff;">
-      {tt("landing.lede")}
-    </p>
-    <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-      <a
-        href={localizedPath(locale, "/contact")}
-        class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold tracking-[0.01em] transition-colors duration-150 hover:bg-[#d6dcff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-        style="color: #001ec9;"
-      >
-        {tt("dossier.hero.ctaPrimary")}
-      </a>
-      <span class="text-sm" style="color: #aab4f0;">{tt("landing.locations")}</span>
-    </div>
-
+<PageHero title={tt("landing.headline")} lede={tt("landing.lede")} image="/images/startseite-roboterarm.webp" imagePosition="68% center">
+  <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+    <a
+      href={localizedPath(locale, "/contact")}
+      class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold tracking-[0.01em] transition-colors duration-150 hover:bg-[#d6dcff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      style="color: #001ec9;"
+    >
+      {tt("dossier.hero.ctaPrimary")}
+    </a>
+    <span class="text-sm" style="color: #aab4f0;">{tt("landing.locations")}</span>
   </div>
-</section>
-
-
+</PageHero>

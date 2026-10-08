@@ -5,31 +5,24 @@ const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
 ---
 
-<section class="surface-carbon relative overflow-hidden">
-  <div class="container-prose section">
-    <div class="grid grid-cols-12 gap-6">
-      <div class="col-span-12 md:col-span-3">
-        <p class="chapter-mark">{tt("nav.contact")}</p>
-        <p class="mt-3 mono-spec text-[var(--color-text-on-carbon-muted)]">
-          {tt("contact.title")}
-        </p>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <h2 class="display-lg text-[var(--color-bone)]">
+<!-- Abschluss jeder Seite: volle Fläche in SAJ-Blau, in beiden Themes gleich. -->
+<section class="text-white" style="background-color: #001ec9;">
+  <div class="container-prose py-16 md:py-20">
+    <div class="grid grid-cols-1 gap-y-8 md:grid-cols-12 md:items-end md:gap-x-16">
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold leading-[1.12]" style="font-size: clamp(1.75rem, 3.2vw, 2.6rem);">
           {tt("home.cta.headline")}
         </h2>
-        <p class="lede mt-8 max-w-[58ch]">
-          {tt("home.cta.sub")}
-        </p>
-        <div class="mt-12 flex flex-col gap-3 sm:flex-row">
-          <a
-            href={localizedPath(locale, "/contact")}
-            class="inline-flex items-center justify-center bg-[var(--color-cobalt)] px-7 py-3.5 font-sans text-[0.9375rem] font-bold tracking-[0.01em] text-white transition-colors duration-150 hover:bg-[var(--color-cobalt-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-cobalt)]"
-          >
-            {tt("home.cta.button")} →
-          </a>
-        </div>
-
+        <p class="mt-5 max-w-[56ch] text-lg leading-relaxed" style="color: #d6dcff;">{tt("home.cta.sub")}</p>
+      </div>
+      <div class="md:col-span-4 md:text-right">
+        <a
+          href={localizedPath(locale, "/contact")}
+          class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold tracking-[0.01em] transition-colors duration-150 hover:bg-[#d6dcff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          style="color: #001ec9;"
+        >
+          {tt("home.cta.button")}
+        </a>
       </div>
     </div>
   </div>

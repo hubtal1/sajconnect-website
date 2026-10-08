@@ -1,4 +1,5 @@
 ---
+import PageHero from "../../components/PageHero.astro";
 import Layout from "../../layouts/Layout.astro";
 import ContactForm from "../../components/ContactForm.tsx";
 import { LOCALES, t, type Locale } from "../../i18n/utils";
@@ -17,27 +18,13 @@ const responseLabel = tt("ui.responseTime");
 ---
 
 <Layout title={tt("contact.title")} description={tt("contact.lead")}>
-  <section class="surface-carbon relative overflow-hidden">
-    <div class="container-prose pt-16 pb-12 md:pt-24 md:pb-16">
-      <div class="grid grid-cols-12 gap-6 reveal">
-        <div class="col-span-12 md:col-span-2">
-          <p class="chapter-mark">{tt("nav.contact")}</p>
-        </div>
-        <div class="col-span-12 md:col-span-10">
-          <h1 class="display-xl text-[var(--color-bone)]">{tt("contact.title")}</h1>
-          <p class="lede mt-10 max-w-[58ch]">
-            {tt("contact.lead")}
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageHero label={tt("nav.contact")} title={tt("contact.title")} lede={tt("contact.lead")} />
 
   <section class="surface-carbon">
-    <div class="container-prose pb-24 md:pb-32">
-      <div class="grid gap-px bg-[var(--color-hairline-dark)] md:grid-cols-12">
+    <div class="container-prose pb-24 pt-14 md:pb-32 md:pt-20">
+      <div class="grid grid-cols-1 gap-y-12 md:grid-cols-12 md:gap-x-16">
         <!-- Form column -->
-        <div class="md:col-span-8 bg-[var(--color-carbon)] p-8 md:p-12">
+        <div class="md:col-span-8">
           <p class="mono-label text-[var(--color-cobalt-light)]">{tt("ui.form")}</p>
           <h2 class="display-md mt-6 text-[var(--color-bone)]">{formHeadline}</h2>
           <p class="mt-4 max-w-[55ch] text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">
@@ -49,7 +36,7 @@ const responseLabel = tt("ui.responseTime");
         </div>
 
         <!-- Direct column -->
-        <aside class="md:col-span-4 bg-[var(--color-carbon)] p-8 md:p-12">
+        <aside class="md:col-span-4 md:border-l md:border-[var(--color-hairline-dark)] md:pl-10">
           <p class="mono-label text-[var(--color-saj-green-bright)]">{directLabel}</p>
 
           <div class="mt-10 space-y-10">
