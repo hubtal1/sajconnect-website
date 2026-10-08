@@ -18,7 +18,7 @@ Was Sie beantragen können
 
 Das Band reicht von 3.700 bis 3.800 MHz. Sie können 10 bis 100 MHz davon beantragen, in Schritten von 10 MHz, für ein festgelegtes Gebiet und für eine Laufzeit, die Sie selbst wählen. Die beantragte Bandbreite sollte zu dem passen, was das Netz braucht.
 
-Die Zuteilung gilt für ein Netz zur eigenen Nutzung. Ein öffentliches Netz lässt sich damit nicht betreiben, und Konnektivität an Dritte zu verkaufen ist nicht erlaubt. Erfasst sind zum Beispiel Industrieparks, Messegelände sowie land- und forstwirtschaftliche Flächen. Die Frequenzen werden technologieneutral zugeteilt, und auf dem eigenen Grundstück sind Sie in der Netzplanung frei.
+Die Zuteilung gilt für ein Netz zur eigenen Nutzung. Ein öffentliches Netz lässt sich damit nicht betreiben, und Connectivity an Dritte zu verkaufen ist nicht erlaubt. Erfasst sind zum Beispiel Industrieparks, Messegelände sowie land- und forstwirtschaftliche Flächen. Die Frequenzen werden technologieneutral zugeteilt, und auf dem eigenen Grundstück sind Sie in der RF-Planung frei.
 
 Wer beantragen darf
 
@@ -34,7 +34,7 @@ B ist die Bandbreite in MHz, t die Laufzeit in Jahren, a1 die Siedlungs- und Ver
 
 Ein Beispiel: 100 MHz über zehn Jahre auf einem Gelände mit 0,5 km² Siedlungsfläche ergeben 16.000 Euro. Ein kleinerer Fall, 50 MHz über fünf Jahre auf 0,2 km², ergibt 2.500 Euro.
 
-Das sind nur die Frequenzgebühren. Funkplanung, Kernnetz, Endgeräte und Betrieb kommen dazu.
+Das sind nur die Frequenzgebühren. RF-Planung, Core Network, Endgeräte und Betrieb kommen dazu.
 
 So stellen Sie den Antrag
 
@@ -52,9 +52,9 @@ Was die Zuteilung nicht löst
 
 Die Zuteilung gibt Ihnen Frequenzen. Ein funktionierendes Netz bekommen Sie dadurch noch nicht.
 
-Die Funkplanung muss zum Gelände passen, wie es ist, mit Regalen, Maschinen und Wänden. Die Bauunterlagen stimmen nicht immer, und eine Simulation, die darauf aufbaut, übernimmt den Fehler. In einem Projekt war eine Wand als Trockenbau eingetragen und stellte sich als Brandschutzwand heraus, mit der die Planung nicht gerechnet hatte. Eine Begehung findet so etwas, bevor es die Funkplanung tut.
+Die RF-Planung muss zum Gelände passen, wie es ist, mit Regalen, Maschinen und Wänden. Die Bauunterlagen stimmen nicht immer, und eine Simulation, die darauf aufbaut, übernimmt den Fehler. In einem Projekt war eine Wand als Trockenbau eingetragen und stellte sich als Brandschutzwand heraus, mit der die Planung nicht gerechnet hatte. Eine Begehung findet so etwas, bevor es die RF-Planung tut.
 
-Der Kern entscheidet, wie das Netz an Ihre IT angebunden ist, wer darauf zugreifen kann und wie es sich segmentieren lässt. Das ist teuer zu ändern, sobald das Netz läuft.
+Das Core Network entscheidet, wie das Netz an Ihre IT angebunden ist, wer darauf zugreifen kann und wie es sich segmentieren lässt. Das ist teuer zu ändern, sobald das Netz läuft.
 
 Endgeräte müssen das Band unterstützen, hier ist das n78. Nicht jedes Industriegerät tut das, und ein Gerät für ein bestimmtes Netz zertifizieren zu lassen ist ein kleines Projekt für sich.
 
@@ -66,10 +66,10 @@ Deutschland teilt lokale Frequenzen auch im 26-GHz-Band zu, von 24,25 bis 27,5 G
 
 Die Blöcke sind deutlich breiter. Die Gebührenformel beginnt bei 50 MHz, in der Praxis werden Blöcke bis zu 800 MHz erwartet. Auch der Gebührenfaktor ist niedriger: 800 MHz über zehn Jahre auf 0,5 km² Siedlungsfläche ergeben etwa 16.100 Euro, ungefähr so viel wie 100 MHz bei 3,7 GHz unter denselben Bedingungen.
 
-Millimeterwellen reichen nicht weit. Das Band eignet sich deshalb für kurze Strecken und hohen Kapazitätsbedarf auf kompakten Geländen. Wenn Ihr Anwendungsfall mehr Kapazität als Reichweite braucht, lohnt ein Blick darauf.
+Millimeterwellen reichen nicht weit. Das Band eignet sich deshalb für kurze Strecken und hohen Kapazitätsbedarf auf kompakten Geländen. Wenn Ihr Use Case mehr Kapazität als Reichweite braucht, lohnt ein Blick darauf.
 
 Wo Sie anfangen
 
-Fangen Sie bei der Aufgabe des Netzes an: Welche Prozesse hängen davon ab, welche Latenz sie brauchen, wie viele Geräte das Netz trägt, wie das Gelände in drei Jahren aussieht und wer das Netz betreibt. Der Frequenzantrag ergibt sich aus diesen Antworten und ist mit ihnen in einem Nachmittag erledigt.
+Fangen Sie bei der Aufgabe des Netzes an: Welche Prozesse hängen davon ab, welche Latency sie brauchen, wie viele Geräte das Netz trägt, wie das Gelände in drei Jahren aussieht und wer das Netz betreibt. Der Frequenzantrag ergibt sich aus diesen Antworten und ist mit ihnen in einem Nachmittag erledigt.
 
 Wir planen und betreiben private Netze in Deutschland und den USA. Wenn Sie ein eigenes erwägen: Sprechen wir über Ihr Vorhaben.

@@ -32,7 +32,7 @@ Ein Campusnetz spielt seine Stärken dort aus, wo WLAN physikalisch und konzepti
 - **Mobilität mit harten Anforderungen.** Fahrerlose Transportsysteme (FTS/AGV), Stapler-Terminals, mobile Robotik: Beim Zellwechsel bleibt eine 5G-Verbindung praktisch unterbrechungsfrei — das Handover steuert das Netz, nicht das Endgerät. WLAN-Roaming ist auch mit 802.11r in der Praxis eine häufige Störungsquelle — genau dann, wenn sich das Gerät bewegt, also im kritischsten Moment.
 - **Lizenziertes Spektrum.** Im 3,7–3,8-GHz-Band funken in Ihrem Zuteilungsgebiet nur Sie. Kein Gastgerät, keine Mikrowelle — und Nachbarnetze sind koordiniert statt zufällig. Für Prozesse, die deterministisch funktionieren müssen, ist Interferenzhoheit der eigentliche Kaufgrund.
 - **Große und schwierige Flächen.** Außenbereiche, Hochregale, Metallumgebungen: 5G deckt sie mit deutlich weniger Funkzellen ab als ein WLAN-Raster — und Outdoor ist für Wi-Fi 6E regulatorisch ohnehin eng.
-- **Priorisierung und Dienstgüte.** Wenn der Not-Halt-Befehl und das Software-Update über dasselbe Netz laufen, wollen Sie festlegen können, wer Vorrang hat. Quality-of-Service ist in 5G Architekturprinzip, nicht Zubehör.
+- **Priorisierung und Quality of Service.** Wenn der Not-Halt-Befehl und das Software-Update über dasselbe Netz laufen, wollen Sie festlegen können, wer Vorrang hat. Quality-of-Service ist in 5G Architekturprinzip, nicht Zubehör.
 - **SIM-basierte Identität.** Ein Gerät ohne Ihre SIM kommt nicht ins Netz — ein anderes Sicherheitsmodell als jedes Passwort- oder Zertifikats-WLAN.
 
 ## Die Kostenwahrheit — auf beiden Seiten
@@ -41,14 +41,14 @@ Beim Geld wird selten sauber verglichen. Die Punkte, die in Angeboten gern fehle
 
 **Bei Private 5G:** Endgeräte und Router mit 5G-Modul kosten spürbar mehr als Wi-Fi-Pendants. SIM-/Profilverwaltung ist ein neuer Betriebsprozess. Und ein Campusnetz will betrieben werden — die Frage „wer macht Day-2?“ gehört in jede Kalkulation. Die Frequenzzuteilung der Bundesnetzagentur ist dagegen der kleinste Posten: eine überschaubare Verwaltungsgebühr, abhängig von Fläche, Bandbreite und Laufzeit — typisch vier- bis niedrig fünfstellig für zehn Jahre, plus geringe jährliche Beiträge.
 
-**Bei Wi-Fi:** In anspruchsvollen Hallen wird das Access-Point-Raster dicht — Verkabelung, Switches und Montage summieren sich. Und die Kosten wiederkehrender Funkstörungen tauchen in keinem Angebot auf, sondern erst im Betrieb: als Stillstand, Fehlersuche und Frust.
+**Bei Wi-Fi:** In anspruchsvollen Hallen wird das Access-Point-Raster dicht — Verkabelung, Switches und Montage summieren sich. Und die Kosten wiederkehrender Interference-Probleme tauchen in keinem Angebot auf, sondern erst im Betrieb: als Stillstand, Fehlersuche und Frust.
 
 ## Die Prüffragen für Ihre Entscheidung
 
 1. Bewegen sich Ihre kritischen Geräte — und reißt ein Prozess ab, wenn die Verbindung 2 Sekunden hakt?
 2. Teilen Sie sich die Funkumgebung mit Nachbarn, Gästen oder eigenen Altsystemen?
 3. Müssen Außenflächen, Höfe oder Hochregallager abgedeckt werden?
-4. Gibt es Anwendungen, die garantierte Latenz oder Priorisierung brauchen?
+4. Gibt es Anwendungen, die garantierte Latency oder Priorisierung brauchen?
 5. Sind Ihre Endgeräte überhaupt mit 5G-Modulen verfügbar — oder wäre alles Nachrüstung?
 6. Wer betreibt das Netz in drei Jahren — Ihr Team, ein Partner, der Ausrüster?
 

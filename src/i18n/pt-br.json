@@ -17,7 +17,7 @@
     "iot": "IoT Connectivity",
     "ntn": "NTN (satélite)",
     "sixg": "6G",
-    "platform": "Plataforma de Conectividade",
+    "platform": "Connectivity Platform",
     "careers": "Carreiras",
     "blog": "Blog",
     "contact": "Contato"
@@ -34,7 +34,7 @@
       { "label": "5G+", "text": "Expertise em 5G público e privado — da arquitetura à operação." },
       { "label": "E2E", "text": "Entrega end-to-end por todo o ciclo de desenvolvimento e implantação." },
       { "label": "6G", "text": "Pesquisa e consultoria voltadas para as redes da próxima geração." },
-      { "label": "360°", "text": "Cobertura completa de wireless, IoT e conectividade automotiva." }
+      { "label": "360°", "text": "Cobertura completa de wireless, IoT e Automotive Connectivity." }
     ],
     "intersection": {
       "headline": "Onde o wireless e a mobilidade se encontram",
@@ -83,8 +83,8 @@
       "gueltigAb": "Válido desde"
     },
     "hero": {
-      "headline": "Conectividade: especificada, construída, testada.",
-      "kicker": "Conectividade —",
+      "headline": "Connectivity: especificada, construída, testada.",
+      "kicker": "Connectivity —",
       "verbs": ["especificada,", "construída,", "testada."],
       "masskette": "3 fases — da arquitetura-alvo à operação",
       "sub": "A SAJ Connect é a consultoria de engenharia na interseção entre wireless e mobilidade — Private 5G, eSIM e Connected Car, da arquitetura-alvo à operação. Cada fase entrega um resultado definido e mensurável.",
@@ -124,15 +124,15 @@
     "exploreAll": "Explorar todas as 10 áreas",
     "domains": [
       { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engenharia, design, deployment e operação de Private 5G corporativo e industrial." },
-      { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, gestão de perfis, ciclo de vida e certificação." },
-      { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Estratégias de conectividade para Massive IoT — celular, LPWA, satélite e arquiteturas híbridas." },
-      { "title": "NTN — Redes Não Terrestres", "tag": "SATELLITE 5G", "description": "Integração satélite-5G, arquitetura NTN e viabilidade para conectividade global e resiliente." },
-      { "title": "6G — Próxima Geração", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G ao longo do roadmap 3GPP (Rel-20+)." },
-      { "title": "Plataforma de Conectividade", "tag": "PLATFORM ENGINEERING", "description": "Plataformas que abstraem complexidade — da gestão de conectividade à telemetria e analytics." },
-      { "title": "V2X & Conectividade Veicular", "tag": "AUTOMOTIVE", "description": "Arquiteturas de conectividade veicular — celular, V2X, Wi-Fi, Bluetooth — com caminhos de dados separados e protegidos." },
-      { "title": "FRMCS — Rádio Ferroviário", "tag": "RAIL RADIO", "description": "Migração do GSM-R para o FRMCS: planejamento de rádio em n100 e n101, convivência, integração embarcada e conceitos de teste." },
+      { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "Ecossistema eSIM e iSIM end-to-end — RSP, Profile Management, Lifecycle e certificação." },
+      { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Estratégias de Connectivity para Massive IoT — celular, LPWA, satélite e arquiteturas híbridas." },
+      { "title": "NTN — Non-Terrestrial Networks", "tag": "SATELLITE 5G", "description": "Integração satélite-5G, arquitetura NTN e viabilidade para uma Connectivity global e resiliente." },
+      { "title": "6G — Next Generation", "tag": "TOMORROW'S NETWORKS", "description": "Readiness, consultoria e pesquisa em 6G ao longo do roadmap 3GPP (Rel-20+)." },
+      { "title": "Connectivity Platform", "tag": "PLATFORM ENGINEERING", "description": "Plataformas que abstraem complexidade — do Connectivity Management à telemetria e analytics." },
+      { "title": "V2X & Vehicle Connectivity", "tag": "AUTOMOTIVE", "description": "Arquiteturas de Vehicle Connectivity — celular, V2X, Wi-Fi, Bluetooth — com caminhos de dados separados e protegidos." },
+      { "title": "FRMCS — Rádio Ferroviário", "tag": "RAIL RADIO", "description": "Migração do GSM-R para o FRMCS: RF Planning em n100 e n101, Coexistence, integração embarcada e conceitos de teste." },
       { "title": "KRITIS & NIS2", "tag": "CRITICAL INFRASTRUCTURE", "description": "Implementação técnica das obrigações da NIS2 e da KRITIS para redes de rádio, móveis e de campus." },
-      { "title": "Expertise 360° em Conectividade", "tag": "FULL STACK", "description": "Cobertura end-to-end do dispositivo à nuvem — integrada, validada e em operação." }
+      { "title": "360° Connectivity Expertise", "tag": "FULL STACK", "description": "Cobertura end-to-end do dispositivo à nuvem — integrada, validada e em operação." }
     ],
     "outroHeadline": "As redes de amanhã. A preparação de hoje.",
     "outroSub": "Não operamos apenas as redes de hoje — ajudamos nossos clientes a moldar a próxima geração.",
@@ -144,8 +144,8 @@
       "sub": "De um projeto claramente delimitado à responsabilidade operacional de longo prazo — você escolhe a profundidade da parceria.",
       "models": [
         { "title": "Entrega de Projeto", "text": "Escopo definido, resultado definido: assumimos concepção, implementação e aceite de uma iniciativa delimitada — em preço fixo ou por esforço." },
-        { "title": "Expert Augmentation", "text": "Nossos especialistas reforçam seu time — reviews de arquitetura, planejamento de RF, campanhas de teste ou suporte à certificação, exatamente onde falta expertise." },
-        { "title": "Managed Services", "text": "Assumimos de forma duradoura a operação e a evolução da sua solução de conectividade — com SLAs, monitoramento e relatórios regulares." }
+        { "title": "Expert Augmentation", "text": "Nossos especialistas reforçam seu time — reviews de arquitetura, RF Planning, campanhas de teste ou suporte à certificação, exatamente onde falta expertise." },
+        { "title": "Managed Services", "text": "Assumimos de forma duradoura a operação e a evolução da sua solução de Connectivity — com SLAs, monitoramento e relatórios regulares." }
       ]
     }
   },
@@ -153,7 +153,7 @@
     "title": "Consultoria Private 5G",
     "lead": "Do conceito à operação — consultoria full-stack para deployments Private 5G corporativos e industriais.",
     "items": [
-      { "title": "Engenharia & Design de Rede", "text": "Arquitetura, planejamento de RF, estratégia de slicing e design de integração — sob medida para seu ambiente industrial." },
+      { "title": "Engenharia & Design de Rede", "text": "Arquitetura, RF Planning, estratégia de slicing e design de integração — sob medida para seu ambiente industrial." },
       { "title": "Gestão de Projeto & Operações", "text": "Programa end-to-end — milestones, coordenação de fornecedores, risco e qualidade do kick-off à entrega." },
       { "title": "Gestão & Operação de Rede", "text": "Day-2 operations, monitoramento, otimização e melhoria contínua — mantendo redes mission-critical saudáveis." },
       { "title": "Desenvolvimento de Software & Hardware", "text": "Componentes customizados de software e hardware onde o stack padrão não atende — totalmente integrados e certificados." },
@@ -163,14 +163,14 @@
   },
   "testing": {
     "title": "Testamos até ficar perfeito",
-    "lead": "Validação rigorosa e estruturada por todo o stack de conectividade — para produtos que precisam funcionar no mundo real.",
+    "lead": "Validação rigorosa e estruturada por todo o Connectivity stack — para produtos que precisam funcionar no mundo real.",
     "groups": [
       {
         "headline": "Disciplinas de teste",
         "items": [
           { "title": "Testes Funcionais", "text": "Validação funcional end-to-end de todos os componentes e interfaces — verificando que cada feature funciona exatamente como especificado." },
-          { "title": "Performance & Carga", "text": "Benchmarking de KPIs, testes de throughput, medição de latência e testes de stress em condições reais e de pior caso." },
-          { "title": "Interoperabilidade", "text": "Comprovamos que setups multifornecedor realmente funcionam juntos — entre vendors, plataformas e protocolos." },
+          { "title": "Performance & Carga", "text": "Benchmarking de KPIs, testes de throughput, medição de Latency e testes de stress em condições reais e de pior caso." },
+          { "title": "Interoperabilidade", "text": "Comprovamos que setups multi-vendor realmente funcionam juntos — entre vendors, plataformas e protocolos." },
           { "title": "Compliance & Homologação", "text": "Testes de conformidade regulatória e suporte de homologação — garantindo que seu produto atenda às certificações antes do lançamento." }
         ]
       },
@@ -178,10 +178,10 @@
         "headline": "Testes especializados",
         "items": [
           { "title": "Testes de Rede 5G", "text": "Campanhas em RAN, core e slice — incluindo validação de KPIs, drive testing e benchmarking." },
-          { "title": "Testes eSIM & SIM", "text": "Testes de perfil, RSP e ciclo de vida — totalmente alinhados às especificações GSMA." },
+          { "title": "Testes eSIM & SIM", "text": "Testes de perfil, RSP e Lifecycle — totalmente alinhados às especificações GSMA." },
           { "title": "Testes de OTA Updates", "text": "Validação end-to-end de campanhas OTA — robustez, rollback, segurança e cenários de campo." },
           { "title": "HIL & SIL Testing", "text": "Ambientes hardware e software-in-the-loop para sistemas conectados e automotivos." },
-          { "title": "Validação de Dispositivos IoT", "text": "Certificação de dispositivos, conformidade e prontidão de ecossistema para deployments IoT em massa." },
+          { "title": "Validação de Dispositivos IoT", "text": "Certificação de dispositivos, conformidade e prontidão de ecossistema para deployments de Massive IoT." },
           { "title": "PoC & Aceitação", "text": "Frameworks estruturados de prova de conceito e aceitação — mensuráveis, repetíveis, prontos para decisão." }
         ]
       }
@@ -193,8 +193,8 @@
     "lead": "Um carro hoje: vários padrões de rádio, dezenas de ECUs, atualizações de software over the air. Entregamos engenharia em todo o stack de Connected Car e IVI.",
     "items": [
       { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Expertise profunda em Android Automotive OS e integração Android Auto — em conformidade com os requisitos do OEM e o ecossistema Google." },
-      { "title": "Arquitetura de Conectividade", "tag": "4G · 5G · V2X", "text": "Design da conectividade veicular: celular, Wi-Fi, Bluetooth e V2X — incluindo qual caminho de dados vai para onde e como é protegido." },
-      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Gestão robusta do ciclo de vida de serviços e frameworks de segurança — IAM, gestão de certificados e fluxos de autorização alinhados aos padrões de cibersegurança automotiva." },
+      { "title": "Connectivity Architecture", "tag": "4G · 5G · V2X", "text": "Design da Vehicle Connectivity: celular, Wi-Fi, Bluetooth e V2X — incluindo qual caminho de dados vai para onde e como é protegido." },
+      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Gestão robusta do Lifecycle de serviços e frameworks de segurança — IAM, gestão de certificados e fluxos de autorização alinhados aos padrões de cibersegurança automotiva." },
       { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Arquitetura e implementação para ativação flexível de features por assinatura — OEMs liberam capacidades remotamente e criam novas receitas pós-venda." },
       { "title": "Gestão de OTA Updates", "tag": "OTA · ECU · IVI", "text": "Estratégia, integração e validação completas de OTA — atualizações de software seguras, confiáveis e em conformidade em ECUs, IVI e subsistemas." },
       { "title": "Testes & Validação de ECU", "tag": "HIL · SIL · HOMOLOGATION", "text": "Testes rigorosos para ECUs e sistemas veiculares conectados — da verificação inicial à integração de sistema e homologação." }
@@ -207,12 +207,12 @@
     "name": {
       "label": "O nome",
       "title": "SAJ — Smart Access Journey.",
-      "text": "Nosso nome é a nossa promessa: acompanhamos empresas em sua jornada rumo à conectividade inteligente — independentes de fabricante, da estratégia à operação. Sejam veículos conectados, redes 5G privadas em portos e áreas industriais, transmissão ao vivo no autódromo ou máquinas conectadas em campo: criamos o acesso que conecta seus ativos, processos e pessoas.",
+      "text": "Nosso nome é a nossa promessa: acompanhamos empresas em sua jornada rumo à Smart Connectivity — independentes de fabricante, da estratégia à operação. Sejam veículos conectados, redes Private 5G em portos e áreas industriais, transmissão ao vivo no autódromo ou máquinas conectadas em campo: criamos o acesso que conecta seus ativos, processos e pessoas.",
       "closing": "SAJ Connect — seu parceiro na Smart Access Journey."
     },
     "mission": {
       "title": "Nossa missão",
-      "text": "Levamos projetos de 5G e conectividade à operação — e seguimos responsáveis até rodarem de forma estável."
+      "text": "Levamos projetos de 5G e Connectivity à operação — e seguimos responsáveis até rodarem de forma estável."
     },
     "differentiators": {
       "title": "Por que trabalhar conosco",
@@ -221,7 +221,7 @@
         { "n": "02", "text": "Colaboração direta com clientes — da estratégia à operação." },
         { "n": "03", "text": "Ecossistema de parceiros comprovado, escalável e com alcance global." },
         { "n": "04", "text": "Cobertura abrangente em Private 5G, eSIM, IoT e Connected Car." },
-        { "n": "05", "text": "Tamanho de time conforme a necessidade — de um único planejador de RF a um time de projeto completo." }
+        { "n": "05", "text": "Tamanho de time conforme a necessidade — de um único RF Planner a um time de projeto completo." }
       ]
     }
   },
@@ -284,7 +284,7 @@
     "chapter": "FRMCS",
     "title": "FRMCS: o novo rádio ferroviário em 5G",
     "lede": "O GSM-R é o rádio digital dos trens na Europa desde os anos 2000 e é baseado em 2G. Seu sucessor, o FRMCS (Future Railway Mobile Communication System), leva o 5G para a ferrovia. Apoiamos gestores de infraestrutura, fabricantes de material rodante e fornecedores na preparação técnica da migração.",
-    "teaser": "Migração do GSM-R para o FRMCS: planejamento de rádio em n100 e n101, convivência, integração embarcada e conceitos de teste.",
+    "teaser": "Migração do GSM-R para o FRMCS: RF Planning em n100 e n101, Coexistence, integração embarcada e conceitos de teste.",
     "factsTitle": "Dados-chave",
     "facts": [
       {
@@ -312,7 +312,7 @@
         "v": "prevista para 2027/28"
       },
       {
-        "k": "Convivência",
+        "k": "Coexistence",
         "v": "GSM-R até cerca de 2035"
       }
     ],
@@ -329,7 +329,7 @@
       {
         "title": "O que o FRMCS é tecnicamente",
         "paras": [
-          "O FRMCS é uma rede 5G standalone. Sobre ela rodam os serviços de missão crítica do 3GPP: MCPTT para chamadas de voz em grupo e de emergência, MCData para aplicações de dados. Os requisitos das ferrovias vêm da União Internacional de Ferrovias (UIC); as especificações técnicas são elaboradas pelo comitê TC RT do ETSI e pelo 3GPP.",
+          "O FRMCS é uma rede 5G standalone. Sobre ela rodam os serviços Mission Critical do 3GPP: MCPTT para chamadas de voz em grupo e de emergência, MCData para aplicações de dados. Os requisitos das ferrovias vêm da União Internacional de Ferrovias (UIC); as especificações técnicas são elaboradas pelo comitê TC RT do ETSI e pelo 3GPP.",
           "No trem, a arquitetura embarcada TOBA (Telecom On-Board Architecture) fornece o acesso de rádio para todas as aplicações a bordo. ETCS e ATO se conectam por uma interface padronizada (OBapp). Assim, fabricantes de sinalização e de rádio já podem desenvolver seus equipamentos contra uma interface comum."
         ],
         "bullets": [],
@@ -339,7 +339,7 @@
         "title": "O espectro",
         "paras": [
           "Com a Decisão de Execução (UE) 2021/1730, a UE harmonizou duas faixas para o rádio ferroviário: a faixa pareada de 900 MHz (874,4–880 MHz e 919,4–925 MHz, banda 3GPP n100) e a faixa não pareada de 1900 MHz (1900–1910 MHz, banda n101).",
-          "As duas faixas são estreitas. A de 900 MHz oferece apenas 5,6 MHz por sentido, e o GSM-R a compartilha durante a transição. A de 1900 MHz traz mais capacidade, mas, por ter maior perda de propagação, exige uma rede mais densa. Os equipamentos embarcados precisam alternar entre as duas faixas com o trem em movimento."
+          "As duas faixas são estreitas. A de 900 MHz oferece apenas 5,6 MHz por sentido, e o GSM-R a compartilha durante a transição. A de 1900 MHz traz mais capacidade, mas, por ter maior Path Loss, exige uma rede mais densa. Os equipamentos embarcados precisam alternar entre as duas faixas com o trem em movimento."
         ],
         "bullets": [],
         "after": []
@@ -360,10 +360,10 @@
           "Entre hoje e a operação regular há questões que as especificações sozinhas não resolvem:"
         ],
         "bullets": [
-          "Convivência e interoperação com o GSM-R por muitos anos, nas mesmas linhas e em parte nas mesmas frequências",
+          "Coexistence e interoperação com o GSM-R por muitos anos, nas mesmas linhas e em parte nas mesmas frequências",
           "Robustez contra redes móveis públicas que transmitem logo acima de 925 MHz, um problema que o GSM-R já conhece",
-          "Planejamento de rádio ao longo da via para 900 e 1900 MHz, incluindo quais sites existentes podem ser reaproveitados",
-          "Integração embarcada: antenas, espaço no teto, convivência com outros sistemas de rádio no veículo",
+          "RF Planning ao longo da via para 900 e 1900 MHz, incluindo quais sites existentes podem ser reaproveitados",
+          "Integração embarcada: antenas, espaço no teto, Coexistence com outros sistemas de rádio no veículo",
           "Conceitos de teste que acompanham as versões V1, V2 e V3 da especificação, em vez de recomeçar a cada revisão"
         ],
         "after": []
@@ -372,8 +372,8 @@
     "contributionTitle": "O que entregamos",
     "contribution": [
       "Avaliação técnica e conceitos de migração: o que o FRMCS significa para suas linhas, veículos ou produtos, e em que ordem?",
-      "Planejamento de rádio e análises de convivência para n100 e n101, incluindo cenários de interferência com redes públicas",
-      "Arquitetura e integração do core 5G standalone e dos serviços de missão crítica, que conhecemos de projetos de Private 5G",
+      "RF Planning e análises de Coexistence para n100 e n101, incluindo cenários de Interference com redes públicas",
+      "Arquitetura e integração do core 5G standalone e dos serviços Mission Critical, que conhecemos de projetos de Private 5G",
       "Gestão de requisitos, conceitos de teste e campanhas de teste acompanhando as versões da especificação"
     ],
     "asOf": "Atualizado em outubro de 2026. A especificação do FRMCS continua evoluindo, e atualizamos esta página quando houver novas versões.",
@@ -487,7 +487,7 @@
         "title": "O que isso significa para redes de rádio e de campus",
         "paras": [
           "Uma rede de campus puramente interna em geral não é uma rede pública de telecomunicações. Por isso, os deveres específicos de segurança da lei alemã de telecomunicações (§ 165 e seguintes do TKG) normalmente não se aplicam diretamente. Se a empresa estiver sujeita à NIS2 ou operar uma instalação crítica, porém, a rede faz parte dos sistemas de TI que a gestão de riscos do § 30 BSIG precisa cobrir. Se isso se aplica a cada caso deve ser verificado juridicamente.",
-          "A escolha de fornecedores também ganha peso. Pelo § 41 BSIG, o Ministério Federal do Interior pode proibir operadores de instalações críticas de usar componentes críticos de um fabricante. As grandes operadoras móveis alemãs se comprometeram por contrato com o governo federal a retirar componentes críticos da Huawei e da ZTE de seus núcleos 5G até o fim de 2026."
+          "A escolha de fornecedores também ganha peso. Pelo § 41 BSIG, o Ministério Federal do Interior pode proibir operadores de instalações críticas de usar componentes críticos de um fabricante. As grandes operadoras móveis alemãs se comprometeram por contrato com o governo federal a retirar componentes críticos da Huawei e da ZTE de seus 5G Core Networks até o fim de 2026."
         ],
         "bullets": [],
         "after": []
@@ -495,7 +495,7 @@
     ],
     "contributionTitle": "O que entregamos",
     "contribution": [
-      "Levantamento das suas redes de rádio, móveis e de campus: quais sistemas são críticos para a operação e onde há pontos únicos de falha?",
+      "Levantamento das suas redes de rádio, móveis e de campus: quais sistemas são críticos para a operação e onde há Single Points of Failure?",
       "Arquitetura de rede com redundância, segmentação e transições protegidas para o restante da TI",
       "Avaliação de fornecedores e componentes como contribuição para a segurança da cadeia de fornecimento",
       "Conceitos técnicos de monitoramento, detecção e fluxos de notificação de incidentes",
@@ -541,11 +541,11 @@
     ]
   },
   "landing": {
-    "headline": "Consultoria em conectividade e Private 5G.",
+    "headline": "Consultoria em Connectivity e Private 5G.",
     "lede": "Planejamos, testamos e operamos redes móveis privadas, soluções eSIM e rádio ferroviário para fábricas, operadores ferroviários e infraestrutura crítica.",
     "locations": "Nuremberg · Spokane, EUA",
     "legendTitle": "Potência recebida RSRP (dBm)",
-    "legendCaption": "Representação esquemática de um planejamento de rádio: galpão industrial, 3,7 GHz, quatro células.",
+    "legendCaption": "Representação esquemática de um RF Planning: galpão industrial, 3,7 GHz, quatro células.",
     "bandTitle": "Uma rede sem fio só está pronta quando entrega na operação o que o planejamento prometeu.",
     "bandText": "Por isso acompanhamos o projeto do primeiro dia de medições até a entrega ao seu time. E depois também, se você quiser.",
     "fieldTitle": "O que vemos sempre em campo",
@@ -571,7 +571,7 @@
     "chapter": "eSIM & iSIM",
     "title": "eSIM e iSIM: perfis de SIM que podem ser trocados remotamente",
     "lede": "Uma eSIM não é mais um cartão, e sim um chip no qual perfis de operadora são carregados pela rede. Para dispositivos IoT que funcionam por dez ou quinze anos, isso decide se ainda será possível trocar de operadora depois. Planejamos a arquitetura de eSIM da fábrica até a troca de perfil em campo.",
-    "teaser": "Arquitetura de eSIM e iSIM segundo a GSMA SGP.32: gestão de perfis, fabricação, ciclo de vida e segurança.",
+    "teaser": "Arquitetura de eSIM e iSIM segundo a GSMA SGP.32: Profile Management, fabricação, Lifecycle e segurança.",
     "factsTitle": "Dados-chave",
     "facts": [
       {
@@ -607,7 +607,7 @@
       {
         "title": "O que são eSIM e iSIM",
         "paras": [
-          "A eUICC é o chip seguro que pode armazenar vários perfis de operadora: baixar, ativar, desativar, excluir. Por eSIM normalmente se entende exatamente esse provisionamento remoto (Remote SIM Provisioning), às vezes também o formato soldado MFF2.",
+          "A eUICC é o chip seguro que pode armazenar vários perfis de operadora: baixar, ativar, desativar, excluir. Por eSIM normalmente se entende exatamente esse Remote SIM Provisioning, às vezes também o formato soldado MFF2.",
           "Na iSIM, a eUICC deixa de ser um componente separado na placa e passa a ficar em uma área de segurança protegida do system-on-chip. Isso economiza espaço e custo. A GSMA exige para isso uma área de segurança certificada separadamente."
         ],
         "bullets": [],
@@ -626,7 +626,7 @@
         "title": "Perfis de fábrica e por quinze anos",
         "paras": [
           "Desde 2025, a SGP.41 descreve como os perfis podem ser carregados na eUICC já na fábrica do dispositivo, tanto para eUICCs soldadas quanto para a iSIM. A especificação técnica correspondente ainda não foi publicada.",
-          "Em campo, o que conta é o ciclo de vida: um medidor ou um controlador de máquina muitas vezes funciona por mais tempo do que qualquer contrato de operadora. Quem não planeja a troca de perfil desde o início fica preso ao primeiro fornecedor."
+          "Em campo, o que conta é o Lifecycle: um medidor ou um controlador de máquina muitas vezes funciona por mais tempo do que qualquer contrato de operadora. Quem não planeja a troca de perfil desde o início fica preso ao primeiro fornecedor."
         ],
         "bullets": [],
         "after": []
@@ -663,8 +663,8 @@
     "contribution": [
       "Arquitetura de eSIM segundo a SGP.32: eIM, IPA, estratégia de perfis e escolha de fornecedores",
       "Integração na fabricação e na logística, do primeiro perfil ao comissionamento",
-      "Conceito de ciclo de vida para troca de perfil em campo, incluindo o orçamento de energia em NB-IoT e LTE-M",
-      "Testes de download de perfil, troca de perfil e perfil de contingência em laboratório e em campo"
+      "Conceito de Lifecycle para troca de perfil em campo, incluindo o Energy Budget em NB-IoT e LTE-M",
+      "Testes de download de perfil, troca de perfil e perfil de Fallback em laboratório e em campo"
     ],
     "asOf": "Atualizado em outubro de 2026. As especificações da GSMA são atualizadas continuamente, e atualizamos esta página quando houver novas versões.",
     "sourcesTitle": "Fontes",
@@ -678,7 +678,7 @@
         "url": "https://gsma.com/solutions-and-impact/technologies/esim/wp-content/uploads/2024/06/SGP.32-v1.2.pdf"
       },
       {
-        "label": "GSMA SGP.41: provisionamento de perfis na fábrica (em inglês)",
+        "label": "GSMA SGP.41: Provisioning de perfis na fábrica (em inglês)",
         "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/gsma_resources/esim-ifpp-architecture-and-requirements/"
       },
       {
@@ -701,9 +701,9 @@
   },
   "iot": {
     "chapter": "IoT Connectivity",
-    "title": "Conectividade IoT: muitos dispositivos, poucos dados, longa vida útil",
+    "title": "IoT Connectivity: muitos dispositivos, poucos dados, longa vida útil",
     "lede": "Medidores, sensores e rastreadores enviam pouco e raramente, mas precisam funcionar por anos com uma bateria e ter sinal até no subsolo. NB-IoT, LTE-M e RedCap são a tecnologia móvel certa para isso. Ajudamos na escolha e planejamos a migração para longe do 2G.",
-    "teaser": "Conectividade para IoT massiva: NB-IoT, LTE-M e RedCap, orçamento de energia, cobertura e migração do 2G.",
+    "teaser": "Connectivity para Massive IoT: NB-IoT, LTE-M e RedCap, Energy Budget, Coverage e migração do 2G.",
     "factsTitle": "Dados-chave",
     "facts": [
       {
@@ -715,7 +715,7 @@
         "v": "Parte do 5G mMTC (IMT-2020)"
       },
       {
-        "k": "Cobertura NB-IoT",
+        "k": "NB-IoT Coverage",
         "v": "até 164 dB MCL"
       },
       {
@@ -739,17 +739,17 @@
       {
         "title": "NB-IoT ou LTE-M?",
         "paras": [
-          "As duas tecnologias vêm do 3GPP Release 13 e, segundo os requisitos da UIT, fazem parte do 5G para comunicação massiva entre máquinas. O NB-IoT é de banda muito estreita, consome pouca energia e penetra fundo nos edifícios: com os níveis de cobertura estendida, a perda de acoplamento admissível sobe para até 164 dB, ao custo de maior consumo de energia.",
+          "As duas tecnologias vêm do 3GPP Release 13 e, segundo os requisitos da UIT, fazem parte do 5G para Massive Machine-Type Communication. O NB-IoT é de banda muito estreita, consome pouca energia e penetra fundo nos edifícios: com os níveis de Coverage Enhancement, a Coupling Loss admissível sobe para até 164 dB, ao custo de maior consumo de energia.",
           "O LTE-M usa 1,4 MHz de banda, oferece mais taxa de dados e mobilidade plena. Isso combina com rastreadores e dispositivos móveis. Voz seria tecnicamente possível, mas quase não é oferecida pelas operadoras."
         ],
         "bullets": [],
         "after": []
       },
       {
-        "title": "O orçamento de energia",
+        "title": "O Energy Budget",
         "paras": [
           "Com o Power Saving Mode e o eDRX, o dispositivo dorme a maior parte do tempo e só acorda para janelas curtas de transmissão. A GSMA cita assim até dez anos de bateria, dependendo do perfil de dados.",
-          "Mas os temporizadores são apenas pedidos pelo dispositivo; quem decide é a rede. E uma conexão mal configurada no backend pode anular a economia. Por isso calculamos o orçamento de energia com o comportamento real da rede, não só com a folha de dados."
+          "Mas os Timers são apenas pedidos pelo dispositivo; quem decide é a rede. E uma conexão mal configurada no backend pode anular a economia. Por isso calculamos o Energy Budget com o comportamento real da rede, não só com o datasheet."
         ],
         "bullets": [],
         "after": []
@@ -767,7 +767,7 @@
         "title": "RedCap e satélite",
         "paras": [
           "Para aplicações entre o sensor IoT e o smartphone, como câmeras, wearables ou sensores industriais com mais dados, o Release 17 trouxe o RedCap: 5G com até 20 MHz de banda e hardware simplificado. O Release 18 acrescenta o eRedCap para dispositivos ainda mais baratos.",
-          "Onde a rede móvel não chega, NB-IoT e LTE-M também podem funcionar por satélite desde o Release 17. Mais detalhes em nossa página sobre redes não terrestres."
+          "Onde a rede móvel não chega, NB-IoT e LTE-M também podem funcionar por satélite desde o Release 17. Mais detalhes em nossa página sobre Non-Terrestrial Networks."
         ],
         "bullets": [],
         "after": []
@@ -779,8 +779,8 @@
         ],
         "bullets": [
           "Quais dispositivos ainda funcionam em 2G, o que precisa ser migrado até 2028, e para qual tecnologia?",
-          "Como é o perfil de dados: tamanho das mensagens, frequência, comandos para o dispositivo, atraso máximo?",
-          "Onde o dispositivo é instalado, no subsolo, no quadro de medidores, em caixa metálica, e qual nível de cobertura isso exige?",
+          "Como é o perfil de dados: tamanho das mensagens, frequência, comandos para o dispositivo, Latency máxima?",
+          "Onde o dispositivo é instalado, no subsolo, no quadro de medidores, em caixa metálica, e qual nível de Coverage isso exige?",
           "O dispositivo se move, precisa de roaming, e o módulo suporta as bandas necessárias?",
           "Qual módulo e chipset estarão disponíveis durante toda a vida do produto, e uma eSIM SGP.32 deve ser prevista desde já?"
         ],
@@ -790,7 +790,7 @@
     "contributionTitle": "O que entregamos",
     "contribution": [
       "Escolha de tecnologia entre NB-IoT, LTE-M, RedCap ou satélite, a partir do seu perfil de dados",
-      "Orçamento de energia e planejamento de cobertura, incluindo medições no local de instalação",
+      "Energy Budget e Coverage Planning, incluindo medições no local de instalação",
       "Plano de migração dos dispositivos 2G legados antes do desligamento",
       "Escolha de módulo e fornecedor, testes de campo antes do rollout"
     ],
@@ -814,16 +814,16 @@
         "url": "https://www.3gpp.org/news-events/partner-news/redcap-gsa-article01"
       },
       {
-        "label": "GSMA Foundry: visão geral das redes não terrestres (em inglês)",
+        "label": "GSMA Foundry: visão geral de Non-Terrestrial Networks (em inglês)",
         "url": "https://www.gsma.com/get-involved/gsma-foundry/gsma_resources/non-terrestrial-networks-ntn/"
       }
     ]
   },
   "ntn": {
     "chapter": "NTN",
-    "title": "Redes não terrestres: conectividade móvel via satélite",
-    "lede": "Desde o 3GPP Release 17, os satélites fazem parte do padrão móvel. Os dispositivos podem usar a mesma tecnologia pela torre de celular e pelo satélite, em regiões sem cobertura, em navios, dutos ou como contingência para instalações críticas. Avaliamos onde isso funciona e como satélite e rede terrestre trabalham juntos.",
-    "teaser": "5G via satélite segundo o 3GPP: escolha de órbita, link budget, operação híbrida com a rede terrestre e resiliência.",
+    "title": "Non-Terrestrial Networks: Mobile Connectivity via satélite",
+    "lede": "Desde o 3GPP Release 17, os satélites fazem parte do padrão móvel. Os dispositivos podem usar a mesma tecnologia pela torre de celular e pelo satélite, em regiões sem Coverage, em navios, dutos ou como Fallback para instalações críticas. Avaliamos onde isso funciona e como satélite e rede terrestre trabalham juntos.",
+    "teaser": "5G via satélite segundo o 3GPP: escolha de órbita, Link Budget, operação híbrida com a rede terrestre e Resilience.",
     "factsTitle": "Dados-chave",
     "facts": [
       {
@@ -832,10 +832,10 @@
       },
       {
         "k": "Evolução",
-        "v": "Rel-18 · Rel-19 (carga útil regenerativa)"
+        "v": "Rel-18 · Rel-19 (Regenerative Payload)"
       },
       {
-        "k": "Atraso ida e volta",
+        "k": "Round-Trip Time",
         "v": "GEO cerca de 540 ms · LEO 600 km cerca de 26 ms"
       },
       {
@@ -859,23 +859,23 @@
       {
         "title": "O que o 3GPP padronizou",
         "paras": [
-          "O Release 17 definiu em 2022 as primeiras regras obrigatórias para NTN, tanto para o 5G NR quanto para NB-IoT e LTE-M via satélite. O dispositivo conhece sua posição por GNSS e compensa sozinho o atraso e o desvio Doppler, com base em dados de órbita que a rede transmite em cada célula.",
-          "O Release 18 melhorou a cobertura de uplink e a mobilidade entre satélite e rede terrestre. O Release 19 está pronto para implementação desde o fim de 2025 e traz, entre outros pontos, satélites que executam funções 5G a bordo e store-and-forward para IoT."
+          "O Release 17 definiu em 2022 as primeiras regras obrigatórias para NTN, tanto para o 5G NR quanto para NB-IoT e LTE-M via satélite. O dispositivo conhece sua posição por GNSS e compensa sozinho o Round-Trip Time e o Doppler Shift, com base em dados de órbita que a rede transmite em cada célula.",
+          "O Release 18 melhorou a Coverage de uplink e a mobilidade entre satélite e rede terrestre. O Release 19 está pronto para implementação desde o fim de 2025 e traz, entre outros pontos, satélites que executam funções 5G a bordo e store-and-forward para IoT."
         ],
         "bullets": [],
         "after": []
       },
       {
-        "title": "Órbita, atraso, link budget",
+        "title": "Órbita, Round-Trip Time, Link Budget",
         "paras": [
-          "Segundo os valores de referência do estudo do 3GPP, um pacote leva cerca de 540 ms ida e volta por um satélite geoestacionário e cerca de 26 ms por um satélite de órbita baixa a 600 km. Em compensação, os satélites LEO cruzam o céu rapidamente, o que significa handovers constantes e Doppler forte.",
-          "O que define o caso de uso é o link budget: um smartphone com antena pequena precisa de visada livre para o céu e trabalha com taxas de dados baixas. A banda Ka é destinada a terminais fixos com antena direcional."
+          "Segundo os valores de referência do estudo do 3GPP, o Round-Trip Time de um pacote é de cerca de 540 ms por um satélite geoestacionário e de cerca de 26 ms por um satélite de órbita baixa a 600 km. Em compensação, os satélites LEO cruzam o céu rapidamente, o que significa handovers constantes e Doppler forte.",
+          "O que define o Use Case é o Link Budget: um smartphone com antena pequena precisa de visada livre para o céu e trabalha com taxas de dados baixas. A banda Ka é destinada a terminais fixos com antena direcional."
         ],
         "bullets": [],
         "after": []
       },
       {
-        "title": "Satélite direto ao dispositivo",
+        "title": "Direct-to-Device",
         "paras": [
           "Os primeiros serviços já funcionam: mensagens de emergência via satélite estão disponíveis em iPhones atuais em 21 países, incluindo a Alemanha, e um serviço de NB-IoT via satélite segundo o Release 17 está disponível comercialmente na América do Norte desde 2024.",
           "Na Europa, a UE está reorganizando a banda de 2 GHz para serviços móveis por satélite, porque as licenças atuais vencem em 2027. Com o IRIS², a UE também constrói um sistema próprio de 348 satélites para órgãos públicos e serviços de emergência, com os primeiros lançamentos previstos para 2029."
@@ -884,9 +884,9 @@
         "after": []
       },
       {
-        "title": "Satélite como contingência",
+        "title": "Satélite como Fallback",
         "paras": [
-          "Para operadores de infraestrutura crítica, a NTN é sobretudo uma segunda conexão independente: se a rede móvel ou a fibra falhar, telemetria e alarmes continuam via satélite. Isso exige que comutação, priorização de dados e faturamento estejam planejados com antecedência."
+          "Para operadores de infraestrutura crítica, a NTN é sobretudo uma segunda conexão independente: se a rede móvel ou a fibra falhar, telemetria e alarmes continuam via satélite. Isso exige que Failover, priorização de dados e faturamento estejam planejados com antecedência."
         ],
         "bullets": [],
         "after": []
@@ -897,9 +897,9 @@
           "Antes de escolher um provedor de satélite, esclarecemos com você:"
         ],
         "bullets": [
-          "Qual órbita e qual arquitetura combinam com latência, disponibilidade e orçamento?",
-          "O link budget é suficiente para o dispositivo planejado, com antena, potência de transmissão e local de instalação?",
-          "Como satélite e rede terrestre se conectam: roaming, comutação, priorização?",
+          "Qual órbita e qual arquitetura combinam com Latency, disponibilidade e orçamento?",
+          "O Link Budget é suficiente para o dispositivo planejado, com antena, potência de transmissão e local de instalação?",
+          "Como satélite e rede terrestre se conectam: roaming, Failover, priorização?",
           "Quais volumes de dados são esperados, e o que isso significa para os custos recorrentes?",
           "Quais regras de espectro e licenciamento valem no local?"
         ],
@@ -908,10 +908,10 @@
     ],
     "contributionTitle": "O que entregamos",
     "contribution": [
-      "Análise de viabilidade: onde o satélite funciona e onde não, com link budget por dispositivo",
+      "Análise de viabilidade: onde o satélite funciona e onde não, com Link Budget por dispositivo",
       "Arquitetura para operação híbrida entre rede terrestre e satélite",
       "Escolha de provedor e de dispositivos ao longo dos releases do 3GPP",
-      "Conceitos de resiliência para instalações críticas com satélite como segundo caminho"
+      "Conceitos de Resilience para instalações críticas com satélite como segundo caminho"
     ],
     "asOf": "Atualizado em outubro de 2026. A NTN evolui rápido, e atualizamos esta página com novos releases e atribuições de espectro.",
     "sourcesTitle": "Fontes",
@@ -971,7 +971,7 @@
       },
       {
         "k": "Novos cenários",
-        "v": "Sensoriamento · IA · conectividade ubíqua"
+        "v": "Sensing · AI · Ubiquitous Connectivity"
       }
     ],
     "sections": [
@@ -990,12 +990,12 @@
           "A UIT descreve seis cenários de uso. Além dos já conhecidos do 5G, três são novos:"
         ],
         "bullets": [
-          "Sensoriamento e comunicação integrados: a rede detecta objetos e movimentos, não só dispositivos",
-          "Inteligência artificial e comunicação: IA na rede e redes para aplicações de IA",
-          "Conectividade ubíqua, inclusive via satélite"
+          "Integrated Sensing and Communication: a rede detecta objetos e movimentos, não só dispositivos",
+          "AI and Communication: AI na rede e redes para aplicações de AI",
+          "Ubiquitous Connectivity, inclusive via satélite"
         ],
         "after": [
-          "A UIT cita faixas-alvo como taxas de pico de 50 a 200 Gbit/s e posicionamento com precisão de um a dez centímetros. São metas do documento-marco, não valores garantidos."
+          "A UIT cita faixas-alvo como Peak Data Rates de 50 a 200 Gbit/s e posicionamento com precisão de um a dez centímetros. São metas do documento-marco, não valores garantidos."
         ]
       },
       {
@@ -1009,7 +1009,7 @@
       {
         "title": "O que dá para preparar hoje",
         "paras": [
-          "Após as primeiras decisões de base no 3GPP, o 6G deve começar como sistema standalone e compartilhar espectro dinamicamente com o 5G. Nossa avaliação: quem hoje aposta em 5G standalone com núcleo de rede cloud-native está construindo sobre a arquitetura à qual o 6G vai se conectar. Como será exatamente a transição no núcleo ainda está em decisão no 3GPP."
+          "Após as primeiras decisões de base no 3GPP, o 6G deve começar como sistema standalone e compartilhar espectro dinamicamente com o 5G. Nossa avaliação: quem hoje aposta em 5G standalone com Cloud-native Core está construindo sobre a arquitetura à qual o 6G vai se conectar. Como será exatamente a transição no Core ainda está em decisão no 3GPP."
         ],
         "bullets": [],
         "after": []
@@ -1020,7 +1020,7 @@
           "Para um planejamento preparado para o futuro, esclarecemos com você:"
         ],
         "bullets": [
-          "O núcleo de rede atual é compatível com 5G standalone e cloud-native, ou ainda roda a arquitetura antiga?",
+          "O Core Network atual é compatível com 5G standalone e cloud-native, ou ainda roda a arquitetura antiga?",
           "Quais componentes podem ser atualizados por software, e qual hardware já estará depreciado por volta de 2030?",
           "Qual espectro está em uso hoje, e o que a banda de 7 GHz significa para sites e antenas?",
           "Quais aplicações realmente precisam de recursos do 6G, e quais já podem ser resolvidas com o 5G-Advanced?"
@@ -1031,8 +1031,8 @@
     "contributionTitle": "O que entregamos",
     "contribution": [
       "Check de preparação para o 6G: quais decisões de hoje continuam valendo nos anos 2030?",
-      "Consultoria de arquitetura para 5G standalone e núcleos de rede cloud-native",
-      "Leitura dos estudos e do estágio de padronização no 3GPP e na UIT para os seus casos de uso",
+      "Consultoria de arquitetura para 5G standalone e Cloud-native Core Networks",
+      "Leitura dos estudos e do estágio de padronização no 3GPP e na UIT para os seus Use Cases",
       "Acompanhamento de projetos de pesquisa e pilotos"
     ],
     "asOf": "Atualizado em outubro de 2026. O 6G está sendo padronizado agora, e as datas podem mudar.",
@@ -1066,13 +1066,13 @@
   },
   "platform": {
     "chapter": "Connectivity Platform",
-    "title": "Plataformas de conectividade: SIMs, redes e dados sob controle",
-    "lede": "Quem opera milhares de dispositivos conectados em vários países precisa de visão geral: qual SIM está ativa, quanto consome, onde uma conexão cai. Para isso existem plataformas de gestão de conectividade e interfaces de rede abertas. Planejamos a arquitetura para que você não dependa de um único fornecedor.",
-    "teaser": "Gestão de conectividade, APIs de rede abertas (CAMARA, Open Gateway) e telemetria com MQTT e LwM2M.",
+    "title": "Connectivity Platforms: SIMs, redes e dados sob controle",
+    "lede": "Quem opera milhares de dispositivos conectados em vários países precisa de visão geral: qual SIM está ativa, quanto consome, onde uma conexão cai. Para isso existem Connectivity Management Platforms e Open Network APIs. Planejamos a arquitetura para que você não dependa de um único fornecedor.",
+    "teaser": "Connectivity Management, Open Network APIs (CAMARA, Open Gateway) e telemetria com MQTT e LwM2M.",
     "factsTitle": "Dados-chave",
     "facts": [
       {
-        "k": "APIs de rede",
+        "k": "Network APIs",
         "v": "GSMA Open Gateway (desde 2023)"
       },
       {
@@ -1088,7 +1088,7 @@
         "v": "MQTT 5.0 (padrão OASIS, 2019)"
       },
       {
-        "k": "Gestão de dispositivos",
+        "k": "Device Management",
         "v": "LwM2M 1.2.2 (OMA SpecWorks, 2024)"
       },
       {
@@ -1098,21 +1098,21 @@
     ],
     "sections": [
       {
-        "title": "O que uma plataforma de conectividade faz",
+        "title": "O que uma Connectivity Platform faz",
         "paras": [
-          "Uma plataforma de gestão de conectividade administra os chips SIM de uma frota de dispositivos durante todo o ciclo de vida: ativação sem trabalho manual, planos tarifários, dados de uso, diagnóstico, alertas de anomalias e, cada vez mais, a gestão remota de perfis eSIM. As operadoras oferecem essas plataformas aos seus clientes corporativos.",
+          "Uma Connectivity Management Platform administra os chips SIM de uma frota de dispositivos durante todo o Lifecycle: ativação zero-touch, planos tarifários, dados de uso, diagnóstico, alertas de anomalias e, cada vez mais, o Remote Management de perfis eSIM. As operadoras oferecem essas plataformas aos seus clientes corporativos.",
           "O problema: cada plataforma pertence a um fornecedor. Quem usa várias redes ou países logo acaba com várias interfaces e formatos de dados."
         ],
         "bullets": [],
         "after": []
       },
       {
-        "title": "Interfaces de rede abertas",
+        "title": "Open Network APIs",
         "paras": [
           "Com o Open Gateway, a GSMA lançou em 2023 uma iniciativa conjunta das operadoras para oferecer funções de rede por interfaces uniformes. No início de 2026, mais de 85 grupos de operadoras participavam. As interfaces em si são definidas no projeto open source CAMARA, da Linux Foundation."
         ],
         "bullets": [
-          "Quality on Demand: melhor qualidade de serviço para uma conexão sob demanda",
+          "Quality on Demand: melhor Quality of Service para uma conexão sob demanda",
           "Device Location: verificação de localização pela rede",
           "SIM Swap: indica se um SIM foi trocado recentemente, útil contra fraudes"
         ],
@@ -1121,9 +1121,9 @@
         ]
       },
       {
-        "title": "Telemetria e gestão de dispositivos",
+        "title": "Telemetria e Device Management",
         "paras": [
-          "Para o transporte de dados, o MQTT virou referência, padrão OASIS na versão 5.0 desde 2019. Para a gestão dos próprios dispositivos, ou seja, configuração, firmware e dados de estado, existe o LwM2M da OMA SpecWorks, atualmente na versão 1.2.2. Ambos são abertos e independentes de fabricante."
+          "Para o transporte de dados, o MQTT virou referência, padrão OASIS na versão 5.0 desde 2019. Para o Device Management em si, ou seja, configuração, firmware e dados de estado, existe o LwM2M da OMA SpecWorks, atualmente na versão 1.2.2. Ambos são abertos e independentes de fabricante."
         ],
         "bullets": [],
         "after": []
@@ -1131,7 +1131,7 @@
       {
         "title": "Manter a independência",
         "paras": [
-          "Quem combina uma plataforma com interfaces de rede abertas, protocolos abertos e eSIM SGP.32 pode trocar de operadora e de plataforma depois sem mexer nos dispositivos em campo. Essa é a verdadeira decisão de arquitetura, não a escolha da interface de usuário."
+          "Quem combina uma plataforma com Open Network APIs, protocolos abertos e eSIM SGP.32 pode trocar de operadora e de plataforma depois sem mexer nos dispositivos em campo. Essa é a verdadeira decisão de arquitetura, não a escolha da interface de usuário."
         ],
         "bullets": [],
         "after": []
@@ -1154,7 +1154,7 @@
     "contributionTitle": "O que entregamos",
     "contribution": [
       "Arquitetura de plataforma abrangendo várias redes e fornecedores",
-      "Escolha e avaliação de plataformas de conectividade e interfaces de rede",
+      "Escolha e avaliação de Connectivity Platforms e Network APIs",
       "Integração com ERP, faturamento e plataformas IoT por protocolos abertos",
       "Conceito de proteção de dados e de saída, para que seus dados continuem seus"
     ],

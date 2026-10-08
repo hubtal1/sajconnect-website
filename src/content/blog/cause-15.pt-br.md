@@ -12,7 +12,7 @@ Uma operadora recusou a homologação do dispositivo de um cliente. A posição 
 
 Estávamos na mesma cidade naquela semana para uma sessão de validação, e o laboratório da operadora ficava ali também. Oferecemos passar lá para dar uma olhada. Nos nossos próprios testes aquele comportamento nunca tinha aparecido, e isso nos incomodava mais do que o atraso.
 
-Na manhã seguinte: ferramenta de trace na interface aérea, módulo ligado, attach.
+Na manhã seguinte: ferramenta de trace na Air Interface, módulo ligado, attach.
 
 Reject. Cause 15, no suitable cells in tracking area.
 
@@ -26,7 +26,7 @@ Ficamos ali um tempo sem avançar, até que alguém sugeriu tirar o módulo do l
 
 Fez attach na primeira tentativa. Sem erro, sem demora.
 
-O laboratório rodava uma femtocélula própria, conectada ao core de produção, configurada para aceitar apenas dispositivos de teste. Alguém tinha montado aquilo anos antes, e havia um erro na configuração: todo UE comum era rejeitado. Ninguém tinha percebido, porque num laboratório cheio de dispositivos de teste nunca aparece nada comum. O dispositivo que fomos defender tinha se comportado corretamente o tempo todo.
+O laboratório rodava uma Femtocell própria, conectada ao core de produção, configurada para aceitar apenas dispositivos de teste. Alguém tinha montado aquilo anos antes, e havia um erro na configuração: todo UE comum era rejeitado. Ninguém tinha percebido, porque num laboratório cheio de dispositivos de teste nunca aparece nada comum. O dispositivo que fomos defender tinha se comportado corretamente o tempo todo.
 
 Do primeiro trace até a resposta, uns quarenta minutos.
 
@@ -36,7 +36,7 @@ O dispositivo é culpado por padrão. É a coisa mais nova da cadeia e o único 
 
 E aquela divergência nunca seria resolvida conversando. Dois lados na mesa, os dois convictos, os dois parcialmente certos. Outra reunião teria gerado outra reunião. O que encerrou foi um trace e uma caminhada pelo corredor.
 
-O trace é justamente a parte que se pula. Muitas equipes que trabalham com dispositivos nunca tiveram acesso à interface aérea, porque a ferramenta fica com o fornecedor e ninguém pensou nisso na hora do contrato. Aí volta um relatório de certificação dizendo "fails attach procedure", que é um veredito e não uma evidência. Com isso não dá para trabalhar.
+O trace é justamente a parte que se pula. Muitas equipes que trabalham com dispositivos nunca tiveram acesso à Air Interface, porque a ferramenta fica com o fornecedor e ninguém pensou nisso na hora do contrato. Aí volta um relatório de certificação dizendo "fails attach procedure", que é um veredito e não uma evidência. Com isso não dá para trabalhar.
 
 Se você está numa situação dessas: consiga um trace da falha real e teste o dispositivo em outro lugar, mudando o mínimo possível. Se funcionar uma sala adiante, a discussão acabou. E trate a primeira resposta sobre o ambiente de teste como ponto de partida. Laboratórios acumulam configuração ao longo de anos, e quem responde normalmente herdou a maior parte dela.
 

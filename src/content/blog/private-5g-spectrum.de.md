@@ -8,7 +8,7 @@ tags: ["private-5g", "bnetza", "campusnetz"]
 draft: false
 ---
 
-Wer über Private 5G nachdenkt, denkt zuerst an Funkplanung, Antennen und Kernnetz. Die eigentliche Grundlage ist deutlich unspektakulärer: ein Verwaltungsakt. Deutschland hat das Band 3,7–3,8 GHz für lokale Netze reserviert, und die Zuteilung beantragt man direkt bei der Bundesnetzagentur. Die gute Nachricht vorweg: Das ist kein Vergabeverfahren mit Auktion, sondern ein Antrag. Wer die Unterlagen beisammen hat, bekommt seine Frequenz.
+Wer über Private 5G nachdenkt, denkt zuerst an RF-Planung, Antennen und Core Network. Die eigentliche Grundlage ist deutlich unspektakulärer: ein Verwaltungsakt. Deutschland hat das Band 3,7–3,8 GHz für lokale Netze reserviert, und die Zuteilung beantragt man direkt bei der Bundesnetzagentur. Die gute Nachricht vorweg: Das ist kein Vergabeverfahren mit Auktion, sondern ein Antrag. Wer die Unterlagen beisammen hat, bekommt seine Frequenz.
 
 ## Was Sie da eigentlich bekommen
 
@@ -39,16 +39,16 @@ Dazu kommen geringe jährliche Frequenznutzungs- und EMV-Beiträge. Verglichen m
 
 ## Die Stolpersteine aus der Praxis
 
-**Das Polygon ist zu groß.** Wer großzügig die halbe Gemarkung einzeichnet, zahlt für Fläche, die er nie ausleuchtet. Erst die Funkplanung, dann das Polygon.
+**Das Polygon ist zu groß.** Wer großzügig die halbe Gemarkung einzeichnet, zahlt für Fläche, die er nie ausleuchtet. Erst die RF-Planung, dann das Polygon.
 
-**Der Nachbar hat auch ein Campusnetz.** Angrenzende Zuteilungen müssen sich vertragen. In der Praxis heißt das: TDD-Rahmen synchronisieren und Leistungswerte an der Grundstücksgrenze einhalten. Das ist lösbar, gehört aber vor den Antrag, nicht danach.
+**Der Nachbar hat auch ein Campusnetz.** Angrenzende Zuteilungen müssen sich vertragen. In der Praxis heißt das: TDD-Frames synchronisieren und Leistungswerte an der Grundstücksgrenze einhalten. Das ist lösbar, gehört aber vor den Antrag, nicht danach.
 
 **Die Inbetriebnahmefrist rutscht durch.** Ein Jahr klingt lang. Wenn Hardware-Lieferzeiten, Integration und Abnahme dazwischenliegen, ist es das nicht. Der Antrag gehört deshalb in den Projektplan, nicht an dessen Anfang oder Ende.
 
-**Die Laufzeit passt nicht zur Abschreibung.** Zehn Jahre Zuteilung zu fünf Jahren Hardware-Lebenszyklus oder umgekehrt: Beides lässt sich planen, wenn man es vorher durchrechnet.
+**Die Laufzeit passt nicht zur Abschreibung.** Zehn Jahre Zuteilung zu fünf Jahren Hardware-Lifecycle oder umgekehrt: Beides lässt sich planen, wenn man es vorher durchrechnet.
 
 ## Fazit
 
-Die Frequenzzuteilung ist der am meisten überschätzte Schrecken und der am meisten unterschätzte Planungsbaustein eines Campusnetzes. Der Antrag selbst ist Routine. Entscheidend ist, dass Fläche, Bandbreite und Zeitplan zur Funkplanung passen, bevor das Formular ausgefüllt wird.
+Die Frequenzzuteilung ist der am meisten überschätzte Schrecken und der am meisten unterschätzte Planungsbaustein eines Campusnetzes. Der Antrag selbst ist Routine. Entscheidend ist, dass Fläche, Bandbreite und Zeitplan zur RF-Planung passen, bevor das Formular ausgefüllt wird.
 
 Genau diese Reihenfolge ist Teil unserer Projektmethodik. Wenn Sie ein Campusnetz planen und die Frequenzfrage klären wollen: [Sprechen wir über Ihr Vorhaben](/de/contact). Die Zuteilung selbst ist danach der einfachste Teil.

@@ -46,7 +46,7 @@ Claro, Vivo e TIM vendem redes privativas como produto, sobre o espectro que arr
 
 ## As armadilhas que vemos na prática
 
-**Assumir exclusividade.** A faixa de 3,7 GHz no Brasil é coordenada, não exclusiva. O planejamento de rádio precisa considerar vizinhos — especialmente em polos industriais.
+**Assumir exclusividade.** A faixa de 3,7 GHz no Brasil é coordenada, não exclusiva. O RF Planning precisa considerar vizinhos — especialmente em polos industriais.
 
 **Esquecer o licenciamento por estação.** Cada estação conta para TFI e TFF. Uma rede que cresce de 5 para 50 rádios muda de custo recorrente, e isso pertence ao business case desde o início.
 
@@ -54,6 +54,6 @@ Claro, Vivo e TIM vendem redes privativas como produto, sobre o espectro que arr
 
 ## Conclusão
 
-O Brasil montou um dos modelos mais acessíveis do mundo para redes privativas: espectro dedicado sem leilão, processo eletrônico e custos que não assustam. O que o modelo não entrega é exclusividade territorial — e é exatamente isso que o planejamento de rádio precisa compensar.
+O Brasil montou um dos modelos mais acessíveis do mundo para redes privativas: espectro dedicado sem leilão, processo eletrônico e custos que não assustam. O que o modelo não entrega é exclusividade territorial — e é exatamente isso que o RF Planning precisa compensar.
 
 Planejamos e operamos redes privativas dos dois lados do Atlântico. Se você avalia um projeto no Brasil: [vamos falar sobre o seu projeto](/pt-br/contact).

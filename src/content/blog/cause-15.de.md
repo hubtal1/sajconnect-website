@@ -12,7 +12,7 @@ Ein Netzbetreiber verweigerte die Type Approval für das Gerät eines Kunden. Se
 
 Wir waren in derselben Woche für eine Validierung in der Stadt, und das Labor des Betreibers lag zufällig auch dort. Also boten wir an, vorbeizukommen und uns das anzusehen. In unseren eigenen Tests war das beschriebene Verhalten nie aufgetreten, und das störte uns mehr als die Verzögerung.
 
-Am nächsten Morgen: Trace-Tool an der Luftschnittstelle, Modul hochgefahren, Attach.
+Am nächsten Morgen: Trace-Tool am Air Interface, Modul hochgefahren, Attach.
 
 Reject. Cause 15, no suitable cells in tracking area.
 
@@ -36,7 +36,7 @@ Das Gerät steht standardmäßig unter Verdacht. Es ist das Neueste in der Kette
 
 Durch Reden wäre die Sache nie geklärt worden. Zwei Parteien am Tisch, beide sicher, beide teilweise im Recht. Ein weiteres Meeting hätte ein weiteres Meeting ergeben. Beendet hat es ein Trace und ein Gang über den Flur.
 
-Genau der Trace ist der Teil, der übersprungen wird. Viele Teams, die an Geräten arbeiten, hatten nie Zugriff auf die Luftschnittstelle, weil das Werkzeug beim Lieferanten liegt und bei der Vertragsgestaltung niemand daran gedacht hat. Dann kommt ein Zertifizierungsbericht zurück, in dem "fails attach procedure" steht, und das ist ein Urteil, kein Beleg. Damit lässt sich nicht arbeiten.
+Genau der Trace ist der Teil, der übersprungen wird. Viele Teams, die an Geräten arbeiten, hatten nie Zugriff auf das Air Interface, weil das Werkzeug beim Lieferanten liegt und bei der Vertragsgestaltung niemand daran gedacht hat. Dann kommt ein Zertifizierungsbericht zurück, in dem "fails attach procedure" steht, und das ist ein Urteil, kein Beleg. Damit lässt sich nicht arbeiten.
 
 Wer gerade in so einer Situation steckt: Besorgt euch einen Trace vom tatsächlichen Fehlerfall, und probiert das Gerät an einem anderen Ort, mit so wenig Änderungen wie möglich. Wenn es einen Raum weiter funktioniert, ist die Diskussion vorbei. Und behandelt die erste Auskunft über die Testumgebung als Ausgangspunkt. Labore sammeln über Jahre Konfiguration an, und wer dort Auskunft gibt, hat das meiste davon geerbt.
 

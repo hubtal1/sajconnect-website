@@ -16,7 +16,7 @@ O que se pode solicitar
 
 A faixa vai de 3.700 a 3.800 MHz. É possível solicitar de 10 a 100 MHz, em passos de 10 MHz, para uma área definida e por um período à sua escolha. A largura de banda solicitada deve corresponder ao que a rede precisa.
 
-A autorização vale para uma rede de uso próprio. Não é possível operar uma rede pública com ela nem vender conectividade a terceiros. Parques industriais, áreas de feiras e terrenos agrícolas e florestais estão incluídos. O espectro é concedido de forma neutra em relação à tecnologia, e no próprio terreno você tem liberdade para planejar a rede.
+A autorização vale para uma rede de uso próprio. Não é possível operar uma rede pública com ela nem vender Connectivity a terceiros. Parques industriais, áreas de feiras e terrenos agrícolas e florestais estão incluídos. O espectro é concedido de forma neutra em relação à tecnologia, e no próprio terreno você tem liberdade para planejar a rede.
 
 Quem pode solicitar
 
@@ -32,13 +32,13 @@ B é a largura de banda em MHz, t a duração em anos, a1 a área urbanizada e d
 
 Um exemplo: 100 MHz por dez anos em um terreno com 0,5 km² de área urbanizada resultam em 16.000 euros. Um caso menor, 50 MHz por cinco anos em 0,2 km², resulta em 2.500 euros.
 
-Essas são só as taxas de espectro. Planejamento de rádio, rede core, dispositivos e operação são pagos à parte.
+Essas são só as taxas de espectro. RF Planning, Core Network, dispositivos e operação são pagos à parte.
 
 Como solicitar
 
 Os pedidos são enviados eletronicamente à Bundesnetzagentur, com os formulários dela. A maior parte do esforço está em definir a área. Você é responsável pelas coordenadas da área e das estações base planejadas, e elas determinam tanto a taxa quanto quem são seus vizinhos.
 
-A Bundesnetzagentur publica uma lista dos detentores de autorizações, para que os solicitantes encontrem usuários vizinhos cedo e combinem com eles uma operação sem interferência. Leia a lista antes de pedir. A faixa também fica logo acima do espectro das operadoras nacionais, e uma eventual faixa de guarda em relação a esse uso vizinho deve ser providenciada pelo detentor local. Trate a coordenação com os vizinhos como parte do projeto e não como formalidade no final.
+A Bundesnetzagentur publica uma lista dos detentores de autorizações, para que os solicitantes encontrem usuários vizinhos cedo e combinem com eles uma operação sem Interference. Leia a lista antes de pedir. A faixa também fica logo acima do espectro das operadoras nacionais, e uma eventual faixa de guarda em relação a esse uso vizinho deve ser providenciada pelo detentor local. Trate a coordenação com os vizinhos como parte do projeto e não como formalidade no final.
 
 Condições que passam despercebidas
 
@@ -50,13 +50,13 @@ O que a autorização não resolve
 
 A autorização dá espectro. Ela ainda não dá uma rede funcionando.
 
-A cobertura precisa ser projetada para o local como ele é, com suas prateleiras, máquinas e paredes. A documentação do edifício nem sempre está certa, e uma simulação baseada nela herda o erro. Em um projeto, uma parede constava como drywall e se revelou uma parede corta-fogo, com a qual o planejamento não tinha contado. Uma visita ao local encontra esse tipo de coisa antes do planejamento de rádio.
+A Coverage precisa ser projetada para o local como ele é, com suas prateleiras, máquinas e paredes. A documentação do edifício nem sempre está certa, e uma simulação baseada nela herda o erro. Em um projeto, uma parede constava como drywall e se revelou uma parede corta-fogo, com a qual o planejamento não tinha contado. Uma visita ao local encontra esse tipo de coisa antes do RF Planning.
 
 O core define como a rede se conecta à sua TI, quem pode acessá-la e como ela pode ser segmentada. Isso é caro de mudar depois que a rede está no ar.
 
 Os dispositivos precisam suportar a faixa, que aqui significa n78. Nem todo dispositivo industrial suporta, e certificar um dispositivo para uma rede específica é um pequeno projeto à parte.
 
-O gerenciamento de SIM precisa de um responsável, para uma rede que vai durar de oito a dez anos. E alguém precisa operar a rede depois que a equipe do projeto seguir adiante.
+O SIM Management precisa de um responsável, para uma rede que vai durar de oito a dez anos. E alguém precisa operar a rede depois que a equipe do projeto seguir adiante.
 
 A faixa de 26 GHz
 
@@ -68,6 +68,6 @@ Ondas milimétricas não percorrem grandes distâncias. Por isso, essa faixa ser
 
 Por onde começar
 
-Comece pelo que a rede precisa fazer: quais processos dependem dela, que latência precisam, quantos dispositivos ela vai atender, como o local será daqui a três anos e quem vai operá-la. O pedido de espectro decorre dessas respostas e leva uma tarde quando elas estão prontas.
+Comece pelo que a rede precisa fazer: quais processos dependem dela, que Latency precisam, quantos dispositivos ela vai atender, como o local será daqui a três anos e quem vai operá-la. O pedido de espectro decorre dessas respostas e leva uma tarde quando elas estão prontas.
 
 Planejamos e operamos redes privadas na Alemanha e nos EUA. Se você está considerando uma rede própria: vamos conversar sobre o seu projeto.
