@@ -25,7 +25,7 @@ const domains = getDict<Domain[]>(lang, "services.domains") ?? [];
 const engagementModels = getDict<EngagementModel[]>(lang, "services.engagement.models") ?? [];
 
 // Bereiche mit eigener Fachseite (Reihenfolge wie services.domains)
-const PAGES: (string | null)[] = ["/consultancy", null, null, null, null, null, "/connected-car", "/frmcs", "/kritis", null];
+const PAGES: (string | null)[] = ["/consultancy", "/esim", "/iot", "/ntn", "/6g", "/connectivity-platform", "/connected-car", "/frmcs", "/kritis", null];
 const rows = domains.map((d, i) => ({
   title: d.title,
   text: d.description,
@@ -34,6 +34,11 @@ const rows = domains.map((d, i) => ({
 
 const subAreas = [
   { title: tt("consultancy.title"), lead: tt("consultancy.lead"), href: localizedPath(lang, "/consultancy"), tag: "Private 5G" },
+  { title: tt("esim.title"), lead: tt("esim.teaser"), href: localizedPath(lang, "/esim"), tag: "eSIM & iSIM" },
+  { title: tt("iot.title"), lead: tt("iot.teaser"), href: localizedPath(lang, "/iot"), tag: "IoT Connectivity" },
+  { title: tt("ntn.title"), lead: tt("ntn.teaser"), href: localizedPath(lang, "/ntn"), tag: "NTN" },
+  { title: tt("sixg.title"), lead: tt("sixg.teaser"), href: localizedPath(lang, "/6g"), tag: "6G" },
+  { title: tt("platform.title"), lead: tt("platform.teaser"), href: localizedPath(lang, "/connectivity-platform"), tag: "Connectivity Platform" },
   { title: tt("testing.title"), lead: tt("testing.lead"), href: localizedPath(lang, "/testing"), tag: "Testing" },
   { title: tt("vehicle.title"), lead: tt("vehicle.lead"), href: localizedPath(lang, "/connected-car"), tag: "Connected Car" },
   { title: tt("frmcs.title"), lead: tt("frmcs.teaser"), href: localizedPath(lang, "/frmcs"), tag: tt("nav.frmcs") },

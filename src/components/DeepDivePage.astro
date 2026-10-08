@@ -40,7 +40,7 @@ interface DeepDive {
 
 interface Props {
   lang: Locale;
-  ns: "frmcs" | "kritis";
+  ns: "frmcs" | "kritis" | "esim" | "iot" | "ntn" | "sixg" | "platform";
 }
 
 const { lang, ns } = Astro.props;
@@ -48,6 +48,11 @@ const { lang, ns } = Astro.props;
 const HERO: Record<Props["ns"], { image: string; position: string }> = {
   frmcs: { image: "/images/frmcs-oberleitung.webp", position: "center 60%" },
   kritis: { image: "/images/kritis-mast.webp", position: "center 35%" },
+  esim: { image: "/images/esim-platine.webp", position: "center" },
+  iot: { image: "/images/iot-zaehler.webp", position: "center 45%" },
+  ntn: { image: "/images/ntn-satellit.webp", position: "center 40%" },
+  sixg: { image: "/images/6g-radioteleskop.webp", position: "center 70%" },
+  platform: { image: "/images/plattform-netzwerk.webp", position: "center" },
 };
 const page = getDict<DeepDive>(lang, ns);
 if (!page) throw new Error(`Fachseite ${ns} fehlt in ${lang}`);

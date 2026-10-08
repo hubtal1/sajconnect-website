@@ -12,5 +12,10 @@ Alle Fotos stammen von Unsplash (https://unsplash.com) und stehen unter der Unsp
 | kritis-mast.webp | photo-1755895757151-82cb82b9a635 |
 | testing-panel.webp | photo-1717386255773-a456c611dc4e |
 | connected-car-fertigung.webp | photo-1567789884554-0b844b597180 |
+| esim-platine.webp | photo-1562408590-e32931084e23 |
+| iot-zaehler.webp | photo-1622801185864-874be8248594 |
+| ntn-satellit.webp | photo-1446776811953-b23d57bd21aa |
+| 6g-radioteleskop.webp | photo-1743412059152-d577187040c1 |
+| plattform-netzwerk.webp | photo-1558494949-ef010cbdcc31 |
 
 Eigene Fotos von SAJ Connect sollen diese Bilder ersetzen, sobald verfügbar.

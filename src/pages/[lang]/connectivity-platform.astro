@@ -1,0 +1,12 @@
+---
+import DeepDivePage from "../../components/DeepDivePage.astro";
+import { LOCALES, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+---
+
+<DeepDivePage lang={lang} ns="platform" />

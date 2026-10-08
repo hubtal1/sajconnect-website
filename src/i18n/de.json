@@ -617,6 +617,622 @@
       }
     ]
   },
+  "esim": {
+    "chapter": "eSIM & iSIM",
+    "title": "eSIM und iSIM: SIM-Profile, die man aus der Ferne wechseln kann",
+    "lede": "Eine eSIM ist kein Kärtchen mehr, sondern ein Chip, auf den Mobilfunkprofile über das Netz geladen werden. Für IoT-Geräte mit zehn oder fünfzehn Jahren Laufzeit entscheidet das darüber, ob man den Netzbetreiber später noch wechseln kann. Wir planen die eSIM-Architektur von der Fertigung bis zum Profilwechsel im Feld.",
+    "teaser": "eSIM- und iSIM-Architektur nach GSMA SGP.32: Profilverwaltung, Fertigung, Lebenszyklus und Sicherheit.",
+    "factsTitle": "Eckdaten",
+    "facts": [
+      {
+        "k": "IoT-Spezifikation",
+        "v": "GSMA SGP.31/32 (V1.3, Mai 2026)"
+      },
+      {
+        "k": "Consumer-Spezifikation",
+        "v": "GSMA SGP.21/22"
+      },
+      {
+        "k": "Neue Bausteine",
+        "v": "eIM (Server) · IPA (Gerät oder eUICC)"
+      },
+      {
+        "k": "Profil ab Werk",
+        "v": "GSMA SGP.41 (2025)"
+      },
+      {
+        "k": "Produktsicherheit",
+        "v": "GSMA eSA (Common Criteria)"
+      },
+      {
+        "k": "Standort-Audit",
+        "v": "GSMA SAS-UP · SAS-SM"
+      },
+      {
+        "k": "Bauformen",
+        "v": "MFF2 (eingelötet) · iSIM (im SoC)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Was eSIM und iSIM eigentlich sind",
+        "paras": [
+          "Die eUICC ist der sichere Chip, der mehrere Betreiberprofile speichern kann: laden, aktivieren, deaktivieren, löschen. Mit eSIM ist meist genau diese Fernbeladung gemeint (Remote SIM Provisioning), manchmal auch die eingelötete Bauform MFF2.",
+          "Bei der iSIM sitzt die eUICC nicht mehr als eigener Baustein auf der Platine, sondern in einem geschützten Sicherheitsbereich des System-on-Chip. Das spart Platz und Kosten. Die GSMA verlangt dafür einen eigens zertifizierten Sicherheitsbereich."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "SGP.32: die eSIM für IoT",
+        "paras": [
+          "Für Smartphones gilt seit Jahren SGP.22. Für IoT-Geräte passte das schlecht: Dort gibt es oft keinen Bildschirm, über den jemand einen Profilwechsel bestätigen könnte, und wenig Bandbreite. Die ältere M2M-Variante SGP.02 war aufwendig zu integrieren.",
+          "SGP.31/32 schließt diese Lücke mit zwei neuen Bausteinen: dem eIM, einem Server, der die Profile einer ganzen Geräteflotte steuert, und dem IPA, der im Gerät oder direkt in der eUICC sitzt. Die aktuelle Fassung V1.3 ist seit Mai 2026 veröffentlicht, erste Hersteller melden zertifizierte SGP.32-Produkte seit 2025."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Profile ab Werk und über fünfzehn Jahre",
+        "paras": [
+          "Mit SGP.41 beschreibt die GSMA seit 2025, wie Profile schon in der Gerätefabrik auf die eUICC kommen, für eingelötete eUICCs ebenso wie für die iSIM. Die zugehörige technische Spezifikation steht noch aus.",
+          "Im Feld zählt dann der Lebenszyklus: Ein Zähler oder eine Maschinensteuerung läuft oft länger als jeder Mobilfunkvertrag. Wer den Profilwechsel nicht von Anfang an einplant, bleibt an den ersten Anbieter gebunden."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Wo Regulierung mitredet",
+        "paras": [
+          "Nicht jedes Land erlaubt, dass Geräte dauerhaft mit einem ausländischen Profil im Roaming laufen:"
+        ],
+        "bullets": [
+          "Türkei: Die Regulierungsbehörde BTK begrenzt das Roaming importierter eSIM-Geräte seit 2019 auf 120 Tage.",
+          "Brasilien: Die Anatel wertet Roaming über 90 Tage als dauerhaft und hat 2022 ein entsprechendes M2M-Angebot beanstandet."
+        ],
+        "after": [
+          "Für solche Märkte braucht das Gerät ein lokales Profil, und die Architektur muss den Wechsel dorthin beherrschen."
+        ]
+      },
+      {
+        "title": "Die Engineering-Fragen",
+        "paras": [
+          "Bevor die erste Baugruppe bestellt wird, klären wir mit Ihnen:"
+        ],
+        "bullets": [
+          "Ist die Hard- und Software auf SGP.32 ausgelegt, oder hängen Bestandsgeräte noch an SGP.02, und wie sieht der Migrationspfad aus?",
+          "Wer betreibt den eIM, und wie bleibt ein späterer Wechsel von eIM und Netzbetreiber technisch und vertraglich möglich?",
+          "Welches Profil kommt ab Werk auf das Gerät, und wie ist die Fertigung angebunden?",
+          "In welchen Ländern läuft das Gerät dauerhaft, und wo ist ein lokales Profil Pflicht?",
+          "Eingelötete eUICC oder iSIM: Platz, Energie, Verfügbarkeit von Modul und Chipsatz, Zertifizierungsstand"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "Was wir beitragen",
+    "contribution": [
+      "eSIM-Architektur nach SGP.32: eIM, IPA, Profilstrategie und Anbieterwahl",
+      "Einbindung in Fertigung und Logistik, vom ersten Profil bis zur Inbetriebnahme",
+      "Lebenszyklus-Konzept für Profilwechsel im Feld, inklusive Energiebudget bei NB-IoT und LTE-M",
+      "Tests von Profil-Download, Profilwechsel und Rückfallprofil im Labor und im Feld"
+    ],
+    "asOf": "Stand: Oktober 2026. Die GSMA-Spezifikationen werden laufend fortgeschrieben, wir aktualisieren diese Seite bei neuen Fassungen.",
+    "sourcesTitle": "Quellen",
+    "sources": [
+      {
+        "label": "GSMA: eSIM-Spezifikationen für Consumer und IoT (englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/esim-specification/"
+      },
+      {
+        "label": "GSMA SGP.32 V1.2, technische Spezifikation (PDF, englisch)",
+        "url": "https://gsma.com/solutions-and-impact/technologies/esim/wp-content/uploads/2024/06/SGP.32-v1.2.pdf"
+      },
+      {
+        "label": "GSMA SGP.41: Profilbeladung in der Fabrik (englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/gsma_resources/esim-ifpp-architecture-and-requirements/"
+      },
+      {
+        "label": "GSMA: eUICC Security Assurance (englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/gsma_resources/gsma-euicc-security-assurance-scheme-step-by-step-guide/"
+      },
+      {
+        "label": "GSMA: Security Accreditation Scheme (englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/security/gsma_resources/security-accreditation-scheme-for-uicc/"
+      },
+      {
+        "label": "Mondaq: eSIM-Beschluss der BTK, Türkei (englisch)",
+        "url": "https://www.mondaq.com/turkey/telecoms-mobile-cable-communications/795466/esim-decision"
+      },
+      {
+        "label": "Teletime: Anatel zu dauerhaftem Roaming (portugiesisch)",
+        "url": "https://teletime.com.br/01/09/2022/conselho-diretor-da-anatel-firma-entendimento-e-condena-algar-sobre-pratica-irregular-de-roaming-permanente/"
+      }
+    ]
+  },
+  "iot": {
+    "chapter": "IoT Connectivity",
+    "title": "IoT-Konnektivität: viele Geräte, kleine Datenmengen, lange Laufzeit",
+    "lede": "Zähler, Sensoren und Tracker senden selten und wenig, müssen dafür aber jahrelang mit einer Batterie auskommen und auch im Keller Netz haben. Mit NB-IoT, LTE-M und RedCap gibt es dafür passende Mobilfunktechnik. Wir helfen bei der Auswahl und planen die Migration weg von 2G.",
+    "teaser": "Connectivity für Massive IoT: NB-IoT, LTE-M und RedCap, Energiebudget, Abdeckung und 2G-Migration.",
+    "factsTitle": "Eckdaten",
+    "facts": [
+      {
+        "k": "Standards",
+        "v": "NB-IoT · LTE-M (3GPP ab Rel-13)"
+      },
+      {
+        "k": "5G-Status",
+        "v": "Teil von 5G mMTC (IMT-2020)"
+      },
+      {
+        "k": "Abdeckung NB-IoT",
+        "v": "bis 164 dB MCL"
+      },
+      {
+        "k": "Batterie",
+        "v": "bis 10 Jahre mit PSM/eDRX"
+      },
+      {
+        "k": "5G-Mittelklasse",
+        "v": "RedCap (Rel-17) · eRedCap (Rel-18)"
+      },
+      {
+        "k": "2G-Ende Deutschland",
+        "v": "2028, IoT-Ausnahmen bis 2030"
+      },
+      {
+        "k": "Satellit",
+        "v": "IoT-NTN ab 3GPP Rel-17"
+      }
+    ],
+    "sections": [
+      {
+        "title": "NB-IoT oder LTE-M?",
+        "paras": [
+          "Beide Techniken stammen aus 3GPP Release 13 und gelten nach den Anforderungen der ITU als Teil von 5G für massive Maschinenkommunikation. NB-IoT ist sehr schmalbandig, kommt mit wenig Energie aus und reicht tief in Gebäude: Mit den Abdeckungsstufen steigt die zulässige Dämpfung auf bis zu 164 dB, allerdings auf Kosten des Energieverbrauchs.",
+          "LTE-M nutzt 1,4 MHz Bandbreite, bietet mehr Datenrate und volle Mobilität. Das passt zu Trackern und mobilen Geräten. Sprache wäre technisch möglich, wird von den Netzbetreibern aber kaum angeboten."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Das Energiebudget",
+        "paras": [
+          "Mit dem Power Saving Mode und eDRX schläft ein Gerät die meiste Zeit und wacht nur für kurze Sendefenster auf. Die GSMA nennt so bis zu zehn Jahre Batterielaufzeit, abhängig vom Datenprofil.",
+          "Die Zeitgeber wünscht sich allerdings das Gerät, entscheiden tut das Netz. Und eine ungünstig eingestellte Verbindung im Backend kann den Spareffekt zunichtemachen. Deshalb rechnen wir das Energiebudget mit dem echten Netzverhalten durch, nicht nur mit dem Datenblatt."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "2G-Abschaltung: der Zeitplan steht",
+        "paras": [
+          "3G ist in Deutschland seit 2021 abgeschaltet. Für 2G haben die Netzbetreiber ihre Termine genannt: die Telekom voraussichtlich zum 30. Juni 2028, Vodafone im September 2028 mit Ausnahmen für kritisches IoT bis Ende 2030, Telefónica Ende 2028.",
+          "Wer heute noch Zähler, Alarmanlagen oder Telematik auf 2G betreibt, hat damit eine feste Frist. Bei Geräten mit langer Laufzeit sollte die Nachfolgetechnik jetzt geplant werden."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "RedCap und Satellit",
+        "paras": [
+          "Für Anwendungen zwischen IoT-Sensor und Smartphone, etwa Kameras, Wearables oder Industriesensoren mit mehr Daten, gibt es seit Release 17 RedCap: 5G mit bis zu 20 MHz Bandbreite und vereinfachter Hardware. Release 18 ergänzt eRedCap für noch günstigere Geräte.",
+          "Wo kein Mobilfunk hinreicht, können NB-IoT und LTE-M seit Release 17 auch über Satellit laufen. Mehr dazu auf unserer Seite zu Non-Terrestrial Networks."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Die Engineering-Fragen",
+        "paras": [
+          "Für eine belastbare Technikwahl klären wir mit Ihnen:"
+        ],
+        "bullets": [
+          "Welche Geräte laufen noch auf 2G, was muss bis 2028 migriert sein, und womit?",
+          "Wie sieht das Datenprofil aus: Nachrichtengröße, Häufigkeit, Befehle an das Gerät, maximale Verzögerung?",
+          "Wo wird verbaut, im Keller, im Zählerschrank, im Metallgehäuse, und welche Abdeckungsstufe ist dafür nötig?",
+          "Bewegt sich das Gerät, braucht es Roaming, und unterstützt das Modul die nötigen Bänder?",
+          "Welches Modul und welcher Chipsatz sind über die ganze Produktlaufzeit lieferbar, und kommt gleich eine eSIM nach SGP.32 dazu?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "Was wir beitragen",
+    "contribution": [
+      "Technologieauswahl NB-IoT, LTE-M, RedCap oder Satellit, begründet aus Ihrem Datenprofil",
+      "Energiebudget und Abdeckungsplanung, inklusive Messungen am Einbauort",
+      "Migrationsplan für 2G-Bestandsgeräte bis zur Abschaltung",
+      "Modul- und Anbieterauswahl, Feldtests vor dem Rollout"
+    ],
+    "asOf": "Stand: Oktober 2026. Die Abschalttermine stammen von den Netzbetreibern und können sich verschieben.",
+    "sourcesTitle": "Quellen",
+    "sources": [
+      {
+        "label": "Bundesnetzagentur: 2G-Abschaltung",
+        "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Breitband/2GAbschaltung/artikel.html"
+      },
+      {
+        "label": "GSMA: Mobile IoT in a 5G Future (2024, englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/wp-content/uploads/2024/10/Mobile-IoT-in-a-5G-Future-Final.pdf"
+      },
+      {
+        "label": "GSMA: Mobile IoT Deployment Guide (2026, englisch)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/wp-content/uploads/2026/05/Mobile-IoT-Deployment-Guide-digital-new.pdf"
+      },
+      {
+        "label": "3GPP/GSA: RedCap und eRedCap (2025, englisch)",
+        "url": "https://www.3gpp.org/news-events/partner-news/redcap-gsa-article01"
+      },
+      {
+        "label": "GSMA Foundry: Überblick Non-Terrestrial Networks (englisch)",
+        "url": "https://www.gsma.com/get-involved/gsma-foundry/gsma_resources/non-terrestrial-networks-ntn/"
+      }
+    ]
+  },
+  "ntn": {
+    "chapter": "NTN",
+    "title": "Non-Terrestrial Networks: Mobilfunk über Satellit",
+    "lede": "Seit 3GPP Release 17 gehören Satelliten zum Mobilfunkstandard. Geräte können dieselbe Technik über Mobilfunkmast und Satellit nutzen, für Regionen ohne Netz, für Schiffe, Leitungstrassen oder als Rückfallebene für kritische Anlagen. Wir prüfen, wo das trägt und wie Satellit und terrestrisches Netz zusammenspielen.",
+    "teaser": "Satelliten-5G nach 3GPP: Orbitwahl, Linkbudget, Hybridbetrieb mit dem terrestrischen Netz und Ausfallsicherheit.",
+    "factsTitle": "Eckdaten",
+    "facts": [
+      {
+        "k": "Erste Norm",
+        "v": "3GPP Rel-17 (2022): NR-NTN · IoT-NTN"
+      },
+      {
+        "k": "Weiterentwicklung",
+        "v": "Rel-18 · Rel-19 (regenerative Nutzlast)"
+      },
+      {
+        "k": "Laufzeit hin/zurück",
+        "v": "GEO ca. 540 ms · LEO 600 km ca. 26 ms"
+      },
+      {
+        "k": "Smartphone-Bänder",
+        "v": "n255 (L-Band) · n256 (S-Band)"
+      },
+      {
+        "k": "Ka-Band",
+        "v": "n510–n512, nur für Richtantennen"
+      },
+      {
+        "k": "EU-Satellitensystem",
+        "v": "IRIS², 348 Satelliten, Starts ab 2029"
+      },
+      {
+        "k": "EU-Spektrum",
+        "v": "2-GHz-MSS, Lizenzen laufen 2027 aus"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Was 3GPP standardisiert hat",
+        "paras": [
+          "Release 17 hat 2022 die ersten verbindlichen Regeln für NTN festgelegt, sowohl für 5G NR als auch für NB-IoT und LTE-M über Satellit. Das Endgerät kennt seine Position per GNSS und gleicht Laufzeit und Dopplerverschiebung selbst aus, anhand von Bahndaten, die das Netz in jeder Zelle aussendet.",
+          "Release 18 hat die Abdeckung im Uplink verbessert und den Wechsel zwischen Satellit und terrestrischem Netz. Release 19 ist seit Ende 2025 umsetzbar und bringt unter anderem Satelliten, die 5G-Funktionen selbst an Bord ausführen, sowie Store-and-Forward für IoT."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Orbit, Laufzeit, Linkbudget",
+        "paras": [
+          "Nach den Referenzwerten der 3GPP-Studie dauert ein Paket über einen geostationären Satelliten hin und zurück rund 540 ms, über einen niedrig fliegenden LEO-Satelliten in 600 km Höhe rund 26 ms. LEO-Satelliten bewegen sich dafür schnell über den Himmel, was ständige Wechsel und starken Doppler bedeutet.",
+          "Entscheidend für den Einsatz ist das Linkbudget: Ein Smartphone mit kleiner Antenne braucht freie Sicht zum Himmel und kommt mit schmalen Datenraten aus. Das Ka-Band ist für fest installierte Terminals mit Richtantenne gedacht."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Satellit direkt zum Gerät",
+        "paras": [
+          "Erste Dienste laufen: Notfallnachrichten per Satellit gibt es auf aktuellen iPhones in 21 Ländern, darunter Deutschland, und in Nordamerika ist ein NB-IoT-Satellitendienst nach Release 17 seit 2024 kommerziell verfügbar.",
+          "In Europa ordnet die EU gerade das 2-GHz-Band für mobile Satellitendienste neu, weil die heutigen Lizenzen 2027 auslaufen. Mit IRIS² baut die EU zudem ein eigenes Satellitensystem mit 348 Satelliten für Behörden und Notfalldienste, erste Starts sind für 2029 geplant."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Satellit als Rückfallebene",
+        "paras": [
+          "Für Betreiber kritischer Infrastruktur ist NTN vor allem eine zweite, unabhängige Verbindung: Fällt der Mobilfunk oder die Glasfaser aus, laufen Telemetrie und Alarme über Satellit weiter. Das setzt voraus, dass Umschaltung, Datenpriorisierung und Abrechnung vorher geplant sind."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Die Engineering-Fragen",
+        "paras": [
+          "Bevor ein Satellitenanbieter ausgewählt wird, klären wir mit Ihnen:"
+        ],
+        "bullets": [
+          "Welcher Orbit und welche Architektur passen zu Latenz, Verfügbarkeit und Budget?",
+          "Reicht das Linkbudget für das geplante Gerät, mit Antenne, Sendeleistung und Einbauort?",
+          "Wie werden Satellit und terrestrisches Netz verbunden: Roaming, Umschaltung, Priorisierung?",
+          "Welche Datenmengen fallen an, und was bedeutet das für die laufenden Kosten?",
+          "Welche Spektrum- und Lizenzlage gilt am Einsatzort?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "Was wir beitragen",
+    "contribution": [
+      "Machbarkeitsanalyse: wo Satellit trägt und wo nicht, mit Linkbudget je Gerät",
+      "Architektur für den Hybridbetrieb aus terrestrischem Netz und Satellit",
+      "Anbieter- und Endgeräteauswahl entlang der 3GPP-Releases",
+      "Ausfallsicherheitskonzepte für kritische Anlagen mit Satellit als zweitem Weg"
+    ],
+    "asOf": "Stand: Oktober 2026. NTN entwickelt sich schnell, wir aktualisieren diese Seite bei neuen Releases und Vergaben.",
+    "sourcesTitle": "Quellen",
+    "sources": [
+      {
+        "label": "3GPP: Non-Terrestrial Networks, Überblick (englisch)",
+        "url": "https://www.3gpp.org/technologies/ntn-overview"
+      },
+      {
+        "label": "3GPP: Release 19 (englisch)",
+        "url": "https://www.3gpp.org/specifications-technologies/releases/release-19"
+      },
+      {
+        "label": "EU-Kommission: Neue Genehmigung für mobile Satellitendienste (Mai 2026, englisch)",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-proposes-new-authorisation-mobile-satellite-services-eus-resilience-and-competitiveness"
+      },
+      {
+        "label": "EUSPA: IRIS² wird beschleunigt (August 2026, englisch)",
+        "url": "https://www.euspa.europa.eu/newsroom-events/news/commission-accelerates-iris2-deployment-enhanced-security-and-expanded"
+      },
+      {
+        "label": "Apple: Notruf-SOS über Satellit, Länderliste (englisch)",
+        "url": "https://support.apple.com/en-us/101573"
+      }
+    ]
+  },
+  "sixg": {
+    "chapter": "6G",
+    "title": "6G: was feststeht und was Sie heute schon vorbereiten können",
+    "lede": "6G kommt nach heutigem Plan um 2030. Die Eckpunkte stehen: Die ITU hat den Rahmen festgelegt, 3GPP arbeitet an den ersten Studien, die Kandidatenbänder werden 2027 beraten. Wir beraten dazu, welche Entscheidungen von heute auch in einem 6G-Netz noch tragen.",
+    "teaser": "6G-Readiness entlang von ITU IMT-2030 und 3GPP Rel-20/21: Zeitplan, Spektrum und zukunftsfähige Architektur.",
+    "factsTitle": "Eckdaten",
+    "facts": [
+      {
+        "k": "Rahmen",
+        "v": "ITU IMT-2030 (Empfehlung M.2160, 2023)"
+      },
+      {
+        "k": "Einreichung bei der ITU",
+        "v": "02/2027 bis 02/2029"
+      },
+      {
+        "k": "Erste Studien",
+        "v": "3GPP Rel-20"
+      },
+      {
+        "k": "Erste Norm",
+        "v": "3GPP Rel-21, voraussichtlich 2029"
+      },
+      {
+        "k": "Markteinführung",
+        "v": "erwartet um 2030"
+      },
+      {
+        "k": "Kandidatenbänder WRC-27",
+        "v": "4,4–4,8 · 7,125–8,4 · 14,8–15,35 GHz"
+      },
+      {
+        "k": "Neue Szenarien",
+        "v": "Sensing · KI · flächendeckende Konnektivität"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Der Zeitplan",
+        "paras": [
+          "Die ITU hat mit IMT-2030 im November 2023 den Rahmen für 6G festgelegt. Zwischen Februar 2027 und Februar 2029 können Kandidaten-Technologien eingereicht werden. Bei 3GPP laufen in Release 20 die ersten 6G-Studien, die eigentliche Norm entsteht in Release 21 und soll 2029 abgeschlossen sein.",
+          "Mit ersten kommerziellen Netzen wird um 2030 gerechnet. Für Investitionen, die heute getätigt werden, heißt das: Sie laufen ziemlich sicher noch, wenn 6G kommt."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Was 6G können soll",
+        "paras": [
+          "Die ITU beschreibt sechs Nutzungsszenarien. Neben den bekannten aus 5G kommen drei neue hinzu:"
+        ],
+        "bullets": [
+          "Integrated Sensing and Communication: Das Netz erkennt Objekte und Bewegungen, nicht nur Geräte",
+          "Künstliche Intelligenz und Kommunikation: KI im Netz und Netze für KI-Anwendungen",
+          "Flächendeckende Konnektivität, auch über Satelliten"
+        ],
+        "after": [
+          "Die ITU nennt dafür Zielbereiche wie Spitzenraten von 50 bis 200 Gbit/s und Positionierung auf ein bis zehn Zentimeter. Das sind Ziele aus dem Rahmendokument, keine zugesagten Werte."
+        ]
+      },
+      {
+        "title": "Neues Spektrum",
+        "paras": [
+          "Für die Weltfunkkonferenz 2027 werden drei Bereiche für Mobilfunk untersucht: 4,4 bis 4,8 GHz, 7,125 bis 8,4 GHz und 14,8 bis 15,35 GHz. Besonders der Bereich um 7 GHz gilt als Kandidat für 6G, weil er Kapazität und Reichweite verbindet."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Was sich heute vorbereiten lässt",
+        "paras": [
+          "Nach den ersten Grundsatzentscheidungen bei 3GPP soll 6G als eigenständiges System starten und Spektrum dynamisch mit 5G teilen können. Unsere Einschätzung: Wer heute auf 5G Standalone mit einem cloudbasierten Kernnetz setzt, baut auf die Architektur, an die 6G anschließen wird. Wie der Übergang im Kernnetz genau aussieht, entscheidet 3GPP noch."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Die Engineering-Fragen",
+        "paras": [
+          "Für eine zukunftsfähige Planung klären wir mit Ihnen:"
+        ],
+        "bullets": [
+          "Ist das heutige Kernnetz 5G-Standalone-fähig und cloudbasiert, oder läuft noch die ältere Architektur?",
+          "Welche Komponenten lassen sich per Software aufrüsten, und welche Hardware ist um 2030 ohnehin abgeschrieben?",
+          "Welches Spektrum ist heute im Einsatz, und was bedeutet das 7-GHz-Band für Standorte und Antennen?",
+          "Welche Anwendungen brauchen wirklich 6G-Funktionen, und welche sind schon mit 5G-Advanced lösbar?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "Was wir beitragen",
+    "contribution": [
+      "6G-Readiness-Check: Welche heutigen Entscheidungen tragen bis in die 2030er?",
+      "Architekturberatung für 5G Standalone und cloudbasierte Kernnetze",
+      "Einordnung von Studien und Normungsständen bei 3GPP und ITU für Ihre Anwendungsfälle",
+      "Begleitung von Forschungs- und Pilotprojekten"
+    ],
+    "asOf": "Stand: Oktober 2026. 6G wird gerade genormt, die Termine können sich verschieben.",
+    "sourcesTitle": "Quellen",
+    "sources": [
+      {
+        "label": "ITU-R: IMT-2030 (englisch)",
+        "url": "https://www.itu.int/en/ITU-R/study-groups/rsg5/rwp5d/imt-2030/Pages/default.aspx"
+      },
+      {
+        "label": "3GPP: Release 20 (englisch)",
+        "url": "https://www.3gpp.org/specifications-technologies/releases/release-20"
+      },
+      {
+        "label": "3GPP: Berichte der Arbeitsgruppen, RAN#113 (englisch)",
+        "url": "https://www.3gpp.org/news-events/3gpp-news/ran113-reports"
+      },
+      {
+        "label": "Ericsson: 6G-Normung, Meilensteine und erste Entscheidungen (Juni 2026, englisch)",
+        "url": "https://www.ericsson.com/en/blog/2026/6/6g-standardization-key-milestones-and-ran-decisions"
+      },
+      {
+        "label": "ITU: Resolution 256, Kandidatenbänder für WRC-27 (PDF, englisch)",
+        "url": "https://www.itu.int/dms_pub/itu-r/oth/0c/0a/R0C0A0000110084PDFE.pdf"
+      },
+      {
+        "label": "Smart Networks and Services Joint Undertaking der EU (englisch)",
+        "url": "https://smart-networks.europa.eu/"
+      }
+    ]
+  },
+  "platform": {
+    "chapter": "Connectivity Platform",
+    "title": "Connectivity-Plattformen: SIMs, Netze und Daten im Griff",
+    "lede": "Wer tausende vernetzte Geräte in mehreren Ländern betreibt, braucht einen Überblick: welche SIM aktiv ist, was sie verbraucht, wo eine Verbindung abreißt. Dafür gibt es Connectivity-Management-Plattformen und offene Netz-Schnittstellen. Wir planen die Architektur so, dass Sie nicht von einem einzelnen Anbieter abhängen.",
+    "teaser": "Connectivity-Management, offene Netz-APIs (CAMARA, Open Gateway) und Telemetrie mit MQTT und LwM2M.",
+    "factsTitle": "Eckdaten",
+    "facts": [
+      {
+        "k": "Netz-APIs",
+        "v": "GSMA Open Gateway (seit 2023)"
+      },
+      {
+        "k": "API-Spezifikation",
+        "v": "CAMARA (Linux Foundation, Apache 2.0)"
+      },
+      {
+        "k": "Kern-APIs",
+        "v": "Quality on Demand · Device Location · SIM Swap"
+      },
+      {
+        "k": "Telemetrie",
+        "v": "MQTT 5.0 (OASIS-Standard, 2019)"
+      },
+      {
+        "k": "Gerätemanagement",
+        "v": "LwM2M 1.2.2 (OMA SpecWorks, 2024)"
+      },
+      {
+        "k": "Verbreitung Open Gateway",
+        "v": "über 85 Betreibergruppen (2026)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Was eine Connectivity-Plattform leistet",
+        "paras": [
+          "Eine Connectivity-Management-Plattform verwaltet die SIM-Karten einer Geräteflotte über ihren ganzen Lebenszyklus: Aktivierung ohne Handarbeit, Tarife, Nutzungsdaten, Diagnose, Alarme bei Auffälligkeiten und zunehmend auch die Fernverwaltung von eSIM-Profilen. Netzbetreiber bieten solche Plattformen für ihre Geschäftskunden an.",
+          "Der Haken: Jede Plattform gehört zu einem Anbieter. Wer mehrere Netze oder Länder nutzt, landet schnell bei mehreren Oberflächen und Datenformaten."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Offene Netz-Schnittstellen",
+        "paras": [
+          "Mit Open Gateway hat die GSMA 2023 eine gemeinsame Initiative der Netzbetreiber gestartet, Netzfunktionen über einheitliche Schnittstellen anzubieten. Anfang 2026 waren über 85 Betreibergruppen beteiligt. Die Schnittstellen selbst werden im Open-Source-Projekt CAMARA der Linux Foundation definiert."
+        ],
+        "bullets": [
+          "Quality on Demand: bessere Dienstgüte für eine Verbindung auf Anforderung",
+          "Device Location: Standortbestätigung über das Netz",
+          "SIM Swap: Hinweis, ob eine SIM kürzlich getauscht wurde, nützlich gegen Betrug"
+        ],
+        "after": [
+          "Ein offener Standard heißt aber nicht, dass jeder Betreiber jede Schnittstelle anbietet. Das muss je Markt geprüft werden."
+        ]
+      },
+      {
+        "title": "Telemetrie und Gerätemanagement",
+        "paras": [
+          "Für den Datentransport hat sich MQTT durchgesetzt, seit 2019 in Version 5.0 als OASIS-Standard. Für die Verwaltung der Geräte selbst, also Konfiguration, Firmware und Zustandsdaten, gibt es LwM2M von OMA SpecWorks, aktuell in Version 1.2.2. Beide sind offen und herstellerunabhängig."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Unabhängig bleiben",
+        "paras": [
+          "Wer eine Plattform mit offenen Netz-Schnittstellen, offenen Protokollen und eSIM nach SGP.32 kombiniert, kann Netzbetreiber und Plattform später wechseln, ohne die Geräte im Feld anfassen zu müssen. Das ist die eigentliche Architekturentscheidung, nicht die Wahl der Oberfläche."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Die Engineering-Fragen",
+        "paras": [
+          "Für die Plattformarchitektur klären wir mit Ihnen:"
+        ],
+        "bullets": [
+          "Wie viele Netze, Anbieter und Länder müssen abgedeckt werden, und reicht eine einzelne Anbieterplattform?",
+          "Wo liegen Nutzungs-, Standort- und Gerätedaten, und welche Rechtsgrundlage nach DSGVO gilt dafür?",
+          "Welche Schnittstellen braucht die Anbindung an ERP, Abrechnung und IoT-Plattform?",
+          "Welche CAMARA-Schnittstellen bieten die gewählten Betreiber tatsächlich an?",
+          "Wie bleiben Daten exportierbar und ein Anbieterwechsel möglich?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "Was wir beitragen",
+    "contribution": [
+      "Plattformarchitektur über mehrere Netze und Anbieter hinweg",
+      "Auswahl und Bewertung von Connectivity-Plattformen und Netz-Schnittstellen",
+      "Anbindung an ERP, Abrechnung und IoT-Plattformen über offene Protokolle",
+      "Datenschutz- und Ausstiegskonzept, damit Ihre Daten Ihre bleiben"
+    ],
+    "asOf": "Stand: Oktober 2026.",
+    "sourcesTitle": "Quellen",
+    "sources": [
+      {
+        "label": "CAMARA Project der Linux Foundation (englisch)",
+        "url": "https://camaraproject.org/"
+      },
+      {
+        "label": "MWC/GSMA: Stand von Open Gateway (März 2026, englisch)",
+        "url": "https://www.mwcbarcelona.com/articles/rakuten-mobile-signs-gsma-open-gateway-mou"
+      },
+      {
+        "label": "OASIS: MQTT Version 5.0 (englisch)",
+        "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"
+      },
+      {
+        "label": "OMA SpecWorks: LwM2M-Spezifikationen (englisch)",
+        "url": "https://www.openmobilealliance.org/release/LightweightM2M/"
+      },
+      {
+        "label": "Ericsson: Übergabe von IoT Accelerator an Aeris (2023, englisch)",
+        "url": "https://www.ericsson.com/en/news/2023/3/ericsson-announces-closing-of-the-transfer-of-iot-accelerator-and-connected-vehicle-cloud-businesses-to-aeris"
+      }
+    ]
+  },
   "usPrivacy": {
     "lead": "Nach kalifornischem Recht (CCPA/CPRA) haben Besucherinnen und Besucher aus den USA das Recht, dem Verkauf und der Weitergabe ihrer personenbezogenen Daten zu widersprechen. Auf dieser Seite können Sie dieses Recht ausüben.",
     "note": "Stand heute verkauft SAJ Connect keine personenbezogenen Daten und setzt keine Marketing- oder Analyse-Cookies von Drittanbietern ein. Ihre Einstellung wird in Ihrem Browser gespeichert und greift automatisch, falls solche Dienste künftig eingesetzt werden. Sendet Ihr Browser das Global-Privacy-Control-Signal (GPC), respektieren wir es ohne weiteres Zutun.",

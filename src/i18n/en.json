@@ -617,6 +617,622 @@
       }
     ]
   },
+  "esim": {
+    "chapter": "eSIM & iSIM",
+    "title": "eSIM and iSIM: SIM profiles you can change remotely",
+    "lede": "An eSIM is no longer a card but a chip onto which mobile network profiles are loaded over the air. For IoT devices that run for ten or fifteen years, that decides whether you can still switch operators later. We plan the eSIM architecture from manufacturing to profile changes in the field.",
+    "teaser": "eSIM and iSIM architecture to GSMA SGP.32: profile management, manufacturing, lifecycle and security.",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "k": "IoT specification",
+        "v": "GSMA SGP.31/32 (V1.3, May 2026)"
+      },
+      {
+        "k": "Consumer specification",
+        "v": "GSMA SGP.21/22"
+      },
+      {
+        "k": "New components",
+        "v": "eIM (server) · IPA (device or eUICC)"
+      },
+      {
+        "k": "In-factory profiles",
+        "v": "GSMA SGP.41 (2025)"
+      },
+      {
+        "k": "Product security",
+        "v": "GSMA eSA (Common Criteria)"
+      },
+      {
+        "k": "Site audit",
+        "v": "GSMA SAS-UP · SAS-SM"
+      },
+      {
+        "k": "Form factors",
+        "v": "MFF2 (soldered) · iSIM (in the SoC)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What eSIM and iSIM actually are",
+        "paras": [
+          "The eUICC is the secure chip that can store several operator profiles: download, enable, disable, delete. eSIM usually refers to exactly this remote provisioning (Remote SIM Provisioning), sometimes to the soldered MFF2 form factor.",
+          "With iSIM, the eUICC is no longer a separate component on the board but sits in a protected security area of the system-on-chip. That saves space and cost. The GSMA requires a separately certified security area for it."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "SGP.32: the eSIM for IoT",
+        "paras": [
+          "Smartphones have used SGP.22 for years. It fitted IoT devices poorly: there is often no screen for anyone to confirm a profile change, and little bandwidth. The older M2M variant, SGP.02, was complex to integrate.",
+          "SGP.31/32 closes this gap with two new components: the eIM, a server that controls the profiles of an entire device fleet, and the IPA, which sits in the device or directly in the eUICC. The current version V1.3 was published in May 2026, and the first manufacturers have reported certified SGP.32 products since 2025."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Profiles from the factory and for fifteen years",
+        "paras": [
+          "Since 2025, SGP.41 describes how profiles can be loaded onto the eUICC in the device factory, for soldered eUICCs as well as for iSIM. The corresponding technical specification is still pending.",
+          "In the field, the lifecycle is what counts: a meter or machine controller often runs longer than any mobile contract. If profile changes are not planned from day one, you stay tied to the first provider."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Where regulation has a say",
+        "paras": [
+          "Not every country allows devices to run permanently on a foreign profile in roaming:"
+        ],
+        "bullets": [
+          "Turkey: the regulator BTK has limited roaming of imported eSIM devices to 120 days since 2019.",
+          "Brazil: Anatel treats roaming beyond 90 days as permanent and objected to such an M2M offer in 2022."
+        ],
+        "after": [
+          "For these markets the device needs a local profile, and the architecture has to be able to switch to it."
+        ]
+      },
+      {
+        "title": "The engineering questions",
+        "paras": [
+          "Before the first component is ordered, we clarify with you:"
+        ],
+        "bullets": [
+          "Are hardware and software designed for SGP.32, or do legacy devices still depend on SGP.02, and what is the migration path?",
+          "Who operates the eIM, and how does a later change of eIM and network operator remain technically and contractually possible?",
+          "Which profile goes onto the device in the factory, and how is manufacturing connected?",
+          "In which countries does the device run permanently, and where is a local profile mandatory?",
+          "Soldered eUICC or iSIM: space, energy, availability of module and chipset, certification status"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "What we contribute",
+    "contribution": [
+      "eSIM architecture to SGP.32: eIM, IPA, profile strategy and provider selection",
+      "Integration into manufacturing and logistics, from the first profile to commissioning",
+      "Lifecycle concept for profile changes in the field, including the energy budget on NB-IoT and LTE-M",
+      "Testing of profile download, profile change and fallback profile in the lab and in the field"
+    ],
+    "asOf": "As of October 2026. The GSMA specifications are updated continuously, and we update this page as new versions are published.",
+    "sourcesTitle": "Sources",
+    "sources": [
+      {
+        "label": "GSMA: eSIM specifications for consumer and IoT",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/esim-specification/"
+      },
+      {
+        "label": "GSMA SGP.32 V1.2, technical specification (PDF)",
+        "url": "https://gsma.com/solutions-and-impact/technologies/esim/wp-content/uploads/2024/06/SGP.32-v1.2.pdf"
+      },
+      {
+        "label": "GSMA SGP.41: in-factory profile provisioning",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/gsma_resources/esim-ifpp-architecture-and-requirements/"
+      },
+      {
+        "label": "GSMA: eUICC Security Assurance",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/esim/gsma_resources/gsma-euicc-security-assurance-scheme-step-by-step-guide/"
+      },
+      {
+        "label": "GSMA: Security Accreditation Scheme",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/security/gsma_resources/security-accreditation-scheme-for-uicc/"
+      },
+      {
+        "label": "Mondaq: BTK eSIM decision, Turkey",
+        "url": "https://www.mondaq.com/turkey/telecoms-mobile-cable-communications/795466/esim-decision"
+      },
+      {
+        "label": "Teletime: Anatel on permanent roaming (Portuguese)",
+        "url": "https://teletime.com.br/01/09/2022/conselho-diretor-da-anatel-firma-entendimento-e-condena-algar-sobre-pratica-irregular-de-roaming-permanente/"
+      }
+    ]
+  },
+  "iot": {
+    "chapter": "IoT Connectivity",
+    "title": "IoT connectivity: many devices, little data, long lifetimes",
+    "lede": "Meters, sensors and trackers send rarely and little, but they have to run on one battery for years and still have coverage in the basement. NB-IoT, LTE-M and RedCap provide the right mobile technology for this. We help you choose and plan the migration away from 2G.",
+    "teaser": "Connectivity for massive IoT: NB-IoT, LTE-M and RedCap, energy budget, coverage and 2G migration.",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "k": "Standards",
+        "v": "NB-IoT · LTE-M (3GPP from Rel-13)"
+      },
+      {
+        "k": "5G status",
+        "v": "Part of 5G mMTC (IMT-2020)"
+      },
+      {
+        "k": "NB-IoT coverage",
+        "v": "up to 164 dB MCL"
+      },
+      {
+        "k": "Battery",
+        "v": "up to 10 years with PSM/eDRX"
+      },
+      {
+        "k": "5G mid-tier",
+        "v": "RedCap (Rel-17) · eRedCap (Rel-18)"
+      },
+      {
+        "k": "2G sunset Germany",
+        "v": "2028, IoT exceptions to 2030"
+      },
+      {
+        "k": "Satellite",
+        "v": "IoT-NTN from 3GPP Rel-17"
+      }
+    ],
+    "sections": [
+      {
+        "title": "NB-IoT or LTE-M?",
+        "paras": [
+          "Both technologies come from 3GPP Release 13 and, under the ITU requirements, count as part of 5G for massive machine-type communication. NB-IoT is very narrowband, needs little energy and reaches deep into buildings: with coverage enhancement levels the permissible coupling loss rises to up to 164 dB, at the cost of energy consumption.",
+          "LTE-M uses 1.4 MHz of bandwidth, offers higher data rates and full mobility. That suits trackers and mobile devices. Voice would be technically possible but is rarely offered by operators."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "The energy budget",
+        "paras": [
+          "With Power Saving Mode and eDRX, a device sleeps most of the time and wakes only for short transmission windows. The GSMA cites up to ten years of battery life this way, depending on the data profile.",
+          "The device only requests the timers, though; the network decides. And a poorly configured connection in the backend can wipe out the savings. That is why we calculate the energy budget against real network behaviour, not just the datasheet."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "2G sunset: the timeline is set",
+        "paras": [
+          "3G was switched off in Germany in 2021. For 2G, operators have announced their dates: Telekom expected on 30 June 2028, Vodafone in September 2028 with exceptions for critical IoT until the end of 2030, Telefónica at the end of 2028.",
+          "Anyone still running meters, alarm systems or telematics on 2G now has a fixed deadline. For long-lived devices, the successor technology should be planned now."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "RedCap and satellite",
+        "paras": [
+          "For applications between IoT sensor and smartphone, such as cameras, wearables or industrial sensors with more data, Release 17 introduced RedCap: 5G with up to 20 MHz of bandwidth and simplified hardware. Release 18 adds eRedCap for even lower-cost devices.",
+          "Where mobile networks do not reach, NB-IoT and LTE-M can also run over satellite since Release 17. More on our page on non-terrestrial networks."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "The engineering questions",
+        "paras": [
+          "For a sound technology choice, we clarify with you:"
+        ],
+        "bullets": [
+          "Which devices still run on 2G, what has to be migrated by 2028, and to what?",
+          "What does the data profile look like: message size, frequency, commands to the device, maximum latency?",
+          "Where is the device installed, in a basement, a meter cabinet, a metal housing, and which coverage level does that need?",
+          "Does the device move, does it need roaming, and does the module support the required bands?",
+          "Which module and chipset will be available for the whole product lifetime, and should an SGP.32 eSIM be designed in right away?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "What we contribute",
+    "contribution": [
+      "Technology selection between NB-IoT, LTE-M, RedCap or satellite, based on your data profile",
+      "Energy budget and coverage planning, including measurements at the installation site",
+      "Migration plan for legacy 2G devices ahead of the sunset",
+      "Module and provider selection, field tests before rollout"
+    ],
+    "asOf": "As of October 2026. The sunset dates come from the network operators and may change.",
+    "sourcesTitle": "Sources",
+    "sources": [
+      {
+        "label": "Bundesnetzagentur: 2G sunset (German)",
+        "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Breitband/2GAbschaltung/artikel.html"
+      },
+      {
+        "label": "GSMA: Mobile IoT in a 5G Future (2024)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/wp-content/uploads/2024/10/Mobile-IoT-in-a-5G-Future-Final.pdf"
+      },
+      {
+        "label": "GSMA: Mobile IoT Deployment Guide (2026)",
+        "url": "https://www.gsma.com/solutions-and-impact/technologies/internet-of-things/wp-content/uploads/2026/05/Mobile-IoT-Deployment-Guide-digital-new.pdf"
+      },
+      {
+        "label": "3GPP/GSA: RedCap and eRedCap (2025)",
+        "url": "https://www.3gpp.org/news-events/partner-news/redcap-gsa-article01"
+      },
+      {
+        "label": "GSMA Foundry: overview of non-terrestrial networks",
+        "url": "https://www.gsma.com/get-involved/gsma-foundry/gsma_resources/non-terrestrial-networks-ntn/"
+      }
+    ]
+  },
+  "ntn": {
+    "chapter": "NTN",
+    "title": "Non-terrestrial networks: mobile connectivity via satellite",
+    "lede": "Since 3GPP Release 17, satellites are part of the mobile standard. Devices can use the same technology via a cell tower and via satellite, for regions without coverage, for ships, pipelines or as a fallback for critical facilities. We assess where that works and how satellite and terrestrial networks play together.",
+    "teaser": "Satellite 5G to 3GPP: orbit choice, link budget, hybrid operation with the terrestrial network and resilience.",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "k": "First standard",
+        "v": "3GPP Rel-17 (2022): NR-NTN · IoT-NTN"
+      },
+      {
+        "k": "Evolution",
+        "v": "Rel-18 · Rel-19 (regenerative payload)"
+      },
+      {
+        "k": "Round-trip delay",
+        "v": "GEO approx. 540 ms · LEO 600 km approx. 26 ms"
+      },
+      {
+        "k": "Smartphone bands",
+        "v": "n255 (L-band) · n256 (S-band)"
+      },
+      {
+        "k": "Ka-band",
+        "v": "n510–n512, directional antennas only"
+      },
+      {
+        "k": "EU satellite system",
+        "v": "IRIS², 348 satellites, launches from 2029"
+      },
+      {
+        "k": "EU spectrum",
+        "v": "2 GHz MSS, licences expire 2027"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What 3GPP has standardised",
+        "paras": [
+          "Release 17 set the first binding rules for NTN in 2022, both for 5G NR and for NB-IoT and LTE-M via satellite. The device knows its position via GNSS and compensates delay and Doppler shift itself, using orbit data the network broadcasts in every cell.",
+          "Release 18 improved uplink coverage and mobility between satellite and terrestrial networks. Release 19 has been ready for implementation since the end of 2025 and adds, among other things, satellites that run 5G functions on board and store-and-forward for IoT."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Orbit, delay, link budget",
+        "paras": [
+          "According to the reference values of the 3GPP study, a packet takes around 540 ms round trip via a geostationary satellite and around 26 ms via a low-earth-orbit satellite at 600 km. LEO satellites, however, move quickly across the sky, which means constant handovers and strong Doppler.",
+          "What decides the use case is the link budget: a smartphone with a small antenna needs a clear view of the sky and gets by with low data rates. The Ka-band is intended for fixed terminals with directional antennas."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Satellite direct to device",
+        "paras": [
+          "The first services are live: emergency messaging via satellite is available on current iPhones in 21 countries, including Germany, and a Release 17 NB-IoT satellite service has been commercially available in North America since 2024.",
+          "In Europe, the EU is currently reorganising the 2 GHz band for mobile satellite services because today's licences expire in 2027. With IRIS², the EU is also building its own system of 348 satellites for public authorities and emergency services, with first launches planned for 2029."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Satellite as a fallback",
+        "paras": [
+          "For operators of critical infrastructure, NTN is above all a second, independent connection: if the mobile network or fibre fails, telemetry and alarms continue via satellite. That requires failover, data prioritisation and billing to be planned in advance."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "The engineering questions",
+        "paras": [
+          "Before a satellite provider is selected, we clarify with you:"
+        ],
+        "bullets": [
+          "Which orbit and architecture fit latency, availability and budget?",
+          "Is the link budget sufficient for the planned device, with antenna, transmit power and installation site?",
+          "How are satellite and terrestrial network connected: roaming, failover, prioritisation?",
+          "What data volumes are expected, and what does that mean for running costs?",
+          "What spectrum and licensing rules apply at the site?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "What we contribute",
+    "contribution": [
+      "Feasibility analysis: where satellite works and where it does not, with a link budget per device",
+      "Architecture for hybrid operation of terrestrial network and satellite",
+      "Provider and device selection along the 3GPP releases",
+      "Resilience concepts for critical facilities with satellite as a second path"
+    ],
+    "asOf": "As of October 2026. NTN is evolving quickly, and we update this page with new releases and spectrum awards.",
+    "sourcesTitle": "Sources",
+    "sources": [
+      {
+        "label": "3GPP: Non-Terrestrial Networks overview",
+        "url": "https://www.3gpp.org/technologies/ntn-overview"
+      },
+      {
+        "label": "3GPP: Release 19",
+        "url": "https://www.3gpp.org/specifications-technologies/releases/release-19"
+      },
+      {
+        "label": "European Commission: new authorisation for mobile satellite services (May 2026)",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-proposes-new-authorisation-mobile-satellite-services-eus-resilience-and-competitiveness"
+      },
+      {
+        "label": "EUSPA: IRIS² deployment accelerated (August 2026)",
+        "url": "https://www.euspa.europa.eu/newsroom-events/news/commission-accelerates-iris2-deployment-enhanced-security-and-expanded"
+      },
+      {
+        "label": "Apple: Emergency SOS via satellite, country list",
+        "url": "https://support.apple.com/en-us/101573"
+      }
+    ]
+  },
+  "sixg": {
+    "chapter": "6G",
+    "title": "6G: what is settled and what you can prepare today",
+    "lede": "According to today's plan, 6G arrives around 2030. The cornerstones are in place: the ITU has set the framework, 3GPP is working on the first studies, and candidate bands will be discussed in 2027. We advise on which decisions made today will still hold in a 6G network.",
+    "teaser": "6G readiness along ITU IMT-2030 and 3GPP Rel-20/21: timeline, spectrum and future-proof architecture.",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "k": "Framework",
+        "v": "ITU IMT-2030 (Recommendation M.2160, 2023)"
+      },
+      {
+        "k": "Submission to ITU",
+        "v": "02/2027 to 02/2029"
+      },
+      {
+        "k": "First studies",
+        "v": "3GPP Rel-20"
+      },
+      {
+        "k": "First standard",
+        "v": "3GPP Rel-21, expected 2029"
+      },
+      {
+        "k": "Market launch",
+        "v": "expected around 2030"
+      },
+      {
+        "k": "WRC-27 candidate bands",
+        "v": "4.4–4.8 · 7.125–8.4 · 14.8–15.35 GHz"
+      },
+      {
+        "k": "New scenarios",
+        "v": "Sensing · AI · ubiquitous connectivity"
+      }
+    ],
+    "sections": [
+      {
+        "title": "The timeline",
+        "paras": [
+          "With IMT-2030, the ITU set the framework for 6G in November 2023. Candidate technologies can be submitted between February 2027 and February 2029. At 3GPP, the first 6G studies are running in Release 20; the actual standard is created in Release 21 and is due to be completed in 2029.",
+          "First commercial networks are expected around 2030. For investments made today, that means they will almost certainly still be running when 6G arrives."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "What 6G is meant to do",
+        "paras": [
+          "The ITU describes six usage scenarios. Besides the familiar ones from 5G, three are new:"
+        ],
+        "bullets": [
+          "Integrated sensing and communication: the network detects objects and movement, not just devices",
+          "Artificial intelligence and communication: AI in the network and networks for AI applications",
+          "Ubiquitous connectivity, including via satellite"
+        ],
+        "after": [
+          "The ITU names target ranges such as peak rates of 50 to 200 Gbit/s and positioning to within one to ten centimetres. These are goals from the framework document, not promised values."
+        ]
+      },
+      {
+        "title": "New spectrum",
+        "paras": [
+          "For the World Radiocommunication Conference 2027, three ranges are being studied for mobile: 4.4 to 4.8 GHz, 7.125 to 8.4 GHz and 14.8 to 15.35 GHz. The range around 7 GHz in particular is seen as a 6G candidate because it combines capacity and reach."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "What you can prepare today",
+        "paras": [
+          "Following the first fundamental decisions at 3GPP, 6G is to start as a standalone system and share spectrum dynamically with 5G. Our assessment: anyone deploying 5G standalone with a cloud-native core today is building on the architecture 6G will connect to. Exactly how the core transition will work is still being decided at 3GPP."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "The engineering questions",
+        "paras": [
+          "For future-proof planning, we clarify with you:"
+        ],
+        "bullets": [
+          "Is today's core network 5G standalone capable and cloud-native, or is the older architecture still in use?",
+          "Which components can be upgraded by software, and which hardware will be written off by 2030 anyway?",
+          "Which spectrum is in use today, and what does the 7 GHz band mean for sites and antennas?",
+          "Which applications really need 6G capabilities, and which can already be solved with 5G-Advanced?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "What we contribute",
+    "contribution": [
+      "6G readiness check: which of today's decisions will hold into the 2030s?",
+      "Architecture advice for 5G standalone and cloud-native core networks",
+      "Assessment of 3GPP and ITU studies and standardisation status for your use cases",
+      "Support for research and pilot projects"
+    ],
+    "asOf": "As of October 2026. 6G is being standardised right now, and dates may change.",
+    "sourcesTitle": "Sources",
+    "sources": [
+      {
+        "label": "ITU-R: IMT-2030",
+        "url": "https://www.itu.int/en/ITU-R/study-groups/rsg5/rwp5d/imt-2030/Pages/default.aspx"
+      },
+      {
+        "label": "3GPP: Release 20",
+        "url": "https://www.3gpp.org/specifications-technologies/releases/release-20"
+      },
+      {
+        "label": "3GPP: working group reports, RAN#113",
+        "url": "https://www.3gpp.org/news-events/3gpp-news/ran113-reports"
+      },
+      {
+        "label": "Ericsson: 6G standardisation, milestones and first RAN decisions (June 2026)",
+        "url": "https://www.ericsson.com/en/blog/2026/6/6g-standardization-key-milestones-and-ran-decisions"
+      },
+      {
+        "label": "ITU: Resolution 256, candidate bands for WRC-27 (PDF)",
+        "url": "https://www.itu.int/dms_pub/itu-r/oth/0c/0a/R0C0A0000110084PDFE.pdf"
+      },
+      {
+        "label": "EU Smart Networks and Services Joint Undertaking",
+        "url": "https://smart-networks.europa.eu/"
+      }
+    ]
+  },
+  "platform": {
+    "chapter": "Connectivity Platform",
+    "title": "Connectivity platforms: SIMs, networks and data under control",
+    "lede": "Anyone operating thousands of connected devices in several countries needs an overview: which SIM is active, what it consumes, where a connection drops. Connectivity management platforms and open network interfaces exist for exactly this. We plan the architecture so that you do not depend on a single provider.",
+    "teaser": "Connectivity management, open network APIs (CAMARA, Open Gateway) and telemetry with MQTT and LwM2M.",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "k": "Network APIs",
+        "v": "GSMA Open Gateway (since 2023)"
+      },
+      {
+        "k": "API specification",
+        "v": "CAMARA (Linux Foundation, Apache 2.0)"
+      },
+      {
+        "k": "Core APIs",
+        "v": "Quality on Demand · Device Location · SIM Swap"
+      },
+      {
+        "k": "Telemetry",
+        "v": "MQTT 5.0 (OASIS standard, 2019)"
+      },
+      {
+        "k": "Device management",
+        "v": "LwM2M 1.2.2 (OMA SpecWorks, 2024)"
+      },
+      {
+        "k": "Open Gateway reach",
+        "v": "more than 85 operator groups (2026)"
+      }
+    ],
+    "sections": [
+      {
+        "title": "What a connectivity platform does",
+        "paras": [
+          "A connectivity management platform manages the SIM cards of a device fleet across their whole lifecycle: zero-touch activation, rate plans, usage data, diagnostics, alerts on anomalies and increasingly remote management of eSIM profiles. Network operators offer such platforms to their business customers.",
+          "The catch: every platform belongs to one provider. Anyone using several networks or countries quickly ends up with several interfaces and data formats."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Open network interfaces",
+        "paras": [
+          "With Open Gateway, the GSMA launched a joint operator initiative in 2023 to offer network functions through uniform interfaces. By early 2026, more than 85 operator groups were involved. The interfaces themselves are defined in the Linux Foundation's open-source project CAMARA."
+        ],
+        "bullets": [
+          "Quality on Demand: better quality of service for a connection on request",
+          "Device Location: location verification via the network",
+          "SIM Swap: an indication of whether a SIM was recently swapped, useful against fraud"
+        ],
+        "after": [
+          "An open standard does not mean every operator offers every interface, though. That has to be checked market by market."
+        ]
+      },
+      {
+        "title": "Telemetry and device management",
+        "paras": [
+          "For data transport, MQTT has become the norm, an OASIS standard in version 5.0 since 2019. For managing the devices themselves, meaning configuration, firmware and status data, there is LwM2M from OMA SpecWorks, currently in version 1.2.2. Both are open and vendor-independent."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "Staying independent",
+        "paras": [
+          "Combining a platform with open network interfaces, open protocols and SGP.32 eSIM lets you switch network operator and platform later without touching the devices in the field. That is the real architecture decision, not the choice of user interface."
+        ],
+        "bullets": [],
+        "after": []
+      },
+      {
+        "title": "The engineering questions",
+        "paras": [
+          "For the platform architecture, we clarify with you:"
+        ],
+        "bullets": [
+          "How many networks, providers and countries have to be covered, and is a single provider platform enough?",
+          "Where do usage, location and device data reside, and what is the legal basis under GDPR?",
+          "Which interfaces are needed to connect ERP, billing and IoT platform?",
+          "Which CAMARA interfaces do the chosen operators actually offer?",
+          "How do data stay exportable and a change of provider possible?"
+        ],
+        "after": []
+      }
+    ],
+    "contributionTitle": "What we contribute",
+    "contribution": [
+      "Platform architecture across several networks and providers",
+      "Selection and assessment of connectivity platforms and network interfaces",
+      "Integration with ERP, billing and IoT platforms via open protocols",
+      "Data protection and exit concept, so your data stay yours"
+    ],
+    "asOf": "As of October 2026.",
+    "sourcesTitle": "Sources",
+    "sources": [
+      {
+        "label": "CAMARA Project of the Linux Foundation",
+        "url": "https://camaraproject.org/"
+      },
+      {
+        "label": "MWC/GSMA: Open Gateway status (March 2026)",
+        "url": "https://www.mwcbarcelona.com/articles/rakuten-mobile-signs-gsma-open-gateway-mou"
+      },
+      {
+        "label": "OASIS: MQTT Version 5.0",
+        "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"
+      },
+      {
+        "label": "OMA SpecWorks: LwM2M specifications",
+        "url": "https://www.openmobilealliance.org/release/LightweightM2M/"
+      },
+      {
+        "label": "Ericsson: transfer of IoT Accelerator to Aeris (2023)",
+        "url": "https://www.ericsson.com/en/news/2023/3/ericsson-announces-closing-of-the-transfer-of-iot-accelerator-and-connected-vehicle-cloud-businesses-to-aeris"
+      }
+    ]
+  },
   "usPrivacy": {
     "lead": "Under California law (CCPA/CPRA), visitors from the United States have the right to opt out of the sale and sharing of their personal information. You can exercise that right on this page.",
     "note": "As of today, SAJ Connect does not sell personal information and does not use third-party marketing or analytics cookies. Your choice is stored in your browser and will apply automatically should such services be introduced in the future. If your browser sends the Global Privacy Control (GPC) signal, we honor it without any further action on your part.",
