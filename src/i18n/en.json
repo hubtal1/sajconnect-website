@@ -13,6 +13,11 @@
     "vehicle": "Connected Car",
     "frmcs": "FRMCS",
     "kritis": "KRITIS & NIS2",
+    "esim": "eSIM & iSIM",
+    "iot": "IoT Connectivity",
+    "ntn": "NTN (satellite)",
+    "sixg": "6G",
+    "platform": "Connectivity Platform",
     "careers": "Careers",
     "blog": "Blog",
     "contact": "Contact"
