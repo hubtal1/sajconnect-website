@@ -551,19 +551,19 @@
     "fieldTitle": "What we keep seeing in the field",
     "fieldNotes": [
       {
-        "k": "Private 5G · Factory",
-        "title": "Metal changes everything.",
-        "text": "High-bay racks, cranes and metal facades often shadow 3.7 GHz more than interior walls do. That is why we plan with the layout in operation, not the empty building."
+        "k": "Planning",
+        "title": "Measure first, then plan.",
+        "text": "Datasheets and simulations are a start. How radio really behaves in a building or on a site only shows up in on-site measurements. That is why we measure at the beginning, not at the end."
       },
       {
-        "k": "FRMCS · Track",
-        "title": "The neighbours are on air too.",
-        "text": "Public mobile networks just above 925 MHz can interfere with rail radio receivers. That belongs before radio planning, not in troubleshooting afterwards."
+        "k": "Project",
+        "title": "The technology is rarely the problem.",
+        "text": "More often things stall at the handovers: between IT and operations, between several suppliers, between requirements and tender. We sort out these points early, before they cost time and money."
       },
       {
-        "k": "KRITIS · Operations",
-        "title": "Redundancy is a plan, not a part.",
-        "text": "Two cells on the same mast with the same power supply are not real resilience. We look at power, fibre and the core network, not just the radio field."
+        "k": "Operations",
+        "title": "Someone has to be able to run the network.",
+        "text": "The best design does little good if nobody knows how it works after handover. We document it so that your team understands the network and can develop it further on its own."
       }
     ]
   },

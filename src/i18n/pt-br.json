@@ -551,19 +551,19 @@
     "fieldTitle": "O que vemos sempre em campo",
     "fieldNotes": [
       {
-        "k": "Private 5G · Galpão",
-        "title": "O metal muda tudo.",
-        "text": "Estantes altas, pontes rolantes e fachadas metálicas muitas vezes bloqueiam mais os 3,7 GHz do que paredes internas. Por isso planejamos com o layout em operação, não com o prédio vazio."
+        "k": "Planejamento",
+        "title": "Primeiro medir, depois planejar.",
+        "text": "Datasheets e simulações são um começo. Como o rádio se comporta de verdade em um prédio ou em um terreno, só a medição no local mostra. Por isso ela vem no início do nosso trabalho, não no fim."
       },
       {
-        "k": "FRMCS · Via",
-        "title": "O vizinho também transmite.",
-        "text": "Redes móveis públicas logo acima de 925 MHz podem interferir nos receptores do rádio ferroviário. Isso deve entrar antes do planejamento de rádio, não na busca de falhas depois."
+        "k": "Projeto",
+        "title": "A tecnologia raramente é o problema.",
+        "text": "Com mais frequência, o que trava são as passagens: entre TI e operação, entre vários fornecedores, entre requisitos e licitação. Esclarecemos esses pontos cedo, antes que custem tempo e dinheiro."
       },
       {
-        "k": "KRITIS · Operação",
-        "title": "Redundância é um plano, não uma peça.",
-        "text": "Duas células no mesmo mastro com a mesma alimentação não são redundância de verdade. Olhamos energia, fibra e núcleo da rede, não só o campo de rádio."
+        "k": "Operação",
+        "title": "Alguém precisa conseguir operar a rede.",
+        "text": "O melhor projeto ajuda pouco se, depois da entrega, ninguém sabe como ele funciona. Documentamos de forma que a sua equipe entenda a rede e consiga evoluí-la por conta própria."
       }
     ]
   },

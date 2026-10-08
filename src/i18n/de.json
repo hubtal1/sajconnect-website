@@ -551,19 +551,19 @@
     "fieldTitle": "Was wir im Feld immer wieder sehen",
     "fieldNotes": [
       {
-        "k": "Private 5G · Halle",
-        "title": "Metall ändert alles.",
-        "text": "Hochregale, Krananlagen und Metallfassaden verschatten 3,7 GHz oft stärker als Innenwände. Darum planen wir mit dem Grundriss im Betrieb, nicht mit dem leeren Gebäude."
+        "k": "Planung",
+        "title": "Erst messen, dann planen.",
+        "text": "Datenblätter und Simulationen sind ein Anfang. Wie sich Funk in einem Gebäude oder auf einem Gelände wirklich verhält, zeigt erst die Messung vor Ort. Darum steht sie bei uns am Anfang und nicht am Ende."
       },
       {
-        "k": "FRMCS · Strecke",
-        "title": "Der Nachbar sendet mit.",
-        "text": "Öffentliche Mobilfunknetze knapp oberhalb von 925 MHz können Bahnfunk-Empfänger stören. Das gehört vor die Funkplanung, nicht in die Fehlersuche danach."
+        "k": "Projekt",
+        "title": "Die Technik ist selten das Problem.",
+        "text": "Häufiger hakt es an den Übergängen: zwischen IT und Betrieb, zwischen mehreren Lieferanten, zwischen Anforderung und Ausschreibung. Diese Stellen klären wir früh, bevor sie Zeit und Geld kosten."
       },
       {
-        "k": "KRITIS · Betrieb",
-        "title": "Redundanz ist ein Plan, kein Bauteil.",
-        "text": "Zwei Funkzellen am selben Mast mit derselben Stromversorgung sind keine echte Ausfallsicherheit. Wir schauen auf Strom, Glasfaser und Kernnetz, nicht nur auf das Funkfeld."
+        "k": "Betrieb",
+        "title": "Ein Netz muss jemand betreiben können.",
+        "text": "Das beste Design hilft wenig, wenn nach der Übergabe niemand weiß, wie es funktioniert. Wir dokumentieren so, dass Ihr Team das Netz selbst versteht und weiterentwickeln kann."
       }
     ]
   },
