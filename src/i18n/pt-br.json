@@ -99,7 +99,7 @@
     "sections": {
       "geltungsbereich": "Escopo",
       "leistungsverzeichnis": "Portfólio",
-      "pruefverfahren": "Procedimento de verificação",
+      "pruefverfahren": "Como trabalhamos",
       "normative": "Referências normativas",
       "vertragsmodelle": "Modelos de contratação",
       "pos": "Pos.",
@@ -587,6 +587,33 @@
       {
         "label": "BMI: contratos sobre componentes Huawei e ZTE nas redes 5G (julho de 2024, em inglês)",
         "url": "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2024/07/5g-en.html"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Redes sem fio que funcionam no chão de fábrica.",
+    "lede": "Planejamos, testamos e operamos Private 5G, eSIM, rádio ferroviário e redes para infraestrutura crítica. Medimos onde a rede vai precisar funcionar de verdade.",
+    "locations": "Nuremberg · Spokane, EUA",
+    "legendTitle": "Potência recebida RSRP (dBm)",
+    "legendCaption": "Representação esquemática de um planejamento de rádio: galpão industrial, 3,7 GHz, quatro células.",
+    "bandTitle": "Uma rede sem fio só está pronta quando entrega na operação o que o planejamento prometeu.",
+    "bandText": "Por isso acompanhamos o projeto do primeiro dia de medições até a entrega ao seu time. E depois também, se você quiser.",
+    "fieldTitle": "O que vemos sempre em campo",
+    "fieldNotes": [
+      {
+        "k": "Private 5G · Galpão",
+        "title": "O metal muda tudo.",
+        "text": "Estantes altas, pontes rolantes e fachadas metálicas muitas vezes bloqueiam mais os 3,7 GHz do que paredes internas. Por isso planejamos com o layout em operação, não com o prédio vazio."
+      },
+      {
+        "k": "FRMCS · Via",
+        "title": "O vizinho também transmite.",
+        "text": "Redes móveis públicas logo acima de 925 MHz podem interferir nos receptores do rádio ferroviário. Isso deve entrar antes do planejamento de rádio, não na busca de falhas depois."
+      },
+      {
+        "k": "KRITIS · Operação",
+        "title": "Redundância é um plano, não uma peça.",
+        "text": "Duas células no mesmo mastro com a mesma alimentação não são redundância de verdade. Olhamos energia, fibra e núcleo da rede, não só o campo de rádio."
       }
     ]
   },

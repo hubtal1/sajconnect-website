@@ -1,70 +1,168 @@
 ---
-import { getLocaleFromUrl, t, getDict, localizedPath, type Locale } from "../i18n/utils";
-
-interface SpecRow {
-  k: string;
-  v: string;
-}
+import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
 
 const locale: Locale = getLocaleFromUrl(Astro.url);
 const tt = t(locale);
-const specRows = getDict<SpecRow[]>(locale, "dossier.hero.spec.rows") ?? [];
-const verbs = getDict<string[]>(locale, "dossier.hero.verbs") ?? [];
 ---
 
-<section class="text-[var(--color-text-on-carbon)]">
-  <div class="container-prose pb-14 pt-16 md:pb-20 md:pt-24">
-    <div class="lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-16">
-      <div>
-    <div class="w-fit max-w-full">
-      <h1 class="font-display font-bold leading-[1.02] tracking-[-0.012em]" style="font-size: clamp(2.25rem, 6vw, 5.25rem);">
-        <span class="mb-3 block font-sans text-[0.5em] font-bold leading-none tracking-[-0.01em] text-[var(--color-text-on-carbon)]">
-          {tt("dossier.hero.kicker")}
-        </span>
-        {verbs.map((verb) => (
-          <span class="block">{verb}</span>
-        ))}
-      </h1>
+<!-- Kopf: schematische Funkplanung als Bildsprache. Bewusst dunkel in beiden Themes. -->
+<section class="coverage-hero relative overflow-hidden text-white" style="background-color: #060c28;">
+  <canvas class="coverage-map absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+  <div class="coverage-scrim pointer-events-none absolute inset-0" aria-hidden="true"></div>
 
-      <!-- Maßkette: vermisst die Headline — das stille Signature-Element -->
-      <svg class="mt-9 h-10 w-full" viewBox="0 0 640 40" fill="none" aria-hidden="true" preserveAspectRatio="none">
-        <path class="masskette-line" d="M1 10 V38 M639 10 V38" />
-        <path class="masskette-line masskette-draw" d="M1 26 H639" />
-        <path d="M1 26 L14 21.5 V30.5 Z M639 26 L626 21.5 V30.5 Z" fill="var(--color-text-on-carbon)" />
-        <text class="masskette-label" x="320" y="14" text-anchor="middle" font-size="10">
-          {tt("dossier.hero.masskette")}
-        </text>
-      </svg>
-    </div>
-
-    <p class="lede mt-10 max-w-[58ch]">
-      {tt("dossier.hero.sub")}
+  <div class="container-prose relative flex min-h-[560px] flex-col justify-end pb-14 pt-28 md:min-h-[680px] md:pb-20">
+    <h1 class="max-w-[15ch] font-display font-bold leading-[1.04] tracking-[-0.01em]" style="font-size: clamp(2.4rem, 5.6vw, 4.4rem);">
+      {tt("landing.headline")}
+    </h1>
+    <p class="mt-7 max-w-[46ch] text-lg leading-relaxed md:text-xl" style="color: #d6dcff;">
+      {tt("landing.lede")}
     </p>
-
-    <div class="mt-10">
+    <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
       <a
         href={localizedPath(locale, "/contact")}
-        class="inline-flex items-center justify-center bg-[var(--color-cobalt)] px-7 py-3.5 font-sans text-[0.9375rem] font-bold tracking-[0.01em] text-white transition-colors duration-150 hover:bg-[var(--color-cobalt-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-cobalt)]"
+        class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold tracking-[0.01em] transition-colors duration-150 hover:bg-[#d6dcff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        style="color: #001ec9;"
       >
         {tt("dossier.hero.ctaPrimary")}
       </a>
-    </div>
-      </div>
-
-      <!-- Funkzellen-Raster: Bildsprache der Mobilfunk-Netzplanung -->
-      <div class="hidden lg:block" aria-hidden="true">
-        <svg class="mx-auto h-auto w-full max-w-[480px]" viewBox="0 0 440 380" fill="none" aria-hidden="true"><path d="M270.0,190.0 L245.0,233.3 L195.0,233.3 L170.0,190.0 L195.0,146.7 L245.0,146.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M348.0,145.0 L323.0,188.3 L273.0,188.3 L248.0,145.0 L273.0,101.7 L323.0,101.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M348.0,235.0 L323.0,278.3 L273.0,278.3 L248.0,235.0 L273.0,191.7 L323.0,191.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M270.0,99.9 L245.0,143.2 L195.0,143.2 L170.0,99.9 L195.0,56.6 L245.0,56.6 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M270.0,280.1 L245.0,323.4 L195.0,323.4 L170.0,280.1 L195.0,236.8 L245.0,236.8 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M192.0,145.0 L167.0,188.3 L117.0,188.3 L92.0,145.0 L117.0,101.7 L167.0,101.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M192.0,235.0 L167.0,278.3 L117.0,278.3 L92.0,235.0 L117.0,191.7 L167.0,191.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M426.0,190.0 L401.0,233.3 L351.0,233.3 L326.0,190.0 L351.0,146.7 L401.0,146.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M114.0,190.0 L89.0,233.3 L39.0,233.3 L14.0,190.0 L39.0,146.7 L89.0,146.7 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M426.0,99.9 L401.0,143.2 L351.0,143.2 L326.0,99.9 L351.0,56.6 L401.0,56.6 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M192.0,325.1 L167.0,368.4 L117.0,368.4 L92.0,325.1 L117.0,281.8 L167.0,281.8 Z" stroke="var(--color-hairline-dark)" stroke-width="1.2"/><path d="M270.0,190.0 L245.0,233.3 L195.0,233.3 L170.0,190.0 L195.0,146.7 L245.0,146.7 Z" stroke="var(--color-cobalt-light)" stroke-width="1.8"/><circle cx="220" cy="190" r="5" fill="var(--color-cobalt-light)"/><circle cx="298" cy="144.9666790032092" r="5" fill="var(--color-saj-green-bright)"/><circle cx="142" cy="235.0333209967908" r="3.5" stroke="var(--color-cobalt-light)" stroke-width="1.5"/></svg>
-      </div>
+      <span class="text-sm" style="color: #aab4f0;">{tt("landing.locations")}</span>
     </div>
 
-    <!-- Faktenzeile: offene Schlüssel/Wert-Paare, keine Box -->
-    <dl class="mt-16 flex flex-wrap gap-x-12 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-6 md:mt-20">
-      {specRows.map((row) => (
-        <div>
-          <dt class="mono-label text-[var(--color-text-on-carbon-faint)]">{row.k}</dt>
-          <dd class="mono-spec mt-1 text-[var(--color-text-on-carbon)]">{row.v}</dd>
-        </div>
-      ))}
-    </dl>
+    <div class="absolute bottom-20 right-12 hidden w-[300px] text-xs lg:block" style="color: #c9d1ff;">
+      <p>{tt("landing.legendTitle")}</p>
+      <div class="coverage-legend mt-2 h-2.5"></div>
+      <div class="mt-1.5 flex justify-between font-mono"><span>−120</span><span>−100</span><span>−80</span><span>−70</span></div>
+      <p class="mt-2.5 leading-snug" style="color: #aab4f0;">{tt("landing.legendCaption")}</p>
+    </div>
   </div>
 </section>
+
+<style>
+  .coverage-scrim {
+    /* Ruhige Zone hinter dem Text: links und unten dunkler. */
+    background:
+      linear-gradient(90deg, rgba(6, 12, 40, 0.78) 0%, rgba(6, 12, 40, 0.35) 45%, rgba(6, 12, 40, 0) 70%),
+      linear-gradient(0deg, rgba(6, 12, 40, 0.55) 0%, rgba(6, 12, 40, 0) 40%);
+  }
+  .coverage-legend {
+    background: linear-gradient(90deg, #060c28 0 14%, #0e1e6e 14% 28%, #001ec9 28% 43%, #285ad2 43% 57%, #117400 57% 71%, #4f9a3a 71% 86%, #78c85a 86%);
+  }
+</style>
+
+<script>
+  // Schematische Funkplanung: Log-Distanz-Pfadverlust je Zelle, Dämpfung an Hallenwänden,
+  // Darstellung in Pegelstufen mit Konturlinien (wie in Planungssoftware).
+  type Cell = [number, number];
+  type Wall = [number, number, number]; // x, y-Anfang, y-Ende (relativ)
+
+  const CELLS: Cell[] = [[0.58, 0.3], [0.8, 0.28], [0.66, 0.7], [0.88, 0.68]];
+  const WALLS: Wall[] = [[0.62, 0.1, 0.55], [0.74, 0.45, 0.9], [0.86, 0.1, 0.5]];
+  const STOPS: [number, number[]][] = [
+    [0, [6, 12, 40]], [0.25, [14, 30, 110]], [0.45, [0, 30, 201]], [0.62, [40, 90, 210]],
+    [0.78, [17, 116, 0]], [1, [120, 200, 90]],
+  ];
+  const LEVELS = 7;
+
+  function color(t: number): number[] {
+    for (let i = 1; i < STOPS.length; i++) {
+      if (t <= STOPS[i][0]) {
+        const [a, ca] = STOPS[i - 1];
+        const [b, cb] = STOPS[i];
+        const f = (t - a) / (b - a);
+        return ca.map((v, k) => v + (cb[k] - v) * f);
+      }
+    }
+    return STOPS[STOPS.length - 1][1];
+  }
+
+  function paint(canvas: HTMLCanvasElement) {
+    const rect = canvas.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const quality = 0.75;
+    const W = (canvas.width = Math.round(rect.width * quality));
+    const H = (canvas.height = Math.round(rect.height * quality));
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const img = ctx.createImageData(W, H);
+    const unit = 1440 / W; // Abstände unabhängig von der Fensterbreite
+    const bands = new Uint8Array(W * H);
+
+    for (let y = 0; y < H; y++) {
+      for (let x = 0; x < W; x++) {
+        let best = -200;
+        for (const [cx, cy] of CELLS) {
+          const px = cx * W;
+          const d = Math.max(2, Math.hypot(x - px, y - cy * H)) * unit * 0.47;
+          let pl = -35 - 30 * Math.log10(d);
+          for (const [wx, y0, y1] of WALLS) {
+            const wxp = wx * W;
+            if ((x - wxp) * (px - wxp) < 0 && y > y0 * H && y < y1 * H) pl -= 9;
+          }
+          if (pl > best) best = pl;
+        }
+        best += 0.35 * Math.sin(x * 0.07) * Math.cos(y * 0.09); // keine perfekten Kreise
+        const level = Math.max(0, Math.min(LEVELS, Math.floor(((best + 120) / 50) * LEVELS)));
+        bands[y * W + x] = level;
+        const [r, g, b] = color(level / LEVELS);
+        const i = (y * W + x) * 4;
+        img.data[i] = r;
+        img.data[i + 1] = g;
+        img.data[i + 2] = b;
+        img.data[i + 3] = 255;
+      }
+    }
+    // Konturlinien an Stufengrenzen leicht aufhellen
+    for (let y = 1; y < H; y++) {
+      for (let x = 1; x < W; x++) {
+        const k = y * W + x;
+        if (bands[k] !== bands[k - 1] || bands[k] !== bands[k - W]) {
+          const i = k * 4;
+          img.data[i] = Math.min(255, img.data[i] + 34);
+          img.data[i + 1] = Math.min(255, img.data[i + 1] + 34);
+          img.data[i + 2] = Math.min(255, img.data[i + 2] + 34);
+        }
+      }
+    }
+    ctx.putImageData(img, 0, 0);
+
+    // Grundriss und Zellenstandorte
+    ctx.strokeStyle = "rgba(255,255,255,0.32)";
+    ctx.lineWidth = 0.7;
+    ctx.strokeRect(W * 0.04, H * 0.08, W * 0.92, H * 0.84);
+    for (const [wx, y0, y1] of WALLS) {
+      ctx.beginPath();
+      ctx.moveTo(wx * W, y0 * H);
+      ctx.lineTo(wx * W, y1 * H);
+      ctx.stroke();
+    }
+    ctx.fillStyle = "#ffffff";
+    for (const [cx, cy] of CELLS) {
+      ctx.beginPath();
+      ctx.arc(cx * W, cy * H, 2.4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  let listeners: AbortController | undefined;
+
+  function init() {
+    listeners?.abort();
+    const canvas = document.querySelector<HTMLCanvasElement>(".coverage-map");
+    if (!canvas) return;
+    listeners = new AbortController();
+    const run = () => paint(canvas);
+    if ("requestIdleCallback" in window) (window as Window).requestIdleCallback(run, { timeout: 400 });
+    else setTimeout(run, 0);
+    let timer: number | undefined;
+    let lastWidth = canvas.getBoundingClientRect().width;
+    window.addEventListener("resize", () => {
+      const w = canvas.getBoundingClientRect().width;
+      if (Math.abs(w - lastWidth) < 40) return; // mobile Adressleiste ignorieren
+      lastWidth = w;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(run, 200);
+    }, { signal: listeners.signal });
+  }
+
+  document.addEventListener("astro:page-load", init);
+</script>

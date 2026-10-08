@@ -99,7 +99,7 @@
     "sections": {
       "geltungsbereich": "Scope",
       "leistungsverzeichnis": "Portfolio",
-      "pruefverfahren": "Verification procedure",
+      "pruefverfahren": "How we work",
       "normative": "Normative references",
       "vertragsmodelle": "Engagement models",
       "pos": "Item",
@@ -587,6 +587,33 @@
       {
         "label": "BMI: contracts on Huawei and ZTE components in 5G networks (July 2024)",
         "url": "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2024/07/5g-en.html"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Wireless networks that work on the factory floor.",
+    "lede": "We plan, test and operate private 5G, eSIM, rail radio and networks for critical infrastructure. We measure where the network will actually have to run.",
+    "locations": "Nuremberg · Spokane, USA",
+    "legendTitle": "Received power RSRP (dBm)",
+    "legendCaption": "Schematic radio plan: factory hall, 3.7 GHz, four cells.",
+    "bandTitle": "A wireless network is only finished when it delivers in operation what the plan promised.",
+    "bandText": "That is why we stay involved from the first day of measurements to the handover to your team. And afterwards, if you want.",
+    "fieldTitle": "What we keep seeing in the field",
+    "fieldNotes": [
+      {
+        "k": "Private 5G · Factory",
+        "title": "Metal changes everything.",
+        "text": "High-bay racks, cranes and metal facades often shadow 3.7 GHz more than interior walls do. That is why we plan with the layout in operation, not the empty building."
+      },
+      {
+        "k": "FRMCS · Track",
+        "title": "The neighbours are on air too.",
+        "text": "Public mobile networks just above 925 MHz can interfere with rail radio receivers. That belongs before radio planning, not in troubleshooting afterwards."
+      },
+      {
+        "k": "KRITIS · Operations",
+        "title": "Redundancy is a plan, not a part.",
+        "text": "Two cells on the same mast with the same power supply are not real resilience. We look at power, fibre and the core network, not just the radio field."
       }
     ]
   },

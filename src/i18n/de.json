@@ -99,7 +99,7 @@
     "sections": {
       "geltungsbereich": "Geltungsbereich",
       "leistungsverzeichnis": "Portfolio",
-      "pruefverfahren": "Prüfverfahren",
+      "pruefverfahren": "So arbeiten wir",
       "normative": "Normative Verweise",
       "vertragsmodelle": "Vertragsmodelle",
       "pos": "Pos.",
@@ -587,6 +587,33 @@
       {
         "label": "BMI: Verträge zu Huawei- und ZTE-Komponenten im 5G-Netz (Juli 2024, englisch)",
         "url": "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2024/07/5g-en.html"
+      }
+    ]
+  },
+  "landing": {
+    "headline": "Funknetze, die in der Halle funktionieren.",
+    "lede": "Wir planen, testen und betreiben Private 5G, eSIM, Bahnfunk und Netze für kritische Infrastruktur. Gemessen wird da, wo das Netz später laufen muss.",
+    "locations": "Nürnberg · Spokane, USA",
+    "legendTitle": "Empfangsleistung RSRP (dBm)",
+    "legendCaption": "Schematische Darstellung einer Funkplanung: Werkhalle, 3,7 GHz, vier Zellen.",
+    "bandTitle": "Ein Funknetz ist erst fertig, wenn es im Betrieb hält, was die Planung versprochen hat.",
+    "bandText": "Deshalb bleiben wir vom ersten Messtag bis zur Übergabe an Ihr Team dabei. Und danach, wenn Sie wollen.",
+    "fieldTitle": "Was wir im Feld immer wieder sehen",
+    "fieldNotes": [
+      {
+        "k": "Private 5G · Halle",
+        "title": "Metall ändert alles.",
+        "text": "Hochregale, Krananlagen und Metallfassaden verschatten 3,7 GHz oft stärker als Innenwände. Darum planen wir mit dem Grundriss im Betrieb, nicht mit dem leeren Gebäude."
+      },
+      {
+        "k": "FRMCS · Strecke",
+        "title": "Der Nachbar sendet mit.",
+        "text": "Öffentliche Mobilfunknetze knapp oberhalb von 925 MHz können Bahnfunk-Empfänger stören. Das gehört vor die Funkplanung, nicht in die Fehlersuche danach."
+      },
+      {
+        "k": "KRITIS · Betrieb",
+        "title": "Redundanz ist ein Plan, kein Bauteil.",
+        "text": "Zwei Funkzellen am selben Mast mit derselben Stromversorgung sind keine echte Ausfallsicherheit. Wir schauen auf Strom, Glasfaser und Kernnetz, nicht nur auf das Funkfeld."
       }
     ]
   },

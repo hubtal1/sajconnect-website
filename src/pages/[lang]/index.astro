@@ -1,11 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
-import BlattGeltungsbereich from "../../components/BlattGeltungsbereich.astro";
+import BlattBand from "../../components/BlattBand.astro";
 import BlattLeistungen from "../../components/BlattLeistungen.astro";
+import BlattFeld from "../../components/BlattFeld.astro";
 import BlattKritis from "../../components/BlattKritis.astro";
 import BlattVerfahren from "../../components/BlattVerfahren.astro";
-import BlattNormen from "../../components/BlattNormen.astro";
 import BlattVertrag from "../../components/BlattVertrag.astro";
 import { LOCALES, t, type Locale } from "../../i18n/utils";
 
@@ -19,10 +19,10 @@ const tt = t(lang);
 
 <Layout title={`${tt("site.name")} — ${tt("site.tagline")}`} description={tt("site.description")}>
   <Hero />
-  <BlattGeltungsbereich />
+  <BlattBand />
   <BlattLeistungen />
+  <BlattFeld />
   <BlattKritis />
   <BlattVerfahren />
-  <BlattNormen />
   <BlattVertrag />
 </Layout>
