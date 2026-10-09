@@ -1484,7 +1484,7 @@
     },
     "story": {
       "label": "Field Story",
-      "quote": "An operator refused to approve our client's device. The trace said the network was rejecting it. Both were right, and neither was the problem.",
+      "quote": "An operator refused to approve our client's device. The trace said the network really was rejecting the Attach Request. Both were right, and neither was the problem.",
       "line": "It took about forty minutes, once we had a trace in front of us.",
       "link": "Read “Cause 15”"
     },

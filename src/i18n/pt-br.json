@@ -1484,7 +1484,7 @@
     },
     "story": {
       "label": "Field Story",
-      "quote": "Uma operadora recusou a homologação do dispositivo do nosso cliente. O trace mostrou que a rede realmente estava rejeitando. Os dois lados tinham razão, e nenhum era o problema.",
+      "quote": "Uma operadora recusou a homologação do dispositivo do nosso cliente. O trace mostrou que a rede realmente estava rejeitando o Attach Request. Os dois lados tinham razão, e nenhum era o problema.",
       "line": "Do primeiro trace até a resposta, uns quarenta minutos.",
       "link": "Ler “Cause 15”"
     },
