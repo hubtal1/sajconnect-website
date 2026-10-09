@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "SAJ Connect",
-    "tagline": "Ingenieurberatung für Private 5G, eSIM und Connected Car",
-    "description": "SAJ Connect — Ingenieurberatung für Wireless und Mobilität: Private 5G, eSIM und Connected Car."
+    "tagline": "Funk-Engineering, das im Betrieb funktioniert",
+    "description": "Ingenieurberatung für Funkprojekte in Automotive, Industrie und Bahn: Netz, Geräte und die Menschen, die sie betreiben, integriert und getestet. Deutschland und USA."
   },
   "nav": {
     "home": "Start",
@@ -20,7 +20,15 @@
     "platform": "Connectivity Platform",
     "careers": "Karriere",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "automotive": "Automotive",
+    "private5g": "Private 5G",
+    "rail": "Bahn & FRMCS",
+    "capabilities": "Kompetenzen",
+    "overview": "Übersicht",
+    "fieldStories": "Field Stories",
+    "germanyUs": "Deutschland & USA",
+    "projectCheck": "Projektcheck anfragen"
   },
   "home": {
     "hero": {
@@ -31,10 +39,22 @@
       "ctaSecondary": "Leistungen entdecken"
     },
     "pillars": [
-      { "label": "5G+", "text": "Public und Private 5G — von Architektur bis Live-Betrieb." },
-      { "label": "E2E", "text": "End-to-End-Lieferung über den gesamten Entwicklungs- und Deployment-Zyklus." },
-      { "label": "6G", "text": "Vorausschauende Forschung und Beratung für die Netze von morgen." },
-      { "label": "360°", "text": "Vollständige Abdeckung von Wireless, IoT und Automotive-Connectivity." }
+      {
+        "label": "5G+",
+        "text": "Public und Private 5G — von Architektur bis Live-Betrieb."
+      },
+      {
+        "label": "E2E",
+        "text": "End-to-End-Lieferung über den gesamten Entwicklungs- und Deployment-Zyklus."
+      },
+      {
+        "label": "6G",
+        "text": "Vorausschauende Forschung und Beratung für die Netze von morgen."
+      },
+      {
+        "label": "360°",
+        "text": "Vollständige Abdeckung von Wireless, IoT und Automotive-Connectivity."
+      }
     ],
     "intersection": {
       "headline": "Wo Wireless auf Mobilität trifft",
@@ -43,16 +63,28 @@
     "differentiators": {
       "headline": "Was uns auszeichnet",
       "items": [
-        { "title": "End-to-End-Lieferung", "text": "Von Architektur und Design über Implementierung und Integration bis in den Live-Betrieb — ein Team, ein verantwortlicher Partner." },
-        { "title": "Vendor Agnostic", "text": "Wir wählen die richtige Technologie für Ihre Aufgabe — ohne Bindung an einen einzelnen Hersteller oder eine Plattform." },
-        { "title": "Globales Ökosystem", "text": "Für Rollouts über mehrere Standorte oder Länder ziehen wir Partner hinzu, mit denen wir schon geliefert haben." },
-        { "title": "Mission Critical", "text": "Wir arbeiten an Systemen, in denen Zuverlässigkeit und Sicherheit zählen — und behandeln Ihr Projekt mit derselben Sorgfalt." }
+        {
+          "title": "End-to-End-Lieferung",
+          "text": "Von Architektur und Design über Implementierung und Integration bis in den Live-Betrieb — ein Team, ein verantwortlicher Partner."
+        },
+        {
+          "title": "Vendor Agnostic",
+          "text": "Wir wählen die richtige Technologie für Ihre Aufgabe — ohne Bindung an einen einzelnen Hersteller oder eine Plattform."
+        },
+        {
+          "title": "Globales Ökosystem",
+          "text": "Für Rollouts über mehrere Standorte oder Länder ziehen wir Partner hinzu, mit denen wir schon geliefert haben."
+        },
+        {
+          "title": "Mission Critical",
+          "text": "Wir arbeiten an Systemen, in denen Zuverlässigkeit und Sicherheit zählen — und behandeln Ihr Projekt mit derselben Sorgfalt."
+        }
       ]
     },
     "cta": {
-      "headline": "Sprechen wir über Ihr Vorhaben",
-      "sub": "Ein erstes Gespräch klärt Machbarkeit, Aufwand und nächste Schritte — unverbindlich und mit den Ingenieuren, die später auch liefern.",
-      "button": "Gespräch vereinbaren"
+      "headline": "Erzählen Sie uns, wo Ihr Projekt hängt.",
+      "sub": "Ob und wie wir helfen können, sagen wir Ihnen meist schon im ersten Gespräch.",
+      "button": "Projektcheck anfragen"
     },
     "approach": {
       "label": "Vorgehen",
@@ -60,16 +92,32 @@
       "sub": "Jedes Engagement folgt demselben Prinzip: erst verstehen, dann bauen, dann verantworten — mit klaren Ergebnissen in jeder Phase.",
       "outcomeLabel": "Ergebnis",
       "steps": [
-        { "title": "Analyse & Scoping", "text": "Anforderungen, Bestandsaufnahme, Machbarkeit und Business Case — bevor die erste Architekturentscheidung fällt.", "outcome": "Belastbares Zielbild mit Aufwands- und Risikobewertung" },
-        { "title": "Design & Umsetzung", "text": "Architektur, Implementierung und Integration in kurzen, überprüfbaren Schritten — mit Testing und Validierung ab dem ersten Inkrement.", "outcome": "Abgenommene, dokumentierte Lösung im Zielbetrieb" },
-        { "title": "Betrieb & Optimierung", "text": "Übergabe in den Betrieb, Monitoring, Optimierung und Wissenstransfer — bis Ihr Team das System sicher selbst verantwortet.", "outcome": "Stabiler Betrieb mit messbaren KPIs und klarer Verantwortung" }
+        {
+          "title": "Analyse & Scoping",
+          "text": "Anforderungen, Bestandsaufnahme, Machbarkeit und Business Case — bevor die erste Architekturentscheidung fällt.",
+          "outcome": "Belastbares Zielbild mit Aufwands- und Risikobewertung"
+        },
+        {
+          "title": "Design & Umsetzung",
+          "text": "Architektur, Implementierung und Integration in kurzen, überprüfbaren Schritten — mit Testing und Validierung ab dem ersten Inkrement.",
+          "outcome": "Abgenommene, dokumentierte Lösung im Zielbetrieb"
+        },
+        {
+          "title": "Betrieb & Optimierung",
+          "text": "Übergabe in den Betrieb, Monitoring, Optimierung und Wissenstransfer — bis Ihr Team das System sicher selbst verantwortet.",
+          "outcome": "Stabiler Betrieb mit messbaren KPIs und klarer Verantwortung"
+        }
       ]
     },
     "standards": {
       "label": "Standards",
       "headline": "Wir arbeiten entlang etablierter Standards.",
       "note": "Normen und Frameworks, an denen wir Architektur, Sicherheit und Prozesse ausrichten.",
-      "items": ["3GPP", "GSMA SGP.21/22 · SGP.31/32", "DSGVO"]
+      "items": [
+        "3GPP",
+        "GSMA SGP.21/22 · SGP.31/32",
+        "DSGVO"
+      ]
     }
   },
   "dossier": {
@@ -85,7 +133,11 @@
     "hero": {
       "headline": "Connectivity: spezifiziert, gebaut, getestet.",
       "kicker": "Connectivity —",
-      "verbs": ["spezifiziert,", "gebaut,", "getestet."],
+      "verbs": [
+        "spezifiziert,",
+        "gebaut,",
+        "getestet."
+      ],
       "masskette": "3 Phasen — vom Zielbild bis in den Betrieb",
       "sub": "SAJ Connect ist die Ingenieurberatung an der Schnittstelle von Wireless und Mobilität — Private 5G, eSIM und Connected Car vom Zielbild bis in den Betrieb. Jede Phase liefert ein definiertes, messbares Ergebnis.",
       "ctaPrimary": "Erstgespräch anfragen",
@@ -94,10 +146,22 @@
         "wert": "Wert",
         "remarks": "Bemerkungen: —",
         "rows": [
-          { "k": "Standorte", "v": "Nürnberg, DE · Spokane, USA" },
-          { "k": "Portfolio", "v": "10 Bereiche" },
-          { "k": "Sprachen", "v": "DE · EN · PT" },
-          { "k": "Arbeitsgrundlage", "v": "3GPP · GSMA" }
+          {
+            "k": "Standorte",
+            "v": "Nürnberg, DE · Spokane, USA"
+          },
+          {
+            "k": "Portfolio",
+            "v": "10 Bereiche"
+          },
+          {
+            "k": "Sprachen",
+            "v": "DE · EN · PT"
+          },
+          {
+            "k": "Arbeitsgrundlage",
+            "v": "3GPP · GSMA"
+          }
         ]
       }
     },
@@ -113,7 +177,11 @@
       "beschreibung": "Beschreibung",
       "phase": "Phase",
       "linienart": "Linienart",
-      "linientypen": ["durchgezogen", "gestrichelt", "doppelt"],
+      "linientypen": [
+        "durchgezogen",
+        "gestrichelt",
+        "doppelt"
+      ],
       "tabelleEnde": "Ende Tabelle",
       "positionen": "Positionen"
     }
@@ -123,16 +191,56 @@
     "lead": "Zehn Bereiche, ein Stack. Die meisten Projekte brauchen zwei oder drei davon.",
     "exploreAll": "Alle 10 Bereiche entdecken",
     "domains": [
-      { "title": "Private 5G", "tag": "5G CONSULTANCY", "description": "Engineering, Design, Deployment und Betrieb für Enterprise- und Industrial-Private-5G." },
-      { "title": "eSIM & iSIM", "tag": "EMBEDDED SIM", "description": "End-to-End eSIM- und iSIM-Ökosystem — RSP, Profilmanagement, Lifecycle und Zertifizierung." },
-      { "title": "IoT Connectivity", "tag": "MASSIVE IOT", "description": "Connectivity-Strategien für Massive IoT — Cellular, LPWA, Satellit, Hybrid-Architekturen." },
-      { "title": "NTN — Non-Terrestrial Networks", "tag": "SATELLITE 5G", "description": "Satelliten-5G-Integration, NTN-Architektur und Machbarkeit für globale, resiliente Connectivity." },
-      { "title": "6G — Next Generation", "tag": "TOMORROW'S NETWORKS", "description": "6G-Readiness, Beratung und Forschung entlang der 3GPP-Roadmap (Rel-20+)." },
-      { "title": "Connectivity Platform", "tag": "PLATFORM ENGINEERING", "description": "Plattformen, die Komplexität abstrahieren — von Connectivity Management bis Telemetrie und Analytics." },
-      { "title": "V2X & Vehicle Connectivity", "tag": "AUTOMOTIVE", "description": "Fahrzeug-Connectivity-Architekturen — Cellular, V2X, Wi-Fi, Bluetooth — mit getrennten, abgesicherten Datenpfaden." },
-      { "title": "FRMCS — Bahnfunk", "tag": "RAIL RADIO", "description": "Migration von GSM-R auf FRMCS: RF-Planung in n100 und n101, Coexistence, Bordintegration und Testkonzepte." },
-      { "title": "KRITIS & NIS2", "tag": "CRITICAL INFRASTRUCTURE", "description": "Technische Umsetzung der NIS2- und KRITIS-Pflichten für Funk-, Mobilfunk- und Campusnetze." },
-      { "title": "360° Connectivity Expertise", "tag": "FULL STACK", "description": "End-to-End-Abdeckung vom Gerät bis zur Cloud — integriert, validiert, betriebsbereit." }
+      {
+        "title": "Private 5G",
+        "tag": "5G CONSULTANCY",
+        "description": "Engineering, Design, Deployment und Betrieb für Enterprise- und Industrial-Private-5G."
+      },
+      {
+        "title": "eSIM & iSIM",
+        "tag": "EMBEDDED SIM",
+        "description": "End-to-End eSIM- und iSIM-Ökosystem — RSP, Profilmanagement, Lifecycle und Zertifizierung."
+      },
+      {
+        "title": "IoT Connectivity",
+        "tag": "MASSIVE IOT",
+        "description": "Connectivity-Strategien für Massive IoT — Cellular, LPWA, Satellit, Hybrid-Architekturen."
+      },
+      {
+        "title": "NTN — Non-Terrestrial Networks",
+        "tag": "SATELLITE 5G",
+        "description": "Satelliten-5G-Integration, NTN-Architektur und Machbarkeit für globale, resiliente Connectivity."
+      },
+      {
+        "title": "6G — Next Generation",
+        "tag": "TOMORROW'S NETWORKS",
+        "description": "6G-Readiness, Beratung und Forschung entlang der 3GPP-Roadmap (Rel-20+)."
+      },
+      {
+        "title": "Connectivity Platform",
+        "tag": "PLATFORM ENGINEERING",
+        "description": "Plattformen, die Komplexität abstrahieren — von Connectivity Management bis Telemetrie und Analytics."
+      },
+      {
+        "title": "V2X & Vehicle Connectivity",
+        "tag": "AUTOMOTIVE",
+        "description": "Fahrzeug-Connectivity-Architekturen — Cellular, V2X, Wi-Fi, Bluetooth — mit getrennten, abgesicherten Datenpfaden."
+      },
+      {
+        "title": "FRMCS — Bahnfunk",
+        "tag": "RAIL RADIO",
+        "description": "Migration von GSM-R auf FRMCS: RF-Planung in n100 und n101, Coexistence, Bordintegration und Testkonzepte."
+      },
+      {
+        "title": "KRITIS & NIS2",
+        "tag": "CRITICAL INFRASTRUCTURE",
+        "description": "Technische Umsetzung der NIS2- und KRITIS-Pflichten für Funk-, Mobilfunk- und Campusnetze."
+      },
+      {
+        "title": "360° Connectivity Expertise",
+        "tag": "FULL STACK",
+        "description": "End-to-End-Abdeckung vom Gerät bis zur Cloud — integriert, validiert, betriebsbereit."
+      }
     ],
     "outroHeadline": "Die Netze von morgen. Vorbereitung heute.",
     "outroSub": "Wir betreiben nicht nur die Netze von heute — wir helfen unseren Kunden, die nächste Generation zu gestalten.",
@@ -143,9 +251,18 @@
       "headline": "Drei Wege, mit uns zu arbeiten.",
       "sub": "Vom klar umrissenen Projekt bis zur langfristigen Verantwortung im Betrieb — Sie wählen die Fertigungstiefe.",
       "models": [
-        { "title": "Projektlieferung", "text": "Definierter Scope, definiertes Ergebnis: Wir übernehmen Konzeption, Umsetzung und Abnahme eines abgegrenzten Vorhabens — auf Festpreis- oder Aufwandsbasis." },
-        { "title": "Expert Augmentation", "text": "Unsere Spezialisten verstärken Ihr Team — Architektur-Reviews, RF-Planung, Testkampagnen oder Zertifizierungsbegleitung, genau dort, wo Expertise fehlt." },
-        { "title": "Managed Services", "text": "Wir verantworten Betrieb und Weiterentwicklung Ihrer Connectivity-Lösung dauerhaft — mit SLAs, Monitoring und regelmäßigem Reporting." }
+        {
+          "title": "Projektlieferung",
+          "text": "Definierter Scope, definiertes Ergebnis: Wir übernehmen Konzeption, Umsetzung und Abnahme eines abgegrenzten Vorhabens — auf Festpreis- oder Aufwandsbasis."
+        },
+        {
+          "title": "Expert Augmentation",
+          "text": "Unsere Spezialisten verstärken Ihr Team — Architektur-Reviews, RF-Planung, Testkampagnen oder Zertifizierungsbegleitung, genau dort, wo Expertise fehlt."
+        },
+        {
+          "title": "Managed Services",
+          "text": "Wir verantworten Betrieb und Weiterentwicklung Ihrer Connectivity-Lösung dauerhaft — mit SLAs, Monitoring und regelmäßigem Reporting."
+        }
       ]
     }
   },
@@ -153,11 +270,26 @@
     "title": "Private 5G Consultancy",
     "lead": "Vom Konzept bis zum Live-Betrieb — Full-Stack-Beratung für Enterprise- und Industrial-Private-5G-Deployments.",
     "items": [
-      { "title": "Network Engineering & Design", "text": "Architektur, RF-Planung, Slicing-Strategie und Integrationsdesign — passgenau für Ihre industrielle Umgebung." },
-      { "title": "Project Management & Operations", "text": "End-to-End-Programm-Management — Meilensteine, Vendor-Koordination, Risiko und Qualität vom Kick-off bis zur Übergabe." },
-      { "title": "Network Management & Operations", "text": "Day-2-Operations, Monitoring, Optimierung und kontinuierliche Verbesserung — für gesunde, Mission-Critical-Netze." },
-      { "title": "Software & Hardware Development", "text": "Eigene Software- und Hardware-Komponenten dort, wo der Standard-Stack an Grenzen kommt — integriert und zertifiziert." },
-      { "title": "Network Testing & Validation", "text": "Umfassendes Testing — funktional, Performance, Interoperabilität, Compliance — vor und nach Go-live." }
+      {
+        "title": "Network Engineering & Design",
+        "text": "Architektur, RF-Planung, Slicing-Strategie und Integrationsdesign — passgenau für Ihre industrielle Umgebung."
+      },
+      {
+        "title": "Project Management & Operations",
+        "text": "End-to-End-Programm-Management — Meilensteine, Vendor-Koordination, Risiko und Qualität vom Kick-off bis zur Übergabe."
+      },
+      {
+        "title": "Network Management & Operations",
+        "text": "Day-2-Operations, Monitoring, Optimierung und kontinuierliche Verbesserung — für gesunde, Mission-Critical-Netze."
+      },
+      {
+        "title": "Software & Hardware Development",
+        "text": "Eigene Software- und Hardware-Komponenten dort, wo der Standard-Stack an Grenzen kommt — integriert und zertifiziert."
+      },
+      {
+        "title": "Network Testing & Validation",
+        "text": "Umfassendes Testing — funktional, Performance, Interoperabilität, Compliance — vor und nach Go-live."
+      }
     ],
     "taglineShort": "Vom Konzept bis zum Betrieb"
   },
@@ -168,21 +300,51 @@
       {
         "headline": "Test-Disziplinen",
         "items": [
-          { "title": "Functional Testing", "text": "End-to-End-Validierung aller Systemkomponenten und Schnittstellen — wir verifizieren, dass jede Funktion den Anforderungen entspricht." },
-          { "title": "Performance & Load Testing", "text": "KPI-Benchmarks, Throughput- und Latency-Messungen sowie Stresstests unter Realbedingungen und Worst-Case-Szenarien." },
-          { "title": "Interoperability Testing", "text": "Wir prüfen, ob Multi-Vendor-Setups wirklich zusammenspielen — über Hersteller, Plattformen und Protokoll-Stacks hinweg." },
-          { "title": "Compliance & Homologation", "text": "Begleitung bei regulatorischer Konformität und Homologation — damit Ihr Produkt vor Markteintritt alle erforderlichen Zertifizierungen erlangt." }
+          {
+            "title": "Functional Testing",
+            "text": "End-to-End-Validierung aller Systemkomponenten und Schnittstellen — wir verifizieren, dass jede Funktion den Anforderungen entspricht."
+          },
+          {
+            "title": "Performance & Load Testing",
+            "text": "KPI-Benchmarks, Throughput- und Latency-Messungen sowie Stresstests unter Realbedingungen und Worst-Case-Szenarien."
+          },
+          {
+            "title": "Interoperability Testing",
+            "text": "Wir prüfen, ob Multi-Vendor-Setups wirklich zusammenspielen — über Hersteller, Plattformen und Protokoll-Stacks hinweg."
+          },
+          {
+            "title": "Compliance & Homologation",
+            "text": "Begleitung bei regulatorischer Konformität und Homologation — damit Ihr Produkt vor Markteintritt alle erforderlichen Zertifizierungen erlangt."
+          }
         ]
       },
       {
         "headline": "Spezialisiertes Testing",
         "items": [
-          { "title": "5G Network Testing", "text": "Testkampagnen auf RAN-, Core- und Slice-Ebene — inklusive KPI-Validierung, Drive-Testing und Benchmarking." },
-          { "title": "eSIM & SIM Testing", "text": "Profil-, RSP- und Lifecycle-Tests — vollständig konform mit den GSMA-Spezifikationen." },
-          { "title": "OTA Update Testing", "text": "End-to-End-Validierung von OTA-Kampagnen — Robustheit, Rollback, Sicherheit und feldnahe Szenarien." },
-          { "title": "HIL & SIL Testing", "text": "Hardware- und Software-in-the-Loop-Testumgebungen für vernetzte Fahrzeug- und IoT-Systeme." },
-          { "title": "IoT Device Validation", "text": "Gerätezertifizierung sowie Konformitäts- und Ökosystem-Tests für Massive-IoT-Deployments." },
-          { "title": "PoC & Acceptance", "text": "Klar strukturierte Proof-of-Concept- und Abnahme-Verfahren — messbar, wiederholbar und entscheidungsreif." }
+          {
+            "title": "5G Network Testing",
+            "text": "Testkampagnen auf RAN-, Core- und Slice-Ebene — inklusive KPI-Validierung, Drive-Testing und Benchmarking."
+          },
+          {
+            "title": "eSIM & SIM Testing",
+            "text": "Profil-, RSP- und Lifecycle-Tests — vollständig konform mit den GSMA-Spezifikationen."
+          },
+          {
+            "title": "OTA Update Testing",
+            "text": "End-to-End-Validierung von OTA-Kampagnen — Robustheit, Rollback, Sicherheit und feldnahe Szenarien."
+          },
+          {
+            "title": "HIL & SIL Testing",
+            "text": "Hardware- und Software-in-the-Loop-Testumgebungen für vernetzte Fahrzeug- und IoT-Systeme."
+          },
+          {
+            "title": "IoT Device Validation",
+            "text": "Gerätezertifizierung sowie Konformitäts- und Ökosystem-Tests für Massive-IoT-Deployments."
+          },
+          {
+            "title": "PoC & Acceptance",
+            "text": "Klar strukturierte Proof-of-Concept- und Abnahme-Verfahren — messbar, wiederholbar und entscheidungsreif."
+          }
         ]
       }
     ],
@@ -192,18 +354,42 @@
     "title": "Die moderne Fahrzeug-Plattform",
     "lead": "Ein Fahrzeug heute: mehrere Funkstandards, Dutzende Steuergeräte, Software-Updates over the air. Wir liefern Engineering über den gesamten Connected-Car- und IVI-Stack.",
     "items": [
-      { "title": "Android Automotive & Auto", "tag": "ANDROID · AAOS", "text": "Tiefe Expertise in Android Automotive OS und Android-Auto-Integration — konform mit OEM-Vorgaben und den Anforderungen des Google-Ökosystems." },
-      { "title": "Connectivity-Architektur", "tag": "4G · 5G · V2X", "text": "Design der Fahrzeug-Connectivity: Cellular, Wi-Fi, Bluetooth und V2X — inklusive der Frage, welcher Datenpfad wohin gehört und wie er abgesichert wird." },
-      { "title": "Service Management & Auth", "tag": "ISO/SAE 21434", "text": "Robustes Service-Lifecycle-Management und Security-Frameworks — IAM, Zertifikatsverwaltung und Autorisierungsabläufe, ausgerichtet an Automotive-Cybersecurity-Standards." },
-      { "title": "Functions on Demand", "tag": "REVENUE · POST-SALE", "text": "Architektur und Implementierung für flexible, abonnementbasierte Feature-Aktivierung — OEMs schalten Funktionen remote frei und erschließen neue After-Sales-Umsätze." },
-      { "title": "OTA Update Management", "tag": "OTA · ECU · IVI", "text": "Umfassende OTA-Strategie, Integration und Validierung — sichere, zuverlässige und konforme Software-Updates über ECUs, IVI-Systeme und Fahrzeug-Subsysteme." },
-      { "title": "ECU Testing & Validation", "tag": "HIL · SIL · HOMOLOGATION", "text": "Rigoroses Testing für ECUs und vernetzte Fahrzeugsysteme — von früher Verifikation bis zu System-Integration und Homologation." }
+      {
+        "title": "Android Automotive & Auto",
+        "tag": "ANDROID · AAOS",
+        "text": "Tiefe Expertise in Android Automotive OS und Android-Auto-Integration — konform mit OEM-Vorgaben und den Anforderungen des Google-Ökosystems."
+      },
+      {
+        "title": "Connectivity-Architektur",
+        "tag": "4G · 5G · V2X",
+        "text": "Design der Fahrzeug-Connectivity: Cellular, Wi-Fi, Bluetooth und V2X — inklusive der Frage, welcher Datenpfad wohin gehört und wie er abgesichert wird."
+      },
+      {
+        "title": "Service Management & Auth",
+        "tag": "ISO/SAE 21434",
+        "text": "Robustes Service-Lifecycle-Management und Security-Frameworks — IAM, Zertifikatsverwaltung und Autorisierungsabläufe, ausgerichtet an Automotive-Cybersecurity-Standards."
+      },
+      {
+        "title": "Functions on Demand",
+        "tag": "REVENUE · POST-SALE",
+        "text": "Architektur und Implementierung für flexible, abonnementbasierte Feature-Aktivierung — OEMs schalten Funktionen remote frei und erschließen neue After-Sales-Umsätze."
+      },
+      {
+        "title": "OTA Update Management",
+        "tag": "OTA · ECU · IVI",
+        "text": "Umfassende OTA-Strategie, Integration und Validierung — sichere, zuverlässige und konforme Software-Updates über ECUs, IVI-Systeme und Fahrzeug-Subsysteme."
+      },
+      {
+        "title": "ECU Testing & Validation",
+        "tag": "HIL · SIL · HOMOLOGATION",
+        "text": "Rigoroses Testing für ECUs und vernetzte Fahrzeugsysteme — von früher Verifikation bis zu System-Integration und Homologation."
+      }
     ]
   },
   "about": {
     "title": "Über SAJ Connect",
-    "lead": "SAJ Connect GmbH ist eine spezialisierte Technologieberatung an der Schnittstelle von Wireless, Mobilität und IoT. Wir vereinen tiefes technisches Wissen aus Telco, Automotive und IoT mit einem praktischen, partnerschaftlichen Ansatz.",
-    "leadSecond": "Unser Team aus Ingenieurinnen, Ingenieuren und Beratern arbeitet direkt mit den Kunden — vom ersten Scoping bis zur Abnahme.",
+    "lead": "SAJ Connect ist eine spezialisierte Ingenieurberatung an der Schnittstelle von Funkkommunikation, Mobilität und IoT, mit Teams in Deutschland und den USA.",
+    "leadSecond": "Sie sprechen mit den Ingenieuren, die die Arbeit machen. Wer im ersten Gespräch sitzt, steht auch vor Ort, vom Scoping bis zur Abnahme.",
     "name": {
       "label": "Der Name",
       "title": "SAJ — Smart Access Journey.",
@@ -212,18 +398,34 @@
     },
     "mission": {
       "title": "Unsere Mission",
-      "text": "Wir bringen 5G- und Connectivity-Projekte in den Betrieb — und bleiben verantwortlich, bis sie dort stabil laufen."
+      "text": "Wir bringen Funkprojekte in den Betrieb und bleiben verantwortlich, bis sie zuverlässig laufen."
     },
     "differentiators": {
       "title": "Warum mit uns arbeiten",
       "items": [
-        { "n": "01", "text": "Jahrzehntelange kombinierte Expertise in Mobilkommunikation, 5G und Automotive-Systemen." },
-        { "n": "02", "text": "Direkte Zusammenarbeit mit Kunden — von der Strategie bis zum Live-Betrieb." },
-        { "n": "03", "text": "Bewährtes, skalierbares Partner-Ökosystem mit globaler Reichweite." },
-        { "n": "04", "text": "Vollständige Abdeckung über Private 5G, eSIM, IoT und Connected Car." },
-        { "n": "05", "text": "Teamgröße nach Bedarf — vom einzelnen RF-Planer bis zum kompletten Projektteam." }
+        {
+          "n": "01",
+          "text": "Sie sprechen mit den Ingenieuren, die die Arbeit machen, vom ersten Gespräch bis zur Abnahme."
+        },
+        {
+          "n": "02",
+          "text": "Wir betrachten Netz, Geräte und Menschen zusammen, nicht ein Teil für sich."
+        },
+        {
+          "n": "03",
+          "text": "Vendor-agnostic: Wir wählen die Technik, die zu Ihrem Problem passt, nicht eine, die wir verkaufen müssen."
+        },
+        {
+          "n": "04",
+          "text": "Pro Projekt liefern wir oder wir prüfen. Nie beides."
+        },
+        {
+          "n": "05",
+          "text": "Teamgröße passend zur Aufgabe, vom einzelnen RF-Planer bis zum kompletten Projektteam."
+        }
       ]
-    }
+    },
+    "focusValue": "Automotive · Industrie · Bahn"
   },
   "careers": {
     "title": "Karriere bei SAJ Connect",
@@ -234,8 +436,8 @@
     "initiative": "Initiativbewerbung senden"
   },
   "blog": {
-    "title": "Blog & Insights",
-    "lead": "Notizen aus dem Feld — was wir beim Bauen von 5G-, eSIM-, IoT- und Connected-Car-Systemen lernen.",
+    "title": "Field Stories",
+    "lead": "Was wir beim Aufbau und Testen von Funksystemen lernen, mit den Details, auf die es ankommt.",
     "readingTime": "Min. Lesezeit",
     "by": "von",
     "back": "Zurück zur Übersicht",
@@ -244,22 +446,42 @@
     "articles": "Artikel",
     "published": "Veröffentlicht",
     "tags": "Tags",
-    "noPostsLabel": "Noch keine Artikel"
+    "noPostsLabel": "Noch keine Artikel",
+    "ctaButton": "Projektcheck anfragen"
   },
   "contact": {
-    "title": "Kontakt",
-    "lead": "Erzählen Sie uns von Ihrem Projekt. Wir sagen Ihnen, ob und wie wir helfen können — meist schon im ersten Gespräch.",
+    "title": "Erzählen Sie uns, wo Ihr Projekt hängt.",
+    "lead": "Sie sprechen mit einem Ingenieur, nicht mit dem Vertrieb. Ob wir helfen können, sagen wir Ihnen meist schon im ersten Gespräch.",
     "form": {
       "name": "Name",
-      "email": "E-Mail",
+      "email": "Geschäftliche E-Mail",
       "company": "Unternehmen",
-      "message": "Nachricht",
+      "message": "Ihr Projekt in ein, zwei Sätzen",
       "consent": "Ich habe die Datenschutzerklärung gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
-      "submit": "Nachricht senden",
+      "submit": "Senden",
       "submitting": "Wird gesendet …",
-      "success": "Vielen Dank — wir melden uns in Kürze.",
+      "success": "Danke. Ein Ingenieur meldet sich innerhalb eines Werktags bei Ihnen.",
       "error": "Da ist etwas schiefgelaufen. Bitte versuchen Sie es noch einmal.",
-      "acknowledged": "Bestätigt"
+      "acknowledged": "Bestätigt",
+      "messagePlaceholder": "z. B. „Unsere Telematikeinheit läuft bei zwei Netzbetreibern und scheitert beim dritten.“",
+      "stage": "Wo steht Ihr Projekt gerade?",
+      "stageOptions": [
+        "Planung",
+        "Pilot",
+        "Rollout",
+        "Im Betrieb",
+        "Festgefahren"
+      ],
+      "source": "Wie sind Sie auf uns aufmerksam geworden?",
+      "sourceOptions": [
+        "Suche",
+        "LinkedIn",
+        "Empfehlung",
+        "Veranstaltung",
+        "Sonstiges"
+      ],
+      "optional": "optional",
+      "successMore": "Bis dahin: So arbeiten wir im Feld."
     },
     "officeGermany": "Deutschland",
     "officeUsa": "USA",
@@ -271,7 +493,7 @@
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "terms": "AGB",
-    "tagline": "Ingenieurberatung für Private 5G, eSIM und Connected Car — aus Nürnberg und Spokane."
+    "tagline": "Ingenieurberatung für Funkprojekte, die im Betrieb funktionieren müssen. Automotive · Industrie · Bahn. Deutschland und USA."
   },
   "cookie": {
     "headline": "Wir respektieren Ihre Privatsphäre",
@@ -543,7 +765,7 @@
   "landing": {
     "headline": "Beratung für Connectivity und Private 5G.",
     "lede": "Wir planen, testen und betreiben private Mobilfunknetze, eSIM-Lösungen und Bahnfunk, für Fabriken, Bahnbetreiber und kritische Infrastruktur.",
-    "locations": "Nürnberg · Spokane, USA",
+    "locations": "Raum Nürnberg · Spokane, USA",
     "legendTitle": "Empfangsleistung RSRP (dBm)",
     "legendCaption": "Schematische Darstellung einer RF-Planung: Werkhalle, 3,7 GHz, vier Zellen.",
     "bandTitle": "Ein Funknetz ist erst fertig, wenn es im Betrieb hält, was die Planung versprochen hat.",
@@ -1180,6 +1402,344 @@
       {
         "label": "Ericsson: Übergabe von IoT Accelerator an Aeris (2023, englisch)",
         "url": "https://www.ericsson.com/en/news/2023/3/ericsson-announces-closing-of-the-transfer-of-iot-accelerator-and-connected-vehicle-cloud-businesses-to-aeris"
+      }
+    ]
+  },
+  "start": {
+    "hero": {
+      "headline": "Die meisten Funkprojekte scheitern nicht am Netz.",
+      "sub": "Sondern dort, wo das Netz auf Geräte, Maschinen und Menschen trifft. SAJ Connect plant, integriert und testet alle drei, für Automotive, Industrie und Bahn, in Deutschland und den USA.",
+      "ctaStory": "Eine Field Story lesen",
+      "note": "Im Gespräch sitzen Ihnen Ingenieure gegenüber."
+    },
+    "problem": {
+      "title": "Jeder verantwortet ein Teil. Niemand das Ganze.",
+      "paras": [
+        "Der Netzbetreiber verantwortet das Netz, der Ausrüster die Funktechnik, der Zulieferer das Gerät, Ihr Team den Prozess.",
+        "Wenn etwas nicht funktioniert, besteht jedes Teil seinen eigenen Test, und das Projekt steht trotzdem. Meist fällt der Verdacht zuerst auf das Gerät: Es ist das neueste Glied in der Kette, und niemand im Raum hat es gebaut."
+      ],
+      "closing": "Ein weiteres Meeting löst das nicht. Messdaten schon."
+    },
+    "view": {
+      "label": "Der 360°-Blick",
+      "title": "Wir schauen auf alle drei.",
+      "items": [
+        {
+          "k": "Netz",
+          "text": "Verhalten sich Funknetz und Core so, wie die Planung es versprochen hat, auf Ihrem Gelände und nicht nur im Datenblatt?"
+        },
+        {
+          "k": "Gerät",
+          "text": "Verbinden sich Ihre Fahrzeuge, Module, Scanner und Maschinen, schaffen den Handover und bleiben verbunden, auch nach jedem Firmware-Update?"
+        },
+        {
+          "k": "Mensch",
+          "text": "Können die Menschen, die das System nutzen, betreiben und freigeben, damit arbeiten: Bedienung, Instandhaltung, IT-Sicherheit, Betriebsrat?"
+        }
+      ],
+      "closing": "Ein Funksystem ist erst fertig, wenn alle drei im Betrieb zusammenspielen."
+    },
+    "beliefs": {
+      "title": "Was wir im Feld immer wieder sehen",
+      "items": [
+        {
+          "k": "Planung",
+          "title": "Erst messen, dann planen.",
+          "text": "Datenblätter und Simulationen sind ein Anfang. Wie sich Funk in einem Gebäude oder auf einem Gelände wirklich verhält, zeigt erst die Messung vor Ort. Darum steht sie bei uns am Anfang und nicht am Ende."
+        },
+        {
+          "k": "Nachweis",
+          "title": "Messdaten beenden Diskussionen.",
+          "text": "Ein Prüfbericht mit „nicht bestanden“ ist ein Urteil, kein Beleg. Wir zeichnen den tatsächlichen Fehler mit Trace-Tools auf und haben kein Interesse daran, bei wem er am Ende liegt."
+        },
+        {
+          "k": "Projekt",
+          "title": "Die Technik ist selten das Problem.",
+          "text": "Häufiger hakt es an den Übergängen: zwischen IT und Betrieb, zwischen mehreren Lieferanten, zwischen Anforderung und Ausschreibung. Diese Stellen klären wir früh, bevor sie Zeit und Geld kosten."
+        },
+        {
+          "k": "Betrieb",
+          "title": "Ein System muss jemand betreiben können.",
+          "text": "Das beste Design hilft wenig, wenn nach der Übergabe niemand weiß, wie es funktioniert. Wir dokumentieren so, dass Ihr Team das System selbst versteht und weiterentwickeln kann."
+        }
+      ]
+    },
+    "markets": {
+      "title": "Wo wir arbeiten",
+      "items": [
+        {
+          "title": "Automotive & Connected Vehicles",
+          "text": "Integration und Testing der Connectivity von Fahrzeugen und Geräten, vom Laborplatz bis zur Teststrecke."
+        },
+        {
+          "title": "Private 5G für die Industrie",
+          "text": "Private 5G, das in der Produktion läuft und nicht nur im Pilotprojekt. In Deutschland und den USA."
+        },
+        {
+          "title": "Bahn & FRMCS",
+          "text": "Der Wechsel von GSM-R zu FRMCS, von der RF-Planung bis zur Abnahme."
+        }
+      ],
+      "all": "Alle Kompetenzen"
+    },
+    "story": {
+      "label": "Field Story",
+      "quote": "Ein Netzbetreiber verweigerte die Freigabe für das Gerät unseres Kunden. Der Trace zeigte, dass das Netz es tatsächlich ablehnte. Beide hatten recht, und keiner war das Problem.",
+      "line": "Vom ersten Trace bis zur Auflösung vergingen etwa vierzig Minuten.",
+      "link": "„Cause 15“ lesen"
+    },
+    "atlantic": {
+      "title": "Ein Team, zwei Märkte.",
+      "text": "Viele Werke sehen in Deutschland und den USA gleich aus. Die Regeln nicht: lokale Frequenzen bei 3,7–3,8 GHz in Deutschland, CBRS in den USA. CE-Kennzeichnung auf der einen Seite, FCC auf der anderen. Ein Betriebsrat in Deutschland, andere Erwartungen in den USA. Wir arbeiten in beiden Märkten, damit Ihr Blueprint ohne Überraschungen über den Atlantik kommt.",
+      "link": "Deutschland & USA"
+    },
+    "how": {
+      "title": "Verstehen, bauen, übergeben.",
+      "phase": "Phase",
+      "outcomeLabel": "Sie erhalten",
+      "steps": [
+        {
+          "title": "Analyse",
+          "text": "Anforderungen, Messungen vor Ort, Machbarkeit und Business Case, bevor die erste Architekturentscheidung fällt.",
+          "outcome": "Ein Zielbild mit Kosten und Risiken."
+        },
+        {
+          "title": "Bauen & testen",
+          "text": "Design, Integration und Testing in kurzen, überprüfbaren Schritten, mit echten Geräten ab dem ersten Inkrement.",
+          "outcome": "Ein abgenommenes, dokumentiertes System in seiner Zielumgebung."
+        },
+        {
+          "title": "Betrieb",
+          "text": "Übergabe, Monitoring, Optimierung und Wissenstransfer, bis Ihr Team das System sicher selbst verantwortet. Auf Wunsch auch länger.",
+          "outcome": "Stabiler Betrieb mit messbaren KPIs und klarer Verantwortung."
+        }
+      ],
+      "independence": "Pro Projekt liefern wir oder wir prüfen. Nie beides."
+    }
+  },
+  "automotive": {
+    "label": "Automotive",
+    "title": "Wenn Fahrzeug, Netz und Backend sich uneinig sind, finden wir heraus, warum.",
+    "lede": "Integration und Testing für Connected Vehicles und Automotive-Geräte: Mobilfunk und V2X, eSIM, OTA-Updates und Backend-Anbindung, vom Laborplatz über die Teststrecke bis ins Feld.",
+    "metaTitle": "Connected Vehicle Integration & Testing",
+    "metaDescription": "Mobilfunk-, V2X-, eSIM- und OTA-Testing für OEMs und Tier-1. Ursachenanalyse auf Trace-Basis, wenn Fahrzeug, Netz und Backend sich uneinig sind.",
+    "storyLink": "„Cause 15“ lesen",
+    "stuck": {
+      "title": "Wo Connected-Vehicle-Projekte hängen bleiben",
+      "items": [
+        "Das Modul funktioniert im Labor und scheitert im Netz eines einzelnen Betreibers.",
+        "Ein Zertifizierungsbericht sagt „fails attach procedure“, und niemand hat einen Trace.",
+        "Die OTA-Kampagne läuft auf hundert Fahrzeugen und bricht bei zehntausend.",
+        "Ein eSIM-Profilwechsel scheitert in einem Land, das niemand getestet hat.",
+        "OEM, Zulieferer und Netzbetreiber haben jeweils Belege, dass der Fehler woanders liegt."
+      ],
+      "closing": "Meist hat jede Seite teilweise recht. Die Antwort liegt dazwischen, und genau dort arbeiten wir."
+    },
+    "what": {
+      "title": "Was wir tun",
+      "items": [
+        {
+          "title": "Integrationstests, End-to-End",
+          "text": "Fahrzeug, Telematikeinheit und Modul, über das Netz bis zum Backend, getestet als eine Kette statt als Einzelteile."
+        },
+        {
+          "title": "Interoperabilität und Netzbetreiber-Freigabe",
+          "text": "Validierung über mehrere Hersteller und Netzbetreiber. Unterstützung, wenn ein Netzbetreiber oder eine Prüfstelle Ihr Gerät ablehnt: Traces, Ursache und Lösung."
+        },
+        {
+          "title": "eSIM- und SIM-Testing",
+          "text": "Profil-Download, Profilwechsel und Lifecycle-Tests, ausgerichtet an den GSMA-Spezifikationen."
+        },
+        {
+          "title": "OTA-Update-Testing",
+          "text": "Robustheit, Rollback, Security und echte Feldszenarien, damit eine Kampagne, die auf hundert Fahrzeugen läuft, auch auf der ganzen Flotte läuft."
+        },
+        {
+          "title": "HIL- und SIL-Testumgebungen",
+          "text": "Hardware- und Software-in-the-Loop-Aufbauten für vernetzte und automobile Systeme."
+        },
+        {
+          "title": "Connectivity-Architektur im Fahrzeug",
+          "text": "Mobilfunk, V2X, Wi-Fi und Bluetooth, mit sauber getrennten, abgesicherten Datenpfaden."
+        }
+      ],
+      "alsoTitle": "Ebenfalls Teil unserer Automotive-Arbeit",
+      "also": "Integration von Android Automotive und Android Auto · Service- und Zertifikatsmanagement nach ISO/SAE 21434 · Functions on Demand · ECU-Testing und Begleitung der Homologation"
+    },
+    "how": {
+      "title": "Wie wir testen",
+      "items": [
+        {
+          "title": "Den tatsächlichen Fehler aufzeichnen.",
+          "text": "Ein Trace vom Air Interface, keine Zusammenfassung davon."
+        },
+        {
+          "title": "So wenig wie möglich ändern.",
+          "text": "Gleiches Gerät, andere Umgebung. Funktioniert es einen Raum weiter, ist die Frage beantwortet."
+        },
+        {
+          "title": "Die erste Antwort als Ausgangspunkt nehmen.",
+          "text": "Testumgebungen sammeln über Jahre Konfiguration an, und wer antwortet, hat sie meist geerbt."
+        },
+        {
+          "title": "Belege liefern, keine Urteile.",
+          "text": "Ursache, Nachweis und ein Lösungsvorschlag, den jede Seite nachprüfen kann."
+        }
+      ]
+    },
+    "receive": {
+      "title": "Was Sie erhalten",
+      "rows": [
+        {
+          "k": "Testplan und Testfälle",
+          "v": "Der Testumfang ist abgestimmt, bevor getestet wird"
+        },
+        {
+          "k": "Trace-Daten",
+          "v": "Messdaten, die Diskussionen zwischen den Beteiligten beenden"
+        },
+        {
+          "k": "Ursachenbericht",
+          "v": "Was ausgefallen ist, warum, und wer handeln muss"
+        },
+        {
+          "k": "Abnahmebericht",
+          "v": "Eine dokumentierte Grundlage für Freigabe oder Homologation"
+        }
+      ]
+    },
+    "process": {
+      "title": "Passt in Ihren Prozess",
+      "text": "Wir arbeiten innerhalb Ihres Testmanagements, Ihrer Lieferantenstruktur und Ihrer Release-Gates, nicht daneben."
+    },
+    "cta": {
+      "headline": "Ein Netz nimmt Ihr Gerät nicht an?",
+      "sub": "Erzählen Sie uns, was der Trace zeigt, oder dass es noch keinen gibt. Ob und wie wir helfen können, wissen wir meist nach dem ersten Gespräch."
+    }
+  },
+  "private5g": {
+    "title": "Private 5G, das in der Produktion läuft und nicht nur im Pilotprojekt.",
+    "lede": "Planung, Aufbau, Integration und Testing privater 5G-Netze für Werke, Häfen und Logistikstandorte, in Deutschland (lokale Frequenzen bei 3,7–3,8 GHz) und den USA (CBRS).",
+    "metaTitle": "Private 5G für die Industrie in Deutschland & den USA",
+    "metaDescription": "Private 5G, das in der Produktion läuft: Frequenzen (3,7 GHz / CBRS), RF-Planung, Geräteintegration und Abnahmetests. Vendor-agnostic.",
+    "stall": {
+      "title": "Warum Pilotprojekte stehen bleiben",
+      "items": [
+        "Das Netz liefert. Die Geräte unterstützen das richtige Band oder den Standalone-Betrieb nicht.",
+        "Zehn Geräte funktionieren. Zweihundert nicht.",
+        "Der Pilot war ein Netzprojekt. Für die Produktion müssen IT, OT, Security und der Betriebsrat mit an Bord sein.",
+        "Nach dem Abzug des Integrators kann niemand vor Ort das Netz betreiben."
+      ]
+    },
+    "steps": {
+      "title": "Was wir tun, Schritt für Schritt",
+      "items": [
+        {
+          "title": "Entscheiden",
+          "text": "Private 5G, Wi-Fi oder beides? Eine ehrliche Bewertung mit Business Case. Manchmal lautet die Antwort „kein 5G“, und das sagen wir Ihnen dann auch.",
+          "links": [
+            {
+              "label": "Private 5G oder Wi-Fi 6E in der Fabrik?",
+              "href": "/de/blog/private-5g-vs-wifi-6e"
+            }
+          ]
+        },
+        {
+          "title": "Planen",
+          "text": "Zuerst messen wir vor Ort. Frequenzen: ein Antrag auf lokale Frequenzen in Deutschland, CBRS in den USA. Eine herstellerneutrale Architektur und Unterstützung bei der Ausschreibung.",
+          "links": [
+            {
+              "label": "Die eigene 5G-Frequenz in Deutschland",
+              "href": "/de/blog/germany-local-5g-spectrum"
+            },
+            {
+              "label": "CBRS in den USA (englisch)",
+              "href": "/en/blog/private-5g-spectrum"
+            }
+          ]
+        },
+        {
+          "title": "Bauen & integrieren",
+          "text": "Funktechnik, Core Network, Geräte, Maschinen und IT/OT-Integration, einschließlich der technischen Seite der KRITIS- und NIS2-Pflichten.",
+          "links": [
+            {
+              "label": "KRITIS & NIS2",
+              "href": "/de/kritis"
+            }
+          ]
+        },
+        {
+          "title": "Abnehmen & betreiben",
+          "text": "Abnahmetests mit echten Geräten unter echter Last. Eine Dokumentation, mit der Ihr Team arbeiten kann, und eine saubere Übergabe. Auf Wunsch übernehmen wir den Betrieb.",
+          "links": []
+        }
+      ]
+    }
+  },
+  "capabilities": {
+    "title": "Die Kompetenzen hinter jedem Projekt",
+    "lede": "Die meisten Projekte brauchen zwei oder drei davon. Wir bringen sie dort ein, wo Ihr Projekt sie braucht, nicht als einzelne Produkte.",
+    "metaTitle": "Kompetenzen",
+    "focusTitle": "Unsere Schwerpunkte",
+    "skillsTitle": "Unterstützende Kompetenzen",
+    "augmentation": {
+      "title": "Expert Augmentation",
+      "text": "Unsere Spezialisten verstärken Ihr Team bei Architektur-Reviews, RF-Planung, Testkampagnen oder der Begleitung von Zertifizierungen, genau dort, wo Expertise fehlt."
+    },
+    "outlookTitle": "Ausblick",
+    "notSure": "Unsicher, was Sie brauchen? Erzählen Sie uns von Ihrem Projekt."
+  },
+  "atlantic": {
+    "title": "Ein Team für beide Seiten des Atlantiks.",
+    "lede": "Viele Unternehmen betreiben Standorte in Deutschland und in den USA. Das Werk sieht gleich aus. Die Regeln nicht.",
+    "metaTitle": "Private 5G in Deutschland und den USA",
+    "metaDescription": "Lokale 3,7-GHz-Frequenzen oder CBRS, CE oder FCC, Betriebsrat und mehr: ein Team, das Ihren Blueprint über den Atlantik bringt.",
+    "tableTitle": "Was sich ändert, wenn Ihr Blueprint den Atlantik überquert",
+    "colTopic": "Thema",
+    "colDe": "Deutschland",
+    "colUs": "USA",
+    "rows": [
+      {
+        "k": "Frequenzen",
+        "de": "Lokale Frequenzen bei 3,7–3,8 GHz, beantragt bei der Bundesnetzagentur (ohne Auktion)",
+        "us": "CBRS (3,55–3,7 GHz), Zugang über ein Spectrum Access System; allgemeiner Zugang oder Priority Access Licences (PAL)"
+      },
+      {
+        "k": "Gerätezulassung",
+        "de": "CE-Kennzeichnung nach der Funkanlagenrichtlinie (RED)",
+        "us": "FCC Equipment Authorization"
+      },
+      {
+        "k": "Kritische Infrastruktur",
+        "de": "KRITIS und NIS2",
+        "us": "Sektorspezifische Anforderungen"
+      },
+      {
+        "k": "Belegschaft",
+        "de": "Mitbestimmung des Betriebsrats bei technischen Systemen, die Beschäftigte überwachen können",
+        "us": "Andere Regeln, oft standortspezifisch"
+      }
+    ],
+    "offerTitle": "Was wir bieten",
+    "offer": [
+      {
+        "title": "Ein Blueprint, je Standort angepasst.",
+        "text": "Wir behalten, was gleich bleiben kann, und planen, was sich ändern muss. So wird der zweite Standort kein neues Projekt."
+      },
+      {
+        "title": "Teams auf beiden Seiten.",
+        "text": "Raum Nürnberg und Spokane, Washington, und vor Ort, wo Ihr Projekt ist."
+      }
+    ],
+    "readTitle": "Weiterlesen",
+    "read": [
+      {
+        "label": "Die eigene 5G-Frequenz in Deutschland",
+        "href": "/de/blog/germany-local-5g-spectrum"
+      },
+      {
+        "label": "CBRS in den USA (englisch)",
+        "href": "/en/blog/private-5g-spectrum"
       }
     ]
   },

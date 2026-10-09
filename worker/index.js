@@ -75,6 +75,8 @@ async function handleContact(request, env) {
   const email = clip(body.email, 200);
   const company = clip(body.company, 200);
   const message = clip(body.message, 5000);
+  const stage = clip(body.stage, 100);
+  const source = clip(body.source, 100);
 
   if (name.length < 2 || !EMAIL_RE.test(email) || message.length < 10 || body.consent !== true) {
     return json({ error: "validation" }, 400);
@@ -95,7 +97,8 @@ async function handleContact(request, env) {
         contentType: "Text",
         content:
           `Neue Anfrage über das Kontaktformular www.sajconnect.com\n\n` +
-          `Name: ${name}\nE-Mail: ${email}\nUnternehmen: ${company || "—"}\n\n` +
+          `Name: ${name}\nE-Mail: ${email}\nUnternehmen: ${company || "—"}\n` +
+          `Projektphase: ${stage || "—"}\nAufmerksam geworden über: ${source || "—"}\n\n` +
           `Nachricht:\n${message}\n`,
       },
       toRecipients: [{ emailAddress: { address: env.MAIL_TO } }],

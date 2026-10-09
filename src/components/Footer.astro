@@ -11,27 +11,33 @@ const year = new Date().getFullYear();
 <footer class="surface-carbon border-t border-[var(--color-hairline-dark)]">
   <div class="container-prose pt-20 pb-10">
     <div class="grid grid-cols-12 gap-x-4 gap-y-8 md:gap-8">
-      <div class="col-span-12 md:col-span-5">
+      <div class="col-span-12 md:col-span-4">
         <Logo width={240} withTagline={true} />
-        <p class="mt-6 max-w-md text-base text-[var(--color-text-on-carbon-muted)]">
+        <p class="mt-6 max-w-sm text-base text-[var(--color-text-on-carbon-muted)]">
           {tt("footer.tagline")}
         </p>
       </div>
 
       <div class="col-span-6 md:col-span-2">
-        <p class="mono-label text-[var(--color-saj-green-bright)]">{tt("ui.capabilities")}</p>
+        <p class="mono-label text-[var(--color-saj-green-bright)]">{tt("ui.focus")}</p>
         <ul class="mt-5 space-y-3 text-sm">
-          <li><a href={localizedPath(locale, "/services")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.services")}</a></li>
-          <li><a href={localizedPath(locale, "/consultancy")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.consultancy")}</a></li>
+          <li><a href={localizedPath(locale, "/automotive")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.automotive")}</a></li>
+          <li><a href={localizedPath(locale, "/private-5g")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.private5g")}</a></li>
+          <li><a href={localizedPath(locale, "/frmcs")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.rail")}</a></li>
+          <li><a href={localizedPath(locale, "/germany-us")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.germanyUs")}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-6 md:col-span-2">
+        <p class="mono-label text-[var(--color-saj-green-bright)]">{tt("nav.capabilities")}</p>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href={localizedPath(locale, "/capabilities")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.overview")}</a></li>
           <li><a href={localizedPath(locale, "/esim")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.esim")}</a></li>
           <li><a href={localizedPath(locale, "/iot")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.iot")}</a></li>
           <li><a href={localizedPath(locale, "/ntn")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.ntn")}</a></li>
-          <li><a href={localizedPath(locale, "/6g")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.sixg")}</a></li>
           <li><a href={localizedPath(locale, "/connectivity-platform")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.platform")}</a></li>
-          <li><a href={localizedPath(locale, "/testing")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.testing")}</a></li>
-          <li><a href={localizedPath(locale, "/connected-car")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.vehicle")}</a></li>
-          <li><a href={localizedPath(locale, "/frmcs")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.frmcs")}</a></li>
           <li><a href={localizedPath(locale, "/kritis")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.kritis")}</a></li>
+          <li><a href={localizedPath(locale, "/6g")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.sixg")}</a></li>
         </ul>
       </div>
 
@@ -39,13 +45,13 @@ const year = new Date().getFullYear();
         <p class="mono-label text-[var(--color-cobalt-light)]">{tt("ui.company")}</p>
         <ul class="mt-5 space-y-3 text-sm">
           <li><a href={localizedPath(locale, "/about")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.about")}</a></li>
+          <li><a href={localizedPath(locale, "/blog")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.fieldStories")}</a></li>
           <li><a href={localizedPath(locale, "/careers")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.careers")}</a></li>
-          <li><a href={localizedPath(locale, "/blog")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.blog")}</a></li>
           <li><a href={localizedPath(locale, "/contact")} class="hover:text-[var(--color-cobalt-light)]">{tt("nav.contact")}</a></li>
         </ul>
       </div>
 
-      <div class="col-span-12 md:col-span-3">
+      <div class="col-span-6 md:col-span-2">
         <p class="mono-label text-[var(--color-amber)]">{tt("ui.legal")}</p>
         <ul class="mt-5 space-y-3 text-sm">
           <li><a href={localizedPath(locale, "/imprint")} class="hover:text-[var(--color-cobalt-light)]">{tt("footer.imprint")}</a></li>

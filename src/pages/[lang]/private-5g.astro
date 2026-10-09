@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+interface Step {
+  title: string;
+  text: string;
+  links: { label: string; href: string }[];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+const stall = getDict<string[]>(lang, "private5g.stall.items") ?? [];
+const steps = getDict<Step[]>(lang, "private5g.steps.items") ?? [];
+---
+
+<Layout title={`${tt("private5g.metaTitle")} — ${tt("site.name")}`} description={tt("private5g.metaDescription")}>
+  <PageHero label="Private 5G" title={tt("private5g.title")} lede={tt("private5g.lede")} image="/images/private5g-fabrik.webp" imagePosition="center 45%" />
+
+  <!-- Warum Pilotprojekte stehen bleiben -->
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("private5g.stall.title")}</h2>
+      <ul class="mt-10 max-w-[70ch]">
+        {stall.map((line, idx) => (
+          <li class:list={["py-4 text-lg leading-relaxed text-[var(--color-text-on-carbon)]", idx > 0 && "border-t border-[var(--color-hairline-dark)]"]}>{line}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Schritt für Schritt -->
+  <section class="paper-sheet">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md" style="color: var(--color-paper-ink);">{tt("private5g.steps.title")}</h2>
+      <ol class="mt-10">
+        {steps.map((step, idx) => (
+          <li class="grid grid-cols-1 gap-y-3 py-8 md:grid-cols-12 md:gap-x-12" style={idx > 0 ? "border-top: 1px solid color-mix(in srgb, var(--color-paper-ink) 18%, transparent);" : ""}>
+            <div class="md:col-span-4">
+              <p class="mono-label text-[var(--color-saj-green-bright)]">{String(idx + 1).padStart(2, "0")}</p>
+              <h3 class="heading-card mt-1" style="color: var(--color-paper-ink);">{step.title}</h3>
+            </div>
+            <div class="md:col-span-8">
+              <p class="max-w-[62ch] text-base leading-relaxed" style="color: var(--color-paper-muted);">{step.text}</p>
+              {step.links.length > 0 && (
+                <ul class="mt-3 space-y-1">
+                  {step.links.map((l) => (
+                    <li>
+                      <a href={l.href} class="text-sm font-bold text-[var(--color-cobalt-light)] underline decoration-1 underline-offset-4">{l.label} →</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <CtaBanner />
+</Layout>

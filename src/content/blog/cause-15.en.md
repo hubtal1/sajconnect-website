@@ -1,10 +1,11 @@
 ---
 title: "Cause 15"
 locale: "en"
-description: "An operator refused to type-approve our client's device. The trace said the network was rejecting it. Both were right, and neither was the problem."
+description: "Why a 5G module failed operator acceptance, and what one trace revealed."
 author: "SAJ Connect Team"
 publishedAt: 2026-08-28
-tags: ["news"]
+tags: ["testing", "devices", "certification", "automotive"]
+cta: "Have a device that a network won't accept?"
 draft: false
 ---
 
@@ -41,5 +42,3 @@ The trace is the part that gets skipped. Plenty of teams doing device work have 
 If you are stuck in one of these, get a trace from the actual failure, and try the device somewhere else with as little as possible changed. When it works one room over, the conversation is finished. Also, treat the first answer about the test environment as a starting point. Labs collect configuration over years and the person answering usually inherited it.
 
 That is most of what we do when a device and a network disagree. We turn up with a trace tool, we have no stake in whose fault it is, and we ask what is different about the room.
-
-If you have a device that a network will not accept: let's talk about your project.

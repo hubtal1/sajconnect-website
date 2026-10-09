@@ -1,10 +1,11 @@
 ---
 title: "Cause 15"
 locale: "de"
-description: "Ein Netzbetreiber verweigerte die Freigabe für das Gerät unseres Kunden. Der Trace zeigte, dass das Netz es tatsächlich ablehnte. Beide hatten recht, und keiner war das Problem."
+description: "Warum ein 5G-Modul an der Freigabe eines Netzbetreibers scheiterte und was ein einziger Trace zeigte."
 author: "SAJ Connect Team"
 publishedAt: 2026-08-28
-tags: ["news"]
+tags: ["testing", "devices", "certification", "automotive"]
+cta: "Ein Netz nimmt Ihr Gerät nicht an?"
 draft: false
 ---
 
@@ -41,5 +42,3 @@ Genau der Trace ist der Teil, der übersprungen wird. Viele Teams, die an Gerät
 Wer gerade in so einer Situation steckt: Besorgt euch einen Trace vom tatsächlichen Fehlerfall, und probiert das Gerät an einem anderen Ort, mit so wenig Änderungen wie möglich. Wenn es einen Raum weiter funktioniert, ist die Diskussion vorbei. Und behandelt die erste Auskunft über die Testumgebung als Ausgangspunkt. Labore sammeln über Jahre Konfiguration an, und wer dort Auskunft gibt, hat das meiste davon geerbt.
 
 Das ist das meiste von dem, was wir tun, wenn Gerät und Netz sich uneinig sind. Wir kommen mit einem Trace-Tool, wir haben kein Interesse daran, wessen Fehler es ist, und wir fragen, was an diesem Raum anders ist.
-
-Wenn ein Netz euer Gerät nicht annimmt: Sprechen wir über euer Projekt

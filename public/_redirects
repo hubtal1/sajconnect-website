@@ -4,23 +4,22 @@
 # Translated slug aliases — DE
 /de/karriere                   /de/careers                     301
 /de/karriere/*                 /de/careers/:splat              301
-/de/leistungen                 /de/services                    301
+/de/leistungen                 /de/capabilities                301
 /de/ueber-uns                  /de/about                       301
 /de/kontakt                    /de/contact                     301
 /de/impressum                  /de/imprint                     301
 /de/datenschutz                /de/privacy                     301
-/de/private-5g                 /de/consultancy                 301
-/de/testen                     /de/testing                     301
+/de/testen                     /de/automotive#testing          301
 
 # Translated slug aliases — PT-BR
 /pt-br/sobre                   /pt-br/about                    301
-/pt-br/servicos                /pt-br/services                 301
+/pt-br/servicos                /pt-br/capabilities             301
 /pt-br/carreiras               /pt-br/careers                  301
 /pt-br/contato                 /pt-br/contact                  301
 /pt-br/aviso-legal             /pt-br/imprint                  301
 /pt-br/privacidade             /pt-br/privacy                  301
-/pt-br/consultoria             /pt-br/consultancy              301
-/pt-br/testes                  /pt-br/testing                  301
+/pt-br/consultoria             /pt-br/private-5g               301
+/pt-br/testes                  /pt-br/automotive#testing       301
 
 # Old WordPress paths from sajconnect.com — keep search rankings
 /legal-notice                  /en/imprint                     301
@@ -28,3 +27,37 @@
 /general-terms-conditions      /en/imprint                     301
 /home                          /en/                            301
 /feed                          /en/                            301
+
+# Relaunch Phase 1 (Oktober 2026): alte Seiten auf die neue Struktur
+/de/consultancy                                /de/private-5g                                 301
+/de/consultancy/                               /de/private-5g                                 301
+/de/connected-car                              /de/automotive                                 301
+/de/connected-car/                             /de/automotive                                 301
+/de/testing                                    /de/automotive#testing                         301
+/de/testing/                                   /de/automotive#testing                         301
+/de/services                                   /de/capabilities                               301
+/de/services/                                  /de/capabilities                               301
+/de/blog/en-blog-german-local-5g-spectrum      /de/blog/germany-local-5g-spectrum             301
+/de/blog/en-blog-german-local-5g-spectrum/     /de/blog/germany-local-5g-spectrum             301
+/en/consultancy                                /en/private-5g                                 301
+/en/consultancy/                               /en/private-5g                                 301
+/en/connected-car                              /en/automotive                                 301
+/en/connected-car/                             /en/automotive                                 301
+/en/testing                                    /en/automotive#testing                         301
+/en/testing/                                   /en/automotive#testing                         301
+/en/services                                   /en/capabilities                               301
+/en/services/                                  /en/capabilities                               301
+/en/blog/en-blog-german-local-5g-spectrum      /en/blog/germany-local-5g-spectrum             301
+/en/blog/en-blog-german-local-5g-spectrum/     /en/blog/germany-local-5g-spectrum             301
+/pt-br/consultancy                             /pt-br/private-5g                              301
+/pt-br/consultancy/                            /pt-br/private-5g                              301
+/pt-br/connected-car                           /pt-br/automotive                              301
+/pt-br/connected-car/                          /pt-br/automotive                              301
+/pt-br/testing                                 /pt-br/automotive#testing                      301
+/pt-br/testing/                                /pt-br/automotive#testing                      301
+/pt-br/services                                /pt-br/capabilities                            301
+/pt-br/services/                               /pt-br/capabilities                            301
+/pt-br/blog/en-blog-german-local-5g-spectrum   /pt-br/blog/germany-local-5g-spectrum          301
+/pt-br/blog/en-blog-german-local-5g-spectrum/  /pt-br/blog/germany-local-5g-spectrum          301
+/de/kompetenzen                                /de/capabilities                               301
+/pt-br/competencias                            /pt-br/capabilities                            301

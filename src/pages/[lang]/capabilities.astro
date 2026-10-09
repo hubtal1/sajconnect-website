@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/PageHero.astro";
+import ItemRows from "../../components/ItemRows.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { LOCALES, t, getDict, localizedPath, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+interface EngagementModel {
+  title: string;
+  text: string;
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const tt = t(lang);
+
+// Schwerpunkte: dieselben Texte wie auf der Startseite
+const FOCUS_PAGES = ["/automotive", "/private-5g", "/frmcs"];
+const focus = (getDict<{ title: string; text: string }[]>(lang, "start.markets.items") ?? []).map((m, i) => ({
+  ...m,
+  href: localizedPath(lang, FOCUS_PAGES[i]),
+}));
+
+// Unterstützende Kompetenzen mit eigener Fachseite (Teaser aus der jeweiligen Seite)
+const skills = [
+  { title: tt("nav.esim"), text: tt("esim.teaser"), href: localizedPath(lang, "/esim") },
+  { title: tt("nav.iot"), text: tt("iot.teaser"), href: localizedPath(lang, "/iot") },
+  { title: tt("nav.ntn"), text: tt("ntn.teaser"), href: localizedPath(lang, "/ntn") },
+  { title: tt("nav.kritis"), text: tt("kritis.teaser"), href: localizedPath(lang, "/kritis") },
+  { title: tt("nav.platform"), text: tt("platform.teaser"), href: localizedPath(lang, "/connectivity-platform") },
+  { title: tt("capabilities.augmentation.title"), text: tt("capabilities.augmentation.text") },
+];
+const outlook = [{ title: tt("nav.sixg"), text: tt("sixg.teaser"), href: localizedPath(lang, "/6g") }];
+const engagementModels = getDict<EngagementModel[]>(lang, "services.engagement.models") ?? [];
+const lineStyles = ["border-top: 3px solid currentColor;", "border-top: 3px dashed currentColor;", "border-top: 7px double currentColor;"];
+---
+
+<Layout title={`${tt("capabilities.metaTitle")} — ${tt("site.name")}`} description={tt("capabilities.lede")}>
+  <PageHero label={tt("nav.capabilities")} title={tt("capabilities.title")} lede={tt("capabilities.lede")} />
+
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("capabilities.focusTitle")}</h2>
+      <ItemRows items={focus} />
+    </div>
+  </section>
+
+  <section class="paper-sheet">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md" style="color: var(--color-paper-ink);">{tt("capabilities.skillsTitle")}</h2>
+      <ItemRows items={skills} />
+      <h2 class="mono-label mt-14" style="color: var(--color-paper-muted);">{tt("capabilities.outlookTitle")}</h2>
+      <ItemRows items={outlook} />
+    </div>
+  </section>
+
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("services.engagement.headline")}</h2>
+      <p class="lede mt-6 max-w-[58ch]">{tt("services.engagement.sub")}</p>
+      <div class="mt-12 grid grid-cols-1 gap-10 text-[var(--color-text-on-carbon)] md:grid-cols-3 md:gap-12">
+        {engagementModels.map((model, idx) => (
+          <div style={lineStyles[idx % 3]} class="pt-4">
+            <h3 class="heading-card mt-2.5">{model.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{model.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner headline={tt("capabilities.notSure")} />
+</Layout>

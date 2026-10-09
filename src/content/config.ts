@@ -25,6 +25,8 @@ const blog = defineCollection({
     publishedAt: z.coerce.date(),
     tags: z.array(z.string()).default([]),
     cover: z.string().optional(),
+    /** Eigene Abschlusszeile über dem Projektcheck-Button */
+    cta: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

@@ -1,10 +1,11 @@
 ---
 title: "Cause 15"
 locale: "pt-br"
-description: "Uma operadora recusou a homologação do dispositivo do nosso cliente. O trace mostrou que a rede realmente estava rejeitando. Os dois lados tinham razão, e nenhum era o problema."
+description: "Por que um módulo 5G foi reprovado no aceite da operadora, e o que um único trace revelou."
 author: "SAJ Connect Team"
 publishedAt: 2026-08-28
-tags: ["news"]
+tags: ["testing", "devices", "certification", "automotive"]
+cta: "Uma rede não aceita o seu dispositivo?"
 draft: false
 ---
 
@@ -41,5 +42,3 @@ O trace é justamente a parte que se pula. Muitas equipes que trabalham com disp
 Se você está numa situação dessas: consiga um trace da falha real e teste o dispositivo em outro lugar, mudando o mínimo possível. Se funcionar uma sala adiante, a discussão acabou. E trate a primeira resposta sobre o ambiente de teste como ponto de partida. Laboratórios acumulam configuração ao longo de anos, e quem responde normalmente herdou a maior parte dela.
 
 É basicamente isso que fazemos quando dispositivo e rede discordam. Chegamos com uma ferramenta de trace, não temos interesse em de quem é a culpa, e perguntamos o que naquela sala é diferente.
-
-Se uma rede não aceita o seu dispositivo: vamos conversar sobre o seu projeto

@@ -1,26 +1,157 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
-import BlattBand from "../../components/BlattBand.astro";
-import BlattLeistungen from "../../components/BlattLeistungen.astro";
-import BlattFeld from "../../components/BlattFeld.astro";
-import BlattVerfahren from "../../components/BlattVerfahren.astro";
-import BlattVertrag from "../../components/BlattVertrag.astro";
-import { LOCALES, t, type Locale } from "../../i18n/utils";
+import ItemRows from "../../components/ItemRows.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { LOCALES, t, getDict, localizedPath, type Locale } from "../../i18n/utils";
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
 }
 
+interface Note {
+  k: string;
+  title?: string;
+  text: string;
+}
+interface Step {
+  title: string;
+  text: string;
+  outcome: string;
+}
+
 const { lang } = Astro.params as { lang: Locale };
 const tt = t(lang);
+const problemParas = getDict<string[]>(lang, "start.problem.paras") ?? [];
+const view = getDict<Note[]>(lang, "start.view.items") ?? [];
+const beliefs = getDict<Note[]>(lang, "start.beliefs.items") ?? [];
+const steps = getDict<Step[]>(lang, "start.how.steps") ?? [];
+
+// Schwerpunkte mit eigener Seite, Reihenfolge wie start.markets.items
+const MARKET_PAGES = ["/automotive", "/private-5g", "/frmcs"];
+const markets = (getDict<{ title: string; text: string }[]>(lang, "start.markets.items") ?? []).map((m, i) => ({
+  ...m,
+  href: localizedPath(lang, MARKET_PAGES[i]),
+}));
+// Netz · Gerät · Mensch: je eine Linienfarbe
+const VIEW_COLORS = ["var(--color-saj-green-bright)", "var(--color-cobalt-light)", "var(--color-text-on-carbon)"];
 ---
 
 <Layout title={`${tt("site.name")} — ${tt("site.tagline")}`} description={tt("site.description")}>
   <Hero />
-  <BlattBand />
-  <BlattLeistungen />
-  <BlattFeld />
-  <BlattVerfahren />
-  <BlattVertrag />
+
+  <!-- Das Problem: volle Fläche in SAJ-Blau -->
+  <section class="text-white" style="background-color: #001ec9;">
+    <div class="container-prose py-16 md:py-24">
+      <div class="grid grid-cols-1 gap-y-8 md:grid-cols-12 md:gap-x-16">
+        <h2 class="font-display font-bold leading-[1.15] md:col-span-6" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">
+          {tt("start.problem.title")}
+        </h2>
+        <div class="space-y-5 text-lg leading-relaxed md:col-span-6" style="color: #d6dcff;">
+          {problemParas.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+      <p class="mt-14 border-t pt-8 font-display font-bold leading-snug" style="border-color: rgba(255,255,255,0.22); font-size: clamp(1.35rem, 2.2vw, 1.75rem);">
+        {tt("start.problem.closing")}
+      </p>
+    </div>
+  </section>
+
+  <!-- Der 360°-Blick: Netz · Gerät · Mensch -->
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <p class="mono-label text-[var(--color-cobalt-light)]">{tt("start.view.label")}</p>
+      <h2 class="display-md mt-3 text-[var(--color-text-on-carbon)]">{tt("start.view.title")}</h2>
+      <div class="mt-12 grid grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-12">
+        {view.map((item, idx) => (
+          <div class="pt-5" style={`border-top: 3px solid ${VIEW_COLORS[idx % 3]};`}>
+            <h3 class="font-display font-bold text-[var(--color-text-on-carbon)]" style="font-size: clamp(1.5rem, 2.4vw, 2rem);">{item.k}</h3>
+            <p class="mt-3 text-base leading-relaxed text-[var(--color-text-on-carbon-muted)]">{item.text}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-12 max-w-[60ch] text-lg font-bold leading-relaxed text-[var(--color-text-on-carbon)]">{tt("start.view.closing")}</p>
+    </div>
+  </section>
+
+  <!-- Überzeugungen aus dem Feld -->
+  <section class="paper-sheet" id="feld">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md" style="color: var(--color-paper-ink);">{tt("start.beliefs.title")}</h2>
+      <div class="mt-10 grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-16">
+        {beliefs.map((note) => (
+          <div class="border-l-2 pl-5" style="border-color: var(--color-cobalt-light);">
+            <p class="mono-label" style="color: var(--color-paper-muted);">{note.k}</p>
+            <h3 class="heading-card mt-2" style="color: var(--color-paper-ink);">{note.title}</h3>
+            <p class="mt-3 max-w-[56ch] text-base leading-relaxed" style="color: var(--color-paper-muted);">{note.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Wo wir arbeiten -->
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("start.markets.title")}</h2>
+      <ItemRows items={markets} />
+      <a href={localizedPath(lang, "/capabilities")} class="mt-8 inline-block text-sm font-bold text-[var(--color-cobalt-light)] underline decoration-1 underline-offset-4">
+        {tt("start.markets.all")} →
+      </a>
+    </div>
+  </section>
+
+  <!-- Field Story -->
+  <section class="text-white" style="background-color: #060c28;">
+    <div class="container-prose py-16 md:py-24">
+      <p class="text-sm font-bold" style="color: #9fe58f;">{tt("start.story.label")}</p>
+      <blockquote class="mt-5 max-w-[34ch] font-display font-bold leading-[1.2]" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+        {tt("start.story.quote")}
+      </blockquote>
+      <p class="mt-6 max-w-[58ch] text-lg leading-relaxed" style="color: #d6dcff;">{tt("start.story.line")}</p>
+      <a href={localizedPath(lang, "/blog/cause-15")} class="mt-8 inline-block text-[0.9375rem] font-bold text-white underline decoration-1 underline-offset-4 hover:text-[#d6dcff]">
+        {tt("start.story.link")} →
+      </a>
+    </div>
+  </section>
+
+  <!-- Deutschland & USA -->
+  <section class="paper-sheet">
+    <div class="container-prose grid grid-cols-1 gap-y-6 py-16 md:grid-cols-12 md:gap-x-16 md:py-24">
+      <h2 class="display-md md:col-span-5" style="color: var(--color-paper-ink);">{tt("start.atlantic.title")}</h2>
+      <div class="md:col-span-7">
+        <p class="text-lg leading-relaxed" style="color: var(--color-paper-muted);">{tt("start.atlantic.text")}</p>
+        <a href={localizedPath(lang, "/germany-us")} class="mt-6 inline-block text-sm font-bold text-[var(--color-cobalt-light)] underline decoration-1 underline-offset-4">
+          {tt("start.atlantic.link")} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- So arbeiten wir -->
+  <section class="surface-carbon">
+    <div class="container-prose py-16 md:py-24">
+      <h2 class="display-md text-[var(--color-text-on-carbon)]">{tt("start.how.title")}</h2>
+      <div class="relative mt-12">
+        <div class="absolute left-0 right-0 top-[0.4rem] hidden h-px bg-[var(--color-hairline-dark)] md:block" aria-hidden="true"></div>
+        <div class="grid gap-10 md:grid-cols-3 md:gap-12">
+          {steps.map((step, idx) => (
+            <div class="relative">
+              <span class="relative z-[1] block h-3.5 w-3.5 rounded-full bg-[var(--color-saj-green-bright)]" aria-hidden="true"></span>
+              <p class="mono-label mt-4 text-[var(--color-saj-green-bright)]">{tt("start.how.phase")} {String(idx + 1).padStart(2, "0")}</p>
+              <h3 class="heading-card mt-1.5 text-[var(--color-text-on-carbon)]">{step.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-[var(--color-text-on-carbon-muted)]">{step.text}</p>
+              <p class="mono-label mt-4 text-[var(--color-text-on-carbon-faint)]">{tt("start.how.outcomeLabel")}</p>
+              <p class="mt-1 text-sm font-medium leading-relaxed text-[var(--color-text-on-carbon)]">{step.outcome}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p class="mt-14 border-t border-[var(--color-hairline-dark)] pt-8 text-lg font-bold text-[var(--color-text-on-carbon)]">
+        {tt("start.how.independence")}
+      </p>
+    </div>
+  </section>
+
+  <CtaBanner />
 </Layout>

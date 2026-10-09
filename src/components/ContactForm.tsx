@@ -13,6 +13,8 @@ const Schema = z.object({
   email: z.string().email(),
   company: z.string().optional(),
   message: z.string().min(10),
+  stage: z.string().max(100).optional(),
+  source: z.string().max(100).optional(),
   consent: z.literal(true),
   // Honeypot — bleibt bei Menschen leer, Bots füllen es aus.
   website: z.string().optional(),
@@ -83,6 +85,15 @@ export default function ContactForm({ locale, endpoint }: Props) {
         <p className="heading-card mt-3 text-[var(--color-bone)]">
           {t.success}
         </p>
+        <p className="mt-4 text-sm text-[var(--color-text-on-carbon-muted)]">
+          {t.successMore}{" "}
+          <a
+            href={`/${locale}/blog/cause-15`}
+            className="font-bold text-[var(--color-cobalt-light)] underline decoration-1 underline-offset-2"
+          >
+            Cause 15 →
+          </a>
+        </p>
       </div>
     );
   }
@@ -124,10 +135,29 @@ export default function ContactForm({ locale, endpoint }: Props) {
       <Field label={t.message} error={errors.message?.message}>
         <textarea
           {...register("message", { required: true, minLength: 10 })}
-          rows={5}
+          rows={4}
+          placeholder={t.messagePlaceholder}
           className="form-input resize-none"
         />
       </Field>
+      <div className="grid gap-6 md:grid-cols-2">
+        <Field label={`${t.stage} (${t.optional})`}>
+          <select {...register("stage")} className="form-input" defaultValue="">
+            <option value="">—</option>
+            {t.stageOptions.map((o) => (
+              <option key={o} value={o}>{o}</option>
+            ))}
+          </select>
+        </Field>
+        <Field label={`${t.source} (${t.optional})`}>
+          <select {...register("source")} className="form-input" defaultValue="">
+            <option value="">—</option>
+            {t.sourceOptions.map((o) => (
+              <option key={o} value={o}>{o}</option>
+            ))}
+          </select>
+        </Field>
+      </div>
       <label className="flex items-start gap-3 text-sm text-[var(--color-text-on-carbon-muted)]">
         <input
           type="checkbox"
