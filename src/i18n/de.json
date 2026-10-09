@@ -1484,7 +1484,7 @@
     },
     "story": {
       "label": "Field Story",
-      "quote": "Ein Netzbetreiber verweigerte die Freigabe für das Gerät unseres Kunden. Der Trace zeigte, dass das Netz es tatsächlich ablehnte. Beide hatten recht, und keiner war das Problem.",
+      "quote": "Ein Netzbetreiber verweigerte die Freigabe für das Gerät unseres Kunden. Der Trace zeigte, dass das Netz den Attach Request tatsächlich rejected hat. Beide hatten recht, und keiner war das Problem.",
       "line": "Vom ersten Trace bis zur Auflösung vergingen etwa vierzig Minuten.",
       "link": "„Cause 15“ lesen"
     },
