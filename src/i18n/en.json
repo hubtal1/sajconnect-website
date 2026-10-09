@@ -28,7 +28,8 @@
     "overview": "Overview",
     "fieldStories": "Field Stories",
     "germanyUs": "Germany & US",
-    "projectCheck": "Request a project check"
+    "projectCheck": "Request a project check",
+    "projectCheckNote": "30 minutes · free · with a real person from our team"
   },
   "home": {
     "hero": {
@@ -393,8 +394,7 @@
     "name": {
       "label": "The name",
       "title": "SAJ — Smart Access Journey.",
-      "text": "Our name is our promise: we guide companies on their journey to intelligent connectivity — vendor-independent, from strategy to live operations. Whether it's connected vehicles, private 5G campus networks in ports and industrial sites, live broadcast at the race circuit, or connected machinery in the field: we create the access that links your assets, processes, and people.",
-      "closing": "SAJ Connect — your partner on the Smart Access Journey."
+      "text": "The journey from a plan to a system that works in operation. Our job is to make that journey shorter."
     },
     "mission": {
       "title": "Our mission",
@@ -507,6 +507,44 @@
     "title": "FRMCS: the new 5G rail radio",
     "lede": "GSM-R has been Europe's digital train radio since the 2000s and is based on 2G. Its successor FRMCS (Future Railway Mobile Communication System) brings 5G to the railway. We help infrastructure managers, rolling stock manufacturers and suppliers prepare the migration technically.",
     "teaser": "Migration from GSM-R to FRMCS: radio planning in n100 and n101, coexistence, on-board integration and test concepts.",
+    "pitch": {
+      "title": "From GSM-R to FRMCS without losing what works today.",
+      "lede": "RF planning, coexistence, on-board integration and test concepts for rail operators and rolling-stock suppliers.",
+      "metaTitle": "FRMCS Radio Planning & Integration",
+      "factsLink": "Facts and sources",
+      "stuckTitle": "Where FRMCS projects get difficult",
+      "stuck": [
+        "GSM-R and FRMCS will run side by side for years, on the same line and often in the same vehicle.",
+        "The new bands n100 and n101 have to coexist with public mobile networks along the line.",
+        "On-board units and antennas have to be integrated into existing rolling stock.",
+        "Every step has to pass safety-relevant acceptance."
+      ],
+      "receiveTitle": "What you receive",
+      "receive": [
+        {
+          "k": "RF planning",
+          "v": "For n100 and n101 along the line, including coexistence and interference analysis"
+        },
+        {
+          "k": "Migration concept",
+          "v": "For parallel operation of GSM-R and FRMCS"
+        },
+        {
+          "k": "Integration specifications",
+          "v": "For on-board units and antennas in existing rolling stock"
+        },
+        {
+          "k": "Architecture",
+          "v": "5G standalone core and mission-critical services, as in our private 5G projects"
+        },
+        {
+          "k": "Test concepts",
+          "v": "Acceptance from the lab to the line"
+        }
+      ],
+      "receiveClosing": "Documented so that your teams and your suppliers work from the same evidence.",
+      "background": "Background"
+    },
     "factsTitle": "Key facts",
     "facts": [
       {
@@ -1477,7 +1515,7 @@
         },
         {
           "title": "Rail & FRMCS",
-          "text": "The move from GSM-R to FRMCS, from RF Planning to acceptance."
+          "text": "The move from GSM-R to FRMCS, from RF planning to acceptance."
         }
       ],
       "all": "All capabilities"
@@ -1539,7 +1577,7 @@
       "title": "What we do",
       "items": [
         {
-          "title": "Integration testing, End-to-End",
+          "title": "End-to-end integration testing",
           "text": "Vehicle, telematics unit and module, through the network to the backend, tested as one chain rather than as separate parts."
         },
         {
@@ -1548,7 +1586,7 @@
         },
         {
           "title": "eSIM and SIM testing",
-          "text": "Profile download, switching and Lifecycle testing, aligned with GSMA specifications."
+          "text": "Profile download, switching and lifecycle testing, aligned with GSMA specifications."
         },
         {
           "title": "OTA update testing",
@@ -1571,7 +1609,7 @@
       "items": [
         {
           "title": "Capture the actual failure.",
-          "text": "A trace from the Air Interface, not a summary of one."
+          "text": "A trace from the air interface, not a summary of one."
         },
         {
           "title": "Change as little as possible.",
@@ -1621,7 +1659,7 @@
     "title": "Private 5G that runs in production, not just in the pilot.",
     "lede": "Planning, deployment, integration and testing of private 5G networks for factories, ports and logistics sites, in Germany (local 3.7–3.8 GHz licences) and the US (CBRS).",
     "metaTitle": "Private 5G for Industry in Germany & the US",
-    "metaDescription": "Private 5G that runs in production: spectrum (3.7 GHz / CBRS), RF Planning, device integration and acceptance testing. Vendor-agnostic.",
+    "metaDescription": "Private 5G that runs in production: spectrum (3.7 GHz / CBRS), RF planning, device integration and acceptance testing. Vendor-agnostic.",
     "stall": {
       "title": "Why pilots stall",
       "items": [
@@ -1660,7 +1698,7 @@
         },
         {
           "title": "Build & integrate",
-          "text": "Radio, Core Network, devices, machines and IT/OT integration, including the technical side of KRITIS and NIS2 obligations.",
+          "text": "Radio, core network, devices, machines and IT/OT integration, including the technical side of KRITIS and NIS2 obligations.",
           "links": [
             {
               "label": "KRITIS & NIS2",
@@ -1684,7 +1722,7 @@
     "skillsTitle": "Supporting capabilities",
     "augmentation": {
       "title": "Expert Augmentation",
-      "text": "Our specialists join your team for architecture reviews, RF Planning, test campaigns or certification support, exactly where expertise is missing."
+      "text": "Our specialists join your team for architecture reviews, RF planning, test campaigns or certification support, exactly where expertise is missing."
     },
     "outlookTitle": "Outlook",
     "notSure": "Not sure which you need? Tell us about your project."

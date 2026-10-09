@@ -28,7 +28,8 @@
     "overview": "Übersicht",
     "fieldStories": "Field Stories",
     "germanyUs": "Deutschland & USA",
-    "projectCheck": "Projektcheck anfragen"
+    "projectCheck": "Projektcheck anfragen",
+    "projectCheckNote": "30 Minuten · kostenlos · mit einem Menschen aus unserem Team"
   },
   "home": {
     "hero": {
@@ -393,8 +394,7 @@
     "name": {
       "label": "Der Name",
       "title": "SAJ — Smart Access Journey.",
-      "text": "Unser Name ist unser Versprechen: Wir begleiten Unternehmen auf ihrem Weg zu intelligenter Connectivity — vendor-agnostic, von der Strategie bis in den Live-Betrieb. Ob vernetzte Fahrzeuge, private 5G-Campusnetze in Häfen und Industriearealen, Live-Übertragung an der Rennstrecke oder vernetzte Maschinen im Feld: Wir schaffen den Zugang, der Ihre Anlagen, Prozesse und Menschen verbindet.",
-      "closing": "SAJ Connect — Ihr Partner auf der Smart Access Journey."
+      "text": "Der Weg von der Planung zu einem System, das im Betrieb funktioniert. Unsere Aufgabe ist es, diesen Weg kürzer zu machen."
     },
     "mission": {
       "title": "Unsere Mission",
@@ -507,6 +507,44 @@
     "title": "FRMCS: der neue Bahnfunk auf 5G-Basis",
     "lede": "GSM-R ist seit den 2000er-Jahren der digitale Zugfunk in Europa und basiert auf 2G. Sein Nachfolger FRMCS (Future Railway Mobile Communication System) bringt 5G auf die Schiene. Wir unterstützen Infrastrukturbetreiber, Fahrzeughersteller und Zulieferer dabei, die Migration technisch vorzubereiten.",
     "teaser": "Migration von GSM-R auf FRMCS: RF-Planung in n100 und n101, Coexistence, Bordintegration und Testkonzepte.",
+    "pitch": {
+      "title": "Von GSM-R zu FRMCS, ohne zu verlieren, was heute funktioniert.",
+      "lede": "RF-Planung, Coexistence, Integration der Bordtechnik und Testkonzepte für Bahnbetreiber und Fahrzeughersteller.",
+      "metaTitle": "FRMCS: RF-Planung und Integration",
+      "factsLink": "Fakten und Quellen",
+      "stuckTitle": "Wo FRMCS-Projekte schwierig werden",
+      "stuck": [
+        "GSM-R und FRMCS laufen über Jahre parallel, auf derselben Strecke und oft im selben Fahrzeug.",
+        "Die neuen Bänder n100 und n101 müssen sich entlang der Strecke mit öffentlichen Mobilfunknetzen vertragen.",
+        "Bordgeräte und Antennen müssen in bestehende Fahrzeuge integriert werden.",
+        "Jeder Schritt muss durch eine sicherheitsrelevante Abnahme."
+      ],
+      "receiveTitle": "Was Sie erhalten",
+      "receive": [
+        {
+          "k": "RF-Planung",
+          "v": "Für n100 und n101 entlang der Strecke, mit Coexistence- und Interference-Analyse"
+        },
+        {
+          "k": "Migrationskonzept",
+          "v": "Für den Parallelbetrieb von GSM-R und FRMCS"
+        },
+        {
+          "k": "Integrationsspezifikation",
+          "v": "Für Bordgeräte und Antennen in bestehenden Fahrzeugen"
+        },
+        {
+          "k": "Architektur",
+          "v": "5G-Standalone-Core und Mission-Critical-Dienste, wie in unseren Private-5G-Projekten"
+        },
+        {
+          "k": "Testkonzepte",
+          "v": "Von der Abnahme im Labor bis auf die Strecke"
+        }
+      ],
+      "receiveClosing": "So dokumentiert, dass Ihre Teams und Ihre Lieferanten mit denselben Belegen arbeiten.",
+      "background": "Hintergrund"
+    },
     "factsTitle": "Eckdaten",
     "facts": [
       {

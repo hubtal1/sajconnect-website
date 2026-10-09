@@ -28,7 +28,8 @@
     "overview": "Visão geral",
     "fieldStories": "Field Stories",
     "germanyUs": "Alemanha & EUA",
-    "projectCheck": "Solicitar análise do projeto"
+    "projectCheck": "Solicitar análise do projeto",
+    "projectCheckNote": "30 minutos · gratuito · com uma pessoa da nossa equipe"
   },
   "home": {
     "hero": {
@@ -393,8 +394,7 @@
     "name": {
       "label": "O nome",
       "title": "SAJ — Smart Access Journey.",
-      "text": "Nosso nome é a nossa promessa: acompanhamos empresas em sua jornada rumo à Smart Connectivity — independentes de fabricante, da estratégia à operação. Sejam veículos conectados, redes Private 5G em portos e áreas industriais, transmissão ao vivo no autódromo ou máquinas conectadas em campo: criamos o acesso que conecta seus ativos, processos e pessoas.",
-      "closing": "SAJ Connect — seu parceiro na Smart Access Journey."
+      "text": "O caminho do planejamento até um sistema que funciona em operação. Nosso trabalho é encurtar esse caminho."
     },
     "mission": {
       "title": "Nossa missão",
@@ -507,6 +507,44 @@
     "title": "FRMCS: o novo rádio ferroviário em 5G",
     "lede": "O GSM-R é o rádio digital dos trens na Europa desde os anos 2000 e é baseado em 2G. Seu sucessor, o FRMCS (Future Railway Mobile Communication System), leva o 5G para a ferrovia. Apoiamos gestores de infraestrutura, fabricantes de material rodante e fornecedores na preparação técnica da migração.",
     "teaser": "Migração do GSM-R para o FRMCS: RF Planning em n100 e n101, Coexistence, integração embarcada e conceitos de teste.",
+    "pitch": {
+      "title": "Do GSM-R ao FRMCS sem perder o que funciona hoje.",
+      "lede": "RF Planning, Coexistence, integração embarcada e conceitos de teste para operadoras ferroviárias e fabricantes de material rodante.",
+      "metaTitle": "FRMCS: RF Planning e integração",
+      "factsLink": "Fatos e fontes",
+      "stuckTitle": "Onde os projetos de FRMCS ficam difíceis",
+      "stuck": [
+        "GSM-R e FRMCS vão funcionar lado a lado por anos, na mesma linha e muitas vezes no mesmo veículo.",
+        "As novas bandas n100 e n101 precisam conviver com as redes móveis públicas ao longo da linha.",
+        "Unidades embarcadas e antenas precisam ser integradas ao material rodante existente.",
+        "Cada etapa precisa passar por um aceite relevante para a segurança."
+      ],
+      "receiveTitle": "O que você recebe",
+      "receive": [
+        {
+          "k": "RF Planning",
+          "v": "Para n100 e n101 ao longo da linha, com análise de Coexistence e Interference"
+        },
+        {
+          "k": "Conceito de migração",
+          "v": "Para a operação paralela de GSM-R e FRMCS"
+        },
+        {
+          "k": "Especificação de integração",
+          "v": "Para unidades embarcadas e antenas no material rodante existente"
+        },
+        {
+          "k": "Arquitetura",
+          "v": "5G standalone Core e serviços Mission Critical, como nos nossos projetos de Private 5G"
+        },
+        {
+          "k": "Conceitos de teste",
+          "v": "Do aceite em laboratório até a linha"
+        }
+      ],
+      "receiveClosing": "Documentado para que as suas equipes e os seus fornecedores trabalhem com as mesmas evidências.",
+      "background": "Contexto"
+    },
     "factsTitle": "Dados-chave",
     "facts": [
       {

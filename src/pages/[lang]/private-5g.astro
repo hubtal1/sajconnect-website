@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import PageHero from "../../components/PageHero.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
+import HeroCta from "../../components/HeroCta.astro";
 import { LOCALES, t, getDict, type Locale } from "../../i18n/utils";
 
 export function getStaticPaths() {
@@ -21,7 +22,9 @@ const steps = getDict<Step[]>(lang, "private5g.steps.items") ?? [];
 ---
 
 <Layout title={`${tt("private5g.metaTitle")} — ${tt("site.name")}`} description={tt("private5g.metaDescription")}>
-  <PageHero label="Private 5G" title={tt("private5g.title")} lede={tt("private5g.lede")} image="/images/private5g-fabrik.webp" imagePosition="center 45%" />
+  <PageHero label="Private 5G" title={tt("private5g.title")} lede={tt("private5g.lede")} image="/images/private5g-fabrik.webp" imagePosition="center 45%">
+    <HeroCta />
+  </PageHero>
 
   <!-- Warum Pilotprojekte stehen bleiben -->
   <section class="surface-carbon">

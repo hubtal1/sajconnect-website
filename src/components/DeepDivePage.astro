@@ -6,6 +6,7 @@
 import Layout from "../layouts/Layout.astro";
 import CtaBanner from "./CtaBanner.astro";
 import PageHero from "./PageHero.astro";
+import HeroCta from "./HeroCta.astro";
 import { getDict, type Locale } from "../i18n/utils";
 
 interface Fact {
@@ -22,6 +23,19 @@ interface Source {
   label: string;
   url: string;
 }
+/** Optionaler Einstieg wie auf den Schwerpunktseiten: Problem, Lieferung, Button. */
+interface Pitch {
+  title: string;
+  lede: string;
+  metaTitle: string;
+  factsLink: string;
+  stuckTitle: string;
+  stuck: string[];
+  receiveTitle: string;
+  receive: Fact[];
+  receiveClosing: string;
+  background: string;
+}
 interface DeepDive {
   chapter: string;
   title: string;
@@ -36,6 +50,7 @@ interface DeepDive {
   asOf: string;
   sourcesTitle: string;
   sources: Source[];
+  pitch?: Pitch;
 }
 
 interface Props {
@@ -57,15 +72,56 @@ const HERO: Record<Props["ns"], { image: string; position: string }> = {
 const page = getDict<DeepDive>(lang, ns);
 if (!page) throw new Error(`Fachseite ${ns} fehlt in ${lang}`);
 
+const pitch = page.pitch;
+
 const bullet =
   "relative pl-6 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-3 before:bg-[var(--color-cobalt-light)]";
 ---
 
-<Layout title={page.title} description={page.lede}>
-  <PageHero label={page.chapter} title={page.title} lede={page.lede} image={HERO[ns].image} imagePosition={HERO[ns].position} />
+<Layout title={pitch ? `${pitch.metaTitle} — SAJ Connect` : page.title} description={pitch?.lede ?? page.lede}>
+  <PageHero label={page.chapter} title={pitch?.title ?? page.title} lede={pitch?.lede ?? page.lede} image={HERO[ns].image} imagePosition={HERO[ns].position}>
+    {pitch && <HeroCta secondary={{ href: "#hintergrund", label: pitch.factsLink }} />}
+  </PageHero>
+
+  {pitch && (
+    <section class="surface-carbon">
+      <div class="container-prose py-16 md:py-24">
+        <h2 class="display-md text-[var(--color-text-on-carbon)]">{pitch.stuckTitle}</h2>
+        <ul class="mt-10 max-w-[70ch]">
+          {pitch.stuck.map((line, idx) => (
+            <li class:list={["py-4 text-lg leading-relaxed text-[var(--color-text-on-carbon)]", idx > 0 && "border-t border-[var(--color-hairline-dark)]"]}>{line}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {pitch && (
+    <section class="paper-sheet">
+      <div class="container-prose py-16 md:py-24">
+        <h2 class="display-md" style="color: var(--color-paper-ink);">{pitch.receiveTitle}</h2>
+        <dl class="mt-8 max-w-[64rem]">
+          {pitch.receive.map((row, idx) => (
+            <div class="grid grid-cols-1 gap-y-1 py-4 sm:grid-cols-[15rem_1fr] sm:gap-x-8" style={idx > 0 ? "border-top: 1px solid color-mix(in srgb, var(--color-paper-ink) 18%, transparent);" : ""}>
+              <dt class="font-bold" style="color: var(--color-paper-ink);">{row.k}</dt>
+              <dd style="color: var(--color-paper-muted);">{row.v}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="mt-8 max-w-[60ch] text-lg font-bold leading-relaxed" style="color: var(--color-paper-ink);">{pitch.receiveClosing}</p>
+      </div>
+    </section>
+  )}
 
   <section class="surface-carbon">
-    <div class="container-prose pb-20 pt-6 md:pb-28">
+    <div class="container-prose pb-20 pt-6 md:pb-28" id={pitch ? "hintergrund" : undefined}>
+      {pitch && (
+        <div class="pt-14 md:pt-20">
+          <p class="mono-label text-[var(--color-cobalt-light)]">{pitch.background}</p>
+          <h2 class="display-md mt-3 max-w-[30ch] text-[var(--color-text-on-carbon)]">{page.title}</h2>
+          <p class="mt-5 max-w-[68ch] text-lg leading-relaxed text-[var(--color-text-on-carbon-muted)]">{page.lede}</p>
+        </div>
+      )}
       <!-- Eckdaten -->
       <div class="grid grid-cols-1 gap-y-6 pt-10 md:grid-cols-12 md:gap-x-12">
         <h2 class="heading-card text-[var(--color-text-on-carbon)] md:col-span-4">{page.factsTitle}</h2>
@@ -99,7 +155,8 @@ const bullet =
         </div>
       ))}
 
-      <!-- Beitrag -->
+      <!-- Beitrag (entfällt, wenn der Einstieg die Lieferung schon nennt) -->
+      {!pitch && (
       <div class="mt-16 grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">
         <div class="md:col-span-4">
           <h2 class="heading-card text-[var(--color-saj-green-bright)]">{page.contributionTitle}</h2>
@@ -116,6 +173,7 @@ const bullet =
           )}
         </div>
       </div>
+      )}
 
       <!-- Quellen -->
       <div class="mt-16 grid grid-cols-1 gap-y-6 border-t border-[var(--color-hairline-dark)] pt-10 md:grid-cols-12 md:gap-x-12">

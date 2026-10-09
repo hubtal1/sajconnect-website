@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import PageHero from "../../components/PageHero.astro";
 import ItemRows from "../../components/ItemRows.astro";
+import HeroCta from "../../components/HeroCta.astro";
 import CtaBanner from "../../components/CtaBanner.astro";
 import { LOCALES, t, getDict, localizedPath, type Locale } from "../../i18n/utils";
 
@@ -24,9 +25,7 @@ const receive = getDict<{ k: string; v: string }[]>(lang, "automotive.receive.ro
 
 <Layout title={`${tt("automotive.metaTitle")} — ${tt("site.name")}`} description={tt("automotive.metaDescription")}>
   <PageHero label={tt("automotive.label")} title={tt("automotive.title")} lede={tt("automotive.lede")} image="/images/connected-car-fertigung.webp" imagePosition="center 55%">
-    <a href={localizedPath(lang, "/blog/cause-15")} class="mt-8 inline-block text-[0.9375rem] font-bold text-white underline decoration-1 underline-offset-4 hover:text-[#d6dcff]">
-      {tt("automotive.storyLink")} →
-    </a>
+    <HeroCta secondary={{ href: localizedPath(lang, "/blog/cause-15"), label: tt("automotive.storyLink") }} />
   </PageHero>
 
   <!-- Wo Projekte hängen bleiben -->

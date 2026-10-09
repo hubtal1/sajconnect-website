@@ -1,5 +1,6 @@
 ---
 import PageHero from "./PageHero.astro";
+import HeroCta from "./HeroCta.astro";
 import { getLocaleFromUrl, t, localizedPath, type Locale } from "../i18n/utils";
 
 const locale: Locale = getLocaleFromUrl(Astro.url);
@@ -7,17 +8,6 @@ const tt = t(locale);
 ---
 
 <PageHero title={tt("start.hero.headline")} lede={tt("start.hero.sub")} image="/images/startseite-roboterarm.webp" imagePosition="68% center">
-  <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-    <a
-      href={localizedPath(locale, "/contact")}
-      class="inline-flex items-center bg-white px-7 py-3.5 text-[0.9375rem] font-bold tracking-[0.01em] transition-colors duration-150 hover:bg-[#d6dcff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-      style="color: #001ec9;"
-    >
-      {tt("nav.projectCheck")}
-    </a>
-    <a href={localizedPath(locale, "/blog/cause-15")} class="text-[0.9375rem] font-bold text-white underline decoration-1 underline-offset-4 transition-colors hover:text-[#d6dcff]">
-      {tt("start.hero.ctaStory")} →
-    </a>
-  </div>
+  <HeroCta secondary={{ href: localizedPath(locale, "/blog/cause-15"), label: tt("start.hero.ctaStory") }} />
   <p class="mt-8 text-sm" style="color: #aab4f0;">{tt("landing.locations")} · {tt("start.hero.note")}</p>
 </PageHero>
